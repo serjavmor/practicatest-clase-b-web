@@ -21,10 +21,10 @@ export default function UserSelectView({ onSelectUser }) {
       const name = prompt(`Ingresa un nombre para el Perfil ${profile.id}:`);
       if (name && name.trim()) {
         localStorage.setItem(`kuro_user_${profile.id}_name`, name.trim());
-        onSelectUser(profile.id, name.trim());
+        onSelectUser(profile.id, name.trim(), true); // isNew = true
       }
     } else {
-      onSelectUser(profile.id, profile.name);
+      onSelectUser(profile.id, profile.name, false); // isNew = false
     }
   };
 

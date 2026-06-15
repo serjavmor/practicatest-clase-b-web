@@ -4,6 +4,7 @@ import HomeView from './components/HomeView'
 import TheoryView from './components/TheoryView'
 import TestView from './components/TestView'
 import RecoveryView from './components/RecoveryView'
+import OnboardingView from './components/OnboardingView'
 import useLives from './hooks/useLives'
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   
   const { lives, decreaseLife, addLife, refillLives, hasLives, maxLives, timeToNextLife } = useLives(currentUser?.id)
   
-  const [view, setView] = useState('userSelect') // 'userSelect', 'home', 'theory', 'test', 'recovery'
+  const [view, setView] = useState('userSelect') // 'userSelect', 'onboarding', 'home', 'theory', 'test', 'recovery'
 
   useEffect(() => {
     // Load data
@@ -28,6 +29,7 @@ function App() {
   }, [])
 
   // Cargar estado cuando se selecciona un usuario
+  // Ya NO hacemos setView('home') automáticamente aquí, se maneja desde handleUserSelect
   useEffect(() => {
     if (currentUser) {
       const savedLevel = localStorage.getItem(`kuro_user_${currentUser.id}_level`)
@@ -37,8 +39,6 @@ function App() {
       setCurrentLevel(savedLevel ? parseInt(savedLevel, 10) : 1)
       setStreak(savedStreak ? parseInt(savedStreak, 10) : 0)
       setFailedQuestions(savedErrors ? JSON.parse(savedErrors) : [])
-      
-      setView('home')
     }
   }, [currentUser])
 
@@ -50,6 +50,19 @@ function App() {
       localStorage.setItem(`kuro_user_${currentUser.id}_errors`, JSON.stringify(failedQuestions))
     }
   }, [currentLevel, streak, failedQuestions, currentUser])
+
+  const handleUserSelect = (id, name, isNew) => {
+    setCurrentUser({ id, name });
+    if (isNew) {
+      setView('onboarding');
+    } else {
+      setView('home');
+    }
+  }
+
+  const finishOnboarding = () => {
+    setView('home');
+  }
 
   const startLevel = () => {
     if (!hasLives) {
@@ -100,7 +113,13 @@ function App() {
     <>
       {view === 'userSelect' && (
         <UserSelectView 
-          onSelectUser={(id, name) => setCurrentUser({ id, name })} 
+          onSelectUser={handleUserSelect} 
+        />
+      )}
+      {view === 'onboarding' && (
+        <OnboardingView 
+          userName={currentUser?.name}
+          onComplete={finishOnboarding}
         />
       )}
       {view === 'home' && (
