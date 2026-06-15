@@ -158,7 +158,8 @@
         "is_correct": false
       }
     ],
-    "feedback": "El manual indica que todas las luces rojas en el panel son advertencias críticas de peligro o fallas mayores que requieren detener el vehículo y revisar el manual del fabricante de inmediato."
+    "feedback": "El manual indica que todas las luces rojas en el panel son advertencias críticas de peligro o fallas mayores que requieren detener el vehículo y revisar el manual del fabricante de inmediato.",
+    "local_image": "signs/sign_7.svg"
   },
   {
     "id": 8,
@@ -4500,7 +4501,8 @@
         "is_correct": false
       }
     ],
-    "feedback": "Las señales amarillas con forma de rombo son de ADVERTENCIA DE PELIGRO, e indican riesgos como curvas, zonas escolares, cruces o calzada resbaladiza."
+    "feedback": "Las señales amarillas con forma de rombo son de ADVERTENCIA DE PELIGRO, e indican riesgos como curvas, zonas escolares, cruces o calzada resbaladiza.",
+    "local_image": "signs/sign_205.svg"
   },
   {
     "id": 206,
@@ -5328,7 +5330,8 @@
         "is_correct": false
       }
     ],
-    "feedback": "Las señales con borde rojo son Reglamentarias. Si es un 'Ceda el Paso', te indica que debes disminuir la velocidad y ceder la preferencia a los vehículos de la otra vía."
+    "feedback": "Las señales con borde rojo son Reglamentarias. Si es un 'Ceda el Paso', te indica que debes disminuir la velocidad y ceder la preferencia a los vehículos de la otra vía.",
+    "local_image": "signs/sign_245.svg"
   },
   {
     "id": 246,
@@ -5374,7 +5377,8 @@
         "is_correct": false
       }
     ],
-    "feedback": "Es una señal Reglamentaria que indica una obligación o restricción que debes cumplir estrictamente bajo pena de infracción (ej. Pare, Velocidad Máxima, No Virar)."
+    "feedback": "Es una señal Reglamentaria que indica una obligación o restricción que debes cumplir estrictamente bajo pena de infracción (ej. Pare, Velocidad Máxima, No Virar).",
+    "local_image": "signs/sign_247.svg"
   },
   {
     "id": 248,
@@ -5397,7 +5401,8 @@
         "is_correct": false
       }
     ],
-    "feedback": "La forma y color revelan su propósito. El rojo indica prohibición u obligación, mientras que el amarillo indica advertencia de peligro."
+    "feedback": "La forma y color revelan su propósito. El rojo indica prohibición u obligación, mientras que el amarillo indica advertencia de peligro.",
+    "local_image": "signs/sign_248.svg"
   },
   {
     "id": 249,
@@ -5443,7 +5448,8 @@
         "is_correct": false
       }
     ],
-    "feedback": "Señal de Advertencia (amarilla) que suele indicar proximidad de peatones, ciclistas, curvas, o animales en la vía."
+    "feedback": "Señal de Advertencia (amarilla) que suele indicar proximidad de peatones, ciclistas, curvas, o animales en la vía.",
+    "local_image": "signs/sign_251.svg"
   },
   {
     "id": 252,
@@ -5535,7 +5541,8 @@
         "is_correct": true
       }
     ],
-    "feedback": "Las señales informativas (generalmente de color azul, verde o café) sirven para orientar al conductor sobre destinos, rutas, servicios o atractivos turísticos."
+    "feedback": "Las señales informativas (generalmente de color azul, verde o café) sirven para orientar al conductor sobre destinos, rutas, servicios o atractivos turísticos.",
+    "local_image": "signs/sign_255.svg"
   },
   {
     "id": 256,
@@ -5558,7 +5565,8 @@
         "is_correct": false
       }
     ],
-    "feedback": "Señal reglamentaria. Ignorar este tipo de señales constituye una falta grave o gravísima a la Ley de Tránsito."
+    "feedback": "Señal reglamentaria. Ignorar este tipo de señales constituye una falta grave o gravísima a la Ley de Tránsito.",
+    "local_image": "signs/sign_256.svg"
   },
   {
     "id": 258,
@@ -5581,7 +5589,8 @@
         "is_correct": true
       }
     ],
-    "feedback": "Identifica siempre la forma: Rombo amarillo es advertencia; Círculo rojo es prohibición/obligación; Rectángulo azul o verde es información."
+    "feedback": "Identifica siempre la forma: Rombo amarillo es advertencia; Círculo rojo es prohibición/obligación; Rectángulo azul o verde es información.",
+    "local_image": "signs/sign_258.svg"
   },
   {
     "id": 260,

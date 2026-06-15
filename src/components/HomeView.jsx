@@ -1,13 +1,13 @@
 import React from 'react';
 import TopBar from './TopBar';
 
-export default function HomeView({ lives, streak, currentLevel, onStart }) {
+export default function HomeView({ lives, streak, currentLevel, onStart, timeToNextLife }) {
   
   const levels = Array.from({length: 10}, (_, i) => i + 1);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: '#f7f7f7' }}>
-      <TopBar lives={lives} streak={streak} />
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
+      <TopBar lives={lives} streak={streak} timeToNextLife={timeToNextLife} />
       
       <div style={{ textAlign: 'center', padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <img 

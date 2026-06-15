@@ -2,14 +2,15 @@ import { useState, useEffect } from 'react'
 import HomeView from './components/HomeView'
 import TheoryView from './components/TheoryView'
 import TestView from './components/TestView'
+import useLives from './hooks/useLives'
 
 function App() {
   const [questions, setQuestions] = useState([])
   const [lessons, setLessons] = useState([])
   
   const [currentLevel, setCurrentLevel] = useState(1)
-  const [lives, setLives] = useState(5)
   const [streak, setStreak] = useState(0)
+  const { lives, decreaseLife, hasLives, timeToNextLife } = useLives()
   
   const [view, setView] = useState('home') // 'home', 'theory', 'test'
 
@@ -27,6 +28,10 @@ function App() {
   }, [])
 
   const startLevel = () => {
+    if (!hasLives) {
+      alert("¡Te quedaste sin vidas! Espera a que se recarguen.");
+      return;
+    }
     setView('theory')
   }
 
@@ -39,7 +44,6 @@ function App() {
       setCurrentLevel(prev => prev + 1)
       setView('home')
     } else {
-      setLives(5)
       setStreak(0)
       setView('home')
     }
@@ -66,6 +70,7 @@ function App() {
           streak={streak} 
           currentLevel={currentLevel} 
           onStart={startLevel} 
+          timeToNextLife={timeToNextLife}
         />
       )}
       {view === 'theory' && (
@@ -78,10 +83,11 @@ function App() {
         <TestView 
           questions={getQuestionsForLevel()} 
           lives={lives}
-          setLives={setLives}
+          decreaseLife={decreaseLife}
           streak={streak}
           setStreak={setStreak}
           onFinish={finishLevel} 
+          timeToNextLife={timeToNextLife}
         />
       )}
     </>

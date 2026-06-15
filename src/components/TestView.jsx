@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import TopBar from './TopBar';
+import useAudio from '../hooks/useAudio';
 
-export default function TestView({ questions, lives, setLives, streak, setStreak, onFinish }) {
+export default function TestView({ questions, lives, decreaseLife, streak, setStreak, onFinish, timeToNextLife }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showingFeedback, setShowingFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+  const { playCorrect, playIncorrect } = useAudio();
 
   if (!questions || questions.length === 0) {
     return <div>Cargando...</div>;
@@ -19,14 +21,20 @@ export default function TestView({ questions, lives, setLives, streak, setStreak
     const correct = selectedOption.is_correct;
     setIsCorrect(correct);
     setShowingFeedback(true);
+    
+    // Reproducir sonido
+    if (correct) {
+      playCorrect();
+    } else {
+      playIncorrect();
+    }
   };
 
   const handleNext = () => {
     if (!isCorrect) {
-      const newLives = lives - 1;
-      setLives(newLives);
+      decreaseLife();
       setStreak(0);
-      if (newLives <= 0) {
+      if (lives - 1 <= 0) {
         onFinish(false);
         return;
       }
@@ -57,7 +65,7 @@ export default function TestView({ questions, lives, setLives, streak, setStreak
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', position: 'relative' }}>
-      <TopBar lives={lives} streak={streak} progress={progress} />
+      <TopBar lives={lives} streak={streak} progress={progress} timeToNextLife={timeToNextLife} />
       
       <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 100px 20px' }}>
         <h2 style={{ fontSize: '1.5rem', marginBottom: '20px' }}>{q.question}</h2>
