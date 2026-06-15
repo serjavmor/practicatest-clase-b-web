@@ -1,0 +1,135 @@
+:root {
+  --duo-green: #58cc02;
+  --duo-green-shadow: #46a302;
+  --duo-red: #ff4b4b;
+  --duo-red-shadow: #ea2b2b;
+  --duo-blue: #1cb0f6;
+  --duo-blue-shadow: #1899d6;
+  --duo-gray: #e5e5e5;
+  --duo-gray-shadow: #b7b7b7;
+  --duo-bg: #ffffff;
+  --duo-text: #3c3c3c;
+  --font-main: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--duo-bg);
+  color: var(--duo-text);
+  line-height: 1.5;
+  overflow-x: hidden;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3D Button Styles */
+.duo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  user-select: none;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.duo-btn:active:not(:disabled) {
+  transform: translateY(4px);
+}
+
+.duo-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--duo-green);
+  color: white;
+  box-shadow: 0 4px 0 var(--duo-green-shadow);
+}
+.btn-primary:active:not(:disabled) {
+  box-shadow: 0 0px 0 var(--duo-green-shadow);
+}
+
+.btn-blue {
+  background-color: var(--duo-blue);
+  color: white;
+  box-shadow: 0 4px 0 var(--duo-blue-shadow);
+}
+.btn-blue:active:not(:disabled) {
+  box-shadow: 0 0px 0 var(--duo-blue-shadow);
+}
+
+.btn-red {
+  background-color: var(--duo-red);
+  color: white;
+  box-shadow: 0 4px 0 var(--duo-red-shadow);
+}
+.btn-red:active:not(:disabled) {
+  box-shadow: 0 0px 0 var(--duo-red-shadow);
+}
+
+.btn-option {
+  background-color: white;
+  color: var(--duo-text);
+  border: 2px solid var(--duo-gray);
+  box-shadow: 0 4px 0 var(--duo-gray-shadow);
+  justify-content: flex-start;
+}
+.btn-option:active:not(:disabled) {
+  box-shadow: 0 0px 0 var(--duo-gray-shadow);
+}
+
+.btn-option.selected {
+  background-color: #ddf4ff;
+  border-color: var(--duo-blue);
+  box-shadow: 0 4px 0 var(--duo-blue-shadow);
+  color: var(--duo-blue);
+}
+
+.btn-option.correct {
+  background-color: #d7ffb8;
+  border-color: var(--duo-green);
+  box-shadow: 0 4px 0 var(--duo-green-shadow);
+  color: var(--duo-green-shadow);
+}
+
+.btn-option.incorrect {
+  background-color: #ffdfdf;
+  border-color: var(--duo-red);
+  box-shadow: 0 4px 0 var(--duo-red-shadow);
+  color: var(--duo-red-shadow);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.feedback-panel {
+  animation: slideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
