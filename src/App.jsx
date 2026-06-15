@@ -13,6 +13,7 @@ import AlbumView from './components/pages/AlbumView'
 import useLives from './hooks/useLives'
 import useMissions from './hooks/useMissions'
 import useAlbum from './hooks/useAlbum'
+import useLeaderboard from './hooks/useLeaderboard'
 
 function App() {
   const [questions, setQuestions] = useState([])
@@ -29,6 +30,7 @@ function App() {
   const { lives, decreaseLife, addLife, refillLives, hasLives, maxLives, timeToNextLife } = useLives(currentUser?.id)
   const { missions, updateMissionProgress, claimReward } = useMissions(currentUser?.id)
   const { unlockedCards, checkUnlocks } = useAlbum(currentUser?.id)
+  const { leaderboard, updatePlayerStats } = useLeaderboard();
   
   const [view, setView] = useState('userSelect') // 'userSelect', 'onboarding', 'home', 'theory', 'test', 'recovery', 'shop', 'missions', 'album'
 
@@ -72,6 +74,11 @@ function App() {
         await localforage.setItem(`kuro_user_${currentUser.id}_test_index`, savedTestIndex)
         await localforage.setItem(`kuro_user_${currentUser.id}_xp`, xp)
         await localforage.setItem(`kuro_user_${currentUser.id}_inventory`, JSON.stringify(inventory))
+        
+        // Update Firebase Leaderboard
+        if (currentUser.uid) {
+          updatePlayerStats(currentUser.uid, currentUser.name, xp, currentLevel, 'kuro_profile.png');
+        }
       }
     }
     saveUserData()
@@ -99,8 +106,8 @@ function App() {
     return false;
   }
 
-  const handleUserSelect = (id, name, isNew) => {
-    setCurrentUser({ id, name });
+  const handleUserSelect = (profile, isNew) => {
+    setCurrentUser(profile);
     if (isNew) {
       setView('onboarding');
     } else {
@@ -211,6 +218,7 @@ function App() {
           xp={xp}
           currentLevel={currentLevel} 
           savedTestIndex={savedTestIndex}
+          leaderboard={leaderboard}
           onStart={startLevel} 
           timeToNextLife={timeToNextLife}
           onChangeUser={() => setView('userSelect')}

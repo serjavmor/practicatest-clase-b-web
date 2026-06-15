@@ -13,11 +13,14 @@ export default function UserSelectView({ onSelectUser }) {
       const p1 = await localforage.getItem('kuro_user_1_name');
       const p2 = await localforage.getItem('kuro_user_2_name');
       const p3 = await localforage.getItem('kuro_user_3_name');
+      const p1_uid = await localforage.getItem('kuro_user_1_uid') || 1;
+      const p2_uid = await localforage.getItem('kuro_user_2_uid') || 2;
+      const p3_uid = await localforage.getItem('kuro_user_3_uid') || 3;
       
       setProfiles([
-        { id: 1, name: p1 },
-        { id: 2, name: p2 },
-        { id: 3, name: p3 }
+        { id: 1, name: p1, uid: p1_uid },
+        { id: 2, name: p2, uid: p2_uid },
+        { id: 3, name: p3, uid: p3_uid }
       ]);
     }
     loadProfiles();
@@ -27,11 +30,19 @@ export default function UserSelectView({ onSelectUser }) {
     if (!profile.name) {
       const name = prompt(`Ingresa un nombre para el Perfil ${profile.id}:`);
       if (name && name.trim()) {
+        const uid = crypto.randomUUID();
         await localforage.setItem(`kuro_user_${profile.id}_name`, name.trim());
-        onSelectUser(profile.id, name.trim(), true); // isNew = true
+        await localforage.setItem(`kuro_user_${profile.id}_uid`, uid);
+        onSelectUser({ id: profile.id, name: name.trim(), uid: uid }, true); // isNew = true
       }
     } else {
-      onSelectUser(profile.id, profile.name, false); // isNew = false
+      let uid = await localforage.getItem(`kuro_user_${profile.id}_uid`);
+      if (!uid) {
+        // Upgrade existing profile
+        uid = crypto.randomUUID();
+        await localforage.setItem(`kuro_user_${profile.id}_uid`, uid);
+      }
+      onSelectUser({ id: profile.id, name: profile.name, uid: uid }, false); // isNew = false
     }
   };
 
@@ -44,8 +55,9 @@ export default function UserSelectView({ onSelectUser }) {
       await localforage.removeItem(`kuro_user_${id}_lives`);
       await localforage.removeItem(`kuro_user_${id}_last_lost`);
       await localforage.removeItem(`kuro_user_${id}_errors`);
+      await localforage.removeItem(`kuro_user_${id}_uid`);
       
-      setProfiles(prev => prev.map(p => p.id === id ? { ...p, name: null } : p));
+      setProfiles(prev => prev.map(p => p.id === id ? { ...p, name: null, uid: null } : p));
     }
   };
 

@@ -2,26 +2,7 @@ import React, { useState, useEffect } from 'react';
 import localforage from 'localforage';
 import TopBar from '../organisms/TopBar';
 
-export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, onStart, timeToNextLife, onChangeUser, onStudy, onShop, onMissions, hasCompletedMission, onAlbum }) {
-  
-  const [leaderboard, setLeaderboard] = useState([]);
-
-  useEffect(() => {
-    async function loadLeaderboard() {
-      const users = [];
-      for (let i = 1; i <= 3; i++) {
-        const name = await localforage.getItem(`kuro_user_${i}_name`);
-        if (name) {
-          const userXp = await localforage.getItem(`kuro_user_${i}_xp`) || 0;
-          users.push({ name, xp: parseInt(userXp, 10) });
-        }
-      }
-      users.sort((a, b) => b.xp - a.xp);
-      setLeaderboard(users);
-    }
-    loadLeaderboard();
-  }, [xp]); // Reload when current user xp changes
-  
+export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, leaderboard, onStart, timeToNextLife, onChangeUser, onStudy, onShop, onMissions, hasCompletedMission, onAlbum }) {
   const levels = Array.from({length: 10}, (_, i) => i + 1);
 
   return (
@@ -97,7 +78,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
                   <span style={{ marginRight: '10px', width: '36px', display: 'inline-block' }}>
                     {idx === 0 ? <img src="/images/kuro_medal_1.png" style={{width: '36px', mixBlendMode: 'multiply'}}/> : idx === 1 ? <img src="/images/kuro_medal_2.png" style={{width: '36px', mixBlendMode: 'multiply'}}/> : <img src="/images/kuro_medal_3.png" style={{width: '36px', mixBlendMode: 'multiply'}}/>}
                   </span>
-                  <span>{user.name}</span>
+                  <span>{user.nickname}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <img src="/images/kuro_coin.png" style={{ width: '30px', height: '30px', marginRight: '4px', mixBlendMode: 'multiply' }}/>

@@ -1,0 +1,10 @@
+{
+  "projectId": "practicatest-kuro-podium",
+  "appId": "1:828315360593:web:2ec269b1f162cde7940770",
+  "storageBucket": "practicatest-kuro-podium.firebasestorage.app",
+  "apiKey": "AIzaSyD67_xsYyTNvB_d5bYz5VXe7k4Pkb3W_mI",
+  "authDomain": "practicatest-kuro-podium.firebaseapp.com",
+  "messagingSenderId": "828315360593",
+  "projectNumber": "828315360593",
+  "version": "2"
+}
