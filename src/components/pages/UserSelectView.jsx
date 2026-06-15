@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import localforage from 'localforage';
 import { v4 as uuidv4 } from 'uuid'; // Fallback to uuid library
+import { deleteDoc, doc } from 'firebase/firestore';
+import { db } from '../../services/firebase';
 
 export default function UserSelectView({ onSelectUser }) {
   const [profiles, setProfiles] = useState([
@@ -50,6 +52,16 @@ export default function UserSelectView({ onSelectUser }) {
   const handleClear = async (e, id) => {
     e.stopPropagation();
     if(confirm(`¿Seguro que deseas borrar el progreso del Perfil ${id}?`)) {
+      const uid = await localforage.getItem(`kuro_user_${id}_uid`);
+      if (uid) {
+        try {
+          await deleteDoc(doc(db, 'leaderboard', uid));
+          console.log("Firebase sync: deleted user", uid);
+        } catch (error) {
+          console.error("Firebase sync: error deleting user", error);
+        }
+      }
+
       await localforage.removeItem(`kuro_user_${id}_name`);
       await localforage.removeItem(`kuro_user_${id}_level`);
       await localforage.removeItem(`kuro_user_${id}_streak`);
