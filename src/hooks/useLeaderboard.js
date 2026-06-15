@@ -19,10 +19,11 @@ export default function useLeaderboard() {
       snapshot.forEach((doc) => {
         topPlayers.push({ id: doc.id, ...doc.data() });
       });
+      console.log("Firebase sync: loaded leaderboard with", topPlayers.length, "players:", topPlayers);
       setLeaderboard(topPlayers);
       setLoading(false);
     }, (error) => {
-      console.error("Error fetching leaderboard:", error);
+      console.error("Firebase sync: Error fetching leaderboard:", error);
       setLoading(false);
     });
 
@@ -31,8 +32,12 @@ export default function useLeaderboard() {
 
   // Update current user's stats
   const updatePlayerStats = async (userId, nickname, xp, currentLevel, avatar) => {
-    if (!userId || !nickname) return;
+    if (!userId || !nickname) {
+      console.warn("Firebase sync: missing userId or nickname", userId, nickname);
+      return;
+    }
     try {
+      console.log("Firebase sync: writing to firestore for", userId);
       await setDoc(doc(db, 'leaderboard', userId), {
         nickname,
         xp,
@@ -40,8 +45,9 @@ export default function useLeaderboard() {
         avatar: avatar || 'kuro_profile.png',
         lastUpdate: new Date().toISOString()
       }, { merge: true });
+      console.log("Firebase sync: write successful!");
     } catch (error) {
-      console.error("Error updating player stats:", error);
+      console.error("Firebase sync: Error updating player stats:", error);
     }
   };
 

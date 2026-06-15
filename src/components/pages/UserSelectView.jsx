@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import localforage from 'localforage';
+import { v4 as uuidv4 } from 'uuid'; // Fallback to uuid library
 
 export default function UserSelectView({ onSelectUser }) {
   const [profiles, setProfiles] = useState([
@@ -30,7 +31,7 @@ export default function UserSelectView({ onSelectUser }) {
     if (!profile.name) {
       const name = prompt(`Ingresa un nombre para el Perfil ${profile.id}:`);
       if (name && name.trim()) {
-        const uid = crypto.randomUUID();
+        const uid = typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : uuidv4();
         await localforage.setItem(`kuro_user_${profile.id}_name`, name.trim());
         await localforage.setItem(`kuro_user_${profile.id}_uid`, uid);
         onSelectUser({ id: profile.id, name: name.trim(), uid: uid }, true); // isNew = true
@@ -39,7 +40,7 @@ export default function UserSelectView({ onSelectUser }) {
       let uid = await localforage.getItem(`kuro_user_${profile.id}_uid`);
       if (!uid) {
         // Upgrade existing profile
-        uid = crypto.randomUUID();
+        uid = typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : uuidv4();
         await localforage.setItem(`kuro_user_${profile.id}_uid`, uid);
       }
       onSelectUser({ id: profile.id, name: profile.name, uid: uid }, false); // isNew = false

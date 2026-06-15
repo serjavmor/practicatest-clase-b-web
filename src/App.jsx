@@ -77,7 +77,10 @@ function App() {
         
         // Update Firebase Leaderboard
         if (currentUser.uid) {
+          console.log("Firebase sync: updating stats for user", currentUser.uid, "xp:", xp, "level:", currentLevel);
           updatePlayerStats(currentUser.uid, currentUser.name, xp, currentLevel, 'kuro_profile.png');
+        } else {
+          console.warn("Firebase sync: skipped, no UID found for currentUser", currentUser);
         }
       }
     }
@@ -107,6 +110,7 @@ function App() {
   }
 
   const handleUserSelect = (profile, isNew) => {
+    console.log("User selected:", profile, "isNew:", isNew);
     setCurrentUser(profile);
     if (isNew) {
       setView('onboarding');
