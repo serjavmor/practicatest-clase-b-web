@@ -28,11 +28,11 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
       <TopBar lives={lives} streak={streak} xp={xp} timeToNextLife={timeToNextLife} />
       
-      <div style={{ position: 'absolute', top: '15px', right: '15px', display: 'flex', gap: '10px' }}>
-        <button onClick={onShop} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 10px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
-          <span style={{ marginRight: '5px' }}>🛒</span> Tienda
+      <div style={{ position: 'absolute', top: '15px', right: '15px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px', zIndex: 10 }}>
+        <button onClick={onShop} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
+          <img src="/images/kuro_shop.png" alt="Shop" style={{ width: '18px', height: '18px', marginRight: '6px' }} /> Tienda
         </button>
-        <button onClick={onChangeUser} style={{ background: 'transparent', border: 'none', color: 'var(--kuro-dark)', fontWeight: 'bold', textDecoration: 'underline' }}>Cambiar Perfil</button>
+        <button onClick={onChangeUser} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '4px 10px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', fontSize: '0.8rem' }}>👤 Cambiar</button>
       </div>
       
       {lives < 5 && (

@@ -119,7 +119,7 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
                 opacity: (showingFeedback || erasedOptions.length >= q.options.length - 1) ? 0.5 : 1
               }}
             >
-              <span style={{ marginRight: '5px' }}>🪄</span> {inventory.eraser}
+              <img src="/images/kuro_eraser.png" alt="Eraser" style={{ width: '18px', height: '18px', marginRight: '5px' }} /> {inventory.eraser}
             </button>
           )}
           {inventory?.shield > 0 && (
@@ -135,7 +135,7 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
                 opacity: showingFeedback && !shieldActive ? 0.5 : 1
               }}
             >
-              <span style={{ marginRight: '5px' }}>🛡️</span> {inventory.shield}
+              <img src="/images/kuro_shield.png" alt="Shield" style={{ width: '18px', height: '18px', marginRight: '5px' }} /> {inventory.shield}
             </button>
           )}
         </div>

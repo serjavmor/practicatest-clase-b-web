@@ -32,9 +32,9 @@ export default function TopBar({ lives, streak, xp, progress, timeToNextLife, on
       
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
         {xp !== undefined && (
-          <div style={{ display: 'flex', alignItems: 'center', color: '#ffb300', fontWeight: 'bold' }}>
-            <span style={{ fontSize: '1.5rem', marginRight: '4px' }}>🌟</span>
-            <span style={{ fontSize: '1.2rem' }}>{xp}</span>
+          <div style={{ display: 'flex', alignItems: 'center', backgroundColor: '#fff', borderRadius: '15px', padding: '5px 10px', boxShadow: '0 2px 0 #e0e0e0' }}>
+            <img src="/images/kuro_coin.png" alt="Kuro Coin" style={{ width: '20px', height: '20px', marginRight: '5px' }} />
+            <span style={{ fontWeight: 'bold', color: '#ffb300', fontSize: '1.1rem' }}>{xp}</span>
           </div>
         )}
         <div style={{ display: 'flex', alignItems: 'center', color: '#ff9600', fontWeight: 'bold' }}>
