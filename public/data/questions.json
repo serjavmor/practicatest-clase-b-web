@@ -19,7 +19,8 @@
         "text": "Consultar con su mecánico lo antes posible.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Si al frenar el vehículo se desvía, suele ser un problema de calibración o falla en los frenos de ese lado, lo cual debe ser inspeccionado por un especialista para evitar accidentes graves por pérdida de control."
   },
   {
     "id": 2,
@@ -41,7 +42,8 @@
         "text": "Neumáticos con presión de aire inadecuada.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Los frenos mal ajustados provocan que una rueda frene más que la otra, generando una fuerza desigual que tira la dirección hacia un lado. Es una de las fallas más comunes indicadas en el manual."
   },
   {
     "id": 3,
@@ -63,7 +65,8 @@
         "text": "Detenerse e investigar el problema.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El fuerte olor a gasolina puede indicar una fuga en el sistema de combustible, lo cual representa un altísimo riesgo de incendio o explosión. La instrucción directa del manual es detenerse inmediatamente e investigar."
   },
   {
     "id": 4,
@@ -85,7 +88,8 @@
         "text": "Revisando su vehículo ante cualquier olor a gas olina extraño.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Para prevenir incendios, el Libro del Nuevo Conductor destaca que la medida más preventiva es estar atento a fugas o anomalías, siendo el olor a gasolina la señal más evidente de que algo anda mal con el estanque o mangueras."
   },
   {
     "id": 5,
@@ -107,7 +111,8 @@
         "text": "Para poder caminar sin problemas en el caso que  necesite solicitar ayuda.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El uso de calzado adecuado es fundamental porque garantiza la sensibilidad y el agarre en los pedales (freno, embrague y acelerador), evitando que el pie resbale en una situación de emergencia."
   },
   {
     "id": 6,

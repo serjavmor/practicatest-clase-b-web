@@ -90,9 +90,10 @@ export default function TestView({ questions, lives, setLives, streak, setStreak
           width: '100%', 
           backgroundColor: isCorrect ? '#d7ffb8' : '#ffdfdf',
           padding: '20px',
-          borderTop: `2px solid ${isCorrect ? 'var(--duo-green)' : 'var(--duo-red)'}`
+          borderTop: `2px solid ${isCorrect ? 'var(--duo-green)' : 'var(--duo-red)'}`,
+          boxShadow: '0 -4px 10px rgba(0,0,0,0.1)'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
             <img 
               src={isCorrect ? "/images/kuromi_celebrate_1781483026283.png" : "/images/kuromi_sad_1781483036083.png"} 
               style={{ height: '80px', marginRight: '20px' }} 
@@ -102,6 +103,21 @@ export default function TestView({ questions, lives, setLives, streak, setStreak
               {isCorrect ? "¡Excelente!" : "Incorrecto..."}
             </h2>
           </div>
+          
+          {!isCorrect && q.feedback && (
+            <div style={{ 
+              backgroundColor: 'white', 
+              padding: '12px', 
+              borderRadius: '12px', 
+              marginBottom: '15px',
+              borderLeft: '4px solid var(--duo-red)',
+              fontSize: '0.9rem',
+              color: '#555'
+            }}>
+              <strong>💡 Según el Libro del Conductor:</strong> {q.feedback}
+            </div>
+          )}
+
           <button 
             className={`duo-btn ${isCorrect ? 'btn-primary' : 'btn-red'}`} 
             onClick={handleNext}
