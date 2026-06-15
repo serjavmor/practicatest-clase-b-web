@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TopBar from './TopBar';
 import useAudio from '../hooks/useAudio';
 
-export default function TestView({ questions, lives, decreaseLife, streak, setStreak, initialIndex = 0, onPause, onFinish, timeToNextLife, onFailQuestion }) {
+export default function TestView({ questions, lives, decreaseLife, streak, setStreak, xp, earnXp, initialIndex = 0, onPause, onFinish, timeToNextLife, onFailQuestion }) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showingFeedback, setShowingFeedback] = useState(false);
@@ -25,6 +25,7 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
     // Reproducir sonido
     if (correct) {
       playCorrect();
+      if (earnXp) earnXp(10);
     } else {
       playIncorrect();
       if (onFailQuestion) onFailQuestion(q);
@@ -69,6 +70,7 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
       <TopBar 
         lives={lives} 
         streak={streak} 
+        xp={xp}
         progress={progress} 
         timeToNextLife={timeToNextLife} 
         onExit={onPause ? () => onPause(currentIndex) : null}

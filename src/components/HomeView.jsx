@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import localforage from 'localforage';
 import TopBar from './TopBar';
 
-export default function HomeView({ lives, streak, currentLevel, savedTestIndex, onStart, timeToNextLife, onChangeUser, onStudy }) {
+export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, onStart, timeToNextLife, onChangeUser, onStudy }) {
+  
+  const [leaderboard, setLeaderboard] = useState([]);
+
+  useEffect(() => {
+    async function loadLeaderboard() {
+      const users = [];
+      for (let i = 1; i <= 3; i++) {
+        const name = await localforage.getItem(`kuro_user_${i}_name`);
+        if (name) {
+          const userXp = await localforage.getItem(`kuro_user_${i}_xp`) || 0;
+          users.push({ name, xp: parseInt(userXp, 10) });
+        }
+      }
+      users.sort((a, b) => b.xp - a.xp);
+      setLeaderboard(users);
+    }
+    loadLeaderboard();
+  }, [xp]); // Reload when current user xp changes
   
   const levels = Array.from({length: 10}, (_, i) => i + 1);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
-      <TopBar lives={lives} streak={streak} timeToNextLife={timeToNextLife} />
+      <TopBar lives={lives} streak={streak} xp={xp} timeToNextLife={timeToNextLife} />
       <button onClick={onChangeUser} style={{ position: 'absolute', top: '15px', right: '15px', background: 'transparent', border: 'none', color: 'var(--kuro-dark)', fontWeight: 'bold', textDecoration: 'underline' }}>Cambiar Perfil</button>
       
       {lives < 5 && (
@@ -40,7 +59,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
         <h1 style={{ color: 'var(--duo-text)', fontSize: '2rem', marginBottom: '15px' }}>Camino al Examen</h1>
 
         {/* Badges Section */}
-        <div style={{ display: 'flex', gap: '15px', marginBottom: '20px' }}>
+        <div style={{ display: 'flex', gap: '15px', marginBottom: '10px' }}>
           <div style={{ 
             display: 'flex', flexDirection: 'column', alignItems: 'center', 
             opacity: streak >= 3 ? 1 : 0.4, filter: streak >= 3 ? 'none' : 'grayscale(100%)' 
@@ -65,6 +84,45 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
             <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Leyenda</span>
           </div>
         </div>
+
+        {/* Leaderboard Podio */}
+        {leaderboard.length > 0 && (
+          <div style={{
+            backgroundColor: '#fff',
+            borderRadius: '16px',
+            padding: '10px 15px',
+            width: '100%',
+            maxWidth: '300px',
+            boxShadow: '0 4px 0 var(--duo-gray)',
+            marginBottom: '20px'
+          }}>
+            <h3 style={{ margin: '0 0 10px 0', color: 'var(--kuro-dark)', fontSize: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ marginRight: '5px' }}>🏆</span> Podio de la Casa
+            </h3>
+            {leaderboard.map((user, idx) => (
+              <div key={idx} style={{ 
+                display: 'flex', 
+                justifyContent: 'space-between', 
+                alignItems: 'center',
+                padding: '5px 0',
+                borderBottom: idx < leaderboard.length - 1 ? '1px solid #f0f0f0' : 'none',
+                fontWeight: idx === 0 ? 'bold' : 'normal',
+                color: idx === 0 ? '#ffb300' : 'var(--kuro-dark)'
+              }}>
+                <div>
+                  <span style={{ marginRight: '10px', width: '20px', display: 'inline-block' }}>
+                    {idx === 0 ? '🥇' : idx === 1 ? '🥈' : '🥉'}
+                  </span>
+                  <span>{user.name}</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <span style={{ marginRight: '4px' }}>🌟</span>
+                  <span>{user.xp}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
 
       </div>
 

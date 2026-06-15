@@ -18,6 +18,7 @@ function App() {
   const [streak, setStreak] = useState(0)
   const [failedQuestions, setFailedQuestions] = useState([])
   const [savedTestIndex, setSavedTestIndex] = useState(0)
+  const [xp, setXp] = useState(0)
   
   const { lives, decreaseLife, addLife, refillLives, hasLives, maxLives, timeToNextLife } = useLives(currentUser?.id)
   
@@ -39,11 +40,13 @@ function App() {
         const savedStreak = await localforage.getItem(`kuro_user_${currentUser.id}_streak`)
         const savedErrors = await localforage.getItem(`kuro_user_${currentUser.id}_errors`)
         const savedIndex = await localforage.getItem(`kuro_user_${currentUser.id}_test_index`)
+        const savedXp = await localforage.getItem(`kuro_user_${currentUser.id}_xp`)
         
         setCurrentLevel(savedLevel ? parseInt(savedLevel, 10) : 1)
         setStreak(savedStreak ? parseInt(savedStreak, 10) : 0)
         setFailedQuestions(savedErrors ? JSON.parse(savedErrors) : [])
         setSavedTestIndex(savedIndex ? parseInt(savedIndex, 10) : 0)
+        setXp(savedXp ? parseInt(savedXp, 10) : 0)
       }
     }
     loadUserData()
@@ -57,10 +60,15 @@ function App() {
         await localforage.setItem(`kuro_user_${currentUser.id}_streak`, streak)
         await localforage.setItem(`kuro_user_${currentUser.id}_errors`, JSON.stringify(failedQuestions))
         await localforage.setItem(`kuro_user_${currentUser.id}_test_index`, savedTestIndex)
+        await localforage.setItem(`kuro_user_${currentUser.id}_xp`, xp)
       }
     }
     saveUserData()
-  }, [currentLevel, streak, failedQuestions, savedTestIndex, currentUser])
+  }, [currentLevel, streak, failedQuestions, savedTestIndex, xp, currentUser])
+
+  const earnXp = (amount) => {
+    setXp(prev => prev + amount);
+  }
 
   const handleUserSelect = (id, name, isNew) => {
     setCurrentUser({ id, name });
@@ -99,6 +107,7 @@ function App() {
   const finishLevel = (passed) => {
     setSavedTestIndex(0) // Reset saved progress on finish
     if (passed) {
+      earnXp(50)
       confetti({
         particleCount: 150,
         spread: 70,
@@ -153,6 +162,7 @@ function App() {
         <HomeView 
           lives={lives} 
           streak={streak} 
+          xp={xp}
           currentLevel={currentLevel} 
           savedTestIndex={savedTestIndex}
           onStart={startLevel} 
@@ -174,6 +184,8 @@ function App() {
           decreaseLife={decreaseLife}
           streak={streak}
           setStreak={setStreak}
+          xp={xp}
+          earnXp={earnXp}
           initialIndex={savedTestIndex}
           onPause={handlePause}
           onFinish={finishLevel} 
@@ -191,6 +203,7 @@ function App() {
           lives={lives}
           maxLives={maxLives}
           onEarnLife={addLife}
+          earnXp={earnXp}
           onExit={() => setView('home')}
         />
       )}

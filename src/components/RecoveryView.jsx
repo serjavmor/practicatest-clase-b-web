@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useAudio from '../hooks/useAudio';
-export default function RecoveryView({ questions, lives, maxLives, onEarnLife, onExit }) {
+export default function RecoveryView({ questions, lives, maxLives, onEarnLife, earnXp, onExit }) {
   const [cardsRead, setCardsRead] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(10);
   const [currentQ, setCurrentQ] = useState(null);
@@ -42,6 +42,7 @@ export default function RecoveryView({ questions, lives, maxLives, onEarnLife, o
     if (newCardsRead >= CARDS_PER_LIFE) {
       playReward();
       onEarnLife();
+      if (earnXp) earnXp(5);
       setCardsRead(0);
     } else {
       setCardsRead(newCardsRead);
