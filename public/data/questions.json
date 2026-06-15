@@ -134,7 +134,8 @@
         "text": "Un asiento con apoya-cabeza ajustado en forma a propiada.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Los apoyacabezas están diseñados específicamente para evitar el 'efecto latigazo' cervical (esguince cervical) en caso de sufrir una colisión por alcance (por detrás)."
   },
   {
     "id": 7,
@@ -156,7 +157,8 @@
         "text": "Freno de mano puesto.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El manual indica que todas las luces rojas en el panel son advertencias críticas de peligro o fallas mayores que requieren detener el vehículo y revisar el manual del fabricante de inmediato."
   },
   {
     "id": 8,
@@ -178,7 +180,8 @@
         "text": "Cuando los neumáticos están calientes.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La presión de los neumáticos siempre debe revisarse cuando los neumáticos están fríos (antes de iniciar un viaje largo), ya que el calor expande el aire y da una lectura engañosa."
   },
   {
     "id": 9,
@@ -196,7 +199,8 @@
         "text": "En cualquier momento, porque da igual que los n eumáticos estén fríos o calientes.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Se debe revisar cuando los neumáticos están fríos para obtener la medida real. Una presión incorrecta reduce la adherencia y aumenta el consumo de combustible."
   },
   {
     "id": 10,
@@ -218,7 +222,8 @@
         "text": "El líquido refrigerante.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Un nivel bajo del líquido de frenos es extremadamente peligroso y puede causar la pérdida total de capacidad de frenado, ocasionando accidentes inminentes."
   },
   {
     "id": 11,
@@ -240,7 +245,8 @@
         "text": "Frenando suavemente, luego un poco más fuerte c uando comienza a detenerse y después aflojando de a poco el freno antes de \ndetenerse.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "La forma más segura de frenar en condiciones normales es presionar el freno suave y gradualmente. El frenado brusco puede bloquear las ruedas y provocar derrapes."
   },
   {
     "id": 12,
@@ -262,7 +268,8 @@
         "text": "Cuando sus señalizadores de viraje no estén fun cionando.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las luces intermitentes de advertencia de peligro (gatos) solo deben usarse cuando el vehículo está detenido obstruyendo el tránsito, por falla mecánica, o para advertir un peligro inminente adelante."
   },
   {
     "id": 13,
@@ -284,7 +291,8 @@
         "text": "Para advertir a los demás que usted tiene prisa .",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Su uso está restringido exclusivamente para advertir a otros conductores que tu vehículo se encuentra temporalmente detenido y representa un obstáculo en la vía."
   },
   {
     "id": 14,
@@ -306,7 +314,8 @@
         "text": "Cuando esté en pana y obstaculizando el tránsit o.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Como indica el manual, las luces de peligro solo te autorizan a advertir que eres un obstáculo temporal (ej: falla, accidente o remolque corto), no te dan prioridad de paso."
   },
   {
     "id": 15,
@@ -328,7 +337,8 @@
         "text": "Amortiguadores gastados.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Si el vehículo rebota u oscila al empujarlo hacia abajo, significa que los amortiguadores están desgastados o defectuosos y han perdido su capacidad de absorber impactos."
   },
   {
     "id": 16,
@@ -350,7 +360,8 @@
         "text": "Para evitar que el automóvil se incline hacia u n lado.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Mantener la presión correcta garantiza la máxima adherencia, previene el desgaste irregular o prematuro del neumático y reduce drásticamente el riesgo de un reventón a alta velocidad."
   },
   {
     "id": 17,
@@ -372,7 +383,8 @@
         "text": "Conducción en marchas altas.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El consumo de combustible se eleva drásticamente al conducir en marchas bajas por mucho tiempo, acelerar bruscamente, o mantener los neumáticos desinflados."
   },
   {
     "id": 18,
@@ -394,7 +406,8 @@
         "text": "1.0 mm",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Por ley en Chile, y por extrema seguridad para evitar el 'aquaplaning' (pérdida de control con agua), los surcos de los neumáticos nunca deben tener una profundidad menor a 1,6 mm."
   },
   {
     "id": 19,
@@ -420,7 +433,8 @@
         "text": "Girar el volante hacia el mismo lado hacia el c ual se desvía la cola del vehículo.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Si se revienta un neumático trasero, debes sujetar el volante con firmeza para mantener la trayectoria y NO frenar bruscamente; debes dejar que el vehículo pierda velocidad por sí solo."
   },
   {
     "id": 20,
@@ -446,7 +460,8 @@
         "text": "Sostener el volante con una mano advirtiendo co n la otra a los demás que usted se detendrá.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Ante un reventón delantero, sujeta el volante con fuerza (ya que tenderá a girar violentamente) y no pises el freno a fondo, permite que el freno de motor disminuya la velocidad suavemente."
   },
   {
     "id": 21,
@@ -468,7 +483,8 @@
         "text": "Lavar los parabrisas",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En una estación de servicio (bomba de bencina) nunca se debe fumar, encender fuego, ni contestar el teléfono celular, debido al altísimo riesgo de ignición de los vapores inflamables."
   },
   {
     "id": 22,
@@ -490,7 +506,8 @@
         "text": "reduce el control del conductor.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Desenganchar el motor (conducir en neutro o pisando el embrague) elimina el freno de motor, haciendo que el vehículo tome velocidad sin control y sobrecargando los frenos."
   },
   {
     "id": 23,
@@ -512,7 +529,8 @@
         "text": "Porque el motor funcionará más rápido.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Circular con el motor desenganchado (en neutro) hace que pierdas el control del vehículo, ya que quitas la tracción a las ruedas y dependes 100% de los frenos."
   },
   {
     "id": 24,
@@ -538,7 +556,8 @@
         "text": "Porque se daña el motor.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Al ir cuesta abajo desenganchado, se anula el 'freno de motor'. Esto obliga a abusar de los frenos de pie, los cuales se pueden sobrecalentar y fallar (corte de frenos)."
   },
   {
     "id": 25,
@@ -560,7 +579,8 @@
         "text": "Porque reduce el agarre de los neumáticos.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Mantener presionado el embrague de forma innecesaria (como al estar detenido en un semáforo) desgasta prematuramente el mecanismo de roce del embrague y cansa tu pierna."
   },
   {
     "id": 26,
@@ -582,7 +602,8 @@
         "text": "Impiden que los asientos se reclinen.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Los seguros de niños impiden que las puertas traseras puedan ser abiertas desde el interior del vehículo, protegiendo a los menores de una apertura accidental en movimiento."
   },
   {
     "id": 27,
@@ -604,7 +625,8 @@
         "text": "hace sentir la dirección más pesada. \n \n \n \n28.\n- En un pavimento mojado, ¿influye el estado de los  neumáticos en la distancia de frenado de su vehículo? \n \n Marque una respuesta",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Una presión baja en las ruedas delanteras incrementa la resistencia al rodado, lo que hace que la dirección se sienta mucho más 'pesada' o difícil de girar."
   },
   {
     "id": 29,
@@ -626,7 +648,8 @@
         "text": "Una temperatura del motor demasiado alta puede deberse a que se haya roto la correa de la bomba de agua.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El Libro del Conductor está lleno de afirmaciones de seguridad vial orientadas a mantener la prudencia y revisión constante de los sistemas del vehículo."
   },
   {
     "id": 30,
@@ -648,7 +671,8 @@
         "text": "Los vapores de la gasolina son inocuos.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Siempre se debe priorizar la seguridad, ajustando la velocidad a las condiciones del clima y manteniendo una distancia prudente con el vehículo que antecede."
   },
   {
     "id": 31,
@@ -674,7 +698,8 @@
         "text": "Lo mejor es que el pedal de freno se sienta elá stico.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La prudencia del conductor es el factor principal para evitar accidentes. Las condiciones del entorno (lluvia, noche) exigen disminuir la velocidad reglamentaria."
   },
   {
     "id": 32,
@@ -696,7 +721,8 @@
         "text": "Independientemente de la ubicación de las rueda s de tracción, para una mejor estabilidad del vehíc ulo los mejores neumáticos \ndeben ir adelante.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En condiciones adversas (lluvia, nieve o hielo) la adherencia de los neumáticos disminuye drásticamente, obligando a triplicar la distancia de seguimiento."
   },
   {
     "id": 33,
@@ -718,7 +744,8 @@
         "text": "Usar cinturón de seguridad es más necesario cua ndo se conduce en carreteras.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El consumo de alcohol, por muy bajo que sea, afecta la percepción, el tiempo de reacción y la toma de decisiones, estando estrictamente prohibido al volante."
   },
   {
     "id": 34,
@@ -740,7 +767,8 @@
         "text": "Un cinturón de seguridad bien tensado brinda ma yor seguridad que uno menos tensado.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El conductor es siempre el responsable de que todos los pasajeros de su vehículo utilicen el cinturón de seguridad de forma correcta."
   },
   {
     "id": 35,
@@ -762,7 +790,8 @@
         "text": "Los vidrios.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Es vital mantener siempre limpios los vidrios, espejos y focos del vehículo para garantizar tu visibilidad (ver) y que los demás te vean a ti."
   },
   {
     "id": 36,
@@ -784,7 +813,8 @@
         "text": "78 metros",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Al duplicar la velocidad, la distancia de frenado no se duplica, ¡se cuadruplica! Por ende, la distancia de detención será mucho mayor de lo que el conductor suele calcular."
   },
   {
     "id": 37,
@@ -806,7 +836,8 @@
         "text": "Se cuadruplica la distancia de frenado.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Es falso creer que la energía se duplica. Al pasar de 30 km/h a 60 km/h, la velocidad se multiplicó por 2, por lo tanto la energía cinética y distancia de frenado se multiplican por 4 (2 al cuadrado)."
   },
   {
     "id": 38,
@@ -828,7 +859,8 @@
         "text": "El conductor del auto azul estima que dicho pun to será el 3.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Nuestro cerebro tiene dificultades para estimar el punto de encuentro cuando los vehículos vienen en contra, por lo que suele ocurrir una colisión mucho antes de lo imaginado."
   },
   {
     "id": 39,
@@ -850,7 +882,8 @@
         "text": "Más de 2000 metros.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Un tren circulando a 100 km/h tiene tanta masa que su inercia le exige entre 800 a 1000 metros (casi 1 kilómetro) para lograr detenerse por completo tras aplicar los frenos."
   },
   {
     "id": 40,
@@ -872,7 +905,8 @@
         "text": "Tener neumáticos en muy buen estado.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Para evitar colisiones por alcance, lo más importante es mantener una 'distancia de seguridad' adecuada, aplicando la regla de los '3 segundos' respecto al auto delantero."
   },
   {
     "id": 41,
@@ -894,7 +928,8 @@
         "text": "unos 30 metros",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "A 50 km/h, tu distancia de reacción es aprox 15m y la de frenado otros 10-15m, por lo que detenerse por completo requerirá cerca de 25 a 30 metros en condiciones óptimas."
   },
   {
     "id": 42,
@@ -916,7 +951,8 @@
         "text": "Unos 120 metros",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "A 90 km/h en asfalto seco, la distancia de reacción (3x9=27m) más la de frenado (aprox 40-45m) suman una distancia total de detención mínima de 70 metros."
   },
   {
     "id": 43,
@@ -938,7 +974,8 @@
         "text": "Unos 25 metros",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "A 70 km/h, reaccionas en unos 21 metros y frenas en unos 25 metros. En total, tu vehículo recorrerá unos 45 a 50 metros antes de detenerse por completo."
   },
   {
     "id": 44,
@@ -960,7 +997,8 @@
         "text": "Dejar puesto el freno de mano.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Al estacionar en bajada, debes dejar puestas las ruedas delanteras giradas hacia la cuneta o acera, aplicar el freno de mano y dejar el vehículo enganchado en marcha atrás."
   },
   {
     "id": 45,
@@ -982,7 +1020,8 @@
         "text": "Presionar el pedal de embrague.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En una pendiente muy larga, el freno principal se puede calentar. Por ello, debes enganchar una marcha baja (como segunda o tercera) para que el motor retenga el vehículo."
   },
   {
     "id": 46,
@@ -1004,7 +1043,8 @@
         "text": "Girar hacia la derecha.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si al virar las ruedas traseras patinan (derrape) hacia la izquierda, debes girar el volante suavemente hacia la misma dirección del patinazo (hacia la izquierda) sin pisar el freno."
   },
   {
     "id": 47,
@@ -1026,7 +1066,8 @@
         "text": "Seleccionar un cambio bajo y evitar usar los fr enos.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Antes de comenzar a descender una pendiente pronunciada, debes poner una marcha baja para utilizar el enganche del motor y no calentar los frenos."
   },
   {
     "id": 48,
@@ -1048,7 +1089,8 @@
         "text": "Unos 15 metros",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "A 90 km/h, si multiplicas el primer dígito al cuadrado y lo divides a la mitad (9x9=81 / 2 = ~40), obtienes que la distancia aproximada de frenado es cercana a 40 metros."
   },
   {
     "id": 49,
@@ -1070,7 +1112,8 @@
         "text": "Aplicar su freno de mano.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Para corregir un 'coletazo' (sobreviraje) se debe soltar suavemente el acelerador, NO pisar el freno, y girar el volante hacia el mismo lado hacia el que se desliza la cola."
   },
   {
     "id": 50,
@@ -1096,7 +1139,8 @@
         "text": "La hora del día.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La distancia de frenado es afectada drásticamente por la velocidad, el estado de la calzada (seca/mojada), el desgaste de los neumáticos, la eficiencia de los frenos y el peso del auto."
   },
   {
     "id": 51,
@@ -1118,7 +1162,8 @@
         "text": "Unos 30 metros.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El tiempo de reacción promedio es 1 segundo. A 70 km/h, avanzas a casi 20 metros por segundo. Por lo tanto, recorrerás unos 21 metros antes de siquiera tocar el freno."
   },
   {
     "id": 52,
@@ -1140,7 +1185,8 @@
         "text": "2 segundos",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El Libro del Conductor establece que el tiempo de reacción promedio de un conductor alerta y sano frente a un imprevisto es de aproximadamente 1 segundo."
   },
   {
     "id": 53,
@@ -1162,7 +1208,8 @@
         "text": "Muchos conductores muestran deficiencias en su madurez personal.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Los conductores jóvenes, a pesar de tener reflejos físicos rápidos, carecen de la experiencia de conducción para anticipar riesgos, por lo que estadísticamente participan en más accidentes."
   },
   {
     "id": 54,
@@ -1184,7 +1231,8 @@
         "text": "El comportamiento que tiene una persona como co nductor muestra cuánto ha avanzado en el desarrollo de su moral.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El desarrollo moral y la madurez se reflejan al volante cuando el conductor deja de ser impulsivo o competitivo y respeta solidariamente el espacio y la vida de los demás usuarios."
   },
   {
     "id": 55,
@@ -1206,7 +1254,8 @@
         "text": "Cuenta con que otros pueden cometer errores y l os acepta.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Un alto grado de madurez personal se evidencia en un conductor que mantiene la calma bajo presión, no responde a provocaciones y asume sus errores con responsabilidad."
   },
   {
     "id": 56,
@@ -1228,7 +1277,8 @@
         "text": "En situaciones reales, que requieren reacciones  complejas, los conductores experimentados reaccionan en un tiempo más corto \nque los jóvenes inexpertos.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Los conductores inexpertos reaccionan igual o más rápido mecánicamente que alguien de 40 años, pero tardan más tiempo en 'detectar' el peligro oculto debido a su falta de experiencia práctica."
   },
   {
     "id": 57,
