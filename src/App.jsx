@@ -8,7 +8,6 @@ import useLives from './hooks/useLives'
 
 function App() {
   const [questions, setQuestions] = useState([])
-  const [lessons, setLessons] = useState([])
   
   const [currentUser, setCurrentUser] = useState(null)
   
@@ -26,11 +25,6 @@ function App() {
       .then(res => res.json())
       .then(data => setQuestions(data))
       .catch(err => console.error("Error loading questions", err))
-
-    fetch('/data/lessons.json')
-      .then(res => res.json())
-      .then(data => setLessons(data))
-      .catch(err => console.error("Error loading lessons", err))
   }, [])
 
   // Cargar estado cuando se selecciona un usuario
@@ -87,9 +81,19 @@ function App() {
   }
 
   const getLessonForLevel = () => {
-    if (lessons.length === 0) return null
-    const index = (currentLevel - 1) % lessons.length
-    return lessons[index]
+    const levelQs = getQuestionsForLevel();
+    if (levelQs.length === 0) return null;
+    
+    // Seleccionar 5 conceptos clave de las preguntas que se van a evaluar en este nivel
+    const sample = levelQs.slice(0, 5);
+    
+    return {
+      title: `Píldoras del Nivel ${currentLevel}`,
+      slides: sample.map((q, i) => ({
+        title: `Concepto Clave ${i + 1}`,
+        content: q.feedback || q.options.find(o => o.is_correct)?.text
+      }))
+    };
   }
 
   return (
