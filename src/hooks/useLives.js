@@ -4,36 +4,44 @@ const MAX_LIVES = 5;
 const MINUTES_PER_LIFE = 15;
 const REGEN_MS = MINUTES_PER_LIFE * 60 * 1000;
 
-export default function useLives() {
+export default function useLives(userId) {
   const [lives, setLivesState] = useState(MAX_LIVES);
   const [lastLostTime, setLastLostTime] = useState(null);
   const [timeToNextLife, setTimeToNextLife] = useState(null);
 
   // Load from local storage
   useEffect(() => {
-    const savedLives = localStorage.getItem('kuro_lives');
-    const savedTime = localStorage.getItem('kuro_last_lost');
+    if (!userId) return;
+    const savedLives = localStorage.getItem(`kuro_user_${userId}_lives`);
+    const savedTime = localStorage.getItem(`kuro_user_${userId}_last_lost`);
 
     if (savedLives !== null) {
       setLivesState(parseInt(savedLives, 10));
+    } else {
+      setLivesState(MAX_LIVES); // default new user
     }
+    
     if (savedTime !== null) {
       setLastLostTime(parseInt(savedTime, 10));
+    } else {
+      setLastLostTime(null);
     }
-  }, []);
+  }, [userId]);
 
   // Save to local storage
   useEffect(() => {
-    localStorage.setItem('kuro_lives', lives);
+    if (!userId) return;
+    localStorage.setItem(`kuro_user_${userId}_lives`, lives);
     if (lastLostTime) {
-      localStorage.setItem('kuro_last_lost', lastLostTime);
+      localStorage.setItem(`kuro_user_${userId}_last_lost`, lastLostTime);
     } else {
-      localStorage.removeItem('kuro_last_lost');
+      localStorage.removeItem(`kuro_user_${userId}_last_lost`);
     }
-  }, [lives, lastLostTime]);
+  }, [lives, lastLostTime, userId]);
 
   // Timer loop for regenerating lives
   useEffect(() => {
+    if (!userId) return;
     let interval;
     
     if (lives < MAX_LIVES && lastLostTime) {
@@ -68,7 +76,7 @@ export default function useLives() {
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [lives, lastLostTime]);
+  }, [lives, lastLostTime, userId]);
 
   const decreaseLife = () => {
     if (lives > 0) {

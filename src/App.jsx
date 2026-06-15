@@ -1,18 +1,24 @@
 import { useState, useEffect } from 'react'
+import UserSelectView from './components/UserSelectView'
 import HomeView from './components/HomeView'
 import TheoryView from './components/TheoryView'
 import TestView from './components/TestView'
+import RecoveryView from './components/RecoveryView'
 import useLives from './hooks/useLives'
 
 function App() {
   const [questions, setQuestions] = useState([])
   const [lessons, setLessons] = useState([])
   
+  const [currentUser, setCurrentUser] = useState(null)
+  
   const [currentLevel, setCurrentLevel] = useState(1)
   const [streak, setStreak] = useState(0)
-  const { lives, decreaseLife, hasLives, timeToNextLife } = useLives()
+  const [failedQuestions, setFailedQuestions] = useState([])
   
-  const [view, setView] = useState('home') // 'home', 'theory', 'test'
+  const { lives, decreaseLife, refillLives, hasLives, timeToNextLife } = useLives(currentUser?.id)
+  
+  const [view, setView] = useState('userSelect') // 'userSelect', 'home', 'theory', 'test', 'recovery'
 
   useEffect(() => {
     // Load data
@@ -27,9 +33,37 @@ function App() {
       .catch(err => console.error("Error loading lessons", err))
   }, [])
 
+  // Cargar estado cuando se selecciona un usuario
+  useEffect(() => {
+    if (currentUser) {
+      const savedLevel = localStorage.getItem(`kuro_user_${currentUser.id}_level`)
+      const savedStreak = localStorage.getItem(`kuro_user_${currentUser.id}_streak`)
+      const savedErrors = localStorage.getItem(`kuro_user_${currentUser.id}_errors`)
+      
+      setCurrentLevel(savedLevel ? parseInt(savedLevel, 10) : 1)
+      setStreak(savedStreak ? parseInt(savedStreak, 10) : 0)
+      setFailedQuestions(savedErrors ? JSON.parse(savedErrors) : [])
+      
+      setView('home')
+    }
+  }, [currentUser])
+
+  // Guardar estado al cambiar
+  useEffect(() => {
+    if (currentUser) {
+      localStorage.setItem(`kuro_user_${currentUser.id}_level`, currentLevel)
+      localStorage.setItem(`kuro_user_${currentUser.id}_streak`, streak)
+      localStorage.setItem(`kuro_user_${currentUser.id}_errors`, JSON.stringify(failedQuestions))
+    }
+  }, [currentLevel, streak, failedQuestions, currentUser])
+
   const startLevel = () => {
     if (!hasLives) {
-      alert("¡Te quedaste sin vidas! Espera a que se recarguen.");
+      if (failedQuestions.length > 0) {
+        setView('recovery')
+      } else {
+        alert("¡Te quedaste sin vidas! Espera a que se recarguen.");
+      }
       return;
     }
     setView('theory')
@@ -49,6 +83,19 @@ function App() {
     }
   }
 
+  const handleRecover = () => {
+    // Premiar con 1 vida por haber estudiado
+    if (lives === 0) {
+      // Forzamos a setear 1 vida. Como decreaseLife baja 1, aquí usaremos refillLives si queremos llenar, 
+      // pero para dar 1 sola vida, podemos hackear localStorage o modificar useLives.
+      // Para no complicar useLives ahora mismo, simplemente le daremos MAX_LIVES o 1 vida recargada.
+      // Haremos un refillLives() completo como gran premio.
+      refillLives();
+    }
+    setFailedQuestions([]);
+    setView('home');
+  }
+
   const getQuestionsForLevel = () => {
     const batchSize = 10
     const start = (currentLevel - 1) * batchSize
@@ -64,6 +111,11 @@ function App() {
 
   return (
     <>
+      {view === 'userSelect' && (
+        <UserSelectView 
+          onSelectUser={(id, name) => setCurrentUser({ id, name })} 
+        />
+      )}
       {view === 'home' && (
         <HomeView 
           lives={lives} 
@@ -71,6 +123,7 @@ function App() {
           currentLevel={currentLevel} 
           onStart={startLevel} 
           timeToNextLife={timeToNextLife}
+          onChangeUser={() => setView('userSelect')}
         />
       )}
       {view === 'theory' && (
@@ -88,6 +141,17 @@ function App() {
           setStreak={setStreak}
           onFinish={finishLevel} 
           timeToNextLife={timeToNextLife}
+          onFailQuestion={(q) => setFailedQuestions(prev => {
+            // Evitar duplicados
+            if (prev.find(item => item.id === q.id)) return prev;
+            return [...prev, q];
+          })}
+        />
+      )}
+      {view === 'recovery' && (
+        <RecoveryView 
+          failedQuestions={failedQuestions}
+          onRecover={handleRecover}
         />
       )}
     </>

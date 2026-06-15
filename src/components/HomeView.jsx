@@ -1,13 +1,15 @@
 import React from 'react';
 import TopBar from './TopBar';
 
-export default function HomeView({ lives, streak, currentLevel, onStart, timeToNextLife }) {
+export default function HomeView({ lives, streak, currentLevel, onStart, timeToNextLife, onChangeUser }) {
   
   const levels = Array.from({length: 10}, (_, i) => i + 1);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
       <TopBar lives={lives} streak={streak} timeToNextLife={timeToNextLife} />
+      <button onClick={onChangeUser} style={{ position: 'absolute', top: '15px', right: '15px', background: 'transparent', border: 'none', color: 'var(--kuro-dark)', fontWeight: 'bold', textDecoration: 'underline' }}>Cambiar Perfil</button>
+      
       
       <div style={{ textAlign: 'center', padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <img 
