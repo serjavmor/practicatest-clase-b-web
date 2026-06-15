@@ -54,7 +54,7 @@ export default function TheoryView({ lesson, onComplete }) {
           className="kuromi-avatar"
         />
         <div className="chat-bubble">
-          ¡Hola! Lee con atención estas diapositivas antes de tu examen. 👇
+          ¡Hola! Lee con atención estas diapositivas antes de tu examen.
         </div>
       </div>
 
@@ -68,11 +68,11 @@ export default function TheoryView({ lesson, onComplete }) {
             <div className="carousel-slide" key={index}>
               <div className={`slide-card ${index === slides.length - 1 ? 'final-slide' : ''}`}>
                 <h2 className="slide-title">
-                  {index === slides.length - 1 ? '⭐ ' : '📘 '}{slide.title}
+                  {index === slides.length - 1 ? <img src="/images/kuro_coin.png" style={{width: '24px', verticalAlign: 'middle', mixBlendMode: 'multiply'}}/> : <img src="/images/kuro_book.png" style={{width: '24px', verticalAlign: 'middle', mixBlendMode: 'multiply'}}/>} {slide.title}
                 </h2>
                 <p className="slide-content">{slide.content}</p>
                 {index === slides.length - 1 && (
-                  <div className="success-icon">✨</div>
+                  <div className="success-icon"><img src="/images/kuro_sparkle.png" style={{width: '40px', mixBlendMode: 'multiply'}}/></div>
                 )}
               </div>
             </div>

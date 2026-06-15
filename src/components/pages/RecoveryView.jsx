@@ -154,7 +154,7 @@ export default function RecoveryView({ questions, lives, maxLives, onEarnLife, e
             borderRadius: '12px', 
             borderLeft: '4px solid var(--kuro-pink)' 
           }}>
-            <h4 style={{ margin: '0 0 10px 0', color: 'var(--kuro-pink)' }}>📖 Libro del Conductor:</h4>
+            <h4 style={{ margin: '0 0 10px 0', color: 'var(--kuro-pink)' }}><img src="/images/kuro_book.png" style={{width: '20px', verticalAlign: 'middle', marginRight: '5px', mixBlendMode: 'multiply'}}/>Libro del Conductor:</h4>
             <p style={{ margin: 0, color: 'var(--kuro-dark)', lineHeight: '1.5' }}>{currentQ.feedback}</p>
           </div>
         )}
