@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import localforage from 'localforage';
 import TopBar from '../organisms/TopBar';
 
-export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, onStart, timeToNextLife, onChangeUser, onStudy, onShop, onMissions, hasCompletedMission }) {
+export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, onStart, timeToNextLife, onChangeUser, onStudy, onShop, onMissions, hasCompletedMission, onAlbum }) {
   
   const [leaderboard, setLeaderboard] = useState([]);
 
@@ -34,6 +34,9 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
           {hasCompletedMission && (
             <span style={{ position: 'absolute', top: '-5px', right: '-5px', width: '15px', height: '15px', backgroundColor: 'var(--kuro-incorrect)', borderRadius: '50%', border: '2px solid white', animation: 'pulse-heartbeat 1s infinite' }} />
           )}
+        </button>
+        <button onClick={onAlbum} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
+          <img src="/images/kuro_album.png" alt="Album" style={{ width: '40px', height: '40px', marginRight: '6px', mixBlendMode: 'multiply' }} /> Álbum
         </button>
       </div>
 
