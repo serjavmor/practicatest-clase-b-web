@@ -31,14 +31,14 @@
 
 .progress-fill {
   height: 100%;
-  background-color: #1cb0f6;
+  background-color: var(--kuro-pink);
   transition: width 0.3s ease;
 }
 
 .progress-text {
   text-align: center;
   font-size: 0.9rem;
-  color: #afafaf;
+  color: var(--kuro-gray-shadow);
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -55,17 +55,18 @@
   margin-right: 15px;
   mix-blend-mode: multiply; /* Soluciona mágicamente cualquier borde blanco */
   filter: contrast(1.1); /* Mejora el contraste después del blend */
+  animation: float 3s ease-in-out infinite;
 }
 
 .chat-bubble {
-  background-color: #f0f0f0;
-  color: #4b4b4b;
+  background-color: #ffffff;
+  color: var(--kuro-dark);
   padding: 12px 15px;
   border-radius: 20px;
   border-bottom-left-radius: 0;
   font-size: 1rem;
   font-weight: bold;
-  box-shadow: 0 4px 0 #d5d5d5;
+  box-shadow: 0 4px 0 var(--kuro-gray);
   position: relative;
   flex: 1;
 }
@@ -99,9 +100,9 @@
 .slide-card {
   width: 100%;
   height: 100%;
-  background-color: #ddf4ff;
-  border: 2px solid #1cb0f6;
-  box-shadow: 0 6px 0 #1cb0f6;
+  background-color: white;
+  border: 3px solid var(--kuro-purple);
+  box-shadow: 0 8px 0 var(--kuro-purple);
   border-radius: 24px;
   padding: 30px 20px;
   box-sizing: border-box;
@@ -113,9 +114,9 @@
 }
 
 .final-slide {
-  background-color: #ffeff1;
-  border: 2px solid #ff4b4b;
-  box-shadow: 0 6px 0 #ff4b4b;
+  background-color: #fff0f6;
+  border: 3px solid var(--kuro-pink);
+  box-shadow: 0 8px 0 var(--kuro-pink);
 }
 
 .slide-title {

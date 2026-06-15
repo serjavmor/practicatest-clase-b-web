@@ -38,18 +38,18 @@ export default function HomeView({ lives, streak, currentLevel, onStart }) {
           
           const xOffset = level % 2 === 0 ? 50 : -50;
           
-          let bgColor = 'var(--duo-gray)';
-          let shadowColor = 'var(--duo-gray-shadow)';
-          let icon = '🔒';
+          let bgColor = 'var(--kuro-gray)';
+          let shadowColor = 'var(--kuro-gray-shadow)';
+          let icon = '🖤';
           
           if (isCompleted) {
-            bgColor = 'var(--duo-green)';
-            shadowColor = 'var(--duo-green-shadow)';
+            bgColor = 'var(--kuro-purple)';
+            shadowColor = 'var(--kuro-purple-shadow)';
             icon = '⭐';
           } else if (isCurrent) {
-            bgColor = 'var(--duo-blue)';
-            shadowColor = 'var(--duo-blue-shadow)';
-            icon = '▶️';
+            bgColor = 'var(--kuro-pink)';
+            shadowColor = 'var(--kuro-pink-shadow)';
+            icon = '💀'; /* Calavera de Kuromi para el nivel activo! */
           }
 
           return (
@@ -71,7 +71,9 @@ export default function HomeView({ lives, streak, currentLevel, onStart }) {
                 justifyContent: 'center',
                 fontSize: '2rem',
                 margin: '20px 0',
-                transition: 'transform 0.1s, box-shadow 0.1s'
+                transition: 'transform 0.1s, box-shadow 0.1s',
+                animation: isCurrent ? 'pulse-heartbeat 2s infinite' : 'none',
+                opacity: isLocked ? 0.8 : 1
               }}
               onMouseDown={(e) => {
                 if (isCurrent) {

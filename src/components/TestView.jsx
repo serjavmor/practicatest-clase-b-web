@@ -76,6 +76,7 @@ export default function TestView({ questions, lives, setLives, streak, setStreak
               key={idx}
               className={getButtonClass(option)}
               onClick={() => !showingFeedback && setSelectedOption(option)}
+              style={{ animationDelay: `${idx * 0.1}s`, animationFillMode: 'both', animationName: 'slideUp', animationDuration: '0.4s' }}
             >
               {option.text}
             </button>
@@ -88,18 +89,18 @@ export default function TestView({ questions, lives, setLives, streak, setStreak
           position: 'absolute', 
           bottom: 0, 
           width: '100%', 
-          backgroundColor: isCorrect ? '#d7ffb8' : '#ffdfdf',
+          backgroundColor: isCorrect ? '#e5ffed' : '#ebdff7',
           padding: '20px',
-          borderTop: `2px solid ${isCorrect ? 'var(--duo-green)' : 'var(--duo-red)'}`,
-          boxShadow: '0 -4px 10px rgba(0,0,0,0.1)'
+          borderTop: `3px solid ${isCorrect ? 'var(--kuro-correct)' : 'var(--kuro-incorrect)'}`,
+          boxShadow: '0 -4px 15px rgba(0,0,0,0.1)'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
             <img 
               src={isCorrect ? "/images/kuromi_celebrate_1781483026283.png" : "/images/kuromi_sad_1781483036083.png"} 
-              style={{ height: '80px', marginRight: '20px', mixBlendMode: 'multiply', filter: 'contrast(1.1)' }} 
+              style={{ height: '80px', marginRight: '20px', mixBlendMode: 'multiply', filter: 'contrast(1.1)', animation: 'float 2s infinite' }} 
               alt="Kuromi"
             />
-            <h2 style={{ color: isCorrect ? 'var(--duo-green-shadow)' : 'var(--duo-red-shadow)' }}>
+            <h2 style={{ color: isCorrect ? 'var(--kuro-correct-shadow)' : 'var(--kuro-incorrect-shadow)' }}>
               {isCorrect ? "¡Excelente!" : "Incorrecto..."}
             </h2>
           </div>
@@ -108,25 +109,26 @@ export default function TestView({ questions, lives, setLives, streak, setStreak
             <div style={{ 
               backgroundColor: 'white', 
               padding: '12px', 
-              borderRadius: '12px', 
+              borderRadius: '16px', 
               marginBottom: '15px',
-              borderLeft: '4px solid var(--duo-red)',
+              borderLeft: '4px solid var(--kuro-incorrect)',
               fontSize: '0.9rem',
-              color: '#555'
+              color: 'var(--kuro-dark)',
+              fontWeight: 'bold'
             }}>
-              <strong>💡 Según el Libro del Conductor:</strong> {q.feedback}
+              <strong>🖤 Dato Kuromi:</strong> {q.feedback}
             </div>
           )}
 
           <button 
-            className={`duo-btn ${isCorrect ? 'btn-primary' : 'btn-red'}`} 
+            className={`duo-btn ${isCorrect ? 'btn-green' : 'btn-red'}`} 
             onClick={handleNext}
           >
             Continuar
           </button>
         </div>
       ) : (
-        <div style={{ padding: '20px', borderTop: '2px solid var(--duo-gray)', backgroundColor: 'white' }}>
+        <div style={{ padding: '20px', borderTop: '2px solid var(--kuro-gray)', backgroundColor: 'var(--kuro-bg)' }}>
           <button 
             className="duo-btn btn-primary" 
             onClick={handleCheck}
