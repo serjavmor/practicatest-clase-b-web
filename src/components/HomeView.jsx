@@ -32,7 +32,9 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
         <button onClick={onShop} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
           <img src="/images/kuro_shop.png" alt="Shop" style={{ width: '18px', height: '18px', marginRight: '6px' }} /> Tienda
         </button>
-        <button onClick={onChangeUser} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '4px 10px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', fontSize: '0.8rem' }}>👤 Cambiar</button>
+        <button onClick={onChangeUser} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '4px 10px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', fontSize: '0.8rem', display: 'flex', alignItems: 'center' }}>
+          <img src="/images/kuro_profile.png" alt="User" style={{ width: '16px', height: '16px', marginRight: '4px' }} /> Cambiar
+        </button>
       </div>
       
       {lives < 5 && (
@@ -70,7 +72,9 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
             display: 'flex', flexDirection: 'column', alignItems: 'center', 
             opacity: streak >= 3 ? 1 : 0.4, filter: streak >= 3 ? 'none' : 'grayscale(100%)' 
           }}>
-            <div style={{ fontSize: '2rem', animation: streak >= 3 ? 'pulse-heartbeat 1.5s infinite' : 'none' }}>🔥</div>
+            <div style={{ animation: streak >= 3 ? 'pulse-heartbeat 1.5s infinite' : 'none' }}>
+              <img src="/images/kuro_fire.png" alt="Fire" style={{ width: '32px', height: '32px' }} />
+            </div>
             <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Racha de 3</span>
           </div>
 
@@ -78,7 +82,9 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
             display: 'flex', flexDirection: 'column', alignItems: 'center', 
             opacity: currentLevel > 1 ? 1 : 0.4, filter: currentLevel > 1 ? 'none' : 'grayscale(100%)' 
           }}>
-            <div style={{ fontSize: '2rem' }}>🔰</div>
+            <div>
+              <img src="/images/kuro_badge_basic.png" alt="Badge" style={{ width: '32px', height: '32px' }} />
+            </div>
             <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Aprobado Básico</span>
           </div>
 
@@ -86,7 +92,9 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
             display: 'flex', flexDirection: 'column', alignItems: 'center', 
             opacity: currentLevel >= 10 ? 1 : 0.4, filter: currentLevel >= 10 ? 'none' : 'grayscale(100%)' 
           }}>
-            <div style={{ fontSize: '2rem' }}>👑</div>
+            <div>
+              <img src="/images/kuro_badge_legend.png" alt="Legend" style={{ width: '32px', height: '32px' }} />
+            </div>
             <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Leyenda</span>
           </div>
         </div>
@@ -103,7 +111,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
             marginBottom: '20px'
           }}>
             <h3 style={{ margin: '0 0 10px 0', color: 'var(--kuro-dark)', fontSize: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <span style={{ marginRight: '5px' }}>🏆</span> Podio de la Casa
+              <img src="/images/kuro_trophy.png" alt="Trophy" style={{ width: '20px', height: '20px', marginRight: '5px' }} /> Podio de la Casa
             </h3>
             {leaderboard.map((user, idx) => (
               <div key={idx} style={{ 
@@ -117,12 +125,12 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
               }}>
                 <div>
                   <span style={{ marginRight: '10px', width: '20px', display: 'inline-block' }}>
-                    {idx === 0 ? '🥇' : idx === 1 ? '🥈' : '🥉'}
+                    {idx === 0 ? <img src="/images/kuro_medal_1.png" style={{width: '20px'}}/> : idx === 1 ? <img src="/images/kuro_medal_2.png" style={{width: '20px'}}/> : <img src="/images/kuro_medal_3.png" style={{width: '20px'}}/>}
                   </span>
                   <span>{user.name}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <span style={{ marginRight: '4px' }}>🌟</span>
+                  <img src="/images/kuro_coin.png" style={{ width: '16px', height: '16px', marginRight: '4px' }}/>
                   <span>{user.xp}</span>
                 </div>
               </div>
@@ -142,16 +150,16 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
           
           let bgColor = 'var(--kuro-gray)';
           let shadowColor = 'var(--kuro-gray-shadow)';
-          let icon = '🖤';
+          let icon = <img src="/images/kuro_heart.png" alt="Heart" style={{ width: '40px', height: '40px', opacity: 0.5, filter: 'grayscale(100%)' }} />;
           
           if (isCompleted) {
             bgColor = 'var(--kuro-purple)';
             shadowColor = 'var(--kuro-purple-shadow)';
-            icon = '⭐';
+            icon = <img src="/images/kuro_coin.png" alt="Coin" style={{ width: '40px', height: '40px' }} />;
           } else if (isCurrent) {
             bgColor = 'var(--kuro-pink)';
             shadowColor = 'var(--kuro-pink-shadow)';
-            icon = savedTestIndex > 0 ? '▶️' : '💀'; /* Cambia a play si está en pausa */
+            icon = savedTestIndex > 0 ? <span style={{fontSize: '1.5rem'}}>▶️</span> : <img src="/images/kuro_heart.png" alt="Active" style={{ width: '40px', height: '40px' }} />;
           }
 
           return (

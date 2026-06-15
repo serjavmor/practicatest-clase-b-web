@@ -204,7 +204,7 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
               color: 'var(--kuro-dark)',
               fontWeight: 'bold'
             }}>
-              <strong>🖤 Dato Kuromi:</strong> {q.feedback}
+              <strong><img src="/images/kuro_heart.png" alt="Life" style={{ width: '16px', height: '16px', verticalAlign: 'middle', marginRight: '4px' }} /> Dato Kuromi:</strong> {q.feedback}
             </div>
           )}
 

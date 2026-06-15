@@ -6,22 +6,22 @@ export default function OnboardingView({ userName, onComplete }) {
   const slides = [
     {
       title: `¡Hola ${userName}!`,
-      content: "Bienvenido a 'Camino al Examen - Clase B'. Soy Kuromi, y seré tu instructora personal para ayudarte a sacar tu licencia de conducir a la primera. 🚗💨",
+      content: <>Bienvenido a 'Camino al Examen - Clase B'. Soy Kuromi, y seré tu instructora personal para ayudarte a sacar tu licencia de conducir a la primera. 🚗💨</>,
       image: "kuromi_celebrate_1781483026283.png"
     },
     {
       title: "¿De qué trata esto?",
-      content: "El juego consta de muchos niveles. En cada nivel tendrás que superar un test de 10 preguntas reales del Libro del Nuevo Conductor. ¡Aprenderás jugando!",
+      content: <>El juego consta de muchos niveles. En cada nivel tendrás que superar un test de 10 preguntas reales del Libro del Nuevo Conductor. ¡Aprenderás jugando!</>,
       image: "kuromi_instructor_1781483016419.png"
     },
     {
       title: "El Sistema de Vidas",
-      content: "Tienes 5 vidas (🖤). Si repruebas un test, pierdes una vida. Las vidas se recargan automáticamente cada 15 minutos, pero si no quieres esperar, ¡puedes estudiar en la Sala de Castigo para recuperarlas al instante!",
+      content: <>Tienes 5 vidas (<img src='/images/kuro_heart.png' alt='Vida' style={{width:'16px', height:'16px', verticalAlign:'middle'}}/>). Si repruebas un test, pierdes una vida. Las vidas se recargan automáticamente cada 15 minutos, pero si no quieres esperar, ¡puedes estudiar en la Sala de Castigo para recuperarlas al instante!</>,
       image: "kuromi_sad_1781483036083.png"
     },
     {
       title: "¡Tú puedes hacerlo!",
-      content: "Aprobar el examen teórico puede parecer difícil, pero con constancia y estudiando un poquito todos los días, ¡esa licencia será tuya muy pronto! ¿Estás listo para empezar la aventura?",
+      content: <>Aprobar el examen teórico puede parecer difícil, pero con constancia y estudiando un poquito todos los días, ¡esa licencia será tuya muy pronto! ¿Estás listo para empezar la aventura?</>,
       image: "kuromi_celebrate_1781483026283.png"
     }
   ];
