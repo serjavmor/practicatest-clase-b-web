@@ -100,7 +100,9 @@ export default function RecoveryView({ questions, lives, maxLives, onEarnLife, e
             <p style={{ margin: 0, color: 'var(--kuro-pink)', fontWeight: 'bold' }}>Vidas: {lives}/{maxLives}</p>
           </div>
         </div>
-        <button onClick={onExit} style={{ background: 'transparent', border: 'none', color: 'var(--kuro-gray)', fontWeight: 'bold', textDecoration: 'underline' }}>Salir</button>
+        <button onClick={onExit} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+          <img src="/images/kuro_close.png" alt="Close" style={{ width: '40px', height: '40px', mixBlendMode: 'multiply' }} />
+        </button>
       </div>
 
       {/* Progress Bar for current life */}
