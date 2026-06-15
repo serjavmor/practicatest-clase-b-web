@@ -4802,7 +4802,8 @@
         "text": "Porque los neumáticos están demasiado duros.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Esto sucede porque hay una pérdida total de fricción (adherencia) entre los neumáticos y el hielo, lo que hace que el volante no ofrezca resistencia."
   },
   {
     "id": 220,
@@ -4824,7 +4825,8 @@
         "text": "Cuando hay vientos fuertes.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La distancia de detención es mucho más larga cuando conduces a exceso de velocidad o cuando las condiciones de la calzada son adversas (mojada, con nieve o hielo)."
   },
   {
     "id": 221,
@@ -4846,7 +4848,8 @@
         "text": "Activar su limpiaparabrisas. \n \n222.\n- ¿Cómo puede usted evitar que su vehículo patine c uando la calzada está cubierta con una capa de hielo? \n \n Marque una respuesta",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Lo primero que debes hacer es presionar el pedal del freno suavemente y en forma repetida para generar fricción, lo que secará los frenos mojados."
   },
   {
     "id": 223,
@@ -4868,7 +4871,8 @@
         "text": "Suelta el acelerador.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Esa sensación indica que estás sufriendo 'aquaplaning' (flotando sobre el agua). Debes soltar suavemente el acelerador y NO pisar el freno ni girar el volante bruscamente."
   },
   {
     "id": 224,
@@ -4890,7 +4894,8 @@
         "text": "Para dejar disponible una marcha baja en el cas o de que las ruedas patinen.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En nieve, arrancar o conducir en la marcha más alta posible (ej: segunda en vez de primera) reduce la fuerza o torque en las ruedas, evitando que patinen en el lugar."
   },
   {
     "id": 225,
@@ -4912,7 +4917,8 @@
         "text": "Porque el agua sobre el parabrisas nublará su v isión hacia el frente.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El agua actúa como un lubricante entre el neumático y el pavimento, reduciendo drásticamente el roce o adherencia, lo que alarga la distancia necesaria para frenar."
   },
   {
     "id": 226,
@@ -4934,7 +4940,8 @@
         "text": "Encendiendo sus luces de advertencia de peligro .",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Además de usar luces bajas, debes aumentar considerablemente tu distancia de seguridad con el vehículo de adelante, ya que tendrás menos tiempo para reaccionar si frena."
   },
   {
     "id": 227,
@@ -4956,7 +4963,8 @@
         "text": "Mantener su velocidad y esperar a que el vehícu lo se aleje.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes levantar el pie del acelerador y disminuir tu velocidad para volver a generar y mantener una distancia de seguridad prudente con ese nuevo vehículo."
   },
   {
     "id": 228,
@@ -4978,7 +4986,8 @@
         "text": "Conduciendo lentamente en el cambio más alto po sible.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Conduciendo a muy baja velocidad, en la marcha más alta posible para no patinar, y utilizando el freno de motor en lugar de frenar bruscamente con el pedal."
   },
   {
     "id": 229,
@@ -5000,7 +5009,8 @@
         "text": "la carretera esté iluminada.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En vías interurbanas, los focos delanteros (luces bajas o altas) deben ir siempre encendidos de día y de noche. Solo podrías apagarlos si el vehículo está legalmente estacionado."
   },
   {
     "id": 230,
@@ -5022,7 +5032,8 @@
         "text": "Frenando a medida que va tomando la curva. \n \n231.\n- Hay mucha neblina y el auto que viene detrás suyo  parece estar muy cerca. ¿Qué debería hacer usted? \n \n Marque una respuesta",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes reducir la velocidad a un mínimo ANTES de entrar a la curva, utilizando el motor para frenar, y evitar tocar el pedal del freno mientras giras el volante."
   },
   {
     "id": 232,
@@ -5044,7 +5055,8 @@
         "text": "Las luces de estacionamiento.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si vas cerca de otros vehículos (ya sea detrás de ellos o vienen en contra), debes mantener encendidas las luces BAJAS para no encandilar a sus conductores."
   },
   {
     "id": 233,
@@ -5066,7 +5078,8 @@
         "text": "Porque el motor está más frío.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La neblina reduce drásticamente tu visibilidad frontal. Al ir más lento, reduces tu distancia de detención, dándote tiempo para frenar ante un obstáculo que aparezca de golpe."
   },
   {
     "id": 234,
@@ -5088,7 +5101,8 @@
         "text": "Instalar un triángulo reflectante para advertir  a los demás usuarios.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Lo primero es encender inmediatamente las luces intermitentes de advertencia de peligro (gatos) y, si es posible, mover el vehículo hacia la berma derecha."
   },
   {
     "id": 235,
@@ -5110,7 +5124,8 @@
         "text": "Desplazarse hacia la pista de su izquierda tan pronto pueda hacerlo en forma segura.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Al ver la advertencia, debes comenzar a señalizar y cambiarte a la pista que está libre lo antes posible, sin esperar llegar al punto exacto del cierre o 'embudo'."
   },
   {
     "id": 236,
@@ -5132,7 +5147,8 @@
         "text": "Acelera para poder pasar primero. \n \n237.\n- Usted va tirando un remolque pequeño que comienza  a zigzaguear.¿Qué hace usted? \n \n Marque una respuesta",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si tu pista está obstruida, el vehículo que viene en sentido contrario (por su pista libre) tiene la prioridad. Debes detenerte y cederle el paso antes de esquivar el obstáculo."
   },
   {
     "id": 238,
@@ -5154,7 +5170,8 @@
         "text": "Debe estar muy bien sujeta.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Es obligación legal que la carga esté firmemente estibada y asegurada, y que no sobrepase los límites del vehículo ni obstruya la visión del conductor."
   },
   {
     "id": 239,
@@ -5176,7 +5193,8 @@
         "text": "Deteniéndose lo más rápido que pueda.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes soltar suavemente el acelerador para que el conjunto reduzca su velocidad paulatinamente. NO debes frenar de golpe, ya que la casa rodante podría 'tijerear' tu auto."
   },
   {
     "id": 240,
@@ -5198,7 +5216,8 @@
         "text": "Que el peso se concentre al lado derecho.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El peso debe distribuirse uniformemente, asegurándose de que los objetos más pesados queden lo más bajo posible y centrados sobre el eje del remolque para mantener la estabilidad."
   },
   {
     "id": 241,
@@ -5220,7 +5239,8 @@
         "text": "Aumenta su distancia al vehículo que va adelant e.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Debes aumentar TU distancia de seguridad con el auto que va delante tuyo. Así, si necesitas frenar, podrás hacerlo de forma suave, dándole tiempo al que te sigue para reaccionar."
   },
   {
     "id": 242,
@@ -5242,7 +5262,8 @@
         "text": "No adelantar",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El Libro del Conductor enseña a diferenciar las señales: Reglamentarias (rojas/blancas), de Advertencia (amarillas) y de Información (azules/verdes)."
   },
   {
     "id": 243,
@@ -5260,7 +5281,8 @@
         "text": "Por la pista de la derecha.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Vas circulando por la pista izquierda. En Chile, las tachas rojas indican el borde izquierdo (que no debe cruzarse) y las blancas separan pistas que van en el mismo sentido."
   },
   {
     "id": 244,
@@ -5282,7 +5304,8 @@
         "text": "Que usted debe mantener una velocidad inferior a la indicada en la señal.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Esa es una señal de Advertencia de Peligro. Su forma de rombo amarillo te alerta de que más adelante hay una condición en la vía que requiere reducir la velocidad."
   },
   {
     "id": 245,
@@ -5304,7 +5327,8 @@
         "text": "Es una recomendación para cuando hay mucho tráns ito.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las señales con borde rojo son Reglamentarias. Si es un 'Ceda el Paso', te indica que debes disminuir la velocidad y ceder la preferencia a los vehículos de la otra vía."
   },
   {
     "id": 246,
@@ -5326,7 +5350,8 @@
         "text": "Sólo cuando haya menos de dos vehículos delante  suyo.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las franjas amarillas diagonales (zona de no bloquear cruce) indican que solo puedes ingresar al cruce si hay espacio suficiente al otro lado para salir de él sin quedar detenido al medio."
   },
   {
     "id": 247,
@@ -5348,7 +5373,8 @@
         "text": "Curvas en el camino.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Es una señal Reglamentaria que indica una obligación o restricción que debes cumplir estrictamente bajo pena de infracción (ej. Pare, Velocidad Máxima, No Virar)."
   },
   {
     "id": 248,
@@ -5370,7 +5396,8 @@
         "text": "No cambiar de pista.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La forma y color revelan su propósito. El rojo indica prohibición u obligación, mientras que el amarillo indica advertencia de peligro."
   },
   {
     "id": 249,
@@ -5392,7 +5419,8 @@
         "text": "Detenerse siempre.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las señales Reglamentarias de Prohibición, que se caracterizan por ser un círculo con borde rojo, fondo blanco y una línea diagonal roja cruzando el símbolo negro."
   },
   {
     "id": 251,
@@ -5414,7 +5442,8 @@
         "text": "Semáforos sincronizados.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Señal de Advertencia (amarilla) que suele indicar proximidad de peatones, ciclistas, curvas, o animales en la vía."
   },
   {
     "id": 252,
@@ -5436,7 +5465,8 @@
         "text": "Que usted debe detenerse sobre el paso de peato nes.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Un semáforo en rojo te obliga a detenerte completamente ANTES de la línea de detención o del paso de cebra, sin invadir la intersección."
   },
   {
     "id": 253,
@@ -5458,7 +5488,8 @@
         "text": "Para advertir acerca de peligros.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Las señales amarillas con forma de rombo son Señales de Advertencia de Peligro. Te avisan con antelación sobre riesgos permanentes o temporales en la ruta."
   },
   {
     "id": 254,
@@ -5480,7 +5511,8 @@
         "text": "Que usted debe continuar si no hay peatones cru zando.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El amarillo indica que debes prepararte para detenerte. Solo puedes continuar si estás tan cerca del cruce que detenerte bruscamente podría causar un accidente por alcance."
   },
   {
     "id": 255,
@@ -5502,7 +5534,8 @@
         "text": "Dos sentidos de tránsito más adelante.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Las señales informativas (generalmente de color azul, verde o café) sirven para orientar al conductor sobre destinos, rutas, servicios o atractivos turísticos."
   },
   {
     "id": 256,
@@ -5524,7 +5557,8 @@
         "text": "Peatón debe transitar por su izquierda.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Señal reglamentaria. Ignorar este tipo de señales constituye una falta grave o gravísima a la Ley de Tránsito."
   },
   {
     "id": 258,
@@ -5546,7 +5580,8 @@
         "text": "Que se acerca a una zona donde es muy probable la presencia de ciclistas en la vía.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Identifica siempre la forma: Rombo amarillo es advertencia; Círculo rojo es prohibición/obligación; Rectángulo azul o verde es información."
   },
   {
     "id": 260,
@@ -5572,7 +5607,8 @@
         "text": "Bifurcación o cruce en T \n f) Cruce ferroviario",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Señales como 'Curva Peligrosa', 'Pavimento Resbaladizo', o 'Cruce de Escolares' son clásicos rombos amarillos de advertencia."
   },
   {
     "id": 261,
@@ -5594,7 +5630,8 @@
         "text": "Primero la verde y luego la amarilla nuevamente .",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Después del amarillo, la luz que sigue en la secuencia estándar del semáforo es siempre la luz ROJA."
   },
   {
     "id": 262,
@@ -5616,7 +5653,8 @@
         "text": "Que sólo un conductor que va por la pista B pod ría efectuar un adelantamiento.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Una línea de centro continua significa que está estrictamente prohibido cruzarla para adelantar o virar. Una línea segmentada permite el cruce si es seguro."
   },
   {
     "id": 263,
@@ -5638,7 +5676,8 @@
         "text": "No, porque se trata de una vía de mucho tránsit o.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Es totalmente incorrecto. Una zona achurada (líneas diagonales pintadas en el suelo) es una 'isla de canalización' sobre la cual está prohibido circular o detenerse."
   },
   {
     "id": 264,
@@ -5652,7 +5691,8 @@
         "text": "No",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Las flechas en el pavimento indican la dirección obligatoria. Si estás en una pista con flecha de viraje exclusivo, debes virar y no puedes seguir derecho."
   },
   {
     "id": 265,
@@ -5674,7 +5714,8 @@
         "text": "Es sólo una recomendación para que usted ponga especial atención al pasar el cruce.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las señales de velocidad máxima en Chile (círculo rojo con números negros) indican el límite LEGAL máximo absoluto, no una recomendación."
   },
   {
     "id": 266,
@@ -5696,7 +5737,8 @@
         "text": "Siga.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La luz verde te autoriza a ingresar al cruce, pero ÚNICAMENTE si tienes espacio libre al otro lado de la intersección para no quedar bloqueando el paso."
   },
   {
     "id": 267,
@@ -5718,7 +5760,8 @@
         "text": "Cuando está tan cerca del cruce que su detención  puede ocasionar un accidente.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "No deberías detenerte ante luz amarilla solo si te encuentras ya dentro del cruce o tan cerca de él que una frenada repentina provocaría un accidente inminente por detrás."
   },
   {
     "id": 268,
@@ -5744,7 +5787,8 @@
         "text": "Le conversa tranquilamente ayudándola a mantene rse de pie.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes aplicar presión directa y firme sobre la herida con un paño limpio para detener la hemorragia, y si es posible, mantener la pierna en alto."
   },
   {
     "id": 269,
@@ -5770,7 +5814,8 @@
         "text": "Debe poseer una licencia de conducir, que le pe rmita conducir vehículos de la clase B, de a lo men os 5 años de \nantigüedad.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El acompañante debe tener licencia de conducir Clase B vigente por al menos 5 años ininterrumpidos y estar siempre en el asiento delantero junto al menor."
   },
   {
     "id": 270,
@@ -5796,7 +5841,8 @@
         "text": "Asegurarse de que no queden solos los heridos.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Sí, es obligatorio. Todo accidente con lesionados (por muy leves que sean) o fallecidos debe ser denunciado de inmediato a Carabineros de Chile."
   },
   {
     "id": 272,
@@ -5818,7 +5864,8 @@
         "text": "Ayudar a salir a las personas ilesas de los veh ículos.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Si eres el primero, debes detenerte, encender tus luces de emergencia (gatos), instalar los triángulos reflectantes para evitar un segundo accidente y llamar al 131/133."
   },
   {
     "id": 273,
@@ -5840,7 +5887,8 @@
         "text": "Saca de los autos a los heridos.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Asegura el área para no provocar más choques y llama inmediatamente al 131 (SAMU). No muevas a los heridos graves a menos que haya un riesgo inminente de incendio o explosión."
   },
   {
     "id": 274,
@@ -5862,7 +5910,8 @@
         "text": "Tratar de evitar que los productos químicos se sigan derramando.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes mantenerte alejado del camión, identificar a distancia si tiene rombos o paneles de seguridad (colores y números), y entregar esa información exacta a Carabineros y Bomberos."
   },
   {
     "id": 275,
@@ -5884,7 +5933,8 @@
         "text": "Que al motociclista se le dé algo para beber.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Es fundamental asegurarte de que al motociclista NO se le retire el casco bajo ninguna circunstancia, y debes abrigarlo para controlar el estado de shock."
   },
   {
     "id": 276,
@@ -5906,7 +5956,8 @@
         "text": "Continúa hasta donde haya un teléfono para avis ar a la policía o a los servicios de emergencia.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Debes buscar un lugar seguro para estacionar (fuera de la pista), encender luces de emergencia e intentar dar aviso a la policía o autopista. No arriesgues tu vida caminando en la vía."
   },
   {
     "id": 277,
@@ -5928,7 +5979,8 @@
         "text": "El conductor, los pasajeros y cualquier tercero  afectado en un accidente de tránsito en que partic ipe el vehículo \nasegurado.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El Seguro Obligatorio (SOAP) cubre por lesiones o muerte al conductor, a las personas transportadas en el vehículo asegurado y a cualquier tercero (peatón o ciclista) involucrado."
   },
   {
     "id": 278,
@@ -5954,7 +6006,8 @@
         "text": "El certificado de inscripción en el Registro Na cional de Vehículos Motorizados.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "No estás obligado a llevar el Manual del Fabricante. Sin embargo, sí es obligatorio portar Licencia, Permiso de Circulación, Revisión Técnica y Padrón."
   },
   {
     "id": 279,
@@ -5980,7 +6033,8 @@
         "text": "En ningún caso una licencia de conducir puede s er cancelada por el Juez.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Pasar un semáforo en rojo, no respetar un signo PARE o conducir bajo efectos del alcohol son infracciones Gravísimas que implican la suspensión inmediata de la licencia."
   },
   {
     "id": 280,
@@ -6006,6 +6060,7 @@
         "text": "No respetar una señal Ceda el Paso es una infrac ción gravísima si a consecuencia de la infracción s e produce un \naccidente.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Recuerda que ante accidentes o infracciones, la responsabilidad siempre recaerá sobre el conductor por no estar atento a las condiciones del tránsito."
   }
 ]
