@@ -1,8 +1,13 @@
 import React from 'react';
 
-export default function TopBar({ lives, streak, progress, timeToNextLife }) {
+export default function TopBar({ lives, streak, progress, timeToNextLife, onExit }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', padding: '16px', justifyContent: 'space-between' }}>
+      {onExit && (
+        <button onClick={onExit} style={{ background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer', marginRight: '10px' }}>
+          ✖️
+        </button>
+      )}
       
       <div style={{ display: 'flex', alignItems: 'center', color: 'var(--kuro-incorrect)', fontWeight: 'bold' }}>
         <span style={{ fontSize: '1.5rem', marginRight: '8px' }}>🖤</span>

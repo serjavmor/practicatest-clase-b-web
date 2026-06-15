@@ -1,7 +1,7 @@
 import React from 'react';
 import TopBar from './TopBar';
 
-export default function HomeView({ lives, streak, currentLevel, onStart, timeToNextLife, onChangeUser, onStudy }) {
+export default function HomeView({ lives, streak, currentLevel, savedTestIndex, onStart, timeToNextLife, onChangeUser, onStudy }) {
   
   const levels = Array.from({length: 10}, (_, i) => i + 1);
 
@@ -87,7 +87,7 @@ export default function HomeView({ lives, streak, currentLevel, onStart, timeToN
           } else if (isCurrent) {
             bgColor = 'var(--kuro-pink)';
             shadowColor = 'var(--kuro-pink-shadow)';
-            icon = '💀'; /* Calavera de Kuromi para el nivel activo! */
+            icon = savedTestIndex > 0 ? '▶️' : '💀'; /* Cambia a play si está en pausa */
           }
 
           return (
@@ -111,7 +111,8 @@ export default function HomeView({ lives, streak, currentLevel, onStart, timeToN
                 margin: '20px 0',
                 transition: 'transform 0.1s, box-shadow 0.1s',
                 animation: isCurrent ? 'pulse-heartbeat 2s infinite' : 'none',
-                opacity: isLocked ? 0.8 : 1
+                opacity: isLocked ? 0.8 : 1,
+                position: 'relative'
               }}
               onMouseDown={(e) => {
                 if (isCurrent) {
@@ -126,6 +127,11 @@ export default function HomeView({ lives, streak, currentLevel, onStart, timeToN
                 }
               }}
             >
+              {isCurrent && savedTestIndex > 0 && (
+                <span style={{ position: 'absolute', top: '-15px', backgroundColor: 'white', color: 'var(--kuro-dark)', fontSize: '0.8rem', padding: '4px 10px', borderRadius: '12px', fontWeight: 'bold', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>
+                  En pausa
+                </span>
+              )}
               {icon}
             </button>
           )

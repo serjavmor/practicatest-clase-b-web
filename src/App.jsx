@@ -17,6 +17,7 @@ function App() {
   const [currentLevel, setCurrentLevel] = useState(1)
   const [streak, setStreak] = useState(0)
   const [failedQuestions, setFailedQuestions] = useState([])
+  const [savedTestIndex, setSavedTestIndex] = useState(0)
   
   const { lives, decreaseLife, addLife, refillLives, hasLives, maxLives, timeToNextLife } = useLives(currentUser?.id)
   
@@ -37,10 +38,12 @@ function App() {
         const savedLevel = await localforage.getItem(`kuro_user_${currentUser.id}_level`)
         const savedStreak = await localforage.getItem(`kuro_user_${currentUser.id}_streak`)
         const savedErrors = await localforage.getItem(`kuro_user_${currentUser.id}_errors`)
+        const savedIndex = await localforage.getItem(`kuro_user_${currentUser.id}_test_index`)
         
         setCurrentLevel(savedLevel ? parseInt(savedLevel, 10) : 1)
         setStreak(savedStreak ? parseInt(savedStreak, 10) : 0)
         setFailedQuestions(savedErrors ? JSON.parse(savedErrors) : [])
+        setSavedTestIndex(savedIndex ? parseInt(savedIndex, 10) : 0)
       }
     }
     loadUserData()
@@ -53,10 +56,11 @@ function App() {
         await localforage.setItem(`kuro_user_${currentUser.id}_level`, currentLevel)
         await localforage.setItem(`kuro_user_${currentUser.id}_streak`, streak)
         await localforage.setItem(`kuro_user_${currentUser.id}_errors`, JSON.stringify(failedQuestions))
+        await localforage.setItem(`kuro_user_${currentUser.id}_test_index`, savedTestIndex)
       }
     }
     saveUserData()
-  }, [currentLevel, streak, failedQuestions, currentUser])
+  }, [currentLevel, streak, failedQuestions, savedTestIndex, currentUser])
 
   const handleUserSelect = (id, name, isNew) => {
     setCurrentUser({ id, name });
@@ -76,14 +80,24 @@ function App() {
       setView('recovery')
       return;
     }
-    setView('theory')
+    if (savedTestIndex > 0) {
+      setView('test') // Resume directly
+    } else {
+      setView('theory')
+    }
   }
 
   const finishTheory = () => {
     setView('test')
   }
 
+  const handlePause = (currentIndex) => {
+    setSavedTestIndex(currentIndex);
+    setView('home');
+  }
+
   const finishLevel = (passed) => {
+    setSavedTestIndex(0) // Reset saved progress on finish
     if (passed) {
       confetti({
         particleCount: 150,
@@ -140,6 +154,7 @@ function App() {
           lives={lives} 
           streak={streak} 
           currentLevel={currentLevel} 
+          savedTestIndex={savedTestIndex}
           onStart={startLevel} 
           timeToNextLife={timeToNextLife}
           onChangeUser={() => setView('userSelect')}
@@ -159,6 +174,8 @@ function App() {
           decreaseLife={decreaseLife}
           streak={streak}
           setStreak={setStreak}
+          initialIndex={savedTestIndex}
+          onPause={handlePause}
           onFinish={finishLevel} 
           timeToNextLife={timeToNextLife}
           onFailQuestion={(q) => setFailedQuestions(prev => {

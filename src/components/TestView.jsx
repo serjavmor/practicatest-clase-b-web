@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import TopBar from './TopBar';
 import useAudio from '../hooks/useAudio';
 
-export default function TestView({ questions, lives, decreaseLife, streak, setStreak, onFinish, timeToNextLife, onFailQuestion }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export default function TestView({ questions, lives, decreaseLife, streak, setStreak, initialIndex = 0, onPause, onFinish, timeToNextLife, onFailQuestion }) {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showingFeedback, setShowingFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -66,7 +66,13 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', position: 'relative' }}>
-      <TopBar lives={lives} streak={streak} progress={progress} timeToNextLife={timeToNextLife} />
+      <TopBar 
+        lives={lives} 
+        streak={streak} 
+        progress={progress} 
+        timeToNextLife={timeToNextLife} 
+        onExit={onPause ? () => onPause(currentIndex) : null}
+      />
       
       <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 100px 20px' }}>
         <h2 style={{ fontSize: '1.5rem', marginBottom: '20px' }}>{q.question}</h2>
