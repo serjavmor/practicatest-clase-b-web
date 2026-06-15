@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TopBar from '../organisms/TopBar';
 import useAudio from '../../hooks/useAudio';
 
-export default function TestView({ questions, lives, decreaseLife, streak, setStreak, xp, earnXp, inventory, useItem, initialIndex = 0, onPause, onFinish, timeToNextLife, onFailQuestion }) {
+export default function TestView({ questions, lives, decreaseLife, streak, setStreak, xp, earnXp, inventory, useItem, initialIndex = 0, onPause, onFinish, timeToNextLife, onFailQuestion, updateMissionProgress }) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showingFeedback, setShowingFeedback] = useState(false);
@@ -67,7 +67,11 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
         }
       }
     } else {
-      setStreak(streak + 1);
+      const newStreak = streak + 1;
+      setStreak(newStreak);
+      if (updateMissionProgress) {
+        updateMissionProgress('streak', newStreak);
+      }
     }
 
     setShowingFeedback(false);

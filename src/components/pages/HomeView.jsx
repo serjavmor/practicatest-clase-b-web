@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import localforage from 'localforage';
 import TopBar from '../organisms/TopBar';
 
-export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, onStart, timeToNextLife, onChangeUser, onStudy, onShop }) {
+export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, onStart, timeToNextLife, onChangeUser, onStudy, onShop, onMissions, hasCompletedMission }) {
   
   const [leaderboard, setLeaderboard] = useState([]);
 
@@ -28,6 +28,15 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
       <TopBar lives={lives} streak={streak} xp={xp} timeToNextLife={timeToNextLife} />
       
+      <div style={{ position: 'absolute', top: '90px', left: '15px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '8px', zIndex: 10 }}>
+        <button onClick={onMissions} style={{ position: 'relative', background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
+          <img src="/images/kuro_mission.png" alt="Missions" style={{ width: '40px', height: '40px', marginRight: '6px', mixBlendMode: 'multiply' }} /> Misiones
+          {hasCompletedMission && (
+            <span style={{ position: 'absolute', top: '-5px', right: '-5px', width: '15px', height: '15px', backgroundColor: 'var(--kuro-incorrect)', borderRadius: '50%', border: '2px solid white', animation: 'pulse-heartbeat 1s infinite' }} />
+          )}
+        </button>
+      </div>
+
       <div style={{ position: 'absolute', top: '90px', right: '15px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px', zIndex: 10 }}>
         <button onClick={onShop} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
           <img src="/images/kuro_shop.png" alt="Shop" style={{ width: '40px', height: '40px', marginRight: '6px', mixBlendMode: 'multiply' }} /> Tienda

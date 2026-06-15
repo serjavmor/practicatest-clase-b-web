@@ -8,7 +8,9 @@ import TestView from './components/pages/TestView'
 import RecoveryView from './components/pages/RecoveryView'
 import OnboardingView from './components/pages/OnboardingView'
 import ShopView from './components/pages/ShopView'
+import MissionsView from './components/pages/MissionsView'
 import useLives from './hooks/useLives'
+import useMissions from './hooks/useMissions'
 
 function App() {
   const [questions, setQuestions] = useState([])
@@ -23,8 +25,9 @@ function App() {
   const [inventory, setInventory] = useState({ eraser: 0, shield: 0 })
   
   const { lives, decreaseLife, addLife, refillLives, hasLives, maxLives, timeToNextLife } = useLives(currentUser?.id)
+  const { missions, updateMissionProgress, claimReward } = useMissions(currentUser?.id)
   
-  const [view, setView] = useState('userSelect') // 'userSelect', 'onboarding', 'home', 'theory', 'test', 'recovery', 'shop'
+  const [view, setView] = useState('userSelect') // 'userSelect', 'onboarding', 'home', 'theory', 'test', 'recovery', 'shop', 'missions'
 
   useEffect(() => {
     // Load data
@@ -130,6 +133,9 @@ function App() {
     setSavedTestIndex(0) // Reset saved progress on finish
     if (passed) {
       earnXp(50)
+      if (failedQuestions.length === 0) {
+        updateMissionProgress('perfect_test', 1)
+      }
       confetti({
         particleCount: 150,
         spread: 70,
@@ -137,9 +143,11 @@ function App() {
         colors: ['#ebdff7', '#1a1a1a', '#ffb6c1'] // Kuromi colors
       })
       setCurrentLevel(prev => prev + 1)
+      updateMissionProgress('play_level', 1)
       setView('home')
     } else {
       setStreak(0)
+      updateMissionProgress('play_level', 1)
       setView('home')
     }
   }
@@ -192,6 +200,8 @@ function App() {
           onChangeUser={() => setView('userSelect')}
           onStudy={() => setView('recovery')}
           onShop={() => setView('shop')}
+          onMissions={() => setView('missions')}
+          hasCompletedMission={missions.some(m => m.completed && !m.claimed)}
         />
       )}
       {view === 'shop' && (
@@ -228,6 +238,7 @@ function App() {
             if (prev.find(item => item.id === q.id)) return prev;
             return [...prev, q];
           })}
+          updateMissionProgress={updateMissionProgress}
         />
       )}
       {view === 'recovery' && (
@@ -235,9 +246,20 @@ function App() {
           questions={questions}
           lives={lives}
           maxLives={maxLives}
-          onEarnLife={addLife}
+          onEarnLife={() => {
+            addLife();
+            updateMissionProgress('recover_life', 1);
+          }}
           earnXp={earnXp}
           onExit={() => setView('home')}
+        />
+      )}
+      {view === 'missions' && (
+        <MissionsView
+          missions={missions}
+          claimReward={(missionId) => claimReward(missionId, earnXp)}
+          onExit={() => setView('home')}
+          xp={xp}
         />
       )}
     </>
