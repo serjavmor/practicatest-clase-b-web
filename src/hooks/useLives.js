@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import localforage from 'localforage';
 
 const MAX_LIVES = 5;
 const MINUTES_PER_LIFE = 15;
@@ -9,34 +10,40 @@ export default function useLives(userId) {
   const [lastLostTime, setLastLostTime] = useState(null);
   const [timeToNextLife, setTimeToNextLife] = useState(null);
 
-  // Load from local storage
+  // Load from localforage
   useEffect(() => {
     if (!userId) return;
-    const savedLives = localStorage.getItem(`kuro_user_${userId}_lives`);
-    const savedTime = localStorage.getItem(`kuro_user_${userId}_last_lost`);
+    async function loadLives() {
+      const savedLives = await localforage.getItem(`kuro_user_${userId}_lives`);
+      const savedTime = await localforage.getItem(`kuro_user_${userId}_last_lost`);
 
-    if (savedLives !== null) {
-      setLivesState(parseInt(savedLives, 10));
-    } else {
-      setLivesState(MAX_LIVES); // default new user
+      if (savedLives !== null) {
+        setLivesState(parseInt(savedLives, 10));
+      } else {
+        setLivesState(MAX_LIVES); // default new user
+      }
+      
+      if (savedTime !== null) {
+        setLastLostTime(parseInt(savedTime, 10));
+      } else {
+        setLastLostTime(null);
+      }
     }
-    
-    if (savedTime !== null) {
-      setLastLostTime(parseInt(savedTime, 10));
-    } else {
-      setLastLostTime(null);
-    }
+    loadLives();
   }, [userId]);
 
-  // Save to local storage
+  // Save to localforage
   useEffect(() => {
     if (!userId) return;
-    localStorage.setItem(`kuro_user_${userId}_lives`, lives);
-    if (lastLostTime) {
-      localStorage.setItem(`kuro_user_${userId}_last_lost`, lastLostTime);
-    } else {
-      localStorage.removeItem(`kuro_user_${userId}_last_lost`);
+    async function saveLives() {
+      await localforage.setItem(`kuro_user_${userId}_lives`, lives);
+      if (lastLostTime) {
+        await localforage.setItem(`kuro_user_${userId}_last_lost`, lastLostTime);
+      } else {
+        await localforage.removeItem(`kuro_user_${userId}_last_lost`);
+      }
     }
+    saveLives();
   }, [lives, lastLostTime, userId]);
 
   // Timer loop for regenerating lives

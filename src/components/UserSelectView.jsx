@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import localforage from 'localforage';
 
 export default function UserSelectView({ onSelectUser }) {
   const [profiles, setProfiles] = useState([
@@ -8,19 +9,25 @@ export default function UserSelectView({ onSelectUser }) {
   ]);
 
   useEffect(() => {
-    const savedProfiles = [
-      { id: 1, name: localStorage.getItem('kuro_user_1_name') },
-      { id: 2, name: localStorage.getItem('kuro_user_2_name') },
-      { id: 3, name: localStorage.getItem('kuro_user_3_name') }
-    ];
-    setProfiles(savedProfiles);
+    async function loadProfiles() {
+      const p1 = await localforage.getItem('kuro_user_1_name');
+      const p2 = await localforage.getItem('kuro_user_2_name');
+      const p3 = await localforage.getItem('kuro_user_3_name');
+      
+      setProfiles([
+        { id: 1, name: p1 },
+        { id: 2, name: p2 },
+        { id: 3, name: p3 }
+      ]);
+    }
+    loadProfiles();
   }, []);
 
-  const handleSelect = (profile) => {
+  const handleSelect = async (profile) => {
     if (!profile.name) {
       const name = prompt(`Ingresa un nombre para el Perfil ${profile.id}:`);
       if (name && name.trim()) {
-        localStorage.setItem(`kuro_user_${profile.id}_name`, name.trim());
+        await localforage.setItem(`kuro_user_${profile.id}_name`, name.trim());
         onSelectUser(profile.id, name.trim(), true); // isNew = true
       }
     } else {
@@ -28,15 +35,15 @@ export default function UserSelectView({ onSelectUser }) {
     }
   };
 
-  const handleClear = (e, id) => {
+  const handleClear = async (e, id) => {
     e.stopPropagation();
     if(confirm(`¿Seguro que deseas borrar el progreso del Perfil ${id}?`)) {
-      localStorage.removeItem(`kuro_user_${id}_name`);
-      localStorage.removeItem(`kuro_user_${id}_level`);
-      localStorage.removeItem(`kuro_user_${id}_streak`);
-      localStorage.removeItem(`kuro_user_${id}_lives`);
-      localStorage.removeItem(`kuro_user_${id}_last_lost`);
-      localStorage.removeItem(`kuro_user_${id}_errors`);
+      await localforage.removeItem(`kuro_user_${id}_name`);
+      await localforage.removeItem(`kuro_user_${id}_level`);
+      await localforage.removeItem(`kuro_user_${id}_streak`);
+      await localforage.removeItem(`kuro_user_${id}_lives`);
+      await localforage.removeItem(`kuro_user_${id}_last_lost`);
+      await localforage.removeItem(`kuro_user_${id}_errors`);
       
       setProfiles(prev => prev.map(p => p.id === id ? { ...p, name: null } : p));
     }

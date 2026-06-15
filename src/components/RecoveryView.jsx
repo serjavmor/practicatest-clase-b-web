@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-
+import useAudio from '../hooks/useAudio';
 export default function RecoveryView({ questions, lives, maxLives, onEarnLife, onExit }) {
   const [cardsRead, setCardsRead] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(10);
   const [currentQ, setCurrentQ] = useState(null);
   
   const CARDS_PER_LIFE = 6;
+
+  const { playReward } = useAudio();
 
   // Seleccionar pregunta aleatoria inicial
   useEffect(() => {
@@ -38,6 +40,7 @@ export default function RecoveryView({ questions, lives, maxLives, onEarnLife, o
     const newCardsRead = cardsRead + 1;
     
     if (newCardsRead >= CARDS_PER_LIFE) {
+      playReward();
       onEarnLife();
       setCardsRead(0);
     } else {
@@ -46,6 +49,20 @@ export default function RecoveryView({ questions, lives, maxLives, onEarnLife, o
     
     pickRandomQuestion();
   };
+
+  useEffect(() => {
+    if (lives >= maxLives) {
+      import('canvas-confetti').then((module) => {
+        const confetti = module.default;
+        confetti({
+          particleCount: 150,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#ebdff7', '#1a1a1a', '#ffb6c1']
+        });
+      });
+    }
+  }, [lives, maxLives]);
 
   if (lives >= maxLives) {
     return (

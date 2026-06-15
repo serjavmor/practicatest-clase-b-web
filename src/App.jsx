@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import localforage from 'localforage'
+import confetti from 'canvas-confetti'
 import UserSelectView from './components/UserSelectView'
 import HomeView from './components/HomeView'
 import TheoryView from './components/TheoryView'
@@ -29,26 +31,31 @@ function App() {
   }, [])
 
   // Cargar estado cuando se selecciona un usuario
-  // Ya NO hacemos setView('home') automáticamente aquí, se maneja desde handleUserSelect
   useEffect(() => {
-    if (currentUser) {
-      const savedLevel = localStorage.getItem(`kuro_user_${currentUser.id}_level`)
-      const savedStreak = localStorage.getItem(`kuro_user_${currentUser.id}_streak`)
-      const savedErrors = localStorage.getItem(`kuro_user_${currentUser.id}_errors`)
-      
-      setCurrentLevel(savedLevel ? parseInt(savedLevel, 10) : 1)
-      setStreak(savedStreak ? parseInt(savedStreak, 10) : 0)
-      setFailedQuestions(savedErrors ? JSON.parse(savedErrors) : [])
+    async function loadUserData() {
+      if (currentUser) {
+        const savedLevel = await localforage.getItem(`kuro_user_${currentUser.id}_level`)
+        const savedStreak = await localforage.getItem(`kuro_user_${currentUser.id}_streak`)
+        const savedErrors = await localforage.getItem(`kuro_user_${currentUser.id}_errors`)
+        
+        setCurrentLevel(savedLevel ? parseInt(savedLevel, 10) : 1)
+        setStreak(savedStreak ? parseInt(savedStreak, 10) : 0)
+        setFailedQuestions(savedErrors ? JSON.parse(savedErrors) : [])
+      }
     }
+    loadUserData()
   }, [currentUser])
 
   // Guardar estado al cambiar
   useEffect(() => {
-    if (currentUser) {
-      localStorage.setItem(`kuro_user_${currentUser.id}_level`, currentLevel)
-      localStorage.setItem(`kuro_user_${currentUser.id}_streak`, streak)
-      localStorage.setItem(`kuro_user_${currentUser.id}_errors`, JSON.stringify(failedQuestions))
+    async function saveUserData() {
+      if (currentUser) {
+        await localforage.setItem(`kuro_user_${currentUser.id}_level`, currentLevel)
+        await localforage.setItem(`kuro_user_${currentUser.id}_streak`, streak)
+        await localforage.setItem(`kuro_user_${currentUser.id}_errors`, JSON.stringify(failedQuestions))
+      }
     }
+    saveUserData()
   }, [currentLevel, streak, failedQuestions, currentUser])
 
   const handleUserSelect = (id, name, isNew) => {
@@ -78,6 +85,12 @@ function App() {
 
   const finishLevel = (passed) => {
     if (passed) {
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#ebdff7', '#1a1a1a', '#ffb6c1'] // Kuromi colors
+      })
       setCurrentLevel(prev => prev + 1)
       setView('home')
     } else {

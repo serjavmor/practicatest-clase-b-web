@@ -57,7 +57,7 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
     let base = "duo-btn btn-option ";
     if (showingFeedback) {
       if (option.is_correct) return base + "correct";
-      if (selectedOption?.text === option.text && !option.is_correct) return base + "incorrect";
+      if (selectedOption?.text === option.text && !option.is_correct) return base + "incorrect shake-animation";
     } else {
       if (selectedOption?.text === option.text) return base + "selected";
     }
