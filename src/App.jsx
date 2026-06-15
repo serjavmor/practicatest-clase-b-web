@@ -9,8 +9,10 @@ import RecoveryView from './components/pages/RecoveryView'
 import OnboardingView from './components/pages/OnboardingView'
 import ShopView from './components/pages/ShopView'
 import MissionsView from './components/pages/MissionsView'
+import AlbumView from './components/pages/AlbumView'
 import useLives from './hooks/useLives'
 import useMissions from './hooks/useMissions'
+import useAlbum from './hooks/useAlbum'
 
 function App() {
   const [questions, setQuestions] = useState([])
@@ -26,8 +28,9 @@ function App() {
   
   const { lives, decreaseLife, addLife, refillLives, hasLives, maxLives, timeToNextLife } = useLives(currentUser?.id)
   const { missions, updateMissionProgress, claimReward } = useMissions(currentUser?.id)
+  const { unlockedCards, checkUnlocks } = useAlbum(currentUser?.id)
   
-  const [view, setView] = useState('userSelect') // 'userSelect', 'onboarding', 'home', 'theory', 'test', 'recovery', 'shop', 'missions'
+  const [view, setView] = useState('userSelect') // 'userSelect', 'onboarding', 'home', 'theory', 'test', 'recovery', 'shop', 'missions', 'album'
 
   useEffect(() => {
     // Load data
@@ -82,6 +85,7 @@ function App() {
     if (xp >= cost) {
       setXp(prev => prev - cost);
       setInventory(prev => ({ ...prev, [item]: prev[item] + 1 }));
+      checkUnlocks({ coinsSpentEvent: cost });
       return true;
     }
     return false;
@@ -136,6 +140,11 @@ function App() {
       if (failedQuestions.length === 0) {
         updateMissionProgress('perfect_test', 1)
       }
+      checkUnlocks({ 
+        levelCompletedEvent: 1, 
+        currentLevel: currentLevel + 1,
+        perfectLevel: failedQuestions.length === 0 
+      })
       confetti({
         particleCount: 150,
         spread: 70,
@@ -201,6 +210,7 @@ function App() {
           onStudy={() => setView('recovery')}
           onShop={() => setView('shop')}
           onMissions={() => setView('missions')}
+          onAlbum={() => setView('album')}
           hasCompletedMission={missions.some(m => m.completed && !m.claimed)}
         />
       )}
@@ -239,6 +249,7 @@ function App() {
             return [...prev, q];
           })}
           updateMissionProgress={updateMissionProgress}
+          checkUnlocks={checkUnlocks}
         />
       )}
       {view === 'recovery' && (
@@ -249,6 +260,7 @@ function App() {
           onEarnLife={() => {
             addLife();
             updateMissionProgress('recover_life', 1);
+            checkUnlocks({ livesRecoveredEvent: 1 });
           }}
           earnXp={earnXp}
           onExit={() => setView('home')}
@@ -260,6 +272,12 @@ function App() {
           claimReward={(missionId) => claimReward(missionId, earnXp)}
           onExit={() => setView('home')}
           xp={xp}
+        />
+      )}
+      {view === 'album' && (
+        <AlbumView
+          unlockedCards={unlockedCards}
+          onExit={() => setView('home')}
         />
       )}
     </>
