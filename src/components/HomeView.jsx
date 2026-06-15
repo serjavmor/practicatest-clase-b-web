@@ -9,7 +9,24 @@ export default function HomeView({ lives, streak, currentLevel, onStart }) {
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: '#f7f7f7' }}>
       <TopBar lives={lives} streak={streak} />
       
-      <div style={{ textAlign: 'center', padding: '20px' }}>
+      <div style={{ textAlign: 'center', padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <img 
+          src="/images/kuromi_instructor_1781483016419.png" 
+          alt="Kuromi Mascot" 
+          style={{ height: '120px', marginBottom: '10px' }} 
+        />
+        <div style={{
+          backgroundColor: 'white',
+          padding: '10px 20px',
+          borderRadius: '16px',
+          boxShadow: '0 4px 0 var(--duo-gray)',
+          fontWeight: 'bold',
+          color: 'var(--duo-text)',
+          marginBottom: '15px',
+          position: 'relative'
+        }}>
+          ¡Aprobar la Clase B es tu destino!
+        </div>
         <h1 style={{ color: 'var(--duo-text)', fontSize: '2rem' }}>Camino al Examen</h1>
       </div>
 
