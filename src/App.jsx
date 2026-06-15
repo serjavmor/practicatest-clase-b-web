@@ -7,6 +7,7 @@ import TheoryView from './components/TheoryView'
 import TestView from './components/TestView'
 import RecoveryView from './components/RecoveryView'
 import OnboardingView from './components/OnboardingView'
+import ShopView from './components/ShopView'
 import useLives from './hooks/useLives'
 
 function App() {
@@ -19,10 +20,11 @@ function App() {
   const [failedQuestions, setFailedQuestions] = useState([])
   const [savedTestIndex, setSavedTestIndex] = useState(0)
   const [xp, setXp] = useState(0)
+  const [inventory, setInventory] = useState({ eraser: 0, shield: 0 })
   
   const { lives, decreaseLife, addLife, refillLives, hasLives, maxLives, timeToNextLife } = useLives(currentUser?.id)
   
-  const [view, setView] = useState('userSelect') // 'userSelect', 'onboarding', 'home', 'theory', 'test', 'recovery'
+  const [view, setView] = useState('userSelect') // 'userSelect', 'onboarding', 'home', 'theory', 'test', 'recovery', 'shop'
 
   useEffect(() => {
     // Load data
@@ -41,12 +43,14 @@ function App() {
         const savedErrors = await localforage.getItem(`kuro_user_${currentUser.id}_errors`)
         const savedIndex = await localforage.getItem(`kuro_user_${currentUser.id}_test_index`)
         const savedXp = await localforage.getItem(`kuro_user_${currentUser.id}_xp`)
+        const savedInv = await localforage.getItem(`kuro_user_${currentUser.id}_inventory`)
         
         setCurrentLevel(savedLevel ? parseInt(savedLevel, 10) : 1)
         setStreak(savedStreak ? parseInt(savedStreak, 10) : 0)
         setFailedQuestions(savedErrors ? JSON.parse(savedErrors) : [])
         setSavedTestIndex(savedIndex ? parseInt(savedIndex, 10) : 0)
         setXp(savedXp ? parseInt(savedXp, 10) : 0)
+        setInventory(savedInv ? JSON.parse(savedInv) : { eraser: 0, shield: 0 })
       }
     }
     loadUserData()
@@ -61,13 +65,31 @@ function App() {
         await localforage.setItem(`kuro_user_${currentUser.id}_errors`, JSON.stringify(failedQuestions))
         await localforage.setItem(`kuro_user_${currentUser.id}_test_index`, savedTestIndex)
         await localforage.setItem(`kuro_user_${currentUser.id}_xp`, xp)
+        await localforage.setItem(`kuro_user_${currentUser.id}_inventory`, JSON.stringify(inventory))
       }
     }
     saveUserData()
-  }, [currentLevel, streak, failedQuestions, savedTestIndex, xp, currentUser])
+  }, [currentLevel, streak, failedQuestions, savedTestIndex, xp, inventory, currentUser])
 
   const earnXp = (amount) => {
     setXp(prev => prev + amount);
+  }
+
+  const buyItem = (item, cost) => {
+    if (xp >= cost) {
+      setXp(prev => prev - cost);
+      setInventory(prev => ({ ...prev, [item]: prev[item] + 1 }));
+      return true;
+    }
+    return false;
+  }
+
+  const useItem = (item) => {
+    if (inventory[item] > 0) {
+      setInventory(prev => ({ ...prev, [item]: prev[item] - 1 }));
+      return true;
+    }
+    return false;
   }
 
   const handleUserSelect = (id, name, isNew) => {
@@ -169,6 +191,15 @@ function App() {
           timeToNextLife={timeToNextLife}
           onChangeUser={() => setView('userSelect')}
           onStudy={() => setView('recovery')}
+          onShop={() => setView('shop')}
+        />
+      )}
+      {view === 'shop' && (
+        <ShopView
+          xp={xp}
+          inventory={inventory}
+          buyItem={buyItem}
+          onExit={() => setView('home')}
         />
       )}
       {view === 'theory' && (
@@ -186,6 +217,8 @@ function App() {
           setStreak={setStreak}
           xp={xp}
           earnXp={earnXp}
+          inventory={inventory}
+          useItem={useItem}
           initialIndex={savedTestIndex}
           onPause={handlePause}
           onFinish={finishLevel} 

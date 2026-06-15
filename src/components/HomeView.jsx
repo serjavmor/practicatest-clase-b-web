@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import localforage from 'localforage';
 import TopBar from './TopBar';
 
-export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, onStart, timeToNextLife, onChangeUser, onStudy }) {
+export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, onStart, timeToNextLife, onChangeUser, onStudy, onShop }) {
   
   const [leaderboard, setLeaderboard] = useState([]);
 
@@ -27,7 +27,13 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
       <TopBar lives={lives} streak={streak} xp={xp} timeToNextLife={timeToNextLife} />
-      <button onClick={onChangeUser} style={{ position: 'absolute', top: '15px', right: '15px', background: 'transparent', border: 'none', color: 'var(--kuro-dark)', fontWeight: 'bold', textDecoration: 'underline' }}>Cambiar Perfil</button>
+      
+      <div style={{ position: 'absolute', top: '15px', right: '15px', display: 'flex', gap: '10px' }}>
+        <button onClick={onShop} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 10px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
+          <span style={{ marginRight: '5px' }}>🛒</span> Tienda
+        </button>
+        <button onClick={onChangeUser} style={{ background: 'transparent', border: 'none', color: 'var(--kuro-dark)', fontWeight: 'bold', textDecoration: 'underline' }}>Cambiar Perfil</button>
+      </div>
       
       {lives < 5 && (
         <div style={{ textAlign: 'center', marginTop: '10px' }}>

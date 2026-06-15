@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import TopBar from './TopBar';
 import useAudio from '../hooks/useAudio';
 
-export default function TestView({ questions, lives, decreaseLife, streak, setStreak, xp, earnXp, initialIndex = 0, onPause, onFinish, timeToNextLife, onFailQuestion }) {
+export default function TestView({ questions, lives, decreaseLife, streak, setStreak, xp, earnXp, inventory, useItem, initialIndex = 0, onPause, onFinish, timeToNextLife, onFailQuestion }) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showingFeedback, setShowingFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+  
+  const [shieldActive, setShieldActive] = useState(false);
+  const [erasedOptions, setErasedOptions] = useState([]);
+
   const { playCorrect, playIncorrect } = useAudio();
 
   if (!questions || questions.length === 0) {
@@ -15,6 +19,23 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
 
   const q = questions[currentIndex];
   const progress = currentIndex / questions.length;
+
+  const handleUseEraser = () => {
+    if (inventory?.eraser > 0 && useItem('eraser')) {
+      const wrongOptions = q.options.filter(o => !o.is_correct && !erasedOptions.includes(o.text));
+      if (wrongOptions.length > 0) {
+        // Eliminar una al azar
+        const toErase = wrongOptions[Math.floor(Math.random() * wrongOptions.length)];
+        setErasedOptions(prev => [...prev, toErase.text]);
+      }
+    }
+  };
+
+  const handleUseShield = () => {
+    if (inventory?.shield > 0 && !shieldActive && useItem('shield')) {
+      setShieldActive(true);
+    }
+  };
 
   const handleCheck = () => {
     if (!selectedOption) return;
@@ -28,17 +49,22 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
       if (earnXp) earnXp(10);
     } else {
       playIncorrect();
-      if (onFailQuestion) onFailQuestion(q);
+      if (!shieldActive && onFailQuestion) onFailQuestion(q);
     }
   };
 
   const handleNext = () => {
     if (!isCorrect) {
-      decreaseLife();
-      setStreak(0);
-      if (lives - 1 <= 0) {
-        onFinish(false);
-        return;
+      if (shieldActive) {
+        // El escudo salva la vida y la racha
+        setShieldActive(false);
+      } else {
+        decreaseLife();
+        setStreak(0);
+        if (lives - 1 <= 0) {
+          onFinish(false);
+          return;
+        }
       }
     } else {
       setStreak(streak + 1);
@@ -46,6 +72,7 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
 
     setShowingFeedback(false);
     setSelectedOption(null);
+    setErasedOptions([]); // Reset eraser
     
     if (currentIndex + 1 >= questions.length) {
       onFinish(true);
@@ -55,6 +82,8 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
   };
 
   const getButtonClass = (option) => {
+    if (erasedOptions.includes(option.text)) return "duo-btn btn-option erased"; // Need to add CSS for this
+    
     let base = "duo-btn btn-option ";
     if (showingFeedback) {
       if (option.is_correct) return base + "correct";
@@ -77,6 +106,40 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
       />
       
       <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 100px 20px' }}>
+        
+        {/* Power-Ups Bar */}
+        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginBottom: '15px' }}>
+          {inventory?.eraser > 0 && (
+            <button 
+              onClick={handleUseEraser}
+              disabled={showingFeedback || erasedOptions.length >= q.options.length - 1}
+              style={{ 
+                background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '12px', padding: '5px 10px', 
+                fontSize: '0.85rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', boxShadow: '0 2px 0 var(--kuro-gray)',
+                opacity: (showingFeedback || erasedOptions.length >= q.options.length - 1) ? 0.5 : 1
+              }}
+            >
+              <span style={{ marginRight: '5px' }}>🪄</span> {inventory.eraser}
+            </button>
+          )}
+          {inventory?.shield > 0 && (
+            <button 
+              onClick={handleUseShield}
+              disabled={showingFeedback || shieldActive}
+              style={{ 
+                background: shieldActive ? '#e5ffed' : 'white', 
+                border: `2px solid ${shieldActive ? 'var(--kuro-correct)' : 'var(--kuro-gray)'}`, 
+                borderRadius: '12px', padding: '5px 10px', 
+                fontSize: '0.85rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', 
+                boxShadow: `0 2px 0 ${shieldActive ? 'var(--kuro-correct)' : 'var(--kuro-gray)'}`,
+                opacity: showingFeedback && !shieldActive ? 0.5 : 1
+              }}
+            >
+              <span style={{ marginRight: '5px' }}>🛡️</span> {inventory.shield}
+            </button>
+          )}
+        </div>
+
         <h2 style={{ fontSize: '1.5rem', marginBottom: '20px' }}>{q.question}</h2>
         
         {q.local_image && (
@@ -92,8 +155,16 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
             <button 
               key={idx}
               className={getButtonClass(option)}
-              onClick={() => !showingFeedback && setSelectedOption(option)}
-              style={{ animationDelay: `${idx * 0.1}s`, animationFillMode: 'both', animationName: 'slideUp', animationDuration: '0.4s' }}
+              onClick={() => !showingFeedback && !erasedOptions.includes(option.text) && setSelectedOption(option)}
+              style={{ 
+                animationDelay: `${idx * 0.1}s`, 
+                animationFillMode: 'both', 
+                animationName: 'slideUp', 
+                animationDuration: '0.4s',
+                opacity: erasedOptions.includes(option.text) ? 0 : 1,
+                pointerEvents: erasedOptions.includes(option.text) ? 'none' : 'auto',
+                transition: 'opacity 0.3s'
+              }}
             >
               {option.text}
             </button>
