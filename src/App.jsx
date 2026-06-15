@@ -16,7 +16,7 @@ function App() {
   const [streak, setStreak] = useState(0)
   const [failedQuestions, setFailedQuestions] = useState([])
   
-  const { lives, decreaseLife, refillLives, hasLives, timeToNextLife } = useLives(currentUser?.id)
+  const { lives, decreaseLife, addLife, refillLives, hasLives, maxLives, timeToNextLife } = useLives(currentUser?.id)
   
   const [view, setView] = useState('userSelect') // 'userSelect', 'home', 'theory', 'test', 'recovery'
 
@@ -59,11 +59,7 @@ function App() {
 
   const startLevel = () => {
     if (!hasLives) {
-      if (failedQuestions.length > 0) {
-        setView('recovery')
-      } else {
-        alert("¡Te quedaste sin vidas! Espera a que se recarguen.");
-      }
+      setView('recovery')
       return;
     }
     setView('theory')
@@ -81,19 +77,6 @@ function App() {
       setStreak(0)
       setView('home')
     }
-  }
-
-  const handleRecover = () => {
-    // Premiar con 1 vida por haber estudiado
-    if (lives === 0) {
-      // Forzamos a setear 1 vida. Como decreaseLife baja 1, aquí usaremos refillLives si queremos llenar, 
-      // pero para dar 1 sola vida, podemos hackear localStorage o modificar useLives.
-      // Para no complicar useLives ahora mismo, simplemente le daremos MAX_LIVES o 1 vida recargada.
-      // Haremos un refillLives() completo como gran premio.
-      refillLives();
-    }
-    setFailedQuestions([]);
-    setView('home');
   }
 
   const getQuestionsForLevel = () => {
@@ -124,6 +107,7 @@ function App() {
           onStart={startLevel} 
           timeToNextLife={timeToNextLife}
           onChangeUser={() => setView('userSelect')}
+          onStudy={() => setView('recovery')}
         />
       )}
       {view === 'theory' && (
@@ -150,8 +134,11 @@ function App() {
       )}
       {view === 'recovery' && (
         <RecoveryView 
-          failedQuestions={failedQuestions}
-          onRecover={handleRecover}
+          questions={questions}
+          lives={lives}
+          maxLives={maxLives}
+          onEarnLife={addLife}
+          onExit={() => setView('home')}
         />
       )}
     </>

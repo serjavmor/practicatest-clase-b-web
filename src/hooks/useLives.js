@@ -89,16 +89,33 @@ export default function useLives(userId) {
     }
   };
 
+  const addLife = () => {
+    if (lives < MAX_LIVES) {
+      const newLives = lives + 1;
+      setLivesState(newLives);
+      if (newLives === MAX_LIVES) {
+        setLastLostTime(null);
+        setTimeToNextLife(null);
+      } else {
+        // Al sumar una vida, reiniciamos el ciclo de 15 minutos de la SIGUIENTE vida
+        setLastLostTime(Date.now());
+      }
+    }
+  };
+
   const refillLives = () => {
     setLivesState(MAX_LIVES);
     setLastLostTime(null);
+    setTimeToNextLife(null);
   };
 
   return {
     lives,
     decreaseLife,
+    addLife,
     refillLives,
     timeToNextLife,
-    hasLives: lives > 0
+    hasLives: lives > 0,
+    maxLives: MAX_LIVES
   };
 }

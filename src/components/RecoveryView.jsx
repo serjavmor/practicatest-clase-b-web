@@ -1,79 +1,155 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function RecoveryView({ failedQuestions, onRecover }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export default function RecoveryView({ questions, lives, maxLives, onEarnLife, onExit }) {
+  const [cardsRead, setCardsRead] = useState(0);
+  const [secondsLeft, setSecondsLeft] = useState(10);
+  const [currentQ, setCurrentQ] = useState(null);
+  
+  const CARDS_PER_LIFE = 6;
 
-  if (!failedQuestions || failedQuestions.length === 0) {
+  // Seleccionar pregunta aleatoria inicial
+  useEffect(() => {
+    if (questions && questions.length > 0 && !currentQ) {
+      pickRandomQuestion();
+    }
+  }, [questions]);
+
+  // Temporizador de 10 segundos
+  useEffect(() => {
+    if (lives >= maxLives) return; // Si ya está lleno, no correr timer
+    
+    if (secondsLeft > 0) {
+      const timerId = setTimeout(() => {
+        setSecondsLeft(secondsLeft - 1);
+      }, 1000);
+      return () => clearTimeout(timerId);
+    }
+  }, [secondsLeft, lives, maxLives]);
+
+  const pickRandomQuestion = () => {
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    setCurrentQ(questions[randomIndex]);
+    setSecondsLeft(10);
+  };
+
+  const handleNext = () => {
+    if (secondsLeft > 0) return; // Bloqueado
+    
+    const newCardsRead = cardsRead + 1;
+    
+    if (newCardsRead >= CARDS_PER_LIFE) {
+      onEarnLife();
+      setCardsRead(0);
+    } else {
+      setCardsRead(newCardsRead);
+    }
+    
+    pickRandomQuestion();
+  };
+
+  if (lives >= maxLives) {
     return (
-      <div style={{ padding: '20px', textAlign: 'center' }}>
-        <h2>Sin errores registrados</h2>
-        <button className="duo-btn btn-primary" onClick={onRecover}>Volver</button>
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100dvh', backgroundColor: '#ebdff7', padding: '20px', alignItems: 'center', justifyContent: 'center' }}>
+        <img 
+          src="/images/kuromi_celebrate_1781483026283.png" 
+          alt="Kuromi Happy" 
+          style={{ height: '150px', mixBlendMode: 'multiply', filter: 'contrast(1.1)', marginBottom: '20px', animation: 'pulse 2s infinite' }} 
+        />
+        <h2 style={{ color: 'var(--kuro-dark)', textAlign: 'center' }}>¡Vidas al máximo!</h2>
+        <p style={{ color: 'var(--kuro-dark)', textAlign: 'center', marginBottom: '30px' }}>Estudiaste lo suficiente por hoy.</p>
+        <button className="duo-btn btn-primary" onClick={onExit} style={{ width: '100%', maxWidth: '300px' }}>Volver al Menú</button>
       </div>
     );
   }
 
-  const currentQ = failedQuestions[currentIndex];
+  if (!currentQ) return <div>Cargando...</div>;
 
-  const handleNext = () => {
-    if (currentIndex + 1 >= failedQuestions.length) {
-      onRecover();
-    } else {
-      setCurrentIndex(prev => prev + 1);
-    }
-  };
+  const progressPct = (cardsRead / CARDS_PER_LIFE) * 100;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100dvh', backgroundColor: '#ebdff7', padding: '20px' }}>
       
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-        <img 
-          src="/images/kuromi_sad_1781483036083.png" 
-          alt="Kuromi" 
-          style={{ height: '80px', mixBlendMode: 'multiply', filter: 'contrast(1.1)', marginRight: '15px' }} 
-        />
-        <div>
-          <h2 style={{ color: 'var(--kuro-incorrect-shadow)', margin: 0 }}>Sala de Estudio</h2>
-          <p style={{ margin: 0, color: 'var(--kuro-dark)', fontSize: '0.9rem' }}>Repasa tus errores para recuperar 1 vida.</p>
+      {/* Header Info */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <img 
+            src="/images/kuromi_instructor_1781483016419.png" 
+            alt="Kuromi" 
+            style={{ height: '60px', mixBlendMode: 'multiply', filter: 'contrast(1.1)', marginRight: '10px' }} 
+          />
+          <div>
+            <h2 style={{ color: 'var(--kuro-dark)', margin: 0, fontSize: '1.2rem' }}>Modo Estudio</h2>
+            <p style={{ margin: 0, color: 'var(--kuro-pink)', fontWeight: 'bold' }}>Vidas: {lives}/{maxLives}</p>
+          </div>
+        </div>
+        <button onClick={onExit} style={{ background: 'transparent', border: 'none', color: 'var(--kuro-gray)', fontWeight: 'bold', textDecoration: 'underline' }}>Salir</button>
+      </div>
+
+      {/* Progress Bar for current life */}
+      <div style={{ marginBottom: '15px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', color: 'var(--kuro-gray)', fontWeight: 'bold', marginBottom: '5px' }}>
+          <span>Progreso de vida:</span>
+          <span>{cardsRead} / {CARDS_PER_LIFE} tarjetas</span>
+        </div>
+        <div style={{ width: '100%', height: '12px', backgroundColor: '#e5e5e5', borderRadius: '6px', overflow: 'hidden' }}>
+          <div style={{ width: `${progressPct}%`, height: '100%', backgroundColor: 'var(--kuro-pink)', transition: 'width 0.3s' }}></div>
         </div>
       </div>
 
+      {/* Study Card */}
       <div style={{ 
         flex: 1, 
         backgroundColor: 'white', 
         borderRadius: '24px', 
         padding: '20px',
-        border: '3px solid var(--kuro-incorrect)',
-        boxShadow: '0 8px 0 var(--kuro-incorrect)',
+        border: '3px solid var(--kuro-purple)',
+        boxShadow: '0 8px 0 var(--kuro-purple)',
         overflowY: 'auto',
         marginBottom: '20px'
       }}>
-        <div style={{ color: 'var(--kuro-gray)', fontSize: '0.9rem', marginBottom: '10px', textAlign: 'right' }}>
-          Error {currentIndex + 1} de {failedQuestions.length}
-        </div>
-        
         <h3 style={{ fontSize: '1.2rem', marginBottom: '20px', color: 'var(--kuro-dark)' }}>{currentQ.question}</h3>
         
         {currentQ.local_image && (
           <img 
             src={`/images/${currentQ.local_image}`} 
             alt="Question" 
-            style={{ width: '100%', maxWidth: '200px', display: 'block', margin: '0 auto 20px auto' }} 
+            style={{ width: '100%', maxWidth: '150px', display: 'block', margin: '0 auto 20px auto' }} 
           />
         )}
 
         <div style={{ 
-          backgroundColor: '#fff0f6', 
+          backgroundColor: '#f5f5f5', 
           padding: '15px', 
           borderRadius: '12px', 
-          borderLeft: '4px solid var(--kuro-pink)' 
+          marginBottom: '20px'
         }}>
-          <h4 style={{ margin: '0 0 10px 0', color: 'var(--kuro-pink)' }}>📖 Lo que dice el manual:</h4>
-          <p style={{ margin: 0, color: 'var(--kuro-dark)', lineHeight: '1.5' }}>{currentQ.feedback}</p>
+          <h4 style={{ margin: '0 0 5px 0', color: 'var(--kuro-dark)' }}>Respuesta Correcta:</h4>
+          <p style={{ margin: 0, color: 'var(--kuro-pink)', fontWeight: 'bold' }}>
+            {currentQ.options.find(o => o.is_correct)?.text}
+          </p>
         </div>
+
+        {currentQ.feedback && (
+          <div style={{ 
+            backgroundColor: '#fff0f6', 
+            padding: '15px', 
+            borderRadius: '12px', 
+            borderLeft: '4px solid var(--kuro-pink)' 
+          }}>
+            <h4 style={{ margin: '0 0 10px 0', color: 'var(--kuro-pink)' }}>📖 Libro del Conductor:</h4>
+            <p style={{ margin: 0, color: 'var(--kuro-dark)', lineHeight: '1.5' }}>{currentQ.feedback}</p>
+          </div>
+        )}
       </div>
 
-      <button className="duo-btn btn-primary" onClick={handleNext}>
-        {currentIndex + 1 >= failedQuestions.length ? "Entendido, ¡dame mi vida!" : "Entendido, siguiente"}
+      {/* Control Button */}
+      <button 
+        className={`duo-btn ${secondsLeft > 0 ? 'btn-gray-outline' : 'btn-primary'}`} 
+        onClick={handleNext}
+        disabled={secondsLeft > 0}
+        style={{ opacity: secondsLeft > 0 ? 0.8 : 1 }}
+      >
+        {secondsLeft > 0 ? `Lee para continuar... (${secondsLeft}s)` : "Entendido, siguiente"}
       </button>
 
     </div>

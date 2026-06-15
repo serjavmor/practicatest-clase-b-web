@@ -1,7 +1,7 @@
 import React from 'react';
 import TopBar from './TopBar';
 
-export default function HomeView({ lives, streak, currentLevel, onStart, timeToNextLife, onChangeUser }) {
+export default function HomeView({ lives, streak, currentLevel, onStart, timeToNextLife, onChangeUser, onStudy }) {
   
   const levels = Array.from({length: 10}, (_, i) => i + 1);
 
@@ -9,6 +9,14 @@ export default function HomeView({ lives, streak, currentLevel, onStart, timeToN
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
       <TopBar lives={lives} streak={streak} timeToNextLife={timeToNextLife} />
       <button onClick={onChangeUser} style={{ position: 'absolute', top: '15px', right: '15px', background: 'transparent', border: 'none', color: 'var(--kuro-dark)', fontWeight: 'bold', textDecoration: 'underline' }}>Cambiar Perfil</button>
+      
+      {lives < 5 && (
+        <div style={{ textAlign: 'center', marginTop: '10px' }}>
+          <button onClick={onStudy} className="duo-btn" style={{ backgroundColor: 'var(--kuro-pink)', borderBottom: '4px solid var(--kuro-pink-shadow)', color: 'white', fontSize: '0.9rem', padding: '10px 20px' }}>
+            📚 Estudiar (+1 Vida)
+          </button>
+        </div>
+      )}
       
       
       <div style={{ textAlign: 'center', padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
