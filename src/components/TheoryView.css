@@ -1,13 +1,14 @@
 .theory-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  padding: 20px;
+  height: 100dvh; /* Usa dynamic viewport height para no chocar con la barra de navegación del móvil */
+  padding: 15px 20px; /* Reduje padding vertical un poco */
   max-width: 600px;
   margin: 0 auto;
   box-sizing: border-box;
   background-color: #ffffff;
-  overflow: hidden; /* Prevent body scroll during carousel */
+  overflow-y: auto; /* Permite scroll si la pantalla es muy pequeña */
+  overflow-x: hidden;
 }
 
 .theory-title {
@@ -164,4 +165,28 @@
 .btn-gray-outline:active {
   transform: translateY(2px);
   border-bottom: 2px solid #cecece;
+}
+
+/* Media Queries for small mobile screens (e.g., iPhone SE, older Androids) */
+@media screen and (max-height: 700px) {
+  .kuromi-avatar {
+    height: 70px;
+  }
+  .chat-bubble {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+  .slide-card {
+    padding: 15px 15px;
+  }
+  .slide-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .slide-content {
+    font-size: 1rem;
+  }
+  .theory-title {
+    font-size: 1.4rem;
+  }
 }
