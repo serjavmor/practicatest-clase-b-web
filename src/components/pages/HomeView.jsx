@@ -73,7 +73,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
             opacity: streak >= 3 ? 1 : 0.4, filter: streak >= 3 ? 'none' : 'grayscale(100%)' 
           }}>
             <div style={{ animation: streak >= 3 ? 'pulse-heartbeat 1.5s infinite' : 'none' }}>
-              <img src="/images/kuro_fire.png" alt="Fire" style={{ width: '43px', height: '43px', mixBlendMode: 'multiply' }} />
+              <img src="/images/kuro_fire.png" alt="Fire" style={{ width: '58px', height: '58px', mixBlendMode: 'multiply' }} />
             </div>
             <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Racha de 3</span>
           </div>
@@ -83,7 +83,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
             opacity: currentLevel > 1 ? 1 : 0.4, filter: currentLevel > 1 ? 'none' : 'grayscale(100%)' 
           }}>
             <div>
-              <img src="/images/kuro_badge_basic.png" alt="Badge" style={{ width: '43px', height: '43px', mixBlendMode: 'multiply' }} />
+              <img src="/images/kuro_badge_basic.png" alt="Badge" style={{ width: '58px', height: '58px', mixBlendMode: 'multiply' }} />
             </div>
             <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Aprobado Básico</span>
           </div>
@@ -93,7 +93,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
             opacity: currentLevel >= 10 ? 1 : 0.4, filter: currentLevel >= 10 ? 'none' : 'grayscale(100%)' 
           }}>
             <div>
-              <img src="/images/kuro_badge_legend.png" alt="Legend" style={{ width: '43px', height: '43px', mixBlendMode: 'multiply' }} />
+              <img src="/images/kuro_badge_legend.png" alt="Legend" style={{ width: '58px', height: '58px', mixBlendMode: 'multiply' }} />
             </div>
             <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Leyenda</span>
           </div>
@@ -111,7 +111,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
             marginBottom: '20px'
           }}>
             <h3 style={{ margin: '0 0 10px 0', color: 'var(--kuro-dark)', fontSize: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img src="/images/kuro_trophy.png" alt="Trophy" style={{ width: '27px', height: '27px', marginRight: '5px', mixBlendMode: 'multiply' }} /> Podio de la Casa
+              <img src="/images/kuro_trophy.png" alt="Trophy" style={{ width: '36px', height: '36px', marginRight: '5px', mixBlendMode: 'multiply' }} /> Podio de la Casa
             </h3>
             {leaderboard.map((user, idx) => (
               <div key={idx} style={{ 
@@ -124,13 +124,13 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
                 color: idx === 0 ? '#ffb300' : 'var(--kuro-dark)'
               }}>
                 <div>
-                  <span style={{ marginRight: '10px', width: '27px', display: 'inline-block' }}>
-                    {idx === 0 ? <img src="/images/kuro_medal_1.png" style={{width: '27px', mixBlendMode: 'multiply'}}/> : idx === 1 ? <img src="/images/kuro_medal_2.png" style={{width: '27px', mixBlendMode: 'multiply'}}/> : <img src="/images/kuro_medal_3.png" style={{width: '27px', mixBlendMode: 'multiply'}}/>}
+                  <span style={{ marginRight: '10px', width: '36px', display: 'inline-block' }}>
+                    {idx === 0 ? <img src="/images/kuro_medal_1.png" style={{width: '36px', mixBlendMode: 'multiply'}}/> : idx === 1 ? <img src="/images/kuro_medal_2.png" style={{width: '36px', mixBlendMode: 'multiply'}}/> : <img src="/images/kuro_medal_3.png" style={{width: '36px', mixBlendMode: 'multiply'}}/>}
                   </span>
                   <span>{user.name}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <img src="/images/kuro_coin.png" style={{ width: '22px', height: '22px', marginRight: '4px', mixBlendMode: 'multiply' }}/>
+                  <img src="/images/kuro_coin.png" style={{ width: '30px', height: '30px', marginRight: '4px', mixBlendMode: 'multiply' }}/>
                   <span>{user.xp}</span>
                 </div>
               </div>
@@ -148,12 +148,12 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
           
           const xOffset = level % 2 === 0 ? 50 : -50;
           
-          let icon = <img src="/images/kuro_heart.png" alt="Heart" style={{ width: '60px', height: '60px', opacity: 0.5, filter: 'grayscale(100%)', mixBlendMode: 'multiply' }} />;
+          let icon = <img src="/images/kuro_heart.png" alt="Heart" style={{ width: '90px', height: '90px', opacity: 0.5, filter: 'grayscale(100%)', mixBlendMode: 'multiply' }} />;
           
           if (isCompleted) {
-            icon = <img src="/images/kuro_coin.png" alt="Coin" style={{ width: '60px', height: '60px', mixBlendMode: 'multiply' }} />;
+            icon = <img src="/images/kuro_coin.png" alt="Coin" style={{ width: '90px', height: '90px', mixBlendMode: 'multiply' }} />;
           } else if (isCurrent) {
-            icon = savedTestIndex > 0 ? <span style={{fontSize: '3rem'}}>▶️</span> : <img src="/images/kuro_heart.png" alt="Active" style={{ width: '60px', height: '60px', mixBlendMode: 'multiply' }} />;
+            icon = savedTestIndex > 0 ? <span style={{fontSize: '4.5rem'}}>▶️</span> : <img src="/images/kuro_heart.png" alt="Active" style={{ width: '90px', height: '90px', mixBlendMode: 'multiply' }} />;
           }
 
           return (
@@ -162,8 +162,8 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
               onClick={() => isCurrent && onStart()}
               disabled={!isCurrent}
               style={{
-                width: '80px',
-                height: '80px',
+                width: '110px',
+                height: '110px',
                 backgroundColor: 'transparent',
                 border: 'none',
                 transform: `translateX(${xOffset}px) translateY(${isCurrent ? 0 : 0}px)`,
