@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import TopBar from './TopBar';
-import useAudio from '../hooks/useAudio';
+import TopBar from '../organisms/TopBar';
+import useAudio from '../../hooks/useAudio';
 
 export default function TestView({ questions, lives, decreaseLife, streak, setStreak, xp, earnXp, inventory, useItem, initialIndex = 0, onPause, onFinish, timeToNextLife, onFailQuestion }) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
@@ -119,7 +119,8 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
                 opacity: (showingFeedback || erasedOptions.length >= q.options.length - 1) ? 0.5 : 1
               }}
             >
-              <img src="/images/kuro_eraser.png" alt="Eraser" style={{ width: '18px', height: '18px', marginRight: '5px' }} /> {inventory.eraser}
+              <img src="/images/kuro_eraser.png" alt="Eraser" style={{ width: '20px', height: '20px', marginRight: '5px', mixBlendMode: 'multiply' }} /> 
+              Usar Borrador ({inventory.eraser})
             </button>
           )}
           {inventory?.shield > 0 && (
@@ -135,7 +136,8 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
                 opacity: showingFeedback && !shieldActive ? 0.5 : 1
               }}
             >
-              <img src="/images/kuro_shield.png" alt="Shield" style={{ width: '18px', height: '18px', marginRight: '5px' }} /> {inventory.shield}
+              <img src="/images/kuro_shield.png" alt="Shield" style={{ width: '20px', height: '20px', marginRight: '5px', mixBlendMode: 'multiply' }} /> 
+              Activar Escudo ({inventory.shield})
             </button>
           )}
         </div>
@@ -204,7 +206,7 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
               color: 'var(--kuro-dark)',
               fontWeight: 'bold'
             }}>
-              <strong><img src="/images/kuro_heart.png" alt="Life" style={{ width: '16px', height: '16px', verticalAlign: 'middle', marginRight: '4px' }} /> Dato Kuromi:</strong> {q.feedback}
+              <strong><img src="/images/kuro_heart.png" alt="Life" style={{ width: '16px', height: '16px', verticalAlign: 'middle', marginRight: '4px', mixBlendMode: 'multiply' }} /> Dato Kuromi:</strong> {q.feedback}
             </div>
           )}
 

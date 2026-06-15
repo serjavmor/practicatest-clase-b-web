@@ -22,7 +22,7 @@ export default function ShopView({ xp, inventory, buyItem, onExit }) {
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px', marginTop: '10px' }}>
         <h1 style={{ color: 'var(--kuro-dark)', margin: 0, display: 'flex', alignItems: 'center', fontSize: '1.5rem' }}>
-          <img src="/images/kuro_shop.png" alt="Shop" style={{ width: '32px', height: '32px', marginRight: '10px' }} /> Tienda Kuro
+          <img src="/images/kuro_shop.png" alt="Shop" style={{ width: '30px', height: '30px', marginRight: '10px', mixBlendMode: 'multiply' }} /> Tienda Kuro
         </h1>
         <button onClick={onExit} style={{ background: 'var(--kuro-gray-light)', padding: '8px 15px', borderRadius: '20px', border: 'none', color: 'var(--kuro-dark)', fontWeight: 'bold', fontSize: '0.9rem', boxShadow: '0 2px 0 var(--kuro-gray)' }}>Volver</button>
       </div>
@@ -39,7 +39,7 @@ export default function ShopView({ xp, inventory, buyItem, onExit }) {
       }}>
         <span style={{ fontSize: '1.1rem', color: 'var(--kuro-dark)', fontWeight: 'bold', marginRight: '10px' }}>Tu saldo:</span>
         <span style={{ fontSize: '1.3rem', color: '#ffb300', fontWeight: 'bold', display: 'flex', alignItems: 'center' }}>
-          <img src="/images/kuro_coin.png" alt="Coin" style={{ width: '24px', height: '24px', marginRight: '5px' }} /> {xp}
+          <img src="/images/kuro_coin.png" alt="Coin" style={{ width: '24px', height: '24px', marginRight: '8px', mixBlendMode: 'multiply' }} /> <span>{xp}</span>
         </span>
       </div>
 
@@ -57,7 +57,7 @@ export default function ShopView({ xp, inventory, buyItem, onExit }) {
         justifyContent: 'space-between'
       }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/images/kuro_eraser.png" alt="Eraser" style={{ width: '50px', height: '50px', marginRight: '15px' }} />
+          <img src="/images/kuro_eraser.png" alt="Eraser" style={{ width: '40px', height: '40px', marginRight: '15px', mixBlendMode: 'multiply' }} />
           <div>
             <h3 style={{ margin: '0 0 5px 0', color: 'var(--kuro-dark)', fontSize: '1.1rem' }}>Borrador Mágico</h3>
             <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--kuro-gray)' }}>Oculta 1 opción incorrecta.</p>
@@ -86,7 +86,7 @@ export default function ShopView({ xp, inventory, buyItem, onExit }) {
         justifyContent: 'space-between'
       }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/images/kuro_shield.png" alt="Shield" style={{ width: '50px', height: '50px', marginRight: '15px' }} />
+          <img src="/images/kuro_shield.png" alt="Shield" style={{ width: '40px', height: '40px', marginRight: '15px', mixBlendMode: 'multiply' }} />
           <div>
             <h3 style={{ margin: '0 0 5px 0', color: 'var(--kuro-dark)', fontSize: '1.1rem' }}>Escudo Kuro</h3>
             <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--kuro-gray)' }}>Te salva de perder una vida.</p>

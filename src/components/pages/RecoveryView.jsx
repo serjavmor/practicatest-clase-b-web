@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import useAudio from '../hooks/useAudio';
+import useAudio from '../../hooks/useAudio';
 export default function RecoveryView({ questions, lives, maxLives, onEarnLife, earnXp, onExit }) {
   const [cardsRead, setCardsRead] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(10);

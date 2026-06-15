@@ -16,7 +16,7 @@ export default function OnboardingView({ userName, onComplete }) {
     },
     {
       title: "El Sistema de Vidas",
-      content: <>Tienes 5 vidas (<img src='/images/kuro_heart.png' alt='Vida' style={{width:'16px', height:'16px', verticalAlign:'middle'}}/>). Si repruebas un test, pierdes una vida. Las vidas se recargan automáticamente cada 15 minutos, pero si no quieres esperar, ¡puedes estudiar en la Sala de Castigo para recuperarlas al instante!</>,
+      content: <>Tienes 5 vidas (<img src='/images/kuro_heart.png' alt='Vida' style={{width:'16px', height:'16px', verticalAlign:'middle', mixBlendMode:'multiply'}}/>). Si repruebas un test, pierdes una vida. Las vidas se recargan automáticamente cada 15 minutos, pero si no quieres esperar, ¡puedes estudiar en la Sala de Castigo para recuperarlas al instante!</>,
       image: "kuromi_sad_1781483036083.png"
     },
     {

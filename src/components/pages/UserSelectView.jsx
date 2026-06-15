@@ -80,7 +80,7 @@ export default function UserSelectView({ onSelectUser }) {
             }}
           >
             <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: p.name ? 'var(--kuro-dark)' : 'var(--kuro-gray-shadow)' }}>
-              {p.name ? <><img src="/images/kuro_heart.png" alt="User" style={{width: '20px', verticalAlign: 'middle', marginRight: '5px'}} /> {p.name}</> : `Crear Perfil ${p.id}`}
+              {p.name ? <><img src="/images/kuro_heart.png" alt="User" style={{width: '20px', verticalAlign: 'middle', marginRight: '5px', mixBlendMode: 'multiply'}} /> {p.name}</> : `Crear Perfil ${p.id}`}
             </span>
             {p.name && (
               <button 
