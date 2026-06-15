@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './TheoryView.css';
 
 export default function TheoryView({ lesson, onComplete }) {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  if (!lesson) {
+  if (!lesson || !lesson.slides || lesson.slides.length === 0) {
     return (
       <div className="theory-container" style={{ justifyContent: 'center' }}>
         <h2 style={{ marginBottom: '20px' }}>No hay lección para este nivel.</h2>
@@ -15,10 +15,36 @@ export default function TheoryView({ lesson, onComplete }) {
     );
   }
 
+  const slides = lesson.slides;
+  const isLastSlide = currentSlide === slides.length - 1;
+
+  const nextSlide = () => {
+    if (!isLastSlide) {
+      setCurrentSlide(prev => prev + 1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(prev => prev - 1);
+    }
+  };
+
   return (
     <div className="theory-container">
       {/* Header */}
       <h1 className="theory-title">{lesson.title}</h1>
+
+      {/* Progress Bar */}
+      <div className="progress-bar-container">
+        <div 
+          className="progress-fill" 
+          style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
+        ></div>
+      </div>
+      <p className="progress-text">
+        Píldora {currentSlide + 1} de {slides.length}
+      </p>
 
       {/* Kuromi Chat Bubble */}
       <div className="kuromi-chat-container">
@@ -28,40 +54,52 @@ export default function TheoryView({ lesson, onComplete }) {
           className="kuromi-avatar"
         />
         <div className="chat-bubble">
-          ¡Hola! Antes de empezar el test, quiero enseñarte algo muy importante del Libro del Conductor. 👇
+          ¡Hola! Lee con atención estas diapositivas antes de tu examen. 👇
         </div>
       </div>
 
-      {/* Flashcard 3D */}
-      <div className="flashcard-scene" onClick={() => setIsFlipped(true)}>
-        <div className={`flashcard ${isFlipped ? 'is-flipped' : ''}`}>
-          {/* Frente de la tarjeta */}
-          <div className="flashcard-face flashcard-front">
-            <h2 style={{ color: '#1cb0f6', marginBottom: '10px' }}>💡 Concepto Clave</h2>
-            <p className="concept-text">{lesson.concept}</p>
-            <div className="tap-to-reveal">
-              <span className="pulse-animation">👆 Toca para revelar el Tip Secreto</span>
+      {/* Carousel Card */}
+      <div className="carousel-container">
+        <div 
+          className="carousel-track" 
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <div className="carousel-slide" key={index}>
+              <div className={`slide-card ${index === slides.length - 1 ? 'final-slide' : ''}`}>
+                <h2 className="slide-title">
+                  {index === slides.length - 1 ? '⭐ ' : '📘 '}{slide.title}
+                </h2>
+                <p className="slide-content">{slide.content}</p>
+                {index === slides.length - 1 && (
+                  <div className="success-icon">✨</div>
+                )}
+              </div>
             </div>
-          </div>
-
-          {/* Reverso de la tarjeta */}
-          <div className="flashcard-face flashcard-back">
-            <h2 style={{ color: '#ff4b4b', marginBottom: '10px' }}>⭐ Tip del Libro</h2>
-            <p className="tip-text">{lesson.tip}</p>
-            <div className="success-icon">✨</div>
-          </div>
+          ))}
         </div>
       </div>
 
-      {/* Botón de Acción */}
-      <button 
-        className={`duo-btn ${isFlipped ? 'btn-green' : 'btn-gray'}`} 
-        onClick={onComplete}
-        disabled={!isFlipped}
-        style={{ marginTop: 'auto' }}
-      >
-        {isFlipped ? '¡Estoy listo para el Test!' : 'Lee la tarjeta primero'}
-      </button>
+      {/* Controls */}
+      <div className="carousel-controls">
+        <button 
+          className="duo-btn btn-gray-outline" 
+          onClick={prevSlide}
+          style={{ visibility: currentSlide === 0 ? 'hidden' : 'visible' }}
+        >
+          Atrás
+        </button>
+
+        {!isLastSlide ? (
+          <button className="duo-btn btn-blue" onClick={nextSlide}>
+            Siguiente
+          </button>
+        ) : (
+          <button className="duo-btn btn-green" onClick={onComplete}>
+            ¡Comenzar Test!
+          </button>
+        )}
+      </div>
     </div>
   );
 }

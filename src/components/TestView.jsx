@@ -96,7 +96,7 @@ export default function TestView({ questions, lives, setLives, streak, setStreak
           <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
             <img 
               src={isCorrect ? "/images/kuromi_celebrate_1781483026283.png" : "/images/kuromi_sad_1781483036083.png"} 
-              style={{ height: '80px', marginRight: '20px' }} 
+              style={{ height: '80px', marginRight: '20px', mixBlendMode: 'multiply', filter: 'contrast(1.1)' }} 
               alt="Kuromi"
             />
             <h2 style={{ color: isCorrect ? 'var(--duo-green-shadow)' : 'var(--duo-red-shadow)' }}>

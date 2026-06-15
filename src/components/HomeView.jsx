@@ -13,7 +13,7 @@ export default function HomeView({ lives, streak, currentLevel, onStart }) {
         <img 
           src="/images/kuromi_instructor_1781483016419.png" 
           alt="Kuromi Mascot" 
-          style={{ height: '120px', marginBottom: '10px' }} 
+          style={{ height: '120px', marginBottom: '10px', mixBlendMode: 'multiply', filter: 'contrast(1.1)' }} 
         />
         <div style={{
           backgroundColor: 'white',

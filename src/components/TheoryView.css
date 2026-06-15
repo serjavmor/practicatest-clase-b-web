@@ -7,70 +7,102 @@
   margin: 0 auto;
   box-sizing: border-box;
   background-color: #ffffff;
+  overflow: hidden; /* Prevent body scroll during carousel */
 }
 
 .theory-title {
   font-size: 1.8rem;
   color: #4b4b4b;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
   font-weight: 800;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background-color: #e5e5e5;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #1cb0f6;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #afafaf;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 /* Kuromi Chat */
 .kuromi-chat-container {
   display: flex;
   align-items: flex-end;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .kuromi-avatar {
-  height: 100px;
+  height: 90px;
   margin-right: 15px;
+  mix-blend-mode: multiply; /* Soluciona mágicamente cualquier borde blanco */
+  filter: contrast(1.1); /* Mejora el contraste después del blend */
 }
 
 .chat-bubble {
   background-color: #f0f0f0;
   color: #4b4b4b;
-  padding: 15px 20px;
+  padding: 12px 15px;
   border-radius: 20px;
   border-bottom-left-radius: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   box-shadow: 0 4px 0 #d5d5d5;
   position: relative;
   flex: 1;
 }
 
-/* Flashcard 3D Scene */
-.flashcard-scene {
-  perspective: 1000px; /* Da el efecto 3D */
-  width: 100%;
+/* Carousel */
+.carousel-container {
   flex: 1;
-  min-height: 250px;
-  margin-bottom: 30px;
-  cursor: pointer;
-}
-
-.flashcard {
   width: 100%;
-  height: 100%;
+  overflow: hidden;
   position: relative;
-  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transform-style: preserve-3d;
+  margin-bottom: 20px;
 }
 
-.flashcard.is-flipped {
-  transform: rotateY(180deg);
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.flashcard-face {
-  position: absolute;
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Slide Cards */
+.slide-card {
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* Oculta la parte trasera cuando está dada vuelta */
+  background-color: #ddf4ff;
+  border: 2px solid #1cb0f6;
+  box-shadow: 0 6px 0 #1cb0f6;
   border-radius: 24px;
-  padding: 30px;
+  padding: 30px 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -79,57 +111,29 @@
   text-align: center;
 }
 
-/* Front Face */
-.flashcard-front {
-  background-color: #ddf4ff;
-  border: 2px solid #1cb0f6;
-  box-shadow: 0 6px 0 #1cb0f6;
-}
-
-.concept-text {
-  font-size: 1.2rem;
-  color: #4b4b4b;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.tap-to-reveal {
-  margin-top: auto;
-  color: #1cb0f6;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.pulse-animation {
-  display: inline-block;
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-/* Back Face */
-.flashcard-back {
+.final-slide {
   background-color: #ffeff1;
   border: 2px solid #ff4b4b;
   box-shadow: 0 6px 0 #ff4b4b;
-  transform: rotateY(180deg);
 }
 
-.tip-text {
-  font-size: 1.3rem;
+.slide-title {
+  font-size: 1.5rem;
   color: #4b4b4b;
-  line-height: 1.4;
+  margin-bottom: 20px;
   font-weight: 800;
+}
+
+.slide-content {
+  font-size: 1.2rem;
+  color: #4b4b4b;
+  line-height: 1.5;
+  font-weight: 600;
 }
 
 .success-icon {
   font-size: 3rem;
-  margin-top: 15px;
+  margin-top: 20px;
   animation: popIn 0.5s ease-out;
 }
 
@@ -139,16 +143,25 @@
   100% { transform: scale(1); }
 }
 
-/* Disabled Button state */
-.btn-gray {
-  background-color: #e5e5e5;
-  color: #afafaf;
-  border-bottom: 4px solid #cecece;
-  cursor: not-allowed;
+/* Controls */
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-.btn-gray:active {
-  transform: none;
+.carousel-controls button {
+  flex: 1;
+}
+
+.btn-gray-outline {
+  background-color: white;
+  color: #afafaf;
+  border: 2px solid #e5e5e5;
   border-bottom: 4px solid #cecece;
-  margin-top: auto;
+}
+
+.btn-gray-outline:active {
+  transform: translateY(2px);
+  border-bottom: 2px solid #cecece;
 }
