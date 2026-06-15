@@ -133,6 +133,13 @@ function App() {
     setView('home');
   }
 
+  const handleGoToStudy = (currentIndex) => {
+    if (currentIndex !== undefined) {
+      setSavedTestIndex(currentIndex);
+    }
+    setView('recovery');
+  }
+
   const finishLevel = (passed) => {
     setSavedTestIndex(0) // Reset saved progress on finish
     if (passed) {
@@ -207,7 +214,7 @@ function App() {
           onStart={startLevel} 
           timeToNextLife={timeToNextLife}
           onChangeUser={() => setView('userSelect')}
-          onStudy={() => setView('recovery')}
+          onStudy={() => handleGoToStudy()}
           onShop={() => setView('shop')}
           onMissions={() => setView('missions')}
           onAlbum={() => setView('album')}
@@ -250,6 +257,7 @@ function App() {
           })}
           updateMissionProgress={updateMissionProgress}
           checkUnlocks={checkUnlocks}
+          onStudy={handleGoToStudy}
         />
       )}
       {view === 'recovery' && (

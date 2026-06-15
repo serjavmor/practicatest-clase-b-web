@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TopBar from '../organisms/TopBar';
 import useAudio from '../../hooks/useAudio';
 
-export default function TestView({ questions, lives, decreaseLife, streak, setStreak, xp, earnXp, inventory, useItem, initialIndex = 0, onPause, onFinish, timeToNextLife, onFailQuestion, updateMissionProgress, checkUnlocks }) {
+export default function TestView({ questions, lives, decreaseLife, streak, setStreak, xp, earnXp, inventory, useItem, initialIndex = 0, onPause, onFinish, timeToNextLife, onFailQuestion, updateMissionProgress, checkUnlocks, onStudy }) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showingFeedback, setShowingFeedback] = useState(false);
@@ -109,7 +109,8 @@ export default function TestView({ questions, lives, decreaseLife, streak, setSt
         xp={xp}
         progress={progress} 
         timeToNextLife={timeToNextLife} 
-        onExit={onPause ? () => onPause(currentIndex) : null}
+        onExit={() => onPause(currentIndex)} 
+        onStudy={() => onStudy(currentIndex)}
       />
       
       <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 100px 20px' }}>

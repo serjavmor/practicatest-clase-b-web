@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function TopBar({ lives, streak, xp, progress, timeToNextLife, onExit }) {
+export default function TopBar({ lives, streak, xp, progress, timeToNextLife, onExit, onStudy }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', padding: '16px', justifyContent: 'space-between' }}>
       {onExit && (
@@ -12,6 +12,9 @@ export default function TopBar({ lives, streak, xp, progress, timeToNextLife, on
       <div style={{ display: 'flex', alignItems: 'center', color: 'var(--kuro-incorrect)', fontWeight: 'bold' }}>
         <img src="/images/kuro_heart.png" alt="Life" style={{ width: '54px', height: '54px', marginRight: '4px', mixBlendMode: 'multiply' }} />
         <span style={{ fontSize: '1.2rem', marginRight: '8px' }}>{lives}</span>
+        {onStudy && lives < 5 && (
+          <button onClick={onStudy} style={{ background: 'var(--kuro-pink)', border: 'none', borderRadius: '50%', width: '28px', height: '28px', color: 'white', fontWeight: 'bold', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', marginRight: '8px', boxShadow: '0 2px 0 var(--kuro-pink-shadow)' }}>+</button>
+        )}
         {timeToNextLife && (
           <span style={{ fontSize: '0.8rem', color: 'var(--kuro-gray)', backgroundColor: '#fff', padding: '2px 6px', borderRadius: '10px' }}>
             {timeToNextLife}
