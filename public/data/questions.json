@@ -1300,7 +1300,8 @@
         "text": "Conduce con buen criterio.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Un conductor seguro se distingue por conducir a la defensiva, anticipar los posibles riesgos en la vía y ser respetuoso de las normas del tránsito y de los demás."
   },
   {
     "id": 58,
@@ -1326,7 +1327,8 @@
         "text": "Son muy seguras de sí mismas.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Ceder a la presión del grupo suele llevar a conductores inexpertos a asumir riesgos innecesarios, como aumentar la velocidad, para demostrar valentía o evitar burlas."
   },
   {
     "id": 59,
@@ -1348,7 +1350,8 @@
         "text": "Que el conductor sobrestime sus capacidades y c onduzca a exceso de velocidad.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "En carreteras, los accidentes de un solo vehículo suelen deberse a la fatiga (quedarse dormido al volante) o a conducir a exceso de velocidad perdiendo el control."
   },
   {
     "id": 60,
@@ -1370,7 +1373,8 @@
         "text": "Las fallas mecánicas.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las estadísticas del Libro del Conductor muestran contundentemente que más del 90% de los accidentes de tránsito ocurren por fallas humanas (errores del conductor)."
   },
   {
     "id": 61,
@@ -1392,7 +1396,8 @@
         "text": "El estrés no influye en absoluto en los actos d e un conductor.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Es falso creer que el estrés no afecta la conducción. El estrés puede desencadenar reacciones agresivas o impulsivas, disminuyendo gravemente la seguridad."
   },
   {
     "id": 62,
@@ -1414,7 +1419,8 @@
         "text": "Que efectúe maniobras sorpresivas que sorprenda n a los demás.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Un conductor impulsivo tiende a reaccionar de forma agresiva y a tomar decisiones arriesgadas sin prever ni evaluar las consecuencias a tiempo."
   },
   {
     "id": 63,
@@ -1436,7 +1442,8 @@
         "text": "Contar siempre con tiempo de sobra al conducir.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El mejor consejo para una conducción segura es aplicar técnicas de conducción a la defensiva, manteniendo una actitud preventiva y atenta en todo momento."
   },
   {
     "id": 64,
@@ -1458,7 +1465,8 @@
         "text": "Conduciendo a la defensiva.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Las formas más eficaces de contribuir a la seguridad son conducir siempre a una velocidad razonable y prudente, y prestando 100% de atención a las condiciones del entorno."
   },
   {
     "id": 65,
@@ -1480,7 +1488,8 @@
         "text": "La capacidad de interpretación y decisión de un  conductor experimentado no se ven afectadas con sólo 2 tragos de licor fuerte.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las afirmaciones verdaderas respecto a la conducción suelen recordar que la prudencia y la constante evaluación del riesgo salvan vidas."
   },
   {
     "id": 66,
@@ -1502,7 +1511,8 @@
         "text": "Si la cantidad de alcohol ingerida en cada ocas ión es exactamente la misma, la concentración de alcohol en la sangre también \nserá la misma.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Es falso creer que el café, una ducha fría o la comida 'bajan' el alcohol en la sangre. El alcohol se metaboliza a un ritmo constante que nada puede acelerar."
   },
   {
     "id": 67,
@@ -1524,7 +1534,8 @@
         "text": "La visión se adapta automáticamente a la alta v elocidad y, por lo tanto, el resto del tránsito se percibe igual que al ir a una \nvelocidad baja.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Al conducir a altas velocidades como 100 km/h, se produce el llamado 'efecto túnel', donde el campo visual periférico del conductor se reduce drásticamente."
   },
   {
     "id": 68,
@@ -1546,7 +1557,8 @@
         "text": "Se comienza a sentir que los párpados se cierra n.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Los primeros síntomas de cansancio suelen ser parpadeos frecuentes, pesadez en los párpados, bostezos continuos y dificultad para mantener la trayectoria recta."
   },
   {
     "id": 69,
@@ -1568,7 +1580,8 @@
         "text": "También a los conductores experimentados a vece s les pasan inadvertidas informaciones importantes.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Nuestra percepción visual nunca es un proceso meramente objetivo. Está influenciada fuertemente por nuestras emociones, expectativas, cansancio y experiencia."
   },
   {
     "id": 70,
@@ -1590,7 +1603,8 @@
         "text": "Discutir con alguien o estar pendiente de la mú sica de la radio, aumenta las posibilidades de pasa r por alto circunstancias \nimportantes en el tránsito.  \n \n71.\n- En relación con la técnica de observación de los conductores inexpertos,  ¿cuál o cuáles de las siguientes afirmaciones es(son) \nverdadera(s)? \n \n Marque \nla  o  las respuesta(s) correcta(s)",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El consumo de drogas y alcohol, al igual que el cansancio, alteran siempre de forma negativa y peligrosa la capacidad de reacción del individuo."
   },
   {
     "id": 72,
@@ -1612,7 +1626,8 @@
         "text": "Las personas jóvenes son más sensibles a la luz  deslumbrante que los mayores.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las estadísticas demuestran que gran parte de los accidentes fatales involucran la ingesta de alcohol, incluso en pequeñas cantidades."
   },
   {
     "id": 73,
@@ -1634,7 +1649,8 @@
         "text": "Cuando con buenas condiciones de visibilidad us ted conduce por una carretera con buenas demarcaciones viales.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El riesgo de interpretar erróneamente el entorno aumenta severamente si conduces cansado, con sueño, o bajo el efecto de alcohol, medicamentos o drogas."
   },
   {
     "id": 74,
@@ -1656,7 +1672,8 @@
         "text": "Solicitar consejo a un amigo o pariente.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si consumes cualquier medicamento, aunque sea para la tos, debes leer el prospecto o consultar a un médico para saber si produce somnolencia o altera tus reflejos."
   },
   {
     "id": 75,
@@ -1678,7 +1695,8 @@
         "text": "Solicitar consejo médico antes de conducir.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Si estás tomando remedios que pueden afectar tu capacidad de conducir (como relajantes o antihistamínicos), la ley es clara: no debes conducir bajo ninguna circunstancia."
   },
   {
     "id": 76,
@@ -1700,7 +1718,8 @@
         "text": "Porque las medicinas que está tomando pueden af ectar su visión.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Se debe consultar al doctor porque muchos medicamentos recetados tienen efectos secundarios como visión borrosa, somnolencia o mareos, incompatibles con la conducción."
   },
   {
     "id": 77,
@@ -1726,7 +1745,8 @@
         "text": "Su juicio empeorará. \n  f) Su capacidad de concentración aumentará.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El alcohol produce una falsa sensación de seguridad (sobreconfianza), hace que asumas mayores riesgos y ralentiza dramáticamente tus tiempos de reacción."
   },
   {
     "id": 78,
@@ -1748,7 +1768,8 @@
         "text": "Reduce su concentración.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El alcohol deprime el sistema nervioso central, por lo que afecta directamente el juicio, la coordinación motora y hace más lentas las reacciones físicas y mentales."
   },
   {
     "id": 79,
@@ -1770,7 +1791,8 @@
         "text": "Modificar permanentemente la velocidad para mej orar la concentración.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si no puedes detenerte inmediatamente al sentir sueño, la única medida temporal es bajar las ventanas para que entre aire fresco, pero debes buscar dónde parar cuanto antes."
   },
   {
     "id": 80,
@@ -1792,7 +1814,8 @@
         "text": "Que espere un rato antes de irse conduciendo a casa.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si una persona bebió alcohol en una fiesta, el único y mejor consejo es que entregue las llaves y NO conduzca, optando por un taxi o un conductor designado."
   },
   {
     "id": 81,
@@ -1814,7 +1837,8 @@
         "text": "Tocar la bocina.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si otro conductor hace algo que te molesta (como cerrarte el paso), debes mantener la calma, ser tolerante y evitar entrar en conflictos o conductas agresivas."
   },
   {
     "id": 82,
@@ -1836,7 +1860,8 @@
         "text": "Manejar hasta su casa de noche para que las luc es lo ayuden.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La ley exige que conduzcas en óptimas condiciones. Si en tu licencia se indica el uso de anteojos y no los tienes, simplemente no puedes conducir."
   },
   {
     "id": 83,
@@ -1858,7 +1883,8 @@
         "text": "prometerse a sí mismo que se va a acostar tan p ronto haya llegado a casa.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Sentirse enfermo disminuye tu concentración y reflejos drásticamente. Lo correcto es abstenerse de conducir hasta sentirse completamente recuperado."
   },
   {
     "id": 84,
@@ -1880,7 +1906,8 @@
         "text": "El desorientarse y plantearse preguntas tales c omo, ¿pasé ya la ciudad X o aún no?, es un síntoma de cansancio.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Es completamente falso que el cansancio o el sueño se puedan 'curar' poniendo la música fuerte o tomando café. La única solución real es dormir."
   },
   {
     "id": 85,
@@ -1902,7 +1929,8 @@
         "text": "Detenerse y dormir una pequeña siesta o detener se y tomar un poco de café.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Si comienzas a sentir sueño profundo en un viaje, debes buscar un lugar seguro, salir de la vía y dormir una siesta corta (unos 20 a 30 minutos)."
   },
   {
     "id": 86,
@@ -1924,7 +1952,8 @@
         "text": "Evitar consumir alcohol.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Si vas a un evento social donde habrá alcohol, debes planificar tu regreso con antelación: decidir no beber, o coordinar que alguien que no beba sea el conductor."
   },
   {
     "id": 87,
@@ -1946,7 +1975,8 @@
         "text": "Escaso juicio de la velocidad.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El consumo de alcohol NUNCA mejora tu tiempo de reacción ni tu coordinación, por lo que cualquier afirmación que indique un aumento en tus habilidades es falsa."
   },
   {
     "id": 88,
@@ -1968,7 +1998,8 @@
         "text": "La coordinación.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Prácticamente todas las capacidades cognitivas y motoras se ven afectadas por el alcohol. Ninguna capacidad relevante para conducir sale ilesa de su consumo."
   },
   {
     "id": 89,
@@ -1990,7 +2021,8 @@
         "text": "Las condiciones climáticas.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El 'tiempo de reacción' no depende de los frenos del auto, sino de condiciones del conductor: edad, cansancio, distracciones, y consumo de alcohol o medicamentos."
   },
   {
     "id": 90,
@@ -2016,7 +2048,8 @@
         "text": "Cuando mira un mapa del camino.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Es muy común perder la concentración durante viajes largos en carreteras rectas y monótonas (efecto hipnosis de carretera), especialmente de noche o con cansancio."
   },
   {
     "id": 91,
@@ -2038,7 +2071,8 @@
         "text": "Detenerse, pero sólo si vienen más autos detrás  suyo.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Frente a cruces o situaciones donde otros vehículos o peatones interfieren, el conductor siempre debe reducir la velocidad y ceder el paso si es necesario."
   },
   {
     "id": 92,
@@ -2060,7 +2094,8 @@
         "text": "Podría aparecer sorpresivamente algún vehículo en sentido contrario.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Adelantar cerca de un peatón es riesgoso porque este puede cambiar de dirección sorpresivamente, o porque la maniobra puede bloquear tu vista de vehículos en contra."
   },
   {
     "id": 93,
@@ -2082,7 +2117,8 @@
         "text": "Nada impide que pueda efectuar un adelantamient o en un cruce ferroviario, si no siente tren alguno en las proximidades.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Los cruces ferroviarios siempre deben cruzarse con extrema precaución. Nunca confíes a ciegas en las barreras automáticas; siempre debes mirar y escuchar primero."
   },
   {
     "id": 94,
@@ -2104,7 +2140,8 @@
         "text": "Frena suavemente.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Independiente de si vas a 70 km/h o más, debes adecuar tu conducción a lo que ves adelante, estando siempre preparado para detenerte ante imprevistos."
   },
   {
     "id": 95,
@@ -2126,7 +2163,8 @@
         "text": "Para estar en una ubicación más segura en caso que el vehículo se roncee.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Al aproximarse a una curva hacia la izquierda, mantenerse a la derecha mejora el ángulo visual y evita un choque frontal si un vehículo que viene en contra invade tu pista."
   },
   {
     "id": 96,
@@ -2148,7 +2186,8 @@
         "text": "Un espacio igual al largo de 3 autos.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En vías de alta velocidad, se exige mantener una distancia holgada de seguimiento de al menos 3 segundos con el vehículo que te antecede para prevenir colisiones por alcance."
   },
   {
     "id": 97,
@@ -2170,7 +2209,8 @@
         "text": "Mantenerse bien a la izquierda para hacer la cu rva menos pronunciada.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Ante cualquier curva, la regla de oro es disminuir la velocidad ANTES de entrar a la curva, y luego acelerar suavemente mientras se sale de ella."
   },
   {
     "id": 98,
@@ -2192,7 +2232,8 @@
         "text": "Unos 100 metros",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "A 90 km/h, tu distancia de seguridad debe ser lo suficientemente amplia (más de 75 metros) para reaccionar a tiempo, aplicando firmemente la 'regla de los 3 segundos'."
   },
   {
     "id": 99,
@@ -2214,7 +2255,8 @@
         "text": "El vendedor de helados puede bajarse de su vehí culo.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El Libro del Conductor advierte que en zonas con autos estacionados, el mayor peligro siempre son las puertas que se abren de improviso y los peatones cruzando entre los autos."
   },
   {
     "id": 100,
@@ -2236,7 +2278,8 @@
         "text": "Tocar la bocina y avanzar rápidamente.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si la visual está bloqueada en un cruce, debes detenerte, y luego avanzar milímetro a milímetro (muy lentamente) hasta tener visibilidad completa antes de virar."
   },
   {
     "id": 101,
@@ -2258,7 +2301,8 @@
         "text": "Disminuir la velocidad y estar preparado para d etenerse si aparece un niño.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Si una pelota rebota en la calzada, la acción inmediata es frenar y detenerse. Invariablemente, detrás de una pelota viene un niño corriendo sin mirar a los lados."
   },
   {
     "id": 102,
@@ -2280,7 +2324,8 @@
         "text": "tener las luces encendidas.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Nunca debes tocar la bocina, acelerar bruscamente ni encender luces altas al pasar cerca de animales, ya que pueden asustarse y saltar hacia el vehículo."
   },
   {
     "id": 103,
@@ -2306,7 +2351,8 @@
         "text": "Está preparado para detenerse.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Frente a rebaños u ovejas en la vía, debes reducir la velocidad, e incluso detener el vehículo por completo, esperando con paciencia a que el camino se despeje."
   },
   {
     "id": 104,
@@ -2332,7 +2378,8 @@
         "text": "Entre los autos estacionados puede aparecer un niño corriendo.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Debes frenar por: el riesgo de puertas abriéndose repentinamente, niños o peatones cruzando entre los autos, y vehículos saliendo de su estacionamiento sin señalizar."
   },
   {
     "id": 105,
@@ -2354,7 +2401,8 @@
         "text": "Avanzar lentamente.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si un vehículo señaliza a la derecha en un cruce, NO te confíes. Espera a que el vehículo efectivamente comience a girar, ya que el intermitente pudo quedar encendido por error."
   },
   {
     "id": 106,
@@ -2376,7 +2424,8 @@
         "text": "Intentar despejar el cruce empujando su vehícul o.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si tu auto se apaga en un cruce ferroviario y suena la campana, significa que viene un tren inminentemente. Salta del auto con todos los pasajeros de inmediato y aléjense."
   },
   {
     "id": 107,
@@ -2402,7 +2451,8 @@
         "text": "Puertas de automóviles estacionados que se abra n.  \n f) Automóviles que vengan detrás de él.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El conductor siempre debe estar especialmente atento a los usuarios vulnerables: peatones (especialmente niños o ancianos) y ciclistas, cediéndoles siempre el derecho a paso."
   },
   {
     "id": 108,
