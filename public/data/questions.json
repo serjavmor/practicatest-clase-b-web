@@ -2474,7 +2474,8 @@
         "text": "Decirle al peatón que no debería haber cruzado.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Frente a señalizaciones de Ceda el Paso o intersecciones no reguladas, la obligación es disminuir la velocidad y detenerse si viene otro vehículo con preferencia."
   },
   {
     "id": 109,
@@ -2496,7 +2497,8 @@
         "text": "Continuar con precaución.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Ante cualquier cruce con visibilidad reducida o señales restrictivas, el conductor debe reducir su velocidad a un mínimo y estar preparado para frenar por completo."
   },
   {
     "id": 110,
@@ -2518,7 +2520,8 @@
         "text": "Que algún pasajero que se baje del bus puede ap arecer repentinamente delante del mismo para cruzar.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El principal peligro al sobrepasar un bus detenido es que peatones (especialmente pasajeros que acaban de bajar) crucen la calle sorpresivamente por delante del bus."
   },
   {
     "id": 111,
@@ -2540,7 +2543,8 @@
         "text": "El conductor del camión ha olvidado apagar sus luces indicadoras de viraje.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las señales manuales o lumínicas de los vehículos de carga pesada indican precaución, un giro inminente o que se detendrán, por lo que debes mantener la distancia."
   },
   {
     "id": 112,
@@ -2566,7 +2570,8 @@
         "text": "Debe concentrarse sólo en el vehículo que va de trás suyo.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Al ir en fila, debes mantener una distancia de seguridad constante y no mirar solo al auto de enfrente, sino mirar varios vehículos más adelante para anticipar frenadas."
   },
   {
     "id": 113,
@@ -2588,7 +2593,8 @@
         "text": "D",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Tu visión debe proyectarse a lo lejos y abarcar todo el entorno (espejos, vías laterales, peatones), evitando la 'mirada fija' en un solo punto."
   },
   {
     "id": 114,
@@ -2614,7 +2620,8 @@
         "text": "A los vehículos que pueden venir detrás suyo. \nf) A irregularidades de la superficie de calzada.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En zonas urbanas o de alto tráfico, los principales riesgos son: peatones cruzando en lugares no habilitados, puertas de autos abriéndose sorpresivamente, y vehículos frenando de golpe."
   },
   {
     "id": 115,
@@ -2636,7 +2643,8 @@
         "text": "Sigue conduciendo sin estar preparado para nada  en especial, ya que usted tiene dominio de su vehículo.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Aunque el límite sea 70 km/h, esa es la velocidad máxima en condiciones 'ideales'. Si la situación presenta riesgos (lluvia, tráfico, peatones), tu obligación legal es reducir la velocidad."
   },
   {
     "id": 116,
@@ -2658,7 +2666,8 @@
         "text": "Espera y deja pasar primero al vehículo que vie ne en contra, y luego usted continúa y pasa a los peatones.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Frente a situaciones de riesgo visible o advertencias, la instrucción del Libro del Conductor es levantar el pie del acelerador y prepararse para frenar."
   },
   {
     "id": 117,
@@ -2680,7 +2689,8 @@
         "text": "Es especialmente cauteloso en las interseccion es.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si suena el celular, debes ignorarlo. Si es una emergencia, debes buscar un lugar seguro para estacionar el vehículo antes de contestar."
   },
   {
     "id": 118,
@@ -2702,7 +2712,8 @@
         "text": "Al circular por un camino secundario. \n \n119 .- En un camino muy transitado usted desea adelanta r a un camión con remolque que va lentamente delante suyo, ¿qué debería \nhacer usted? \n \n Marque una respuesta",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El teléfono celular al volante solo puede usarse si cuentas con un sistema de 'manos libres' integrado que no requiera manipulación visual ni manual."
   },
   {
     "id": 120,
@@ -2724,7 +2735,8 @@
         "text": "Intersecciones",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Las estadísticas indican que la gran mayoría de los accidentes de tránsito (choques y colisiones) ocurren en las intersecciones de las zonas urbanas."
   },
   {
     "id": 121,
@@ -2746,7 +2758,8 @@
         "text": "Los volcamientos.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En Chile, la mayor cantidad de muertos en accidentes de tránsito se origina por atropellos a peatones y colisiones frontales en zonas rurales o carreteras."
   },
   {
     "id": 122,
@@ -2768,7 +2781,8 @@
         "text": "Señalizar. \n \n123 .- Las fotografías muestran una secuencia cronológi ca de imágenes. ¿Cuáles son las 2 principales causas por las que surge esta \nsituación de peligro?   \n  \n Marque dos  respuestas",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Antes de moverte, debes mirar por todos los espejos, verificar tus 'puntos ciegos' (girando la cabeza), señalizar, y asegurarte de ceder el paso a los vehículos en movimiento."
   },
   {
     "id": 124,
@@ -2790,7 +2804,8 @@
         "text": "Avanzar, sólo si está seguro que la luz roja es tá próxima a cambiar.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las indicaciones de Carabineros de Chile prevalecen SIEMPRE sobre cualquier otra señal de tránsito o semáforo. Si él te indica avanzar, debes hacerlo con precaución."
   },
   {
     "id": 125,
@@ -2812,7 +2827,8 @@
         "text": "Cuando desea manifestar su disgusto.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La bocina solo debe usarse en caso de emergencia inminente para prevenir un accidente, no para apurar a otros ni para saludar."
   },
   {
     "id": 126,
@@ -2834,7 +2850,8 @@
         "text": "Para prevenir la ocurrencia de un accidente.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Su uso está restringido exclusivamente a situaciones de peligro, para advertir tu presencia y evitar una colisión o atropello."
   },
   {
     "id": 127,
@@ -2856,7 +2873,8 @@
         "text": "Cuando usted va a virar a la derecha.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Nunca debes ingresar a un cruce (aunque el semáforo esté en verde) si no hay espacio suficiente al otro lado para despejar la intersección por completo."
   },
   {
     "id": 128,
@@ -2874,7 +2892,8 @@
         "text": "Por cualquiera de las dos pistas.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La pista izquierda es exclusivamente para maniobras de adelantamiento. Si la vía está despejada, siempre debes circular por la pista derecha."
   },
   {
     "id": 129,
@@ -2896,7 +2915,8 @@
         "text": "Al conducir a una velocidad muy baja.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Solo debes usar la pista izquierda para adelantar a un vehículo más lento, o cuando el tráfico esté completamente congestionado en ambas pistas."
   },
   {
     "id": 130,
@@ -2918,7 +2938,8 @@
         "text": "Sólo si recibe indicación expresa de un Carabin ero.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Retroceder en un cruce está estrictamente prohibido, a menos que un Carabinero te lo ordene expresamente para despejar la vía."
   },
   {
     "id": 131,
@@ -2940,7 +2961,8 @@
         "text": "El otro vehículo, siempre que él se venga acerc ando al cruce por el lado izquierdo suyo.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En un cruce no señalizado, el vehículo que se acerca por la DERECHA siempre tiene el derecho a paso (prioridad)."
   },
   {
     "id": 132,
@@ -2962,7 +2984,8 @@
         "text": "El que se acerca al cruce por la izquierda del otro.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Quien se aproxima por la izquierda debe ceder el paso al vehículo que aparece por su derecha en cruces sin señalización."
   },
   {
     "id": 133,
@@ -2984,7 +3007,8 @@
         "text": "No, a menos que los demás asientos estén ocupad os.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Es absolutamente falso y extremadamente letal. Los niños jamás deben viajar en la zona del portaequipajes o maletero extendido."
   },
   {
     "id": 134,
@@ -3010,7 +3034,8 @@
         "text": "En el asiento trasero, en silla de seguridad mi rando hacia atrás.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Las guaguas deben viajar siempre en el asiento trasero, en una silla de seguridad certificada (Sistema de Retención Infantil) orientada hacia atrás."
   },
   {
     "id": 135,
@@ -4198,7 +4223,8 @@
         "text": "Al ingresar a un recinto o área de estacionamie ntos.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Se debe tener cuidado extremo con los motociclistas en los cruces de calles, al cambiar de pista (revisar puntos ciegos) y al abrir las puertas del auto estacionado."
   },
   {
     "id": 194,
@@ -4220,7 +4246,8 @@
         "text": "Porque el bus puede permanecer detenido.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Porque los pasajeros pueden bajar del bus e intentar cruzar la calle por delante del microbús, quedando ocultos a tu visión hasta el último segundo."
   },
   {
     "id": 195,
@@ -4242,7 +4269,8 @@
         "text": "Se sitúa al lado del ciclista, sigue en línea r ecta y desiste de virar.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes disminuir la velocidad, mantenerte detrás del ciclista, esperar a que cruce la intersección y solo entonces realizar tu viraje. Nunca lo adelantes para doblar frente a él."
   },
   {
     "id": 196,
@@ -4264,7 +4292,8 @@
         "text": "Prepararse para reducir la velocidad.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Debes reducir la velocidad casi a paso de hombre y estar preparado para detenerte si los animales se asustan."
   },
   {
     "id": 197,
@@ -4286,7 +4315,8 @@
         "text": "Tocando la bocina sólo una vez como señal de ad vertencia.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes dejarlos pasar o adelantarlos a muy baja velocidad, dejando una separación lateral muy amplia, sin tocar la bocina ni acelerar fuertemente el motor."
   },
   {
     "id": 198,
@@ -4308,7 +4338,8 @@
         "text": "es muy probable que el peatón sobreviva.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Un atropello a 65 km/h tiene una probabilidad de muerte para el peatón cercana al 90%. La supervivencia cae drásticamente sobre los 50 km/h."
   },
   {
     "id": 199,
@@ -4330,7 +4361,8 @@
         "text": "Toca la bocina para advertir su presencia.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes tratar al motociclista como si fuera un automóvil completo. Para adelantarlo, cámbiate completamente a la pista contigua dejando al menos 1,5 metros de distancia lateral."
   },
   {
     "id": 200,
@@ -4352,7 +4384,8 @@
         "text": "mantenerse cerca tras él y conducir cuidadosame nte.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes tener paciencia y aumentar tu distancia de seguridad, ya que los conductores de la tercera edad suelen tener tiempos de reacción más lentos."
   },
   {
     "id": 201,
@@ -4374,7 +4407,8 @@
         "text": "estacionar al costado derecho de la calzada.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Aún sin señales prohibitivas, por ley nacional NO debes estacionar a contra tránsito (contra el flujo de la calle) ni bloqueando salidas de vehículos o grifos."
   },
   {
     "id": 202,
@@ -4396,7 +4430,8 @@
         "text": "en un camino de tierra.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Nunca debes adelantar a un ciclista justo antes de una intersección o cuando vas a virar a la derecha inmediatamente después."
   },
   {
     "id": 203,
@@ -4418,7 +4453,8 @@
         "text": "Porque el ciclista podría desviarse bruscamente .",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Porque el ciclista puede tambalear, perder el equilibrio, desviarse bruscamente para esquivar un hoyo en la calzada, o ser desestabilizado por el viento de tu vehículo."
   },
   {
     "id": 204,
@@ -4440,7 +4476,8 @@
         "text": "Porque el motociclista podría ir más rápido de lo normal.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El viento que desplaza tu propio vehículo a alta velocidad (rebufo) puede empujar y desestabilizar gravemente al motociclista o ciclista, causando su caída."
   },
   {
     "id": 205,
@@ -4462,7 +4499,8 @@
         "text": "De la proximidad de un parque o plaza.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las señales amarillas con forma de rombo son de ADVERTENCIA DE PELIGRO, e indican riesgos como curvas, zonas escolares, cruces o calzada resbaladiza."
   },
   {
     "id": 206,
@@ -4488,7 +4526,8 @@
         "text": "cambiar de luces altas a bajas repetidas veces antes de iniciar el adelantamiento.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "De noche, al ir a adelantar, debes hacer un cambio de luces breve para advertir, y poner luces bajas apenas estés paralelo al otro vehículo para no encandilarlo por los espejos."
   },
   {
     "id": 207,
@@ -4510,7 +4549,8 @@
         "text": "Como máximo, el equivalente a lo que recorre en  3 segundos.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Cuando la calzada está mojada, la adherencia disminuye, por lo que debes duplicar tu distancia de seguimiento (aumentar el espacio al menos al doble)."
   },
   {
     "id": 208,
@@ -4532,7 +4572,8 @@
         "text": "Baja la visera que tiene su vehículo para prote gerlo del sol.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si un vehículo que viene en contra te encandila, reduce la velocidad y desvía la vista hacia la línea blanca o el borde derecho de la calzada para guiarte sin cegarte."
   },
   {
     "id": 209,
@@ -4554,7 +4595,8 @@
         "text": "El color de las ropas de un peatón influye en q ue éste pueda ser más o menos visible para los conductores. \n \n210 .- ¿Cuál o cuáles de las siguientes afirmaciones es (son) correcta(s) en cuanto a la conducción nocturna en un camino rural? \n \n Marque \nla  o las  respuesta(s) correcta(s)",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Conducir de noche exige reducir la velocidad, ya que tu campo visual está drásticamente limitado solo al alcance de tus luces (unos 50 a 100 metros)."
   },
   {
     "id": 211,
@@ -4576,7 +4618,8 @@
         "text": "Cuando los frenos están buenos el riesgo de pat inaje no existe.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Bajo la lluvia, la visibilidad se reduce y el pavimento mojado alarga la distancia de frenado. Debes encender luces, bajar la velocidad y evitar frenadas bruscas."
   },
   {
     "id": 212,
@@ -4598,7 +4641,8 @@
         "text": "Fallas en el sistema de dirección.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las causas principales de resbalar en agua (aquaplaning) son el exceso de velocidad y tener neumáticos desgastados (surcos con poca profundidad)."
   },
   {
     "id": 213,
@@ -4620,7 +4664,8 @@
         "text": "Bajar la velocidad y eventualmente detenerse.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Desvía tu mirada hacia la cuneta o línea demarcadora derecha de tu pista para no quedar ciego, y levanta el pie del acelerador."
   },
   {
     "id": 214,
@@ -4642,7 +4687,8 @@
         "text": "Bajar la velocidad o detenerse.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Baja la velocidad y no mires directamente a los focos del auto contrario. Jamás 'pagues con la misma moneda' encendiendo tus luces altas, pues ambos quedarían ciegos."
   },
   {
     "id": 215,
@@ -4664,7 +4710,8 @@
         "text": "Poner el pie en el pedal de embrague.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si al frenar el auto comienza a patinar, lo primero que debes hacer es SOLTAR el pedal del freno para permitir que las ruedas vuelvan a girar y recuperes el control del volante."
   },
   {
     "id": 216,
@@ -4686,7 +4733,8 @@
         "text": "Conduciendo en neutro.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Para evitar patinar en hielo, debes conducir extremadamente lento, acelerar con extrema suavidad, y usar el freno de motor en lugar del pedal de freno."
   },
   {
     "id": 217,
@@ -4708,7 +4756,8 @@
         "text": "10 veces la distancia normal.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El Libro del Conductor advierte que sobre calzada con hielo, la distancia necesaria para frenar puede ser hasta 10 veces mayor que en pavimento seco."
   },
   {
     "id": 218,
@@ -4730,7 +4779,8 @@
         "text": "Las luces de advertencia de peligro.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Ante neblina de día (o de noche) SIEMPRE se deben usar luces BAJAS. Las luces altas rebotan en las gotas de agua de la neblina y te encandilarán a ti mismo."
   },
   {
     "id": 219,
