@@ -3032,7 +3032,8 @@
         "text": "En el asiento trasero, en una silla de segurida d.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "La forma más segura para niños pequeños es viajar siempre en los asientos traseros utilizando un Sistema de Retención Infantil (SRI) o silla de seguridad adecuada a su peso y talla."
   },
   {
     "id": 136,
@@ -3054,7 +3055,8 @@
         "text": "En un asiento de seguridad mirando hacia atrás.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Un niño menor de 2 años debe viajar obligatoriamente en una silla de seguridad certificada, instalada en los asientos traseros y, preferentemente, mirando hacia atrás."
   },
   {
     "id": 137,
@@ -3076,7 +3078,8 @@
         "text": "Siempre es seguro.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El espacio que queda detrás de los asientos (maletero o escotilla) no está diseñado para pasajeros; es extremadamente peligroso y letal en caso de impacto."
   },
   {
     "id": 138,
@@ -3098,7 +3101,8 @@
         "text": "No es necesario que usted señalice que va a vir ar.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Para virar a la izquierda en una calle de un solo sentido, debes ubicar tu vehículo con anticipación en la pista o costado izquierdo de la calzada."
   },
   {
     "id": 141,
@@ -3116,7 +3120,8 @@
         "text": "Justo a la derecha de la línea de centro de cal zada.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "En una calle de doble sentido, si deseas virar a la izquierda debes ubicar tu vehículo junto al eje central de la calzada, sin invadir la pista contraria."
   },
   {
     "id": 142,
@@ -3138,7 +3143,8 @@
         "text": "Mantenerse detrás de él hasta que finalice su m aniobra.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Debes mantenerte atrás y esperar. Los camiones articulados necesitan abrirse (desplazarse hacia la izquierda) antes de poder girar a la derecha por su gran longitud."
   },
   {
     "id": 145,
@@ -3164,7 +3170,8 @@
         "text": "El punto de encuentro con el vehículo que viene  en contra.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Al adelantar, lo más difícil de juzgar es la velocidad del vehículo que viene en contra, la distancia a la que se encuentra y la longitud total del vehículo a sobrepasar."
   },
   {
     "id": 146,
@@ -3186,7 +3193,8 @@
         "text": "No acelera.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Aunque vayas a la velocidad máxima, NUNCA debes impedir que te adelanten. Mantén tu trayectoria y, si es necesario, disminuye ligeramente la velocidad para facilitarle la maniobra."
   },
   {
     "id": 147,
@@ -3212,7 +3220,8 @@
         "text": "Se acerca lo más posible hacia la línea de cent ro de calzada, para impedir el adelantamiento.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes facilitar el adelantamiento. Mantén tu velocidad (o redúcela un poco) y mantente lo más a la derecha posible en tu pista."
   },
   {
     "id": 148,
@@ -3234,7 +3243,8 @@
         "text": "Usted tiene la obligación de esperar a que la p ista del sentido contrario esté libre de vehículos para luego adelantar.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Antes de adelantar, siempre debes verificar que ningún vehículo detrás de ti haya comenzado a adelantarte a ti, y que tengas espacio y tiempo suficientes."
   },
   {
     "id": 149,
@@ -3256,7 +3266,8 @@
         "text": "Acelera y adelanta, ya que el ancho de la calza da es suficiente para 3 vehículos si el que viene e n contra se corre bien a su \nderecha.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si el vehículo de atrás ya comenzó a adelantarte, debes abortar inmediatamente tu propia maniobra y permitirle pasar con seguridad."
   },
   {
     "id": 150,
@@ -3278,7 +3289,8 @@
         "text": "Para poder ver mejor las señales que le pueda h acer su conductor.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Mantenerte suficientemente atrás de un vehículo grande te permite tener un mejor ángulo visual de la vía hacia adelante, asegurándote de que no venga nadie en contra."
   },
   {
     "id": 151,
@@ -3300,7 +3312,8 @@
         "text": "Porque los camiones suben las pendientes más le ntamente.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Adelantar a un camión requiere mucho más tiempo y distancia de exposición en la pista contraria, y su gran tamaño bloquea tu visión frontal de la carretera."
   },
   {
     "id": 152,
@@ -3322,7 +3335,8 @@
         "text": "Encender y apagar sus luces y esperar hasta que  el conductor le avise que es seguro adelantar.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes alejarte de su parachoques trasero para ampliar tu campo visual, señalizar tu intención y asegurarte de tener suficiente pista despejada por delante."
   },
   {
     "id": 153,
@@ -3344,7 +3358,8 @@
         "text": "100 km/hr",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En zonas rurales con pavimento de una pista por sentido, el límite general máximo de velocidad para vehículos livianos es de 100 km/h."
   },
   {
     "id": 154,
@@ -3366,7 +3381,8 @@
         "text": "80 km/hr",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La Ley de Tránsito en Chile establece que el límite de velocidad máximo en zonas urbanas es de 50 km/h para todos los vehículos livianos."
   },
   {
     "id": 155,
@@ -3388,7 +3404,8 @@
         "text": "disminuir la velocidad, para luego acelerar gra dualmente mientras la va recorriendo.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Debes reducir tu velocidad ANTES de entrar a la curva, ya que frenar dentro de la curva puede provocar un derrape o la pérdida de control del vehículo."
   },
   {
     "id": 158,
@@ -3410,7 +3427,8 @@
         "text": "No está permitido estacionar en la berma.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes ubicar el vehículo completamente fuera de la calzada (en la berma) y dejar encendidas tus luces de estacionamiento y luces de emergencia (gatos)."
   },
   {
     "id": 159,
@@ -3432,7 +3450,8 @@
         "text": "En un espacio delimitado para estacionar.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Estacionar en curvas, puentes, túneles, pasos de cebra o intersecciones obstaculiza la visibilidad de otros y está estrictamente prohibido por ley."
   },
   {
     "id": 160,
@@ -3454,7 +3473,8 @@
         "text": "Cuando ello sea necesario para evitar un accide nte.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Nunca debes detenerte ni bloquear un paso de cebra. Solo te detendrías antes de él para ceder el paso a un peatón que está cruzando."
   },
   {
     "id": 161,
@@ -3480,7 +3500,8 @@
         "text": "En una vía inclinada levemente. \n f) En una curva del camino.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "No debes estacionar a menos de 10 metros de una esquina, frente a grifos, sobre pasos de cebra, paraderos de locomoción colectiva ni aceras."
   },
   {
     "id": 162,
@@ -3502,7 +3523,8 @@
         "text": "Usted puede estacionar al costado derecho y a 5  m de la esquina si el cruce se encuentra semaforizado.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En vías urbanas de doble sentido sin señalización, la regla general obliga a estacionar al costado derecho de la calzada, en el sentido del tránsito."
   },
   {
     "id": 163,
@@ -3524,7 +3546,8 @@
         "text": "Si en el vehículo va a permanecer una persona.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Ninguna regla permite dejar el auto estacionado con el motor funcionando. Siempre debes apagar el motor y retirar las llaves del vehículo."
   },
   {
     "id": 164,
@@ -3546,7 +3569,8 @@
         "text": "Sólo al lado izquierdo según el sentido del trá nsito.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "En calles de un solo sentido, a menos que un letrero indique lo contrario, siempre debes estacionar exclusivamente al costado derecho."
   },
   {
     "id": 165,
@@ -3572,7 +3596,8 @@
         "text": "Cuando un Carabinero se lo solicita.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Debes detenerte obligatoriamente ante un disco PARE, una luz ROJA del semáforo, y cuando te lo indique un Carabinero."
   },
   {
     "id": 166,
@@ -3594,7 +3619,8 @@
         "text": "15 metros",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La distancia mínima legal para estacionar cerca de una esquina o intersección es de 10 metros, para no bloquear el radio de giro ni la visual."
   },
   {
     "id": 167,
@@ -3620,7 +3646,8 @@
         "text": "En o al llegar a una parada de locomoción colec tiva.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Nunca se debe estacionar sobre puentes, en túneles, pasos a nivel (vías férreas) o en las calzadas de carreteras de alta velocidad."
   },
   {
     "id": 168,
@@ -3642,7 +3669,8 @@
         "text": "Siempre.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Siempre que te detengas de noche en la berma de una zona rural, es obligatorio mantener las luces de estacionamiento encendidas para ser visible."
   },
   {
     "id": 169,
@@ -3664,7 +3692,8 @@
         "text": "Se detiene. \n \n170 .- Usted conduce a 90 km/h cuando la vía es obstrui da sorpresivamente por un camión que está virando a la izquierda. ¿Qué es lo \nprimero que hace usted ?     \n  \n        \n  \n Marque una respuesta",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Frente a situaciones imprevistas, la instrucción general es reducir inmediatamente la velocidad y estar preparado para detenerse."
   },
   {
     "id": 171,
@@ -3686,7 +3715,8 @@
         "text": "Sí, pero sólo en el caso que usted esté tratand o de abandonar un estacionamiento al borde de la calzada.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Usar los intermitentes NO te otorga derecho a paso preferencial; solo es un aviso de tu intención para que el resto de los conductores esté atento."
   },
   {
     "id": 172,
@@ -3708,7 +3738,8 @@
         "text": "Toca la bocina para indicarles que pueden cruza r.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El peatón que espera en la vereda de un paso cebra tiene preferencia de paso. Debes detenerte completamente y permitirle cruzar con seguridad."
   },
   {
     "id": 173,
@@ -3730,7 +3761,8 @@
         "text": "señalizar con su intermitente derecho cuando ad elantar no sea peligroso para los otros.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si llevas un vehículo lento y generas fila atrás, la cortesía y la norma indican que debes orillarte en el primer lugar seguro para dejar pasar a los más rápidos."
   },
   {
     "id": 174,
@@ -3752,7 +3784,8 @@
         "text": "La distancia entre usted y el vehículo que va a delante debería ser a lo menos igual a la que usted recorre en un segundo.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Puedes usar la 'Regla de los 3 Segundos'. Eliges un punto de referencia y verificas que pasen al menos 3 segundos desde que el auto de adelante pasa por él hasta que pasas tú."
   },
   {
     "id": 175,
@@ -3774,7 +3807,8 @@
         "text": "Se acerca hacia el centro de la calzada.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Si te siguen muy de cerca, aumenta TU distancia con el auto que va delante. Así, si debes frenar, podrás hacerlo suavemente sin que el de atrás te choque."
   },
   {
     "id": 176,
@@ -3796,7 +3830,8 @@
         "text": "Disminuye la velocidad y cede el paso al bus, s iempre que ello sea seguro. \n \n177 .- Usted va conduciendo en una carretera a la veloc idad máxima permitida. El conductor que viene detrás suyo está tratando de \nadelantarlo. ¿Qué hace usted?   \n \n Marque una respuesta",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Por cortesía y prevención, en zonas urbanas debes ceder el paso a los buses de locomoción colectiva cuando señalizan para reincorporarse al flujo vehicular."
   },
   {
     "id": 178,
@@ -3818,7 +3853,8 @@
         "text": "Acelera pasándolo inmediatamente.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes soltar el acelerador para recuperar inmediatamente tu 'distancia de seguridad' (los 3 segundos) respecto al vehículo que acaba de interponerse."
   },
   {
     "id": 179,
@@ -3840,7 +3876,8 @@
         "text": "Aumenta su velocidad y le impide que lo adelant e.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Mantén la calma y tu trayectoria constante. En el primer momento que sea seguro hacerlo, cámbiate a la pista derecha para permitirle el paso libremente."
   },
   {
     "id": 180,
@@ -3862,7 +3899,8 @@
         "text": "hay neblina.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "La regla de los 3 segundos es suficiente ÚNICAMENTE en condiciones óptimas: asfalto seco, de día, y con buena visibilidad. Si llueve, se debe duplicar el tiempo."
   },
   {
     "id": 181,
@@ -3884,7 +3922,8 @@
         "text": "No, en ningún momento.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Absolutamente no. Acelerar o bloquear el paso a un vehículo que intenta adelantarte es una maniobra extremadamente temeraria y prohibida por la ley."
   },
   {
     "id": 182,
@@ -3906,7 +3945,8 @@
         "text": "El detenerse en todos los cruces.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las colisiones por detrás ocurren principalmente por no mantener una distancia de seguimiento razonable y prudente respecto al vehículo que antecede."
   },
   {
     "id": 183,
@@ -3928,7 +3968,8 @@
         "text": "Porque las motocicletas tienen el derecho prefe rente de paso.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Las motocicletas son vehículos de menor tamaño, lo que las hace fáciles de ocultar en los 'puntos ciegos' de los espejos y es difícil calcular su velocidad real de aproximación."
   },
   {
     "id": 184,
@@ -3950,7 +3991,8 @@
         "text": "Los que tienen más de 55 años.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Estadísticamente, los jóvenes varones entre 18 y 29 años de edad son el grupo que registra la mayor tasa de accidentes de tránsito."
   },
   {
     "id": 185,
@@ -3972,7 +4014,8 @@
         "text": "Al ir usted en una curva a la derecha.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "En una curva ciega o zona con muchos árboles que generan un fuerte contraste de luces y sombras, ya que se mimetizan con el entorno."
   },
   {
     "id": 186,
@@ -3994,7 +4037,8 @@
         "text": "Pasar al camión por la derecha.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Mantén tu distancia. Es la clásica 'vuelta de camión': se abre a la izquierda para tener radio de giro suficiente y entrar hacia la calle de la derecha."
   },
   {
     "id": 187,
@@ -4016,7 +4060,8 @@
         "text": "No señalizar hasta que el auto lo haya pasado.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "Si el vehículo que te sigue ya inició la maniobra de sobrepaso o adelantamiento hacia la pista izquierda, debes abstenerte de realizar tu maniobra y cederle la pista."
   },
   {
     "id": 188,
@@ -4038,7 +4083,8 @@
         "text": "Lo adelanta dejándolo atrás lo antes posible.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Intenta mantener el control de tu vehículo frenando firmemente sin perder la dirección. Evita reaccionar con ira; recupera tu distancia de seguridad una vez que el peligro haya pasado."
   },
   {
     "id": 189,
@@ -4060,7 +4106,8 @@
         "text": "Les hace señas con la mano apurándolos para que  crucen.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Mantén el vehículo detenido. Haz contacto visual o indícales amablemente que pasen, pero bajo ninguna circunstancia aceleres mientras estén a punto de pisar la calzada."
   },
   {
     "id": 190,
@@ -4082,7 +4129,8 @@
         "text": "al pasar cerca de ciclistas.",
         "is_correct": true
       }
-    ]
+    ],
+    "feedback": "El viento lateral fuerte afecta gravemente la estabilidad, sobre todo al salir de un túnel, pasar cerca de un cerro, o al ser adelantado por un vehículo de gran envergadura (camión)."
   },
   {
     "id": 191,
@@ -4104,7 +4152,8 @@
         "text": "Encender sus luces de advertencia de peligro.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "El peatón que cruza la calle hacia la cual estás virando tiene SIEMPRE derecho a paso preferencial absoluto, por lo que debes detenerte y esperar que cruce por completo."
   },
   {
     "id": 192,
@@ -4126,7 +4175,8 @@
         "text": "Les toca la bocina para advertirles su presenci a.",
         "is_correct": false
       }
-    ]
+    ],
+    "feedback": "Debes ceder el paso deteniéndote completamente, aunque tu semáforo esté en verde, porque el peatón ya se encuentra en la calzada hacia la que viras."
   },
   {
     "id": 193,
