@@ -1,7 +1,10 @@
 import React from 'react';
 import TopBar from '../organisms/TopBar';
+import useAudio from '../../hooks/useAudio';
+import confetti from 'canvas-confetti';
 
 export default function MissionsView({ missions, claimReward, onExit, xp }) {
+  const { playMissionComplete } = useAudio();
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
@@ -69,7 +72,16 @@ export default function MissionsView({ missions, claimReward, onExit, xp }) {
 
             {mission.completed && !mission.claimed && (
               <button 
-                onClick={() => claimReward(mission.id)}
+                onClick={() => {
+                  playMissionComplete();
+                  claimReward(mission.id);
+                  confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                    colors: ['#ffb300', '#ebdff7']
+                  });
+                }}
                 className="duo-btn"
                 style={{ 
                   marginTop: '5px', 

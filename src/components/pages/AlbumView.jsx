@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import TopBar from '../organisms/TopBar';
 import { ALBUM_CARDS } from '../../hooks/useAlbum';
+import useAudio from '../../hooks/useAudio';
 
 export default function AlbumView({ unlockedCards, streak, currentLevel, onExit }) {
+  const { playUnlockCard } = useAudio();
   const [selectedCard, setSelectedCard] = useState(null);
 
   const totalUnlocked = unlockedCards.length;
@@ -76,7 +78,12 @@ export default function AlbumView({ unlockedCards, streak, currentLevel, onExit 
           return (
             <div 
               key={card.id}
-              onClick={() => setSelectedCard(card)}
+              onClick={() => {
+                setSelectedCard(card);
+                if (isUnlocked) {
+                  playUnlockCard();
+                }
+              }}
               style={{
                 backgroundColor: 'white',
                 borderRadius: '16px',

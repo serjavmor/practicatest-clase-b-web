@@ -1,10 +1,13 @@
 import React from 'react';
 import confetti from 'canvas-confetti';
+import useAudio from '../../hooks/useAudio';
 
 export default function ShopView({ xp, inventory, buyItem, onExit }) {
+  const { playBuy } = useAudio();
   
   const handleBuy = (item, cost) => {
     if (buyItem(item, cost)) {
+      playBuy();
       confetti({
         particleCount: 50,
         spread: 40,
