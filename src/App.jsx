@@ -285,6 +285,8 @@ function App() {
       {view === 'album' && (
         <AlbumView
           unlockedCards={unlockedCards}
+          streak={streak}
+          currentLevel={currentLevel}
           onExit={() => setView('home')}
         />
       )}

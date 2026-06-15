@@ -69,39 +69,6 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
         </div>
         <h1 style={{ color: 'var(--duo-text)', fontSize: '2rem', marginBottom: '15px' }}>Camino al Examen</h1>
 
-        {/* Badges Section */}
-        <div style={{ display: 'flex', gap: '15px', marginBottom: '10px' }}>
-          <div style={{ 
-            display: 'flex', flexDirection: 'column', alignItems: 'center', 
-            opacity: streak >= 3 ? 1 : 0.4, filter: streak >= 3 ? 'none' : 'grayscale(100%)' 
-          }}>
-            <div style={{ animation: streak >= 3 ? 'pulse-heartbeat 1.5s infinite' : 'none' }}>
-              <img src="/images/kuro_fire.png" alt="Fire" style={{ width: '58px', height: '58px', mixBlendMode: 'multiply' }} />
-            </div>
-            <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Racha de 3</span>
-          </div>
-
-          <div style={{ 
-            display: 'flex', flexDirection: 'column', alignItems: 'center', 
-            opacity: currentLevel > 1 ? 1 : 0.4, filter: currentLevel > 1 ? 'none' : 'grayscale(100%)' 
-          }}>
-            <div>
-              <img src="/images/kuro_badge_basic.png" alt="Badge" style={{ width: '58px', height: '58px', mixBlendMode: 'multiply' }} />
-            </div>
-            <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Aprobado Básico</span>
-          </div>
-
-          <div style={{ 
-            display: 'flex', flexDirection: 'column', alignItems: 'center', 
-            opacity: currentLevel >= 10 ? 1 : 0.4, filter: currentLevel >= 10 ? 'none' : 'grayscale(100%)' 
-          }}>
-            <div>
-              <img src="/images/kuro_badge_legend.png" alt="Legend" style={{ width: '58px', height: '58px', mixBlendMode: 'multiply' }} />
-            </div>
-            <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Leyenda</span>
-          </div>
-        </div>
-
         {/* Leaderboard Podio */}
         {leaderboard.length > 0 && (
           <div style={{

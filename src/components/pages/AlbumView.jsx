@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TopBar from '../organisms/TopBar';
 import { ALBUM_CARDS } from '../../hooks/useAlbum';
 
-export default function AlbumView({ unlockedCards, onExit }) {
+export default function AlbumView({ unlockedCards, streak, currentLevel, onExit }) {
   const [selectedCard, setSelectedCard] = useState(null);
 
   const totalUnlocked = unlockedCards.length;
@@ -32,7 +32,44 @@ export default function AlbumView({ unlockedCards, onExit }) {
         </div>
       </div>
 
-      <div style={{ flex: 1, overflowY: 'auto', padding: '20px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '15px', alignContent: 'start' }}>
+      <div style={{ padding: '0 20px' }}>
+        <h2 style={{ color: 'var(--duo-text)', fontSize: '1.2rem', margin: '10px 0', textAlign: 'center' }}>Medallas</h2>
+        <div style={{ display: 'flex', gap: '15px', marginBottom: '20px', justifyContent: 'center' }}>
+          <div style={{ 
+            display: 'flex', flexDirection: 'column', alignItems: 'center', 
+            opacity: streak >= 3 ? 1 : 0.4, filter: streak >= 3 ? 'none' : 'grayscale(100%)' 
+          }}>
+            <div style={{ animation: streak >= 3 ? 'pulse-heartbeat 1.5s infinite' : 'none' }}>
+              <img src="/images/kuro_fire.png" alt="Fire" style={{ width: '58px', height: '58px', mixBlendMode: 'multiply' }} />
+            </div>
+            <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Racha de 3</span>
+          </div>
+
+          <div style={{ 
+            display: 'flex', flexDirection: 'column', alignItems: 'center', 
+            opacity: currentLevel > 1 ? 1 : 0.4, filter: currentLevel > 1 ? 'none' : 'grayscale(100%)' 
+          }}>
+            <div>
+              <img src="/images/kuro_badge_basic.png" alt="Badge" style={{ width: '58px', height: '58px', mixBlendMode: 'multiply' }} />
+            </div>
+            <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Aprobado Básico</span>
+          </div>
+
+          <div style={{ 
+            display: 'flex', flexDirection: 'column', alignItems: 'center', 
+            opacity: currentLevel >= 10 ? 1 : 0.4, filter: currentLevel >= 10 ? 'none' : 'grayscale(100%)' 
+          }}>
+            <div>
+              <img src="/images/kuro_badge_legend.png" alt="Legend" style={{ width: '58px', height: '58px', mixBlendMode: 'multiply' }} />
+            </div>
+            <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Leyenda</span>
+          </div>
+        </div>
+
+        <h2 style={{ color: 'var(--duo-text)', fontSize: '1.2rem', margin: '10px 0', textAlign: 'center' }}>Cartas Exclusivas</h2>
+      </div>
+
+      <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 20px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '15px', alignContent: 'start' }}>
         {ALBUM_CARDS.map((card, index) => {
           const isUnlocked = unlockedCards.includes(card.id);
           
