@@ -49,15 +49,6 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
         </button>
       </div>
       
-      {lives < 5 && (
-        <div style={{ textAlign: 'center', marginTop: '10px' }}>
-          <button onClick={onStudy} className="duo-btn" style={{ backgroundColor: 'var(--kuro-pink)', borderBottom: '4px solid var(--kuro-pink-shadow)', color: 'white', fontSize: '0.9rem', padding: '10px 20px' }}>
-            📚 Estudiar (+1 Vida)
-          </button>
-        </div>
-      )}
-      
-      
       <div style={{ textAlign: 'center', padding: '10px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <img 
           src="/images/kuromi_instructor_1781483016419.png" 
