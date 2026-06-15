@@ -1,670 +1,6 @@
 [
   {
-    "question": "¿Cuál es la definición de Ciclovía o Ciclopista?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/b2475ef3939e0f4cd659d06496edf0fb.jpg",
-    "options": [
-      {
-        "text": "Es el espacio que se destina al uso exclusivo de triciclos y bicicletas.",
-        "is_correct": true
-      },
-      {
-        "text": "Calzada destinada únicamente a la utilización de ciertos vehículos",
-        "is_correct": false
-      },
-      {
-        "text": "Se trata de una faja imaginaria o demarcada que se destina al tránsito de vehículos.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "b2475ef3939e0f4cd659d06496edf0fb.jpg"
-  },
-  {
-    "question": "¿Qué debes hacer si durante el adelantamiento sientes inseguridad o aparece un vehículo en sentido contrario?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/825f5d4a3f32ae72a53eca5806319d07.jpg",
-    "options": [
-      {
-        "text": "Interrumpir el adelantamiento y regresar a tu carril original.",
-        "is_correct": true
-      },
-      {
-        "text": "Acelerar y sobrepasar el límite de velocidad para completar la maniobra.",
-        "is_correct": false
-      },
-      {
-        "text": "Continuar con el adelantamiento rápidamente para evitar una colisión.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "825f5d4a3f32ae72a53eca5806319d07.jpg"
-  },
-  {
-    "question": "La velocidad más baja a la que se puede circular es:",
-    "image_url": "https://practicatest.cl/static/img/test/CL/ecf4b749b86abee617508add3e015f2c.jpg",
-    "options": [
-      {
-        "text": "50 km/h.",
-        "is_correct": false
-      },
-      {
-        "text": "La que no impida el desplazamiento normal y adecuado de los demás vehículos.",
-        "is_correct": true
-      },
-      {
-        "text": "20 km/h.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "ecf4b749b86abee617508add3e015f2c.jpg"
-  },
-  {
-    "question": "¿Cuáles de las siguientes afirmaciones es o son verdaderas en cuanto al desarrollo de la moral de un individuo?      I) Durante la infancia todas las personas muestran egocentrismo.     II) Como la moral de las personas no es innata, está sí se puede cambiar.     III) El comportamiento que tiene una persona como conductor muestra cuánto ha avanzado en el desarrollo de la moral.",
-    "image_url": "https://practicatest.cl/static/img/test/CL/3bda3e9904527652eba9dd1c148cef05.jpg",
-    "options": [
-      {
-        "text": "Sólo I.",
-        "is_correct": false
-      },
-      {
-        "text": "Sólo I y II",
-        "is_correct": false
-      },
-      {
-        "text": "I, II y III.",
-        "is_correct": true
-      }
-    ],
-    "local_image": "3bda3e9904527652eba9dd1c148cef05.jpg"
-  },
-  {
-    "question": "Al descender una pendiente muy larga, ¿Qué debería hacer un conductor para controlar mejor la velocidad del vehículo?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/0a5330297a7a7270f4e9657cb382faba.jpg",
-    "options": [
-      {
-        "text": "Seleccionar una marcha baja",
-        "is_correct": true
-      },
-      {
-        "text": "Tomar el manubrio firmemente",
-        "is_correct": false
-      },
-      {
-        "text": "Presionar el pedal del embrague",
-        "is_correct": false
-      }
-    ],
-    "local_image": "0a5330297a7a7270f4e9657cb382faba.jpg"
-  },
-  {
-    "question": "¿Qué etiqueta debe tener un vehículo eléctrico?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/76ec26111cc2560af29266d2d40f1456.jpg",
-    "options": [
-      {
-        "text": "\"Vehículo Híbrido\"",
-        "is_correct": false
-      },
-      {
-        "text": "\"Vehículo Eléctrico\"",
-        "is_correct": true
-      },
-      {
-        "text": "\"Vehículo Autónomo\"",
-        "is_correct": false
-      }
-    ],
-    "local_image": "76ec26111cc2560af29266d2d40f1456.jpg"
-  },
-  {
-    "question": "Para un mejor rendimiento del vehículo ¿cada cuánto tiempo debe cambiar el aceite del motor?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/9203f4d04d6ed96aadc7f3ff2dabc078.jpg",
-    "options": [
-      {
-        "text": "Cada 5.000 kilómetros o una vez al mes.",
-        "is_correct": false
-      },
-      {
-        "text": "Según lo que recomienda el fabricante.",
-        "is_correct": true
-      },
-      {
-        "text": "Cada 2.000 kilómetros o una vez al mes.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "9203f4d04d6ed96aadc7f3ff2dabc078.jpg"
-  },
-  {
-    "question": "Usted conduce un vehículo de marcha lenta por un camino angosto y sinuoso. En estas circunstancias, usted debería...",
-    "image_url": "https://practicatest.cl/static/img/test/CL/1e1628d7159494fe832851c0c5507041.jpg",
-    "options": [
-      {
-        "text": "Circular cerca del centro de la calzada para evitar que otros lo adelanten peligrosamente.",
-        "is_correct": false
-      },
-      {
-        "text": "Reducir la velocidad y guiar con calma hacia la derecha.",
-        "is_correct": true
-      },
-      {
-        "text": "Hacer indicaciones con la mano a los otros conductores cuando usted crea que podrán adelantarlo rápidamente.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "1e1628d7159494fe832851c0c5507041.jpg"
-  },
-  {
-    "question": "En épocas de invierno, ¿dónde es más previsible que haya hielo en la calzada?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/f8820d7437d11a4c72e8d386e3c4dc3b.jpg",
-    "options": [
-      {
-        "text": "Sobre puentes y en tramos de vía que pasan entre bosques.",
-        "is_correct": true
-      },
-      {
-        "text": "En una parada de locomoción colectiva.",
-        "is_correct": false
-      },
-      {
-        "text": "En calles con alto flujo vehicular.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "f8820d7437d11a4c72e8d386e3c4dc3b.jpg"
-  },
-  {
-    "question": "La Ley de Tránsito establece límites de velocidad máxima según las características de la vía y el tipo de vehículo. Tratándose de una calzada de una pista por sentido de circulación en una zona rural, y no habiendo señales de tránsito que impongan otros límites, ¿cuál de los siguientes vehículos NO puede exceder los 90 km/hora?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/36bba9b26d761ad157e6e8ac6e521a74.jpg",
-    "options": [
-      {
-        "text": "Los buses, camiones y vehículos de transporte escolar",
-        "is_correct": true
-      },
-      {
-        "text": "Los automóviles",
-        "is_correct": false
-      },
-      {
-        "text": "Las camionetas Suv",
-        "is_correct": false
-      }
-    ],
-    "local_image": "36bba9b26d761ad157e6e8ac6e521a74.jpg"
-  },
-  {
-    "question": "La licencia de conductor clase B le permite conducir su automóvil con un remolque ligero. ¿Cuál de estas Afirmaciones es correcta?:",
-    "image_url": "https://practicatest.cl/static/img/test/CL/70f4d36e0a68904f8335c489bdbe61d7.jpg",
-    "options": [
-      {
-        "text": "Que el peso total, unidad motriz más remolque,  supere los 3500 kilos",
-        "is_correct": false
-      },
-      {
-        "text": "Qué cuyo peso del remolque exceda la tara de la unidad motriz",
-        "is_correct": false
-      },
-      {
-        "text": "Que el peso total, unidad motriz más remolque, no supere los 3500 kilos",
-        "is_correct": true
-      }
-    ],
-    "local_image": "70f4d36e0a68904f8335c489bdbe61d7.jpg"
-  },
-  {
-    "question": "Indique qué significan estas señales:",
-    "image_url": "https://practicatest.cl/static/img/test/CL/302e4986fa05e5db8bb1e83e9db06ad8.jpg",
-    "options": [
-      {
-        "text": "Dirección Obligada, Puente angosto, Zona de Escuela.",
-        "is_correct": true
-      },
-      {
-        "text": "Viraje a la derecha, Camino angosto, Niños jugando.",
-        "is_correct": false
-      },
-      {
-        "text": "Dirección Obligada, Camino angosto, Zona de Peatones.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "302e4986fa05e5db8bb1e83e9db06ad8.jpg"
-  },
-  {
-    "question": "¿Qué debería hacer un conductor que comienza a sentir sueño en un viaje?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/90f8be1bb53e150b7c95535a0f73f5ee.jpg",
-    "options": [
-      {
-        "text": "Terminar el viaje y después dormir",
-        "is_correct": false
-      },
-      {
-        "text": "Detenerse inmediatamente y respirar profundo",
-        "is_correct": false
-      },
-      {
-        "text": "Detenerse en un lugar seguro y dormir una pequeña siesta",
-        "is_correct": true
-      }
-    ],
-    "local_image": "90f8be1bb53e150b7c95535a0f73f5ee.jpg"
-  },
-  {
-    "question": "Si un conductor tiene alergia respiratoria, debe tener en cuenta que...",
-    "image_url": "https://practicatest.cl/static/img/test/CL/66af76280eb7515ff890cdab24b2142a.jpg",
-    "options": [
-      {
-        "text": "Es mejor conducir por la mañana temprano porque hay menos polen.",
-        "is_correct": false
-      },
-      {
-        "text": "Debe aumentar la dosis de medicamentos para conducir con seguridad.",
-        "is_correct": false
-      },
-      {
-        "text": "Es mejor no abrir las ventanas del vehículo.",
-        "is_correct": true
-      }
-    ],
-    "local_image": "66af76280eb7515ff890cdab24b2142a.jpg"
-  },
-  {
-    "question": "¿Qué debes hacer antes y durante una maniobra de adelantamiento?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/029e5ac081e06ba4b464f21b0c614634.jpg",
-    "options": [
-      {
-        "text": "Adelantar sin necesidad de mirar hacia atrás o a los espejos retrovisores.",
-        "is_correct": false
-      },
-      {
-        "text": "Desplazarte a la pista de la izquierda sin señalizar si crees que es seguro.",
-        "is_correct": false
-      },
-      {
-        "text": "Mirar hacia adelante y hacia atrás, señalizar, y asegurarte de que el vehículo que vas a adelantar no tenga obstáculos delante.",
-        "is_correct": true
-      }
-    ],
-    "local_image": "029e5ac081e06ba4b464f21b0c614634.jpg"
-  },
-  {
-    "question": "Indique la afirmación correcta con respecto al \"Uso correcto de las pistas de circulación\":",
-    "image_url": "https://practicatest.cl/static/img/test/CL/c915bcc84c016a0e134b0ccae8c80f02.jpg",
-    "options": [
-      {
-        "text": "Circule siempre por la mitad derecha de la calzada",
-        "is_correct": true
-      },
-      {
-        "text": "Circule siempre por la mitad izquierda de la calzada",
-        "is_correct": false
-      },
-      {
-        "text": "Circule siempre por la mitad de la calzada",
-        "is_correct": false
-      }
-    ],
-    "local_image": "c915bcc84c016a0e134b0ccae8c80f02.jpg"
-  },
-  {
-    "question": "Antes de tomar su vehículo para un viaje de día y de corta duración, un conductor que padece una leve miopía se da cuenta de que perdió sus anteojos. ¿Podría hacer el viaje este conductor?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/316dcc349bf5e08c41b809d3a17f769e.jpg",
-    "options": [
-      {
-        "text": "Si, considerando que se trata de un viaje corto y de día",
-        "is_correct": false
-      },
-      {
-        "text": "No, debería planificar otra forma de hacer este viaje sin conducir",
-        "is_correct": true
-      },
-      {
-        "text": "Si, considerando que la miopía es leve",
-        "is_correct": false
-      }
-    ],
-    "local_image": "316dcc349bf5e08c41b809d3a17f769e.jpg"
-  },
-  {
-    "question": "¿Cuándo los conductores deben mantenerse atentos a las condiciones del tránsito del momento?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/2029b974dcca3d6320f9c52f735d179a.jpg",
-    "options": [
-      {
-        "text": "Sólo en la noche.",
-        "is_correct": false
-      },
-      {
-        "text": "Siempre.",
-        "is_correct": true
-      },
-      {
-        "text": "Sólo en días de lluvia y niebla.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "2029b974dcca3d6320f9c52f735d179a.jpg"
-  },
-  {
-    "question": "¿Qué es una Pista de uso exclusivo?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/14ff084d08fbc4f65a4d283064a82e1a.jpg",
-    "options": [
-      {
-        "text": "Área geográfica cuyos límites, para los efectos de esta ley, deben estar determinados y señalizados por las Municipalidades.",
-        "is_correct": false
-      },
-      {
-        "text": "Espacio de la calzada debidamente señalizado, destinado únicamente al uso de ciertos vehículos, determinados por la autoridad correspondiente",
-        "is_correct": true
-      },
-      {
-        "text": "Área común de calzadas que se cruzan o convergen.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "14ff084d08fbc4f65a4d283064a82e1a.jpg"
-  },
-  {
-    "question": "Seguridad pasiva o secundaria se refiere a:",
-    "image_url": "https://practicatest.cl/static/img/test/CL/e1ecde15b1502f256c30305dc0cfaf5e.jpg",
-    "options": [
-      {
-        "text": "Tiene como objetivo minimizar las consecuencias de un accidente una vez que se ha producido. Son sistemas como el cinturón de seguridad",
-        "is_correct": true
-      },
-      {
-        "text": "Está encaminada a evitar que se produzca un accidente. La componen sistemas como los frenos, la suspensión",
-        "is_correct": false
-      },
-      {
-        "text": "Es una seguridad extra en el cinturón de seguridad",
-        "is_correct": false
-      }
-    ],
-    "local_image": "e1ecde15b1502f256c30305dc0cfaf5e.jpg"
-  },
-  {
-    "question": "¿En qué casos un conductor puede pasar a un vehículo por la derecha?      I) Cuando el vehículo alcanzado esté realizando o esté a punto de efectuar un viraje a la izquierda.      II) Cuando circule por una vía urbana con tres o más pistas de circulación con un mismo sentido del tránsito.     III) Cuando el vehículo es una motocicleta.",
-    "image_url": "https://practicatest.cl/static/img/test/CL/8434000c4fe5addf9784c0273efe4397.jpg",
-    "options": [
-      {
-        "text": "Sólo III",
-        "is_correct": false
-      },
-      {
-        "text": "Sólo I y II.",
-        "is_correct": true
-      },
-      {
-        "text": "Sólo III.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "8434000c4fe5addf9784c0273efe4397.jpg"
-  },
-  {
-    "question": "El desarrollo de la moral de un individuo al conducir, podemos decir:    I) Durante la infancia, antes de llegar a la edad escolar, las personas son egocéntricas y piensan sobre todo en ellas mismas.      II) Los conocimientos y la experiencia hacen que las personas se vuelvan más comprensivas.     III) Como la moral de las personas es algo innato, no se puede cambiar.     IV) El comportamiento que tiene una persona como conductor muestra cuánto ha avanzado en el desarrollo de su moral.",
-    "image_url": "https://practicatest.cl/static/img/test/CL/cdc0327f404f7c63e094c26cd1ef8479.jpg",
-    "options": [
-      {
-        "text": "II y III.",
-        "is_correct": false
-      },
-      {
-        "text": "Todas las mencionadas.",
-        "is_correct": false
-      },
-      {
-        "text": "I, II y IV.",
-        "is_correct": true
-      }
-    ],
-    "local_image": "cdc0327f404f7c63e094c26cd1ef8479.jpg"
-  },
-  {
-    "question": "En Chile, los siniestros de tránsito afectan especialmente a:",
-    "image_url": "https://practicatest.cl/static/img/test/CL/2744557493a334d0dac47d978d62a1ca.jpg",
-    "options": [
-      {
-        "text": "Los ancianos mayores de 65 años.",
-        "is_correct": false
-      },
-      {
-        "text": "Las mujeres mayores 40.",
-        "is_correct": false
-      },
-      {
-        "text": "Los Jóvenes entre 15 y 29 años.",
-        "is_correct": true
-      }
-    ],
-    "local_image": "2744557493a334d0dac47d978d62a1ca.jpg"
-  },
-  {
-    "question": "¿Qué efecto puede tener la impulsividad en la conducción?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/46b00c9590710289f5d7498b315c27ec.jpg",
-    "options": [
-      {
-        "text": "Ayuda a prever mejor las consecuencias de las acciones al volante.",
-        "is_correct": false
-      },
-      {
-        "text": "Puede llevar a perder el control del vehículo y aumentar el riesgo de siniestros.",
-        "is_correct": true
-      },
-      {
-        "text": "Mejora la capacidad de reacción ante situaciones de riesgo.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "46b00c9590710289f5d7498b315c27ec.jpg"
-  },
-  {
-    "question": "¿Qué significa esta señal?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/4456a911acdd6d146354675975c3ceab.jpg",
-    "options": [
-      {
-        "text": "Peso mínimo permitido",
-        "is_correct": false
-      },
-      {
-        "text": "Peso máximo permitido",
-        "is_correct": true
-      },
-      {
-        "text": "Largo máximo permitido",
-        "is_correct": false
-      }
-    ],
-    "local_image": "4456a911acdd6d146354675975c3ceab.jpg"
-  },
-  {
-    "question": "Vas por un camino recto, pavimento en buen estado, poco tránsito contrario y deseas adelantar. ¿Cuál de estas opciones es correcta?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/7f8f27dfb34546a64971f30efabcaa44.jpg",
-    "options": [
-      {
-        "text": "Adelantar sin precauciones porque la vía está despejada.",
-        "is_correct": false
-      },
-      {
-        "text": "Reconocer que adelantar sigue siendo riesgoso porque puedes malinterpretar la velocidad del vehículo que viene en sentido contrario.",
-        "is_correct": true
-      },
-      {
-        "text": "Reducir la velocidad antes de adelantar para evitar choques traseros.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "7f8f27dfb34546a64971f30efabcaa44.jpg"
-  },
-  {
-    "question": "La Ley de Tránsito establece límites de velocidad máxima según las características de la vía y el tipo de vehículo. Tratándose de una calzada de 2 pistas por sentido de circulación en una zona rural, y no habiendo señales de tránsito que impongan otros límites, ¿Cuál de las siguientes afirmaciones es FALSA?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/33881b958062d233c5fbb1f448d79eb6.jpg",
-    "options": [
-      {
-        "text": "Los buses distintos de los interurbanos no pueden exceder los 90 km/hora.",
-        "is_correct": false
-      },
-      {
-        "text": "Los buses interurbanos pueden exceder los 110 km/hora.",
-        "is_correct": true
-      },
-      {
-        "text": "Los automóviles y motocicletas no pueden exceder los 120 km/hora.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "33881b958062d233c5fbb1f448d79eb6.jpg"
-  },
-  {
-    "question": "¿Cuál de los siguientes factores influye en la tasa de alcohol en la sangre?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/4a4342c199f32e9858c1a5ca82a73be6.jpg",
-    "options": [
-      {
-        "text": "La masa corporal de la persona, donde un menor peso corporal alcanza una mayor tasa de alcoholemia.",
-        "is_correct": true
-      },
-      {
-        "text": "Tomar una ducha de agua fría, podría bajar la tasa de alcohol en la sangre.",
-        "is_correct": false
-      },
-      {
-        "text": "La cantidad de café ingerido. Pues aporta a una mayor tasa de alcohol en la sangre.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "4a4342c199f32e9858c1a5ca82a73be6.jpg"
-  },
-  {
-    "question": "¿Cuál de los siguientes efectos es común en las personas que consumen éxtasis y cómo puede afectar la conducción?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/ccaab39db7f0db11b0f89a5642e9ac69.jpg",
-    "options": [
-      {
-        "text": "Sensibilidad a la luz, ilusiones ópticas, y episodios de visión borrosa, lo que puede llevar a maniobras peligrosas y desorientación al conducir.",
-        "is_correct": true
-      },
-      {
-        "text": "Aumento de la concentración y mejora en la percepción visual, facilitando una conducción segura.",
-        "is_correct": false
-      },
-      {
-        "text": "Mayor capacidad de resistencia física y mental, eliminando el riesgo de agotamiento durante la conducción.",
-        "is_correct": false
-      }
-    ],
-    "local_image": "ccaab39db7f0db11b0f89a5642e9ac69.jpg"
-  },
-  {
-    "question": "¿Qué factor influye en el consumo de combustible?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/c8217ae9c685f53cdda3d0b567dc18bb.jpg",
-    "options": [
-      {
-        "text": "La longitud del cigueñal.",
-        "is_correct": false
-      },
-      {
-        "text": "El diámetro del tubo de escape.",
-        "is_correct": false
-      },
-      {
-        "text": "La aerodinamica del vehiculo.",
-        "is_correct": true
-      }
-    ],
-    "local_image": "c8217ae9c685f53cdda3d0b567dc18bb.jpg"
-  },
-  {
-    "question": "¿Cuál es el mayor riesgo de conducir bajo el efecto de drogas?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/328f363f224730fc425169982a7ef609.jpg",
-    "options": [
-      {
-        "text": "Aumenta la velocidad del vehículo automáticamente.",
-        "is_correct": false
-      },
-      {
-        "text": "Hace que el conductor sea menos propenso a cometer infracciones de tránsito.",
-        "is_correct": false
-      },
-      {
-        "text": "Afecta las funciones del cerebro, como la percepción, la cognición, la atención, el equilibrio y la coordinación, esenciales para una conducción segura.",
-        "is_correct": true
-      }
-    ],
-    "local_image": "328f363f224730fc425169982a7ef609.jpg"
-  },
-  {
-    "question": "La mayor parte de los SINIESTROS de tránsito se produce en:",
-    "image_url": "https://practicatest.cl/static/img/test/CL/3a8df52891a0bd3afc72a8ad02743999.jpg",
-    "options": [
-      {
-        "text": "Intersecciones",
-        "is_correct": true
-      },
-      {
-        "text": "Caminos rurales",
-        "is_correct": false
-      },
-      {
-        "text": "Salidas de colegios",
-        "is_correct": false
-      }
-    ],
-    "local_image": "3a8df52891a0bd3afc72a8ad02743999.jpg"
-  },
-  {
-    "question": "¿Qué se recomienda hacer con los conductos de ventilación del vehículo?",
-    "image_url": "https://practicatest.cl/static/img/test/CL/2886e5899b270ae372b4f3687e4e2687.jpg",
-    "options": [
-      {
-        "text": "Cambiar el sistema de ventilación cada seis meses.",
-        "is_correct": false
-      },
-      {
-        "text": "Bloquearlos para evitar el ingreso de polvo.",
-        "is_correct": false
-      },
-      {
-        "text": "Mantenerlos limpios y realizar limpiezas frecuentes.",
-        "is_correct": true
-      }
-    ],
-    "local_image": "2886e5899b270ae372b4f3687e4e2687.jpg"
-  },
-  {
-    "question": "Las características que deben cumplir los vidrios de seguridad en un vehículo son:",
-    "image_url": "https://practicatest.cl/static/img/test/CL/cfe555a7f954b7b2f65b8f228405c4e4.jpg",
-    "options": [
-      {
-        "text": "Permitir perfecta visibilidad desde el exterior.",
-        "is_correct": false
-      },
-      {
-        "text": "Permitir relativa visibilidad desde el interior.",
-        "is_correct": false
-      },
-      {
-        "text": "Permitir perfecta visibilidad desde y hacia el interior del vehículo.",
-        "is_correct": true
-      }
-    ],
-    "local_image": "cfe555a7f954b7b2f65b8f228405c4e4.jpg"
-  },
-  {
-    "question": "Entre los factores humanos que nos ayudan a conducir con cuidado está:",
-    "image_url": "https://practicatest.cl/static/img/test/CL/45ea0c061b088c88739feb4dfe174c1f.jpg",
-    "options": [
-      {
-        "text": "La calidad del automóvil.",
-        "is_correct": false
-      },
-      {
-        "text": "La velocidad.",
-        "is_correct": false
-      },
-      {
-        "text": "La identidad del conductor.",
-        "is_correct": true
-      }
-    ],
-    "local_image": "45ea0c061b088c88739feb4dfe174c1f.jpg"
-  },
-  {
+    "id": 1,
     "question": "Su vehículo se desvía hacia un lado cuando usted f rena. Usted debería:",
     "options": [
       {
@@ -686,6 +22,7 @@
     ]
   },
   {
+    "id": 2,
     "question": "Su vehículo se desvía hacia un lado cuando usted f rena. ¿Cuál es la falla más probable?",
     "options": [
       {
@@ -707,6 +44,7 @@
     ]
   },
   {
+    "id": 3,
     "question": "Mientras conduce usted siente un fuerte olor a gasolina. ¿Qué debería hacer usted?",
     "options": [
       {
@@ -728,6 +66,7 @@
     ]
   },
   {
+    "id": 4,
     "question": "¿Cómo puede prevenir usted el riesgo de incendio d e su vehículo?",
     "options": [
       {
@@ -743,12 +82,35 @@
         "is_correct": false
       },
       {
-        "text": "Revisando su vehículo ante cualquier olor a gas olina extraño. \n \n5.-\n ¿Por qué es importante usar zapatos apropiados cua ndo conduce? \n \n Marque una respuesta",
+        "text": "Revisando su vehículo ante cualquier olor a gas olina extraño.",
         "is_correct": true
       }
     ]
   },
   {
+    "id": 5,
+    "question": "¿Por qué es importante usar zapatos apropiados cua ndo conduce?",
+    "options": [
+      {
+        "text": "Para tener un adecuado control de los pedales.",
+        "is_correct": true
+      },
+      {
+        "text": "Para evitar el desgaste acelerado de las gomas de los pedales.",
+        "is_correct": false
+      },
+      {
+        "text": "Para poder efectuar los cambios de marcha más r ápidamente.",
+        "is_correct": false
+      },
+      {
+        "text": "Para poder caminar sin problemas en el caso que  necesite solicitar ayuda.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 6,
     "question": "En un automóvil, ¿cuál de los siguientes elementos  reduce el riesgo de lesiones de cuello en una colisión?",
     "options": [
       {
@@ -770,6 +132,7 @@
     ]
   },
   {
+    "id": 7,
     "question": "¿Qué significa esta luz de advertencia en el panel  de instrumentos?",
     "options": [
       {
@@ -791,6 +154,7 @@
     ]
   },
   {
+    "id": 8,
     "question": "Es esencial que la presión de los neumáticos sea c hequeada regularmente. ¿Cuándo se debe hacer esto?",
     "options": [
       {
@@ -812,6 +176,7 @@
     ]
   },
   {
+    "id": 9,
     "question": "La presión de los neumáticos debe revisarse:",
     "options": [
       {
@@ -823,16 +188,57 @@
         "is_correct": false
       },
       {
-        "text": "En cualquier momento, porque da igual que los n eumáticos estén fríos o calientes. \n   \n10.-\n ¿Cuál de estos líquidos, en el caso de estar en un  nivel bajo, podría causar un accidente? \n \n Marque una respuesta.",
-        "is_correct": false
-      },
-      {
-        "text": "El líquido refrigerante. \n \n11.-\n Frente a una situación normal, ¿cuál es la forma m ás segura de frenar? \n \n Marque una respuesta",
+        "text": "En cualquier momento, porque da igual que los n eumáticos estén fríos o calientes.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 10,
+    "question": "¿Cuál de estos líquidos, en el caso de estar en un  nivel bajo, podría causar un accidente?",
+    "options": [
+      {
+        "text": "El líquido de freno.",
+        "is_correct": true
+      },
+      {
+        "text": "El anticongelante.",
+        "is_correct": false
+      },
+      {
+        "text": "El agua de la batería.",
+        "is_correct": false
+      },
+      {
+        "text": "El líquido refrigerante.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Frente a una situación normal, ¿cuál es la forma m ás segura de frenar?",
+    "options": [
+      {
+        "text": "Frenando fuerte, poniendo la palanca de cambio en neutro y tirando el freno de mano justo antes de detenerse .",
+        "is_correct": false
+      },
+      {
+        "text": "Frenando suavemente, presionando el pedal de em brague y tirando el freno de mano justo antes de detenerse.",
+        "is_correct": false
+      },
+      {
+        "text": "Poniendo la palanca de cambio en neutro, frenan do fuerte y luego soltando el freno justo antes de detenerse.",
+        "is_correct": false
+      },
+      {
+        "text": "Frenando suavemente, luego un poco más fuerte c uando comienza a detenerse y después aflojando de a poco el freno antes de \ndetenerse.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 12,
     "question": "¿Cuándo usaría usted las luces intermitentes de a dvertencia de peligro?",
     "options": [
       {
@@ -854,6 +260,7 @@
     ]
   },
   {
+    "id": 13,
     "question": "Las luces de advertencia de peligro deberían ser u sadas:",
     "options": [
       {
@@ -875,6 +282,7 @@
     ]
   },
   {
+    "id": 14,
     "question": "¿Cuándo usaría usted las luces de advertencia de p eligro de su vehículo?",
     "options": [
       {
@@ -896,6 +304,7 @@
     ]
   },
   {
+    "id": 15,
     "question": "Usted está probando la suspensión de su vehículo c uando nota que éste rebota u oscila al cargarlo en un extremo lateral frontal. \n¿Qué significa esto?",
     "options": [
       {
@@ -917,6 +326,7 @@
     ]
   },
   {
+    "id": 16,
     "question": "¿Por qué los neumáticos deben mantenerse a la pres ión indicada por el fabricante?",
     "options": [
       {
@@ -938,6 +348,7 @@
     ]
   },
   {
+    "id": 17,
     "question": "¿A qué se debe un alto consumo de combustible?",
     "options": [
       {
@@ -959,6 +370,7 @@
     ]
   },
   {
+    "id": 18,
     "question": "La profundidad de los surcos de los neumáticos de  un automóvil no debería ser inferior a ...",
     "options": [
       {
@@ -974,16 +386,65 @@
         "is_correct": true
       },
       {
-        "text": "1.0 mm \n \n \n \n \n \n19.-\n Uno de sus neumáticos traseros se revienta mientra s usted conduce.  ¿Cuáles 2 cosas debe hacer usted? \n \n Marque \n dos respuestas",
-        "is_correct": false
-      },
-      {
-        "text": "Girar el volante hacia el mismo lado hacia el c ual se desvía la cola del vehículo. \n \n20.-\n ¿Cuáles 2 cosas debe usted hacer si se le revienta  un neumático delantero? \n \n Marque \ndos  respuestas",
+        "text": "1.0 mm",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 19,
+    "question": "Uno de sus neumáticos traseros se revienta mientra s usted conduce.  ¿Cuáles 2 cosas debe hacer usted?",
+    "options": [
+      {
+        "text": "Poner marcha atrás para detener el vehículo.",
+        "is_correct": false
+      },
+      {
+        "text": "Hacer una señal de detención con el brazo y dis minuir la velocidad.",
+        "is_correct": false
+      },
+      {
+        "text": "Detenerse lentamente al costado de la vía.",
+        "is_correct": true
+      },
+      {
+        "text": "Detener el vehículo frenando lo más fuerte que pueda.",
+        "is_correct": false
+      },
+      {
+        "text": "Girar el volante hacia el mismo lado hacia el c ual se desvía la cola del vehículo.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "question": "¿Cuáles 2 cosas debe usted hacer si se le revienta  un neumático delantero?",
+    "options": [
+      {
+        "text": "Cambiarse de pista y frenar a fondo.",
+        "is_correct": false
+      },
+      {
+        "text": "Frenar suavemente o dejar que el vehículo siga hasta detenerse.",
+        "is_correct": true
+      },
+      {
+        "text": "Frenar rápida y firmemente.",
+        "is_correct": false
+      },
+      {
+        "text": "Sostener firmemente el volante manteniendo la t rayectoria.",
+        "is_correct": true
+      },
+      {
+        "text": "Sostener el volante con una mano advirtiendo co n la otra a los demás que usted se detendrá.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 21,
     "question": "¿Qué es lo que usted nunca debería hacer en una b omba de bencina?",
     "options": [
       {
@@ -1005,6 +466,7 @@
     ]
   },
   {
+    "id": 22,
     "question": "Desenganchar el motor del vehículo...",
     "options": [
       {
@@ -1020,12 +482,35 @@
         "is_correct": false
       },
       {
-        "text": "reduce el control del conductor. \n \n23.-\n ¿Por qué no es bueno desenganchar el motor del veh ículo al ir circulando? \n \n Marque una respuesta",
+        "text": "reduce el control del conductor.",
         "is_correct": true
       }
     ]
   },
   {
+    "id": 23,
+    "question": "¿Por qué no es bueno desenganchar el motor del veh ículo al ir circulando?",
+    "options": [
+      {
+        "text": "Porque ello hace que el vehículo resbale.",
+        "is_correct": false
+      },
+      {
+        "text": "Porque el motor se detendrá.",
+        "is_correct": false
+      },
+      {
+        "text": "Porque no hay frenado del motor.",
+        "is_correct": true
+      },
+      {
+        "text": "Porque el motor funcionará más rápido.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 24,
     "question": "¿Cuáles son las 2 principales razones por las cual es no debe desengancharse el motor al ir cuesta abajo?",
     "options": [
       {
@@ -1051,6 +536,7 @@
     ]
   },
   {
+    "id": 25,
     "question": "¿Por qué usted no debería conducir presionando el pedal de embrague durante más tiempo que el necesario?",
     "options": [
       {
@@ -1066,12 +552,57 @@
         "is_correct": false
       },
       {
-        "text": "Porque reduce el agarre de los neumáticos. \n \n26.-\n ¿Para qué sirven los seguros de niños de los vehíc ulos? \n \n Marque una respuesta",
+        "text": "Porque reduce el agarre de los neumáticos.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 26,
+    "question": "¿Para qué sirven los seguros de niños de los vehíc ulos?",
+    "options": [
+      {
+        "text": "Aseguran las hebillas de los cinturones de segu ridad.",
+        "is_correct": false
+      },
+      {
+        "text": "Impiden que las puertas puedan abrirse desde el  interior.",
+        "is_correct": true
+      },
+      {
+        "text": "Bloquean las ventanas traseras manteniéndolas c erradas.",
+        "is_correct": false
+      },
+      {
+        "text": "Impiden que los asientos se reclinen.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "question": "Una baja presión de aire en los neumáticos delante ros ...",
+    "options": [
+      {
+        "text": "hace que el vehículo tienda a torcer hacia un l ado.",
+        "is_correct": false
+      },
+      {
+        "text": "mejora el rendimiento del combustible.",
+        "is_correct": false
+      },
+      {
+        "text": "hace sentir la dirección más liviana.",
+        "is_correct": false
+      },
+      {
+        "text": "hace sentir la dirección más pesada. \n \n \n \n28.\n- En un pavimento mojado, ¿influye el estado de los  neumáticos en la distancia de frenado de su vehículo? \n \n Marque una respuesta",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 29,
     "question": "¿Cuál o cuáles de las siguientes afirmaciones es(s on) verdadera(s)?",
     "options": [
       {
@@ -1093,6 +624,7 @@
     ]
   },
   {
+    "id": 30,
     "question": "¿Cuáles 2 de las siguientes afirmaciones son verda deras?",
     "options": [
       {
@@ -1114,6 +646,7 @@
     ]
   },
   {
+    "id": 31,
     "question": "¿Cuáles 2 de las siguientes afirmaciones son  verd aderas?",
     "options": [
       {
@@ -1139,6 +672,7 @@
     ]
   },
   {
+    "id": 32,
     "question": "¿Cuál o cuáles de las siguientes afirmaciones es(s on) verdadera(s)?",
     "options": [
       {
@@ -1160,6 +694,7 @@
     ]
   },
   {
+    "id": 33,
     "question": "¿Cuál o cuáles de las siguientes afirmaciones es(s on) verdadera(s)?",
     "options": [
       {
@@ -1175,12 +710,35 @@
         "is_correct": false
       },
       {
-        "text": "Usar cinturón de seguridad es más necesario cua ndo se conduce en carreteras. \n \n34.-\n ¿Cuál o cuáles de las siguientes afirmaciones es(s on) verdadera(s)? \n  \n Marque \n la  o las respuesta(s) correcta(s)",
+        "text": "Usar cinturón de seguridad es más necesario cua ndo se conduce en carreteras.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 34,
+    "question": "¿Cuál o cuáles de las siguientes afirmaciones es(s on) verdadera(s)?",
+    "options": [
+      {
+        "text": "No es seguro que un adulto lleve a un niño pequ eño incluyéndolo en su cinturón de seguridad.",
+        "is_correct": true
+      },
+      {
+        "text": "El cinturón de seguridad disminuye las posibili dades de resultar lesionado en un accidente.",
+        "is_correct": true
+      },
+      {
+        "text": "Para quienes viajan en el asiento trasero el ci nturón de seguridad no brinda mayor seguridad.",
+        "is_correct": false
+      },
+      {
+        "text": "Un cinturón de seguridad bien tensado brinda ma yor seguridad que uno menos tensado.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 35,
     "question": "¿Qué elementos de su vehículo debe usted mantener  limpios?",
     "options": [
       {
@@ -1202,6 +760,7 @@
     ]
   },
   {
+    "id": 36,
     "question": "Suponga que en una ocasión,  \n-   su distancia de reacción es de 10 metros \n-   su distancia de frenado es de 8 metros \n-  su distancia de detención (distancia de reacción más distancia de frenado) es de 18 metros \n \n ¿Cuál sería su distancia de detención si sigue con duciendo en calzada de idénticas características y condiciones, pero aumenta \nal doble su velocidad?",
     "options": [
       {
@@ -1217,12 +776,35 @@
         "is_correct": false
       },
       {
-        "text": "78 metros \n \n37.-\n ¿Cuál de las siguientes afirmaciones es falsa cuan do usted aumenta su velocidad de 30 km/h a 60 km/h? \n \n Marque una respuesta",
+        "text": "78 metros",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 37,
+    "question": "¿Cuál de las siguientes afirmaciones es falsa cuan do usted aumenta su velocidad de 30 km/h a 60 km/h?",
+    "options": [
+      {
+        "text": "Se duplica la energía cinética.",
+        "is_correct": true
+      },
+      {
+        "text": "Se cuadruplica la energía cinética.",
+        "is_correct": false
+      },
+      {
+        "text": "Se duplica la distancia de reacción.",
+        "is_correct": false
+      },
+      {
+        "text": "Se cuadruplica la distancia de frenado.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 38,
     "question": "El auto azul circula a 70 km/h y el rojo a 90 km/h . ¿Dónde es más probable que sus conductores estime n el punto en que se \nproducirá el encuentro de ambos vehículos?",
     "options": [
       {
@@ -1244,6 +826,7 @@
     ]
   },
   {
+    "id": 39,
     "question": "¿Qué distancia de detención tiene un tren que cir cula a alrededor de 100 km/h?",
     "options": [
       {
@@ -1265,6 +848,7 @@
     ]
   },
   {
+    "id": 40,
     "question": "¿Qué es lo más importante para evitar chocar al ve hículo que va adelante?",
     "options": [
       {
@@ -1286,6 +870,7 @@
     ]
   },
   {
+    "id": 41,
     "question": "Usted va circulando a 50 km/h a lo largo de un cam ino plano y de asfalto. Las condiciones climáticas son buenas. Sus \nneumáticos y frenos también están buenos. En estas circunstancias, detenerse le tomará aproximadamente ...",
     "options": [
       {
@@ -1307,6 +892,7 @@
     ]
   },
   {
+    "id": 42,
     "question": "La distancia de detención total es igual a la suma  de la distancia de reacción y la de frenado. Aprox imadamente, ¿cuál es la \nmínima distancia de detención total en un asfalto seco, si usted viaja a 90 km/h?",
     "options": [
       {
@@ -1328,6 +914,7 @@
     ]
   },
   {
+    "id": 43,
     "question": "Usted conduce un vehículo con frenos y neumáticos en buenas condiciones. La superficie de calzada est á seca. ¿Cuál es la \ndistancia aproximada de detención total (distancia de reacción más distancia de frenado) si usted va a 70 km/h?",
     "options": [
       {
@@ -1349,6 +936,7 @@
     ]
   },
   {
+    "id": 44,
     "question": "Usted desea estacionar en bajada en una calle con pendiente pronunciada. ¿Qué debería hacer?",
     "options": [
       {
@@ -1370,6 +958,7 @@
     ]
   },
   {
+    "id": 45,
     "question": "Usted está descendiendo una pendiente muy larga. ¿ Qué debería hacer para ayudar a controlar la velocidad de su vehículo?",
     "options": [
       {
@@ -1385,12 +974,35 @@
         "is_correct": false
       },
       {
-        "text": "Presionar el pedal de embrague. \n \n \n46.-\n Usted está virando hacia la derecha en un camino r esbaladizo y las ruedas traseras de su vehículo resbalan hacia la izquierda. \n¿Qué debería hacer usted? \n \n Marque una respuesta",
+        "text": "Presionar el pedal de embrague.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 46,
+    "question": "Usted está virando hacia la derecha en un camino r esbaladizo y las ruedas traseras de su vehículo resbalan hacia la izquierda. \n¿Qué debería hacer usted?",
+    "options": [
+      {
+        "text": "Frenar firmemente y no girar el manubrio.",
+        "is_correct": false
+      },
+      {
+        "text": "Guiar cuidadosamente hacia la izquierda.",
+        "is_correct": true
+      },
+      {
+        "text": "Usar el embrague y frenar firmemente.",
+        "is_correct": false
+      },
+      {
+        "text": "Girar hacia la derecha.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 47,
     "question": "Usted está próximo a descender por una pendiente muy pronunciada. ¿Qué debería hacer para controlar la velocidad de su \nvehículo?",
     "options": [
       {
@@ -1412,6 +1024,7 @@
     ]
   },
   {
+    "id": 48,
     "question": "La distancia de frenado es la que recorre un vehíc ulo desde que se presiona el freno hasta que el veh ículo se detiene. En \ncondiciones normales, ¿cuál sería aproximadamente su distancia de frenado si usted circula a 90 km/h?",
     "options": [
       {
@@ -1433,6 +1046,7 @@
     ]
   },
   {
+    "id": 49,
     "question": "¿Qué debería hacer usted para corregir un coletazo  de las ruedas traseras?",
     "options": [
       {
@@ -1454,6 +1068,7 @@
     ]
   },
   {
+    "id": 50,
     "question": "La distancia de frenado es la distancia que recorr e un vehículo desde que se presiona el freno hasta que el vehículo se detiene. \nDe las siguientes variables, ¿cuáles influyen en la distancia de frenado?",
     "options": [
       {
@@ -1473,12 +1088,35 @@
         "is_correct": true
       },
       {
-        "text": "La hora del día. \n \n51.-\n Usted va a 70 km/hr. Aproximadamente, ¿qué distanc ia recorrerá su vehículo desde el momento en que usted se percata de un \npeligro que hay más adelante hasta que comienza a frenar? \n \n Marque una respuesta",
+        "text": "La hora del día.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 51,
+    "question": "Usted va a 70 km/hr. Aproximadamente, ¿qué distanc ia recorrerá su vehículo desde el momento en que usted se percata de un \npeligro que hay más adelante hasta que comienza a frenar?",
+    "options": [
+      {
+        "text": "Unos 5 metros.",
+        "is_correct": false
+      },
+      {
+        "text": "Unos 8 metros.",
+        "is_correct": false
+      },
+      {
+        "text": "Unos 20 metros.",
+        "is_correct": true
+      },
+      {
+        "text": "Unos 30 metros.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 52,
     "question": "¿Cuál es el tiempo de reacción promedio de un cond uctor ante un imprevisto?",
     "options": [
       {
@@ -1494,12 +1132,79 @@
         "is_correct": false
       },
       {
-        "text": "2 segundos \n \n \n53.-\n ¿Cuál o cuáles de las siguientes afirmaciones es(s on) verdadera(s)? \n \n Marque \nla  o  las respuesta(s) correcta(s)",
+        "text": "2 segundos",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 53,
+    "question": "¿Cuál o cuáles de las siguientes afirmaciones es(s on) verdadera(s)?",
+    "options": [
+      {
+        "text": "Quien sobrestima sus habilidades para conducir conduce con frecuencia demasiado rápido.",
+        "is_correct": true
+      },
+      {
+        "text": "Quien sobrestima sus habilidades para conducir crea situaciones de riesgo a menudo.",
+        "is_correct": true
+      },
+      {
+        "text": "Con frecuencia, los muchachos jóvenes sobrestim an sus habilidades, conducen a velocidades excesiva s y se ven más \ninvolucrados en accidentes que otros.",
+        "is_correct": true
+      },
+      {
+        "text": "Muchos conductores muestran deficiencias en su madurez personal.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "question": "¿Cuál o cuáles de las siguientes afirmaciones es(s on) verdadera(s) en cuanto al desarrollo de la moral de un individuo?",
+    "options": [
+      {
+        "text": "Durante la infancia, antes de llegar a la edad escolar, las personas son egocéntricas y piensan sobre todo en ellas mismas.",
+        "is_correct": true
+      },
+      {
+        "text": "Los conocimientos y la experiencia hacen que la s personas se vuelvan más comprensivas.",
+        "is_correct": true
+      },
+      {
+        "text": "Como la moral de las personas es algo innato, n o se puede cambiar.",
+        "is_correct": false
+      },
+      {
+        "text": "El comportamiento que tiene una persona como co nductor muestra cuánto ha avanzado en el desarrollo de su moral.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "question": "¿Cuáles 2 de las siguientes cualidades de un indiv iduo denotan que ha alcanzado un alto grado de madurez personal?",
+    "options": [
+      {
+        "text": "No sobrestima sus habilidades; tiene un buen co nocimiento de sí mismo.",
+        "is_correct": true
+      },
+      {
+        "text": "Mantiene su vehículo en muy buen estado.",
+        "is_correct": false
+      },
+      {
+        "text": "Tiene buen conocimiento de las normas que regul an el tránsito.",
+        "is_correct": false
+      },
+      {
+        "text": "Cuenta con que otros pueden cometer errores y l os acepta.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 56,
     "question": "¿Cuál de las siguientes afirmaciones es correcta e n cuanto a la capacidad de reacción de los conductores jóvenes inexpertos, \ncomparados con conductores experimentados cuya edad fluctúa entre 35 y 50 años?",
     "options": [
       {
@@ -1521,6 +1226,7 @@
     ]
   },
   {
+    "id": 57,
     "question": "¿Cuál o cuáles característica(s) distingue(n) a un  conductor seguro?",
     "options": [
       {
@@ -1542,6 +1248,7 @@
     ]
   },
   {
+    "id": 58,
     "question": "¿Cuáles 2 de los siguientes rasgos son característ icos de personas que ceden con facilidad a la presión del grupo?",
     "options": [
       {
@@ -1567,6 +1274,7 @@
     ]
   },
   {
+    "id": 59,
     "question": "De los siguientes factores que se presentan en los  accidentes de tránsito, ¿cuáles son los 2 más frecuentes en los accidentes \nque ocurren en carreteras viéndose involucrado un solo vehículo?",
     "options": [
       {
@@ -1588,6 +1296,7 @@
     ]
   },
   {
+    "id": 60,
     "question": "De los siguientes factores, ¿cuál es el que con m ayor frecuencia se presenta en los accidentes de tránsito?",
     "options": [
       {
@@ -1603,12 +1312,79 @@
         "is_correct": false
       },
       {
-        "text": "Las fallas mecánicas. \n \n61.-\n En cuanto al estrés al conducir, ¿cuál  de las sig uientes afirmaciones es falsa? \n \n Marque  una respuesta",
+        "text": "Las fallas mecánicas.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 61,
+    "question": "En cuanto al estrés al conducir, ¿cuál  de las sig uientes afirmaciones es falsa?",
+    "options": [
+      {
+        "text": "Un grado demasiado alto de estrés disminuye su campo de atención.",
+        "is_correct": false
+      },
+      {
+        "text": "Un estrés moderado puede contribuir a mejorar s u rendimiento.",
+        "is_correct": false
+      },
+      {
+        "text": "Un conductor muy estresado puede tener reaccion es de pánico.",
+        "is_correct": false
+      },
+      {
+        "text": "El estrés no influye en absoluto en los actos d e un conductor.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "question": "¿Qué puede esperarse de un conductor impulsivo?",
+    "options": [
+      {
+        "text": "Que reaccione adecuadamente ante cualquier impr evisto.",
+        "is_correct": false
+      },
+      {
+        "text": "Que actúe sin pensar en las consecuencias.",
+        "is_correct": true
+      },
+      {
+        "text": "Que conduzca con excesiva precaución.",
+        "is_correct": false
+      },
+      {
+        "text": "Que efectúe maniobras sorpresivas que sorprenda n a los demás.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "question": "¿Cuál es el mejor consejo para una conducción segu ra?",
+    "options": [
+      {
+        "text": "Mantener el vehículo en muy buenas condiciones.",
+        "is_correct": false
+      },
+      {
+        "text": "Respetar los límites de velocidad.",
+        "is_correct": false
+      },
+      {
+        "text": "Evitar conducir durante la noche.",
+        "is_correct": false
+      },
+      {
+        "text": "Contar siempre con tiempo de sobra al conducir.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 64,
     "question": "¿De cuáles 2 maneras puede usted contribuir con ma yor eficacia a la seguridad de tránsito?",
     "options": [
       {
@@ -1630,6 +1406,7 @@
     ]
   },
   {
+    "id": 65,
     "question": "¿Cuál o cuáles de las siguientes afirmaciones es(s on) verdadera(s)?",
     "options": [
       {
@@ -1651,6 +1428,7 @@
     ]
   },
   {
+    "id": 66,
     "question": "En cuanto a la concentración de alcohol en la sang re de una persona que ingiere la misma cantidad en ocasiones diferentes, \n¿cuál de las siguientes afirmaciones es falsa?",
     "options": [
       {
@@ -1666,12 +1444,35 @@
         "is_correct": false
       },
       {
-        "text": "Si la cantidad de alcohol ingerida en cada ocas ión es exactamente la misma, la concentración de alcohol en la sangre también \nserá la misma. \n \n67.-\n ¿Qué efecto(s) sobre la visión tiene el conducir a  unos 100 km/h? \n \n Marque \nla o las respuesta(s) correcta(s)",
+        "text": "Si la cantidad de alcohol ingerida en cada ocas ión es exactamente la misma, la concentración de alcohol en la sangre también \nserá la misma.",
         "is_correct": true
       }
     ]
   },
   {
+    "id": 67,
+    "question": "¿Qué efecto(s) sobre la visión tiene el conducir a  unos 100 km/h?",
+    "options": [
+      {
+        "text": "A la mayoría de los conductores se les cansa la  vista después de conducir más o menos media hora.",
+        "is_correct": false
+      },
+      {
+        "text": "El campo visual se reduce, ya que a esa velocid ad se tiende a  fijar la mirada recta a lo lejos.",
+        "is_correct": true
+      },
+      {
+        "text": "Resulta más difícil percibir movimientos a los lados de la carretera.",
+        "is_correct": true
+      },
+      {
+        "text": "La visión se adapta automáticamente a la alta v elocidad y, por lo tanto, el resto del tránsito se percibe igual que al ir a una \nvelocidad baja.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 68,
     "question": "¿Cuáles son los primeros síntomas de cansancio ?",
     "options": [
       {
@@ -1693,6 +1494,7 @@
     ]
   },
   {
+    "id": 69,
     "question": "El modo como percibimos una situación depende, ent re otros factores, de nuestras experiencias anterio res, intereses, \nexpectativas y necesidades. En este contexto, ¿cuál de las siguientes afirmaciones es falsa?",
     "options": [
       {
@@ -1714,6 +1516,7 @@
     ]
   },
   {
+    "id": 70,
     "question": "De las siguientes afirmaciones, ¿cuál o cuáles es( son) verdadera(s)?",
     "options": [
       {
@@ -1735,6 +1538,29 @@
     ]
   },
   {
+    "id": 72,
+    "question": "De las siguientes afirmaciones, ¿cuál o cuáles es( son) verdadera(s)?",
+    "options": [
+      {
+        "text": "El tener una buena visión es imprescindible par a poder captar las diversas situaciones que se presentan al conducir.",
+        "is_correct": true
+      },
+      {
+        "text": "Existe un alto riesgo de que los conductores cu yo campo visual no es lo suficientemente amplio, no  alcancen a reaccionar a \ntiempo ante peligros provenientes de los lados.",
+        "is_correct": true
+      },
+      {
+        "text": "Si usted conduce durante un largo tiempo en con diciones difíciles, puede tener problemas para apreciar correctamente lo que ve y, \npor lo tanto, tomar decisiones equivocadas.",
+        "is_correct": true
+      },
+      {
+        "text": "Las personas jóvenes son más sensibles a la luz  deslumbrante que los mayores.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 73,
     "question": "¿Cuándo es alto el riesgo de interpretar erróneame nte la realidad al conducir ?",
     "options": [
       {
@@ -1756,6 +1582,7 @@
     ]
   },
   {
+    "id": 74,
     "question": "¿Qué debería hacer usted si está tomando un remedi o para la tos y no está seguro si éste puede afectar su conducción?",
     "options": [
       {
@@ -1777,6 +1604,7 @@
     ]
   },
   {
+    "id": 75,
     "question": "Usted está tomando unos remedios que probablemente  afectarán su conducción. ¿Qué debería hacer?",
     "options": [
       {
@@ -1798,6 +1626,7 @@
     ]
   },
   {
+    "id": 76,
     "question": "Su doctor le ha recetado un tratamiento. ¿Por qué usted debe consultarle si puede conducir o no?",
     "options": [
       {
@@ -1819,6 +1648,7 @@
     ]
   },
   {
+    "id": 77,
     "question": "Si usted ha ingerido alcohol, ¿cuál o cuáles son l os efectos más probables?",
     "options": [
       {
@@ -1844,6 +1674,7 @@
     ]
   },
   {
+    "id": 78,
     "question": "¿Cómo afecta el consumo de alcohol a su conducción ?",
     "options": [
       {
@@ -1865,6 +1696,7 @@
     ]
   },
   {
+    "id": 79,
     "question": "Si usted va conduciendo y comienza a sentir cansan cio, es mejor que se detenga lo antes posible. ¿Qué  debería hacer usted \nmientras no pueda detenerse?",
     "options": [
       {
@@ -1886,6 +1718,7 @@
     ]
   },
   {
+    "id": 80,
     "question": "¿Qué consejo daría usted a un conductor que ha ing erido bebidas alcohólicas en una fiesta?",
     "options": [
       {
@@ -1907,6 +1740,7 @@
     ]
   },
   {
+    "id": 81,
     "question": "Un conductor hace algo que a usted le molesta. ¿Qu é debería hacer usted?",
     "options": [
       {
@@ -1922,12 +1756,35 @@
         "is_correct": true
       },
       {
-        "text": "Tocar la bocina. \n \n82.-\n Usted está a punto de volver a casa conduciendo, p ero no puede encontrar los anteojos que necesita usar para conducir. ¿Qué \ndebería hacer usted? \n \n Marque una respuesta",
+        "text": "Tocar la bocina.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 82,
+    "question": "Usted está a punto de volver a casa conduciendo, p ero no puede encontrar los anteojos que necesita usar para conducir. ¿Qué \ndebería hacer usted?",
+    "options": [
+      {
+        "text": "Conducir a casa lentamente por calles tranquila s.",
+        "is_correct": false
+      },
+      {
+        "text": "Encontrar una forma de llegar a casa sin maneja r.",
+        "is_correct": true
+      },
+      {
+        "text": "Pedir prestados los anteojos a un amigo para vo lver conduciendo a casa.",
+        "is_correct": false
+      },
+      {
+        "text": "Manejar hasta su casa de noche para que las luc es lo ayuden.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 83,
     "question": "Usted está a punto de conducir, pero se siente enf ermo. Usted debería ...",
     "options": [
       {
@@ -1949,6 +1806,7 @@
     ]
   },
   {
+    "id": 84,
     "question": "En relación con el cansancio y la conducción, de las siguientes afirmaciones, ¿cuál es falsa?",
     "options": [
       {
@@ -1970,6 +1828,7 @@
     ]
   },
   {
+    "id": 85,
     "question": "Usted comienza a sentir cansancio en un viaje. ¿Qu é debería hacer?",
     "options": [
       {
@@ -1985,12 +1844,35 @@
         "is_correct": false
       },
       {
-        "text": "Detenerse y dormir una pequeña siesta o detener se y tomar un poco de café. \n \n86.-\n ¿Qué precauciones debe tomar un conductor cuando a siste a un evento social? \n \n Marque una respuesta",
+        "text": "Detenerse y dormir una pequeña siesta o detener se y tomar un poco de café.",
         "is_correct": true
       }
     ]
   },
   {
+    "id": 86,
+    "question": "¿Qué precauciones debe tomar un conductor cuando a siste a un evento social?",
+    "options": [
+      {
+        "text": "Beber bastante café después de ingerir bebidas alcohólicas.",
+        "is_correct": false
+      },
+      {
+        "text": "Evitar circular por calles de mucho tráfico des pués de beber alcohol.",
+        "is_correct": false
+      },
+      {
+        "text": "Evitar beber alcohol con el estómago vacío.",
+        "is_correct": false
+      },
+      {
+        "text": "Evitar consumir alcohol.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 87,
     "question": "De los siguientes efectos, ¿cuál no es consecuenci a del consumo de alcohol antes de conducir?",
     "options": [
       {
@@ -2012,6 +1894,7 @@
     ]
   },
   {
+    "id": 88,
     "question": "De las siguientes capacidades de un individuo, ¿cu ál de ellas no se ve afectada por el consumo de alcohol?",
     "options": [
       {
@@ -2033,6 +1916,7 @@
     ]
   },
   {
+    "id": 89,
     "question": "El tiempo que transcurre desde que usted percibe u n peligro hasta que actúa se denomina tiempo de rea cción. En una \nemergencia, ¿qué factor influye en su tiempo de reacción?.",
     "options": [
       {
@@ -2054,6 +1938,7 @@
     ]
   },
   {
+    "id": 90,
     "question": "¿Cuándo es más probable que usted pierda concentra ción cuando conduce?",
     "options": [
       {
@@ -2079,6 +1964,7 @@
     ]
   },
   {
+    "id": 91,
     "question": "¿Qué debería hacer el conductor del auto señalado con la flecha?",
     "options": [
       {
@@ -2100,6 +1986,7 @@
     ]
   },
   {
+    "id": 92,
     "question": "¿Cuáles son las 2 principales razones por las que  no sería adecuado que usted adelantara al peatón en este momento?",
     "options": [
       {
@@ -2121,6 +2008,7 @@
     ]
   },
   {
+    "id": 93,
     "question": "En relación con los cruces ferroviarios a nivel, ¿ cuál o cuáles de las siguientes afirmaciones es(son) verdadera(s)?",
     "options": [
       {
@@ -2142,6 +2030,7 @@
     ]
   },
   {
+    "id": 94,
     "question": "En esta ocasión usted va conduciendo a 70 km/h. ¿Q ué hace usted?",
     "options": [
       {
@@ -2163,6 +2052,7 @@
     ]
   },
   {
+    "id": 95,
     "question": "Al aproximarse a una curva hacia la izquierda uste d debería mantenerse bien a la derecha. ¿Por qué?",
     "options": [
       {
@@ -2178,12 +2068,57 @@
         "is_correct": false
       },
       {
-        "text": "Para estar en una ubicación más segura en caso que el vehículo se roncee.  \n \n96.-\n Usted conduce por una vía rápida en muy buenas con diciones. Por seguridad, ¿qué distancia debería mantener usted respecto \ndel vehículo que va delante suyo? \n \n Marque una respuesta",
+        "text": "Para estar en una ubicación más segura en caso que el vehículo se roncee.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 96,
+    "question": "Usted conduce por una vía rápida en muy buenas con diciones. Por seguridad, ¿qué distancia debería mantener usted respecto \ndel vehículo que va delante suyo?",
+    "options": [
+      {
+        "text": "Un espacio equivalente al que usted recorre en 3 segundos.",
+        "is_correct": true
+      },
+      {
+        "text": "Un espacio igual al largo de un auto.",
+        "is_correct": false
+      },
+      {
+        "text": "3 metros.",
+        "is_correct": false
+      },
+      {
+        "text": "Un espacio igual al largo de 3 autos.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "question": "Usted se aproxima a una curva hacia la izquierda. ¿Qué debería hacer?",
+    "options": [
+      {
+        "text": "Mantenerse bien a la derecha ya que así tardará  menos en pasar la curva.",
+        "is_correct": false
+      },
+      {
+        "text": "Mantenerse bien a la derecha para tener una mej or visual sobre la curva.",
+        "is_correct": true
+      },
+      {
+        "text": "Mantenerse bien a la izquierda para evitar cual quier obstáculo que pueda haber en la cuneta.",
+        "is_correct": false
+      },
+      {
+        "text": "Mantenerse bien a la izquierda para hacer la cu rva menos pronunciada.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 98,
     "question": "Usted conduce a 90 km/h. En condiciones normales, ¿cuál es la distancia mínima de seguridad que usted  debería mantener \nrespecto del vehículo que va adelante?",
     "options": [
       {
@@ -2205,6 +2140,7 @@
     ]
   },
   {
+    "id": 99,
     "question": "Mire el dibujo. ¿Cuál es el peligro al que usted d ebe estar más atento(a)?",
     "options": [
       {
@@ -2220,12 +2156,35 @@
         "is_correct": false
       },
       {
-        "text": "El vendedor de helados puede bajarse de su vehí culo. \n \n100.-\n Usted pretende doblar hacia la izquierda en un cru ce, pero hay vehículos estacionados que le obstruyen la visual. ¿Qué debería \nhacer usted? \n \n Marque una respuesta",
+        "text": "El vendedor de helados puede bajarse de su vehí culo.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 100,
+    "question": "Usted pretende doblar hacia la izquierda en un cru ce, pero hay vehículos estacionados que le obstruyen la visual. ¿Qué debería \nhacer usted?",
+    "options": [
+      {
+        "text": "Avanzar rápidamente, pero estando preparado par a detenerse.",
+        "is_correct": false
+      },
+      {
+        "text": "Tocar la bocina y avanzar lentamente.",
+        "is_correct": false
+      },
+      {
+        "text": "Detenerse, luego avanzar lentamente hasta que t enga una visual plena.",
+        "is_correct": true
+      },
+      {
+        "text": "Tocar la bocina y avanzar rápidamente.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 101,
     "question": "Usted va conduciendo al lado de una fila de autos  estacionados. De pronto ve una pelota rebotando en la calzada un poco más \nadelante. ¿Qué debería hacer usted?",
     "options": [
       {
@@ -2247,6 +2206,7 @@
     ]
   },
   {
+    "id": 102,
     "question": "Al adelantar a animales que van por el camino, ust ed no debería...",
     "options": [
       {
@@ -2268,6 +2228,7 @@
     ]
   },
   {
+    "id": 103,
     "question": "Al adelantar en un camino a una manada de ovejas, ¿qué hace usted?",
     "options": [
       {
@@ -2293,6 +2254,7 @@
     ]
   },
   {
+    "id": 104,
     "question": "Usted va conduciendo por una calle de dos pistas y  de doble sentido de tránsito en la cual hay vehículos estacionados al costado \nderecho. ¿Por cuáles 3 razones usted debe disminuir su velocidad?",
     "options": [
       {
@@ -2312,12 +2274,35 @@
         "is_correct": false
       },
       {
-        "text": "Entre los autos estacionados puede aparecer un niño corriendo.  \n \n105.-\n Usted está esperando en un cruce en T. El vehículo  azul que se acerca desde la izquierda señaliza a la derecha. ¿Qué debería \nhacer usted?     \n   \n  \n  \n Marque una respuesta",
+        "text": "Entre los autos estacionados puede aparecer un niño corriendo.",
         "is_correct": true
       }
     ]
   },
   {
+    "id": 105,
+    "question": "Usted está esperando en un cruce en T. El vehículo  azul que se acerca desde la izquierda señaliza a la derecha. ¿Qué debería \nhacer usted?",
+    "options": [
+      {
+        "text": "Avanzar acelerando a fondo.",
+        "is_correct": false
+      },
+      {
+        "text": "Ponerse en marcha antes de que el vehículo azul  llegue al cruce.",
+        "is_correct": false
+      },
+      {
+        "text": "Esperar hasta que el vehículo azul haya comenza do a virar.",
+        "is_correct": true
+      },
+      {
+        "text": "Avanzar lentamente.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 106,
     "question": "Usted se ha quedado detenido justo al medio de un cruce ferroviario con sistema automático de señales y barreras y no puede \nechar a andar el motor nuevamente. La campanilla del cruce comienza a sonar. ¿Qué debería hacer usted?",
     "options": [
       {
@@ -2339,6 +2324,7 @@
     ]
   },
   {
+    "id": 107,
     "question": "¿A qué debe estar especialmente atento el conduct or del vehículo indicado con la flecha?",
     "options": [
       {
@@ -2364,6 +2350,7 @@
     ]
   },
   {
+    "id": 108,
     "question": "¿Qué debería hacer el conductor del auto indicado con la flecha?",
     "options": [
       {
@@ -2385,6 +2372,7 @@
     ]
   },
   {
+    "id": 109,
     "question": "¿Qué debería hacer el conductor del auto señalado con la flecha?",
     "options": [
       {
@@ -2400,12 +2388,35 @@
         "is_correct": false
       },
       {
-        "text": "Continuar con precaución. \n \n110.-\n ¿Cuál es el principal peligro cuando usted sobrepa sa al bus que está detenido en la parada?       \n       \n    \n      \n Marque una respuesta",
+        "text": "Continuar con precaución.",
         "is_correct": true
       }
     ]
   },
   {
+    "id": 110,
+    "question": "¿Cuál es el principal peligro cuando usted sobrepa sa al bus que está detenido en la parada?",
+    "options": [
+      {
+        "text": "Que usted debe ceder el paso al bus si éste se pone en marcha.",
+        "is_correct": false
+      },
+      {
+        "text": "Que el auto que va adelante puede detenerse par a ceder el paso a un peatón.",
+        "is_correct": false
+      },
+      {
+        "text": "Que alguien puede venir corriendo al bus desde el otro lado de la calle.",
+        "is_correct": false
+      },
+      {
+        "text": "Que algún pasajero que se baje del bus puede ap arecer repentinamente delante del mismo para cruzar.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 111,
     "question": "¿Qué significa la señal que está efectuando el ca mión?",
     "options": [
       {
@@ -2421,16 +2432,61 @@
         "is_correct": true
       },
       {
-        "text": "El conductor del camión ha olvidado apagar sus luces indicadoras de viraje. \n \n112.-\n ¿Qué debe hacer usted cuando va en una fila de aut os? \n       \n Marque \n tres respuestas",
-        "is_correct": false
-      },
-      {
-        "text": "Debe concentrarse sólo en el vehículo que va de trás suyo. \n \n113.-\n ¿Hacia dónde es más importante que usted mire en e ste momento?   \n    \n  \n \n Marque una respuesta",
+        "text": "El conductor del camión ha olvidado apagar sus luces indicadoras de viraje.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 112,
+    "question": "¿Qué debe hacer usted cuando va en una fila de aut os?",
+    "options": [
+      {
+        "text": "Debe concentrarse sólo en el vehículo que va in mediatamente delante suyo.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe mantener un espacio suficiente respecto de l vehículo que va delante suyo, de modo de posibili tar que otro vehículo lo \nadelante a usted e ingrese a dicho espacio.",
+        "is_correct": true
+      },
+      {
+        "text": "Debe mirar a buena distancia hacia adelante, ev entualmente a través de los cristales de los otros vehículos, a fin de poder moderar \nla velocidad a tiempo si alguien frena.",
+        "is_correct": true
+      },
+      {
+        "text": "Debe mantenerse atento a los vehículos que van tanto delante como detrás suyo.",
+        "is_correct": true
+      },
+      {
+        "text": "Debe concentrarse sólo en el vehículo que va de trás suyo.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "question": "¿Hacia dónde es más importante que usted mire en e ste momento?",
+    "options": [
+      {
+        "text": "A",
+        "is_correct": false
+      },
+      {
+        "text": "B",
+        "is_correct": false
+      },
+      {
+        "text": "C",
+        "is_correct": true
+      },
+      {
+        "text": "D",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 114,
     "question": "En esta situación, ¿a cuáles 3 riesgos debe estar usted principalmente atento?",
     "options": [
       {
@@ -2456,6 +2512,7 @@
     ]
   },
   {
+    "id": 115,
     "question": "Usted va conduciendo a 70 km/h que es la velocidad  máxima permitida en esta vía. ¿Qué hace en esta situación?",
     "options": [
       {
@@ -2471,12 +2528,35 @@
         "is_correct": false
       },
       {
-        "text": "Sigue conduciendo sin estar preparado para nada  en especial, ya que usted tiene dominio de su vehículo. \n \n116.-\n ¿Qué hace usted ante esta situación?    \n  \n  \n    \n Marque una respuesta",
+        "text": "Sigue conduciendo sin estar preparado para nada  en especial, ya que usted tiene dominio de su vehículo.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 116,
+    "question": "¿Qué hace usted ante esta situación?",
+    "options": [
+      {
+        "text": "Hace señales a los peatones para que se alejen de la calzada.",
+        "is_correct": false
+      },
+      {
+        "text": "Reduce su velocidad y continúa conduciendo.",
+        "is_correct": false
+      },
+      {
+        "text": "Hace señales de luces al vehículo que viene en contra para que espere a que usted haya pasado.",
+        "is_correct": false
+      },
+      {
+        "text": "Espera y deja pasar primero al vehículo que vie ne en contra, y luego usted continúa y pasa a los peatones.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 117,
     "question": "Mientras va conduciendo su vehículo usted siente q ue lo están llamando a su teléfono celular, ¿qué hace usted para responder la \nllamada?",
     "options": [
       {
@@ -2492,12 +2572,35 @@
         "is_correct": false
       },
       {
-        "text": "Es especialmente cauteloso en las interseccion es. \n \n118.-\n Usted debería utilizar su teléfono celular en su a utomóvil sólo en la siguiente situación : \n \n Marque una respuesta",
+        "text": "Es especialmente cauteloso en las interseccion es.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 118,
+    "question": "Usted debería utilizar su teléfono celular en su a utomóvil sólo en la siguiente situación :",
+    "options": [
+      {
+        "text": "Si su vehículo tiene cambio automático.",
+        "is_correct": false
+      },
+      {
+        "text": "Si necesita efectuar una llamada de emergencia.",
+        "is_correct": false
+      },
+      {
+        "text": "Cuando se encuentra detenido en un lugar seguro .",
+        "is_correct": true
+      },
+      {
+        "text": "Al circular por un camino secundario. \n \n119 .- En un camino muy transitado usted desea adelanta r a un camión con remolque que va lentamente delante suyo, ¿qué debería \nhacer usted? \n \n Marque una respuesta",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 120,
     "question": "La mayor parte de los accidentes de tránsito se pr oduce en:",
     "options": [
       {
@@ -2519,6 +2622,7 @@
     ]
   },
   {
+    "id": 121,
     "question": "Entre los accidentes de tránsito se distinguen dis tintos tipos de éstos. En Chile, ¿cuál es el tipo d e accidente que origina la \nmayor cantidad de muertos?",
     "options": [
       {
@@ -2540,6 +2644,7 @@
     ]
   },
   {
+    "id": 122,
     "question": "Al estar estacionado,  ¿qué debería hacer usted justo antes de poner su vehículo en movimiento?",
     "options": [
       {
@@ -2561,6 +2666,7 @@
     ]
   },
   {
+    "id": 124,
     "question": "Usted llega a una intersección regulada por semáfo ro que se encuentra en rojo y, al mismo tiempo, un Carabinero le indica que \navance, ¿qué debe hacer usted?",
     "options": [
       {
@@ -2576,12 +2682,35 @@
         "is_correct": false
       },
       {
-        "text": "Avanzar, sólo si está seguro que la luz roja es tá próxima a cambiar. \n \n125.-\n ¿En qué situación puede usted hacer uso de la boci na de su vehículo? \n \n Marque una respuesta",
+        "text": "Avanzar, sólo si está seguro que la luz roja es tá próxima a cambiar.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 125,
+    "question": "¿En qué situación puede usted hacer uso de la boci na de su vehículo?",
+    "options": [
+      {
+        "text": "Cuando cede a otro el derecho a vía.",
+        "is_correct": false
+      },
+      {
+        "text": "Cuando saluda a otros usuarios de la vía.",
+        "is_correct": false
+      },
+      {
+        "text": "Cuando trata de prevenir a otros acerca de un p eligro.",
+        "is_correct": true
+      },
+      {
+        "text": "Cuando desea manifestar su disgusto.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 126,
     "question": "¿Cuándo puede usted hacer sonar la bocina de su au to?",
     "options": [
       {
@@ -2603,6 +2732,7 @@
     ]
   },
   {
+    "id": 127,
     "question": "Usted se va acercando a un cruce  semaforizado. ¿ Cuándo no debe usted ingresar al cruce aunque el semáforo esté en verde?",
     "options": [
       {
@@ -2624,6 +2754,7 @@
     ]
   },
   {
+    "id": 128,
     "question": "Fuera de la ciudad, usted va por una carretera de doble calzada con dos pistas por sentido. La velocidad máxima permitida es de \n100 km/hr. Si usted va a 90 km/hr y no van vehículos delante suyo, ¿por cuál pista circula usted?",
     "options": [
       {
@@ -2641,6 +2772,7 @@
     ]
   },
   {
+    "id": 129,
     "question": "En una carretera de doble calzada con dos pistas p or sentido, ¿en cuáles 2 de las siguientes situaciones usted usaría la pista \nizquierda?",
     "options": [
       {
@@ -2656,12 +2788,35 @@
         "is_correct": false
       },
       {
-        "text": "Al conducir a una velocidad muy baja. \n \n \n130.-\n ¿En qué situación retrocede usted con su vehículo en un cruce? \n \n Marque una respuesta",
+        "text": "Al conducir a una velocidad muy baja.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 130,
+    "question": "¿En qué situación retrocede usted con su vehículo en un cruce?",
+    "options": [
+      {
+        "text": "Si no hay nadie detrás suyo.",
+        "is_correct": false
+      },
+      {
+        "text": "En ningún momento.",
+        "is_correct": false
+      },
+      {
+        "text": "Sólo si ha quedado detenido sobre el paso de pe atones.",
+        "is_correct": false
+      },
+      {
+        "text": "Sólo si recibe indicación expresa de un Carabin ero.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 131,
     "question": "Usted se aproxima a un cruce de calles no señaliza do. Por la otra calle también se aproxima un vehículo que pretende pasar el \ncruce. ¿Quién tiene la prioridad para pasar?",
     "options": [
       {
@@ -2677,12 +2832,35 @@
         "is_correct": true
       },
       {
-        "text": "El otro vehículo, siempre que él se venga acerc ando al cruce por el lado izquierdo suyo. \n \n132.-\n Cuando dos vehículos van a cruzarse en una interse cción en la que no hay señalización alguna, ¿quién debe ceder el paso? \n \n Marque una respuesta",
+        "text": "El otro vehículo, siempre que él se venga acerc ando al cruce por el lado izquierdo suyo.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 132,
+    "question": "Cuando dos vehículos van a cruzarse en una interse cción en la que no hay señalización alguna, ¿quién debe ceder el paso?",
+    "options": [
+      {
+        "text": "El vehículo más pequeño.",
+        "is_correct": false
+      },
+      {
+        "text": "El vehículo que va por la calle de pistas más a ngostas.",
+        "is_correct": false
+      },
+      {
+        "text": "El que se acerca al cruce por la derecha del ot ro.",
+        "is_correct": false
+      },
+      {
+        "text": "El que se acerca al cruce por la izquierda del otro.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 133,
     "question": "¿Es seguro permitir que los niños viajen en un ve hículo de 3 o 5 puertas en el espacio que queda det rás de los asientos \ntraseros?",
     "options": [
       {
@@ -2704,6 +2882,7 @@
     ]
   },
   {
+    "id": 134,
     "question": "¿Cuáles son las 2 formas más seguras para transpor tar una guagua en su automóvil?",
     "options": [
       {
@@ -2729,6 +2908,7 @@
     ]
   },
   {
+    "id": 135,
     "question": "¿Cuál es la forma más segura para llevar a un niño  de 3 ó 4 años en su vehículo?",
     "options": [
       {
@@ -2750,6 +2930,7 @@
     ]
   },
   {
+    "id": 136,
     "question": "La forma más segura de viajar en un automóvil para  un niño menor de 2 años es:",
     "options": [
       {
@@ -2765,12 +2946,57 @@
         "is_correct": false
       },
       {
-        "text": "En un asiento de seguridad mirando hacia atrás.  \n \n137.-\n En un vehículo de 3 o 5 puertas, ¿en qué condicion es sería seguro transportar niños pequeños en el espacio que queda detrás \nde los asientos traseros? \n \n Marque una respuesta",
+        "text": "En un asiento de seguridad mirando hacia atrás.",
         "is_correct": true
       }
     ]
   },
   {
+    "id": 137,
+    "question": "En un vehículo de 3 o 5 puertas, ¿en qué condicion es sería seguro transportar niños pequeños en el espacio que queda detrás \nde los asientos traseros?",
+    "options": [
+      {
+        "text": "Al efectuar un viaje corto dentro de la ciudad.",
+        "is_correct": false
+      },
+      {
+        "text": "Al circular por calles o caminos de poco tránsi to.",
+        "is_correct": false
+      },
+      {
+        "text": "Nunca.",
+        "is_correct": true
+      },
+      {
+        "text": "Siempre es seguro.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "question": "Usted está en una calle de un solo sentido de trán sito y desea virar a la izquierda. ¿Cuál o cuáles de las siguientes afirmaciones \nes(son) correcta(s)?",
+    "options": [
+      {
+        "text": "Usted está bien situado para virar a la izquier da.",
+        "is_correct": true
+      },
+      {
+        "text": "Si después de virar usted volverá a virar nueva mente a la izquierda en el siguiente cruce, lo mejor es que se mantenga en la pista \nizquierda de la calle hacia la cual está virando.",
+        "is_correct": true
+      },
+      {
+        "text": "Usted nunca puede saber si la calle hacia la cu al vira tiene un solo sentido de tránsito o dos. Por eso, siempre debe tomar la pista \nderecha de la calle hacia la cual vira.",
+        "is_correct": false
+      },
+      {
+        "text": "No es necesario que usted señalice que va a vir ar.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 141,
     "question": "Usted va por una calle de doble sentido de tránsit o. Para virar a la izquierda, ¿dónde debería ubicarse?",
     "options": [
       {
@@ -2788,6 +3014,7 @@
     ]
   },
   {
+    "id": 142,
     "question": "Usted va detrás de un camión articulado que va a d oblar a la derecha hacia una vía angosta. ¿Qué debe hacer usted?",
     "options": [
       {
@@ -2809,6 +3036,7 @@
     ]
   },
   {
+    "id": 145,
     "question": "Usted ha alcanzado a un auto al que desea adelant ar. ¿Cuáles son las 3 cosas más difíciles de juzgar?",
     "options": [
       {
@@ -2834,6 +3062,7 @@
     ]
   },
   {
+    "id": 146,
     "question": "Usted va conduciendo su vehículo a 90 km/h que es  la velocidad máxima permitida en esa vía. ¿Qué hace usted si a pesar de \ntodo un vehículo desea adelantarlo?",
     "options": [
       {
@@ -2855,6 +3084,7 @@
     ]
   },
   {
+    "id": 147,
     "question": "Usted va por una carretera a 100 km/h. ¿Qué hace u sted si a pesar de todo un vehículo que viene atrás desea adelantarlo?",
     "options": [
       {
@@ -2874,12 +3104,35 @@
         "is_correct": false
       },
       {
-        "text": "Se acerca lo más posible hacia la línea de cent ro de calzada, para impedir el adelantamiento.  \n \n148.-\n Usted desea adelantar. ¿Cuál o cuáles de las sigui entes afirmaciones es(son) verdadera(s)? \n  \n  \n       \n Marque \nla  o las  respuesta(s) correcta(s)",
+        "text": "Se acerca lo más posible hacia la línea de cent ro de calzada, para impedir el adelantamiento.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 148,
+    "question": "Usted desea adelantar. ¿Cuál o cuáles de las sigui entes afirmaciones es(son) verdadera(s)?",
+    "options": [
+      {
+        "text": "El camión tiene la obligación de correrse hacia  la berma para dejarle a usted más espacio.",
+        "is_correct": false
+      },
+      {
+        "text": "El auto que viene en sentido contrario tiene la  obligación de correrse a la berma para aumentar la seguridad.",
+        "is_correct": false
+      },
+      {
+        "text": "El camión está obligado a reducir la velocidad.",
+        "is_correct": false
+      },
+      {
+        "text": "Usted tiene la obligación de esperar a que la p ista del sentido contrario esté libre de vehículos para luego adelantar.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 149,
     "question": "Usted ha comenzado a adelantar. El auto de la dere cha va a aproximadamente 80 km/h. Por su espejo retrovisor usted ve otro \nauto que tiene intención de adelantar. ¿Qué hace usted?",
     "options": [
       {
@@ -2901,6 +3154,7 @@
     ]
   },
   {
+    "id": 150,
     "question": "Antes de adelantar a un vehículo de gran tamaño us ted debería mantenerse suficientemente atrás de él. ¿Por qué?",
     "options": [
       {
@@ -2922,6 +3176,7 @@
     ]
   },
   {
+    "id": 151,
     "question": "¿Por qué adelantar a un camión es más arriesgado q ue adelantar a un auto?",
     "options": [
       {
@@ -2943,6 +3198,7 @@
     ]
   },
   {
+    "id": 152,
     "question": "Usted está a punto de adelantar a un vehículo pesa do. ¿Qué debería hacer?",
     "options": [
       {
@@ -2964,6 +3220,7 @@
     ]
   },
   {
+    "id": 153,
     "question": "Usted va conduciendo de día por una zona rural. La  calzada tiene pavimento en buen estado y tránsito bidireccional. A menos \nque alguna señal le indique otra cosa, usted no debe exceder los ...",
     "options": [
       {
@@ -2979,12 +3236,35 @@
         "is_correct": true
       },
       {
-        "text": "100 km/hr \n \n154.-\n Usted va conduciendo en la ciudad por una calle co n 2 pistas en sentido único de tránsito. A menos que alguna señal le indique \notra cosa, usted no debe exceder los ... \n \n Marque una respuesta",
+        "text": "100 km/hr",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 154,
+    "question": "Usted va conduciendo en la ciudad por una calle co n 2 pistas en sentido único de tránsito. A menos que alguna señal le indique \notra cosa, usted no debe exceder los ...",
+    "options": [
+      {
+        "text": "30 km/hr",
+        "is_correct": false
+      },
+      {
+        "text": "60 km/hr",
+        "is_correct": true
+      },
+      {
+        "text": "50 km/hr",
+        "is_correct": false
+      },
+      {
+        "text": "80 km/hr",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 155,
     "question": "Como norma general, antes de tomar una curva cerra da, usted debe ...",
     "options": [
       {
@@ -3006,6 +3286,7 @@
     ]
   },
   {
+    "id": 158,
     "question": "Por una emergencia usted requiere estacionar de no che en una carretera sin alumbrado y con buenas bermas. ¿Cuál o cuáles de \nlas siguientes afirmaciones es(son) verdadera(s)?",
     "options": [
       {
@@ -3027,6 +3308,7 @@
     ]
   },
   {
+    "id": 159,
     "question": "¿En cuál o cuáles de estos lugares podría el esta cionamiento de su vehículo causar daño u obstrucción a otros usuarios de la \nvía?",
     "options": [
       {
@@ -3048,6 +3330,7 @@
     ]
   },
   {
+    "id": 160,
     "question": "¿En qué circunstancia usted se detendría justo sob re un cruce cebra existente a  mitad de cuadra?",
     "options": [
       {
@@ -3069,6 +3352,7 @@
     ]
   },
   {
+    "id": 161,
     "question": "Como regla general, ¿en cuál o cuáles de los sigui entes lugares usted no debe estacionar?",
     "options": [
       {
@@ -3094,6 +3378,7 @@
     ]
   },
   {
+    "id": 162,
     "question": "¿Cuál o cuáles de las siguientes afirmaciones es(s on) correcta(s) tratándose de una vía urbana sin se ñales de tránsito que \nprohiban o autoricen el estacionamiento o la detención?",
     "options": [
       {
@@ -3109,12 +3394,35 @@
         "is_correct": true
       },
       {
-        "text": "Usted puede estacionar al costado derecho y a 5  m de la esquina si el cruce se encuentra semaforizado. \n \n163.-\n Usted va a dejar su vehículo estacionado. ¿En qué caso puede dejarlo con el motor funcionando? \n \n Marque una respuesta",
+        "text": "Usted puede estacionar al costado derecho y a 5  m de la esquina si el cruce se encuentra semaforizado.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 163,
+    "question": "Usted va a dejar su vehículo estacionado. ¿En qué caso puede dejarlo con el motor funcionando?",
+    "options": [
+      {
+        "text": "En ningún caso.",
+        "is_correct": true
+      },
+      {
+        "text": "Si va a estar estacionado menos de 5 minutos.",
+        "is_correct": false
+      },
+      {
+        "text": "Si la batería está descargada.",
+        "is_correct": false
+      },
+      {
+        "text": "Si en el vehículo va a permanecer una persona.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 164,
     "question": "En una vía urbana de sentido único de tránsito, s in señalización que permita o prohíba el estacionamiento, ¿a qué lado puede \nestacionar?",
     "options": [
       {
@@ -3136,6 +3444,7 @@
     ]
   },
   {
+    "id": 165,
     "question": "¿En cuáles 3 de las siguientes ocasiones debe ust ed detener siempre su vehículo?",
     "options": [
       {
@@ -3161,6 +3470,7 @@
     ]
   },
   {
+    "id": 166,
     "question": "¿A cuántos metros de una esquina es lo más cerca q ue usted puede estacionar?",
     "options": [
       {
@@ -3182,6 +3492,7 @@
     ]
   },
   {
+    "id": 167,
     "question": "Como regla general, ¿en cuál o cuáles de los sigu ientes lugares nunca debe estacionar?",
     "options": [
       {
@@ -3207,6 +3518,7 @@
     ]
   },
   {
+    "id": 168,
     "question": "De noche, en una zona rural, por emergencia usted estaciona su vehículo al costado de la vía. ¿En qué circunstancia debe usted \nencender sus luces de estacionamiento?",
     "options": [
       {
@@ -3228,6 +3540,7 @@
     ]
   },
   {
+    "id": 169,
     "question": "¿Qué hace usted ante esta situación?",
     "options": [
       {
@@ -3249,6 +3562,7 @@
     ]
   },
   {
+    "id": 171,
     "question": "¿Adquiere usted un derecho sobre otros usuarios de  la vía cuando utiliza sus luces indicadoras de viraje?",
     "options": [
       {
@@ -3270,6 +3584,7 @@
     ]
   },
   {
+    "id": 172,
     "question": "Usted se aproxima a un cruce cebra. En la vereda h ay peatones esperando cruzar. ¿Qué hace usted?",
     "options": [
       {
@@ -3291,6 +3606,7 @@
     ]
   },
   {
+    "id": 173,
     "question": "Usted conduce un vehículo de marcha lenta por un c amino angosto y sinuoso. En estas circunstancias, usted debería ...",
     "options": [
       {
@@ -3312,6 +3628,7 @@
     ]
   },
   {
+    "id": 174,
     "question": "Usted está circulando por una vía rápida en buena s condiciones. ¿Cómo puede estar seguro de que lo h ace a una distancia \nadecuada del vehículo que va adelante?",
     "options": [
       {
@@ -3333,6 +3650,7 @@
     ]
   },
   {
+    "id": 175,
     "question": "El conductor detrás suyo le sigue muy de cerca. ¿ Qué hace usted?",
     "options": [
       {
@@ -3354,6 +3672,7 @@
     ]
   },
   {
+    "id": 176,
     "question": "Un bus está detenido en una parada delante suyo. E l intermitente izquierdo del bus está parpadeando. ¿Qué hace usted?",
     "options": [
       {
@@ -3375,6 +3694,7 @@
     ]
   },
   {
+    "id": 178,
     "question": "Usted se está aproximando a un cruce cuando sorpre sivamente un vehículo ingresa a la vía por la que u sted va y se ubica \ndelante suyo. ¿Qué hace usted?",
     "options": [
       {
@@ -3396,6 +3716,7 @@
     ]
   },
   {
+    "id": 179,
     "question": "Usted va conduciendo a la velocidad máxima permiti da. Un vehículo se acerca muy rápido por atrás encendiendo y apagando \nsus luces. ¿Qué hace usted?",
     "options": [
       {
@@ -3417,6 +3738,7 @@
     ]
   },
   {
+    "id": 180,
     "question": "Un espacio entre usted y el vehículo que marcha de lante igual a lo que usted recorre en tres segundos es suficiente cuando ...",
     "options": [
       {
@@ -3438,6 +3760,7 @@
     ]
   },
   {
+    "id": 181,
     "question": "Usted está conduciendo al límite de la velocidad m áxima permitida y un conductor intenta adelantarlo. ¿Trataría usted de evitar \nque lo adelante?",
     "options": [
       {
@@ -3459,6 +3782,7 @@
     ]
   },
   {
+    "id": 182,
     "question": "De los siguientes factores, ¿cuál es el que con ma yor frecuencia se presenta en las colisiones por la parte trasera?",
     "options": [
       {
@@ -3480,6 +3804,7 @@
     ]
   },
   {
+    "id": 183,
     "question": "Usted está esperando poder incorporarse a una vía  principal desde una calle lateral. ¿Por qué razón debería usted poner especial \natención a las motocicletas?",
     "options": [
       {
@@ -3501,6 +3826,7 @@
     ]
   },
   {
+    "id": 184,
     "question": "¿Cuál de los siguientes grupos de conductores tie ne mayores probabilidades de verse involucrado en un accidente de tránsito?",
     "options": [
       {
@@ -3522,6 +3848,7 @@
     ]
   },
   {
+    "id": 185,
     "question": "En una zona rural, usted va conduciendo por un cam ino muy angosto. ¿Dónde le resultaría más difícil ver personas a caballo que \navanzan delante suyo?",
     "options": [
       {
@@ -3543,6 +3870,7 @@
     ]
   },
   {
+    "id": 186,
     "question": "Usted va detrás de un camión articulado que se ap roxima a un cruce. Su conductor señaliza hacia la derecha pero el vehículo se \ndesplaza hacia la izquierda. ¿Qué debe hacer usted?",
     "options": [
       {
@@ -3564,6 +3892,7 @@
     ]
   },
   {
+    "id": 187,
     "question": "En una carretera de doble calzada con 2 pistas por  sentido de tránsito, usted desea pasar al vehículo que va delante suyo. Por su \nespejo retrovisor ve que el auto que viene atrás se  está cambiando de pista para sobrepasarlo a usted.  ¿Qué debería hacer \nusted?",
     "options": [
       {
@@ -3585,6 +3914,7 @@
     ]
   },
   {
+    "id": 188,
     "question": "Un vehículo emerge sorpresivamente desde una vía l ateral situándose delante suyo y obligándolo a frenar fuertemente. ¿Qué \nhace usted?",
     "options": [
       {
@@ -3606,6 +3936,7 @@
     ]
   },
   {
+    "id": 189,
     "question": "Usted se detiene ante un cruce cebra. En la vereda  hay peatones esperando, pero ellos no comienzan a cruzar. ¿Qué hace usted?",
     "options": [
       {
@@ -3627,6 +3958,7 @@
     ]
   },
   {
+    "id": 190,
     "question": "Cuando el viento sopla muy fuertemente usted neces ita tener especial cuidado  ...",
     "options": [
       {
@@ -3648,6 +3980,7 @@
     ]
   },
   {
+    "id": 191,
     "question": "En un cruce hay peatones atravesando la calle haci a la cual usted está virando. ¿Qué debe hacer usted?",
     "options": [
       {
@@ -3669,6 +4002,7 @@
     ]
   },
   {
+    "id": 192,
     "question": "En un cruce hay peatones atravesando la calle hac ia la cual usted está virando. ¿Qué hace usted?",
     "options": [
       {
@@ -3690,6 +4024,7 @@
     ]
   },
   {
+    "id": 193,
     "question": "¿Dónde debe tener usted especial cuidado con los m otociclistas?",
     "options": [
       {
@@ -3705,12 +4040,35 @@
         "is_correct": false
       },
       {
-        "text": "Al ingresar a un recinto o área de estacionamie ntos.  \n \n194.-\n Cuando conduce en la ciudad ¿por qué razón debería  usted tener cuidado al cruzarse con un bus que se encuentra detenido en \nuna parada? \n \n Marque una respuesta",
+        "text": "Al ingresar a un recinto o área de estacionamie ntos.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 194,
+    "question": "Cuando conduce en la ciudad ¿por qué razón debería  usted tener cuidado al cruzarse con un bus que se encuentra detenido en \nuna parada?",
+    "options": [
+      {
+        "text": "Porque el bus puede estar en pana.",
+        "is_correct": false
+      },
+      {
+        "text": "Porque el bus puede ponerse en movimiento repen tinamente.",
+        "is_correct": false
+      },
+      {
+        "text": "Porque pueden aparecer peatones detrás del bus.",
+        "is_correct": true
+      },
+      {
+        "text": "Porque el bus puede permanecer detenido.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 195,
     "question": "Usted se encuentra muy próximo a un cruce en el qu e pretende virar a la derecha. Delante suyo va un ciclista. ¿Qué hace usted?",
     "options": [
       {
@@ -3726,12 +4084,79 @@
         "is_correct": true
       },
       {
-        "text": "Se sitúa al lado del ciclista, sigue en línea r ecta y desiste de virar. \n \n196.-\n Usted va conduciendo por un camino de doble tránsi to cuando se encuentra con personas que van a caballo delante suyo. ¿Qué \nes lo primero que usted debería hacer?  \n \n Marque una respuesta",
+        "text": "Se sitúa al lado del ciclista, sigue en línea r ecta y desiste de virar.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 196,
+    "question": "Usted va conduciendo por un camino de doble tránsi to cuando se encuentra con personas que van a caballo delante suyo. ¿Qué \nes lo primero que usted debería hacer?",
+    "options": [
+      {
+        "text": "Desplazarse hacia el centro de la calzada.",
+        "is_correct": false
+      },
+      {
+        "text": "Acelerar alrededor de ellos.",
+        "is_correct": false
+      },
+      {
+        "text": "Señalizar hacia la izquierda.",
+        "is_correct": false
+      },
+      {
+        "text": "Prepararse para reducir la velocidad.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "question": "¿Cómo debería usted adelantar a personas que van a  caballo?",
+    "options": [
+      {
+        "text": "Conduciendo lentamente y dejando bastante espac io lateral.",
+        "is_correct": true
+      },
+      {
+        "text": "Pasando cerca de ellas y adelantándolas lo ante s posible.",
+        "is_correct": false
+      },
+      {
+        "text": "La velocidad no es importante, pero sí el dejar  suficiente espacio lateral.",
+        "is_correct": false
+      },
+      {
+        "text": "Tocando la bocina sólo una vez como señal de ad vertencia.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "question": "Usted va circulando a 65 km/h aproximadamente cuan do, lamentablemente, atropella a un peatón. A esa velocidad, ....",
+    "options": [
+      {
+        "text": "es seguro que el peatón morirá.",
+        "is_correct": false
+      },
+      {
+        "text": "es muy probable que el peatón muera.",
+        "is_correct": true
+      },
+      {
+        "text": "es seguro que el peatón sobrevivirá.",
+        "is_correct": false
+      },
+      {
+        "text": "es muy probable que el peatón sobreviva.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 199,
     "question": "Usted desea adelantar a un motociclista que va del ante suyo, ¿qué hace usted?",
     "options": [
       {
@@ -3753,6 +4178,7 @@
     ]
   },
   {
+    "id": 200,
     "question": "Usted va siguiendo a un automóvil que es conducido  por una persona de edad. Usted debería ...",
     "options": [
       {
@@ -3774,6 +4200,7 @@
     ]
   },
   {
+    "id": 201,
     "question": "Al estacionar su vehículo en un lugar en el que n o hay señales que lo permitan ni que lo prohiban, usted no debe ....",
     "options": [
       {
@@ -3795,6 +4222,7 @@
     ]
   },
   {
+    "id": 202,
     "question": "Usted nunca debería intentar adelantar a un ciclis ta ...",
     "options": [
       {
@@ -3810,12 +4238,79 @@
         "is_correct": false
       },
       {
-        "text": "en un camino de tierra. \n \n203.-\n Cuando adelanta a un ciclista usted debe dejar el máximo espacio lateral posible. ¿Por qué? \n \n Marque una respuesta",
+        "text": "en un camino de tierra.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 203,
+    "question": "Cuando adelanta a un ciclista usted debe dejar el máximo espacio lateral posible. ¿Por qué?",
+    "options": [
+      {
+        "text": "Porque el ciclista podría cambiar de pista.",
+        "is_correct": false
+      },
+      {
+        "text": "Porque el ciclista podría bajarse de la bicicle ta.",
+        "is_correct": false
+      },
+      {
+        "text": "Porque el ciclista podría tener que virar a la izquierda.",
+        "is_correct": false
+      },
+      {
+        "text": "Porque el ciclista podría desviarse bruscamente .",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "question": "Cuando el viento está soplando muy fuerte, ¿por qu é debe usted dejar un espacio lateral extra al adelantar a un motociclista?",
+    "options": [
+      {
+        "text": "Porque el motociclista podría doblar repentinam ente para escapar del viento.",
+        "is_correct": false
+      },
+      {
+        "text": "Porque el motociclista podría detenerse repenti namente.",
+        "is_correct": false
+      },
+      {
+        "text": "Porque el motociclista podría tambalear o ver d esviada su trayectoria a consecuencia del viento.",
+        "is_correct": true
+      },
+      {
+        "text": "Porque el motociclista podría ir más rápido de lo normal.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "question": "¿De qué le advierte esta señal?",
+    "options": [
+      {
+        "text": "De la posible presencia de escolares.",
+        "is_correct": true
+      },
+      {
+        "text": "De la proximidad de un cruce de peatones.",
+        "is_correct": false
+      },
+      {
+        "text": "De la posible presencia de niños jugando.",
+        "is_correct": false
+      },
+      {
+        "text": "De la proximidad de un parque o plaza.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 206,
     "question": "Cuando es de noche, al adelantar usted debería ...",
     "options": [
       {
@@ -3835,12 +4330,35 @@
         "is_correct": true
       },
       {
-        "text": "cambiar de luces altas a bajas repetidas veces antes de iniciar el adelantamiento. \n \n207.-\n Por una carretera, usted circula detrás de otro ve hículo. Si la calzada está mojada, ¿qué espacio de tiempo mínimo mantiene \nusted respecto del vehículo que va adelante? \n \n Marque una respuesta",
+        "text": "cambiar de luces altas a bajas repetidas veces antes de iniciar el adelantamiento.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 207,
+    "question": "Por una carretera, usted circula detrás de otro ve hículo. Si la calzada está mojada, ¿qué espacio de tiempo mínimo mantiene \nusted respecto del vehículo que va adelante?",
+    "options": [
+      {
+        "text": "A lo menos, el equivalente a lo que recorre en 4 segundos.",
+        "is_correct": true
+      },
+      {
+        "text": "El equivalente a lo que recorre en 1 segundo.",
+        "is_correct": false
+      },
+      {
+        "text": "El equivalente a lo que recorre en 2 segundos.",
+        "is_correct": false
+      },
+      {
+        "text": "Como máximo, el equivalente a lo que recorre en  3 segundos.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 208,
     "question": "Usted está conduciendo de noche y es encandilado p or las luces delanteras de un vehículo que se aprox ima. En estas \ncircunstancias, ¿qué hace usted?",
     "options": [
       {
@@ -3862,6 +4380,7 @@
     ]
   },
   {
+    "id": 209,
     "question": "¿Cuál o cuáles de las siguientes afirmaciones son correctas en cuanto a la conducción durante la noche?",
     "options": [
       {
@@ -3883,6 +4402,7 @@
     ]
   },
   {
+    "id": 211,
     "question": "¿Cuál o cuáles de las siguientes afirmaciones es(s on) correcta(s) en cuanto a la conducción bajo la lluvia?",
     "options": [
       {
@@ -3904,6 +4424,7 @@
     ]
   },
   {
+    "id": 212,
     "question": "¿Cuáles son las 2 causas más comunes de los resbal ones ante la existencia de agua en la calzada?",
     "options": [
       {
@@ -3925,6 +4446,7 @@
     ]
   },
   {
+    "id": 213,
     "question": "Viajando de noche usted es encandilado por las lu ces de un vehículo que viene en sentido contrario, ¿qué debería hacer usted?",
     "options": [
       {
@@ -3946,6 +4468,7 @@
     ]
   },
   {
+    "id": 214,
     "question": "Conduciendo de noche usted se ve encandilado por l as luces de un vehículo que viene en sentido contrario, ¿qué debería hacer \nusted?",
     "options": [
       {
@@ -3967,6 +4490,7 @@
     ]
   },
   {
+    "id": 215,
     "question": "Al frenar en una calzada mojada su vehículo comien za a patinar. ¿Qué es lo primero que usted debería hacer?",
     "options": [
       {
@@ -3988,6 +4512,7 @@
     ]
   },
   {
+    "id": 216,
     "question": "¿Cómo puede usted evitar que los neumáticos patine n cuando la calzada está con hielo?",
     "options": [
       {
@@ -4003,12 +4528,57 @@
         "is_correct": true
       },
       {
-        "text": "Conduciendo en neutro. \n \n217.-\n Cuando la calzada está con hielo la distancia de f renado puede ser ... \n \n Marque una respuesta",
+        "text": "Conduciendo en neutro.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 217,
+    "question": "Cuando la calzada está con hielo la distancia de f renado puede ser ...",
+    "options": [
+      {
+        "text": "2 veces la distancia normal.",
+        "is_correct": false
+      },
+      {
+        "text": "5 veces la distancia normal.",
+        "is_correct": false
+      },
+      {
+        "text": "7 veces la distancia normal.",
+        "is_correct": false
+      },
+      {
+        "text": "10 veces la distancia normal.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "question": "Al conducir con neblina a la luz del día, ¿qué luc es enciende usted ?",
+    "options": [
+      {
+        "text": "Las luces delanteras bajas.",
+        "is_correct": true
+      },
+      {
+        "text": "Las luces de estacionamiento.",
+        "is_correct": false
+      },
+      {
+        "text": "Las luces delanteras altas.",
+        "is_correct": false
+      },
+      {
+        "text": "Las luces de advertencia de peligro.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 219,
     "question": "Al conducir sobre una calzada con hielo usted sien te la dirección de su vehículo más liviana. ¿ Por qué sucede esto?",
     "options": [
       {
@@ -4030,6 +4600,7 @@
     ]
   },
   {
+    "id": 220,
     "question": "¿Cuándo es su distancia de detención total mucho m ás larga?",
     "options": [
       {
@@ -4051,6 +4622,7 @@
     ]
   },
   {
+    "id": 221,
     "question": "Usted acaba de conducir a través de una calle inu ndada. ¿Qué es lo primero que debería hacer?",
     "options": [
       {
@@ -4072,6 +4644,7 @@
     ]
   },
   {
+    "id": 223,
     "question": "Usted está conduciendo bajo mucha lluvia y repenti namente siente la dirección muy liviana. ¿Qué hace usted para tener \nnuevamente el control de su vehículo?",
     "options": [
       {
@@ -4093,6 +4666,7 @@
     ]
   },
   {
+    "id": 224,
     "question": "Cuando hay nieve lo mejor es conducir manteniéndo se en la marcha más alta posible. ¿Por qué es esto?",
     "options": [
       {
@@ -4114,6 +4688,7 @@
     ]
   },
   {
+    "id": 225,
     "question": "¿Cuál es la principal razón por la cual su distanc ia de detención total es mayor después de una lluvia torrencial?",
     "options": [
       {
@@ -4135,6 +4710,7 @@
     ]
   },
   {
+    "id": 226,
     "question": "En una ocasión de mucha neblina usted va detrás de  otros vehículos y lleva encendidas sus luces bajas. ¿De qué otra forma \npuede reducir las probabilidades de verse involucrado en un accidente?",
     "options": [
       {
@@ -4156,6 +4732,7 @@
     ]
   },
   {
+    "id": 227,
     "question": "En un pavimento mojado usted va circulando detrás  de un vehículo manteniéndose a una distancia segura de él. De pronto es \nadelantado por otro vehículo que se ubica en el espacio que usted había dejado. ¿Qué debería hacer usted?",
     "options": [
       {
@@ -4171,12 +4748,79 @@
         "is_correct": true
       },
       {
-        "text": "Mantener su velocidad y esperar a que el vehícu lo se aleje. \n \n228.-\n ¿Cómo puede usted controlar mejor su vehículo al c onducir con nieve? \n \n Marque una respuesta",
+        "text": "Mantener su velocidad y esperar a que el vehícu lo se aleje.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 228,
+    "question": "¿Cómo puede usted controlar mejor su vehículo al c onducir con nieve?",
+    "options": [
+      {
+        "text": "Conduciendo en un cambio bajo y sujetando el vo lante muy firmemente.",
+        "is_correct": false
+      },
+      {
+        "text": "Conduciendo en primera.",
+        "is_correct": false
+      },
+      {
+        "text": "Manteniendo el motor acelerado y presionando el  pedal de embrague.",
+        "is_correct": false
+      },
+      {
+        "text": "Conduciendo lentamente en el cambio más alto po sible.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 229,
+    "question": "Al ir de noche por una carretera usted debe manten er sus focos delanteros encendidos, a menos que ...",
+    "options": [
+      {
+        "text": "su vehículo esté en pana en la berma.",
+        "is_correct": true
+      },
+      {
+        "text": "vayan vehículos muy cerca delante suyo.",
+        "is_correct": false
+      },
+      {
+        "text": "circule a menos de 50 km/hr.",
+        "is_correct": false
+      },
+      {
+        "text": "la carretera esté iluminada.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 230,
+    "question": "¿Cómo debería conducir usted en una curva cuando h ay hielo en la calzada?",
+    "options": [
+      {
+        "text": "Usando el embrague y el freno al mismo tiempo.",
+        "is_correct": false
+      },
+      {
+        "text": "Lenta y suavemente.",
+        "is_correct": true
+      },
+      {
+        "text": "En primera.",
+        "is_correct": false
+      },
+      {
+        "text": "Frenando a medida que va tomando la curva. \n \n231.\n- Hay mucha neblina y el auto que viene detrás suyo  parece estar muy cerca. ¿Qué debería hacer usted? \n \n Marque una respuesta",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 232,
     "question": "Usted va conduciendo de noche por una carretera ce rca de otros vehículos que van delante suyo. ¿Qué luces debería mantener \nencendidas?",
     "options": [
       {
@@ -4198,6 +4842,7 @@
     ]
   },
   {
+    "id": 233,
     "question": "¿Por qué razón debería usted reducir siempre su ve locidad al conducir con neblina?",
     "options": [
       {
@@ -4219,6 +4864,7 @@
     ]
   },
   {
+    "id": 234,
     "question": "Su vehículo ha quedado en pana en medio de una au topista. ¿Qué es lo primero que usted debería hacer?",
     "options": [
       {
@@ -4240,6 +4886,7 @@
     ]
   },
   {
+    "id": 235,
     "question": "Usted va circulando por la pista de la derecha de  una carretera de doble calzada muy transitada. Una señal le indica que a 800 m \nsu pista se encuentra cerrada. ¿Qué debería hacer usted?",
     "options": [
       {
@@ -4261,6 +4908,7 @@
     ]
   },
   {
+    "id": 236,
     "question": "En una calle de una pista por sentido de tránsito usted se encuentra con que su pista está obstruida. ¿Qué hace usted?",
     "options": [
       {
@@ -4282,6 +4930,7 @@
     ]
   },
   {
+    "id": 238,
     "question": "En relación con el transporte de una carga sobre la parrilla de un automóvil, ¿cuál de las siguientes afirmaciones constituye una \nobligación para el conductor?",
     "options": [
       {
@@ -4303,6 +4952,7 @@
     ]
   },
   {
+    "id": 239,
     "question": "¿Cómo puede usted detener el zigzagueo de una casa  rodante que va remolcando?",
     "options": [
       {
@@ -4324,6 +4974,7 @@
     ]
   },
   {
+    "id": 240,
     "question": "¿Qué precaución debe tomar usted al cargar un remo lque que va a arrastrar con su automóvil?",
     "options": [
       {
@@ -4339,12 +4990,35 @@
         "is_correct": true
       },
       {
-        "text": "Que el peso se concentre al lado derecho. \n \n241.-\n En una carretera de doble calzada y de mucho tráns ito, usted está siendo seguido muy de cerca por un vehículo que viene atrás. \n¿Qué hace usted para disminuir el riesgo de accidente? \n          \n Marque una respuesta",
+        "text": "Que el peso se concentre al lado derecho.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 241,
+    "question": "En una carretera de doble calzada y de mucho tráns ito, usted está siendo seguido muy de cerca por un vehículo que viene atrás. \n¿Qué hace usted para disminuir el riesgo de accidente?",
+    "options": [
+      {
+        "text": "Sale a la berma y se detiene.",
+        "is_correct": false
+      },
+      {
+        "text": "Enciende sus luces de advertencia de peligro.",
+        "is_correct": false
+      },
+      {
+        "text": "Frena.",
+        "is_correct": false
+      },
+      {
+        "text": "Aumenta su distancia al vehículo que va adelant e.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 242,
     "question": "Combine los números de las señales con los textos que correspondan.",
     "options": [
       {
@@ -4366,6 +5040,7 @@
     ]
   },
   {
+    "id": 243,
     "question": "Usted va circulando por una carretera de doble cal zada con tres pistas por sentido. Las demarcaciones de pistas y de eje central \nestán reforzadas con tachas reflectantes. Si a su izquierda las tachas son rojas y a su derecha éstas son blancas, ¿por cuál pista \nva usted?",
     "options": [
       {
@@ -4383,6 +5058,7 @@
     ]
   },
   {
+    "id": 244,
     "question": "Al ir circulando en su vehículo usted enfrenta est a señal. ¿Qué significa?",
     "options": [
       {
@@ -4404,6 +5080,7 @@
     ]
   },
   {
+    "id": 245,
     "question": "¿Qué significa esta señal?",
     "options": [
       {
@@ -4425,6 +5102,7 @@
     ]
   },
   {
+    "id": 246,
     "question": "¿Cuándo puede usted ingresar a un cruce en cuya ca lzada se han pintado franjas amarillas diagonales?",
     "options": [
       {
@@ -4440,12 +5118,35 @@
         "is_correct": false
       },
       {
-        "text": "Sólo cuando haya menos de dos vehículos delante  suyo. \n \n247.-\n ¿Qué significa esta señal de tránsito?    \n  \n    \n Marque una respuesta",
+        "text": "Sólo cuando haya menos de dos vehículos delante  suyo.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 247,
+    "question": "¿Qué significa esta señal de tránsito?",
+    "options": [
+      {
+        "text": "Gravilla suelta.",
+        "is_correct": false
+      },
+      {
+        "text": "Peligro de que se pinchen los neumáticos.",
+        "is_correct": false
+      },
+      {
+        "text": "Pavimento resbaladizo.",
+        "is_correct": true
+      },
+      {
+        "text": "Curvas en el camino.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 248,
     "question": "¿Qué significa esta señal?",
     "options": [
       {
@@ -4461,12 +5162,35 @@
         "is_correct": false
       },
       {
-        "text": "No cambiar de pista. \n \n249.-\n ¿Cuál de los siguientes tipos de señales le indica  que no haga algo? \n \n Marque una respuesta \n \n \n  \n \n250 .- ¿Qué debe hacer usted cuando enfrenta esta señal ?  \n  \n  \n           \n Marque una respuesta",
+        "text": "No cambiar de pista.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 249,
+    "question": "¿Cuál de los siguientes tipos de señales le indica  que no haga algo?",
+    "options": [
+      {
+        "text": "Detenerse sólo si viene algún vehículo por la o tra vía.",
+        "is_correct": false
+      },
+      {
+        "text": "Detenerse sólo si hay peatones esperando para c ruzar.",
+        "is_correct": false
+      },
+      {
+        "text": "Detenerse sólo si en la calzada está pintada la  leyenda PARE.",
+        "is_correct": true
+      },
+      {
+        "text": "Detenerse siempre.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 251,
     "question": "¿Qué significa esta señal?",
     "options": [
       {
@@ -4488,6 +5212,7 @@
     ]
   },
   {
+    "id": 252,
     "question": "¿Qué significa un semáforo en rojo?",
     "options": [
       {
@@ -4509,6 +5234,7 @@
     ]
   },
   {
+    "id": 253,
     "question": "¿Para qué sirven las señales amarillas con forma de rombo?",
     "options": [
       {
@@ -4530,6 +5256,7 @@
     ]
   },
   {
+    "id": 254,
     "question": "¿Qué significa un semáforo en amarillo?",
     "options": [
       {
@@ -4551,6 +5278,7 @@
     ]
   },
   {
+    "id": 255,
     "question": "¿Qué significa esta señal?",
     "options": [
       {
@@ -4566,12 +5294,35 @@
         "is_correct": false
       },
       {
-        "text": "Dos sentidos de tránsito más adelante. \n \n256.-\n ¿Qué significa esta señal?     \n  \n        \n Marque una respuesta",
+        "text": "Dos sentidos de tránsito más adelante.",
         "is_correct": true
       }
     ]
   },
   {
+    "id": 256,
+    "question": "¿Qué significa esta señal?",
+    "options": [
+      {
+        "text": "Zona de escuela.",
+        "is_correct": false
+      },
+      {
+        "text": "Cruce de peatones.",
+        "is_correct": true
+      },
+      {
+        "text": "Niños jugando.",
+        "is_correct": false
+      },
+      {
+        "text": "Peatón debe transitar por su izquierda.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 258,
     "question": "¿Qué significa esta señal?",
     "options": [
       {
@@ -4593,6 +5344,7 @@
     ]
   },
   {
+    "id": 260,
     "question": "De las siguientes señales de tránsito, ¿cuál o cuá les corresponden a señales amarillas con forma de rombo?",
     "options": [
       {
@@ -4618,6 +5370,7 @@
     ]
   },
   {
+    "id": 261,
     "question": "Usted está enfrentando un semáforo en amarillo. ¿Q ué luces se encenderán después?",
     "options": [
       {
@@ -4633,12 +5386,35 @@
         "is_correct": false
       },
       {
-        "text": "Primero la verde y luego la amarilla nuevamente . \n \n262.-\n ¿Qué significa la demarcación de centro de calzada  que muestra la figura?      \n \n  \n     \n \n Marque una respuesta",
+        "text": "Primero la verde y luego la amarilla nuevamente .",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 262,
+    "question": "¿Qué significa la demarcación de centro de calzada  que muestra la figura?",
+    "options": [
+      {
+        "text": "Que no puede ser traspasada por un conductor qu e viene por la pista A.",
+        "is_correct": false
+      },
+      {
+        "text": "Que no puede ser traspasada por un conductor qu e va  por la pista B.",
+        "is_correct": true
+      },
+      {
+        "text": "Que en ningún caso pueden efectuarse adelantami entos.",
+        "is_correct": false
+      },
+      {
+        "text": "Que sólo un conductor que va por la pista B pod ría efectuar un adelantamiento.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 263,
     "question": "El vehículo indicado con la flecha se encuentra de tenido sobre una zona achurada esperando poder efectuar un viraje en \nU,  ¿es esto correcto?",
     "options": [
       {
@@ -4654,12 +5430,27 @@
         "is_correct": true
       },
       {
-        "text": "No, porque se trata de una vía de mucho tránsit o.  \n \n264.-\n De acuerdo a las circunstancias que se aprecian en  la fotografía, ¿sería correcto que el automóvil indicado con la flecha \ncontinuara derecho ?",
+        "text": "No, porque se trata de una vía de mucho tránsit o.",
         "is_correct": false
       }
     ]
   },
   {
+    "id": 264,
+    "question": "De acuerdo a las circunstancias que se aprecian en  la fotografía, ¿sería correcto que el automóvil indicado con la flecha \ncontinuara derecho ?",
+    "options": [
+      {
+        "text": "Sí",
+        "is_correct": false
+      },
+      {
+        "text": "No",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 265,
     "question": "¿Qué le indica la señal de tránsito que se observ a en la fotografía?",
     "options": [
       {
@@ -4681,6 +5472,7 @@
     ]
   },
   {
+    "id": 266,
     "question": "¿Qué significa la luz verde del semáforo?",
     "options": [
       {
@@ -4702,6 +5494,7 @@
     ]
   },
   {
+    "id": 267,
     "question": "¿Cuándo no debería usted detenerse al ponerse el semáforo en amarillo?",
     "options": [
       {
@@ -4723,6 +5516,7 @@
     ]
   },
   {
+    "id": 268,
     "question": "Usted se encuentra en el lugar de un accidente. ¿Q ué hace para ayudar de mejor forma a una persona herida que está \ncon una fuerte hemorragia en la parte inferior de una pierna?",
     "options": [
       {
@@ -4748,6 +5542,7 @@
     ]
   },
   {
+    "id": 269,
     "question": "Excepcionalmente, un joven de 17 años puede obtene r licencia de conducir clase B. En tanto no cumpla 18 años deberá \nconducir siempre acompañado. ¿Qué requisitos debe cumplir su acompañante?",
     "options": [
       {
@@ -4773,6 +5568,7 @@
     ]
   },
   {
+    "id": 270,
     "question": "Usted se ve involucrado en un accidente. Un pasajero del otro vehículo ha resultado con lesiones leves. ¿Debe usted \ninformar el hecho a la policía?",
     "options": [
       {
@@ -4798,6 +5594,7 @@
     ]
   },
   {
+    "id": 272,
     "question": "Usted es el primero en llegar al sitio de un accid ente. ¿Qué debería hacer usted?",
     "options": [
       {
@@ -4819,6 +5616,7 @@
     ]
   },
   {
+    "id": 273,
     "question": "Usted es el primero en llegar al lugar de un accid ente en el que hay heridos graves. ¿Qué hace usted?",
     "options": [
       {
@@ -4840,6 +5638,7 @@
     ]
   },
   {
+    "id": 274,
     "question": "Usted llega al lugar de un accidente en el que par ticipó un camión cargado con productos químicos peligrosos. ¿Qué \ndebería hacer usted antes de llamar al 133 de Carabineros?",
     "options": [
       {
@@ -4861,6 +5660,7 @@
     ]
   },
   {
+    "id": 275,
     "question": "Usted llega al lugar de un accidente en el que ha participado un motociclista. El motociclista yace consciente, pero en \nestado de shock. ¿De qué debería asegurarse usted?",
     "options": [
       {
@@ -4882,6 +5682,7 @@
     ]
   },
   {
+    "id": 276,
     "question": "Usted va por una autopista. De un camión cargado q ue va delante suyo cae una caja sin que su conductor se dé cuenta. \n¿Qué hace usted?",
     "options": [
       {
@@ -4903,6 +5704,7 @@
     ]
   },
   {
+    "id": 277,
     "question": "¿Quién o quiénes están cubiertos por el Seguro Ob ligatorio de Accidentes Personales?",
     "options": [
       {
@@ -4918,16 +5720,39 @@
         "is_correct": false
       },
       {
-        "text": "El conductor, los pasajeros y cualquier tercero  afectado en un accidente de tránsito en que partic ipe el vehículo \nasegurado. \n \n278.-\n ¿Qué documento no está obligado a portar usted sie mpre en su vehículo? \n \n Marque una respuesta",
+        "text": "El conductor, los pasajeros y cualquier tercero  afectado en un accidente de tránsito en que partic ipe el vehículo \nasegurado.",
         "is_correct": true
-      },
-      {
-        "text": "El certificado de inscripción en el Registro Na cional de Vehículos Motorizados.",
-        "is_correct": false
       }
     ]
   },
   {
+    "id": 278,
+    "question": "¿Qué documento no está obligado a portar usted sie mpre en su vehículo?",
+    "options": [
+      {
+        "text": "El Permiso de Circulación.",
+        "is_correct": false
+      },
+      {
+        "text": "El certificado de un Seguro Obligatorio de Acci dentes Personales.",
+        "is_correct": false
+      },
+      {
+        "text": "Su licencia de conductor.",
+        "is_correct": false
+      },
+      {
+        "text": "El certificado de revisión técnica o de homolog ación.",
+        "is_correct": false
+      },
+      {
+        "text": "El certificado de inscripción en el Registro Na cional de Vehículos Motorizados.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 279,
     "question": "En relación con las infracciones a las normas del  tránsito, ¿cuál o cuáles de las siguientes afirmac iones es(son) \nverdadera(s)?",
     "options": [
       {
@@ -4953,6 +5778,7 @@
     ]
   },
   {
+    "id": 280,
     "question": "¿Cuál o cuáles de las siguientes afirmaciones es( son) verdadera(s)?",
     "options": [
       {
