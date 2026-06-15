@@ -1,361 +1,233 @@
 [
   {
     "id": 1,
-    "title": "La Falla Humana",
+    "title": "El Problema de los Accidentes",
     "slides": [
       {
-        "title": "El Origen",
-        "content": "A diferencia de lo que comúnmente se cree, los mal llamados 'accidentes' no son cosa de suerte ni del destino."
+        "title": "Un Problema Global",
+        "content": "Los accidentes de tránsito son un problema de salud pública de primer orden a nivel mundial. Según la Organización Mundial de la Salud (OMS), cada año mueren cerca de 3000 personas por día en el mundo a causa de accidentes de tránsito."
       },
       {
-        "title": "El Dato Duro",
-        "content": "Más del 90% de los siniestros de tránsito ocurren exclusivamente por fallas humanas y son completamente evitables."
+        "title": "La Falla Humana",
+        "content": "A diferencia de lo que comúnmente se cree, los mal llamados 'accidentes' no son obra de la casualidad ni del destino. La estadística es contundente: el 90% de los accidentes de tránsito ocurren exclusivamente por fallas humanas y, por lo tanto, son completamente evitables."
+      },
+      {
+        "title": "Los Jóvenes al Volante",
+        "content": "La mayor parte de los fallecidos en accidentes de tránsito en Chile (y en el mundo) son jóvenes. Específicamente, los varones de entre 15 y 29 años representan el grupo con la mayor tasa de mortalidad y accidentabilidad."
       },
       {
         "title": "Tip del Libro ⭐",
-        "content": "El mayor riesgo al volante no es el clima ni el auto, sino un conductor con actitud imprudente, distraído o bajo los efectos del alcohol."
+        "content": "Al conducir, tu estado de ánimo, la fatiga, el consumo de alcohol o incluso la simple inexperiencia son factores de riesgo mucho más graves que un día de lluvia o un vehículo antiguo. ¡La prevención empieza en ti!"
       }
     ]
   },
   {
     "id": 2,
-    "title": "Frenado Seguro",
+    "title": "Frenado y Distancias",
     "slides": [
       {
         "title": "Tiempo de Reacción",
-        "content": "Desde que ves un peligro hasta que pisas el freno, pasa al menos 1 segundo. En ese segundo, tu auto sigue avanzando a toda velocidad."
+        "content": "Desde que un conductor percibe un obstáculo hasta que su pie presiona el pedal de freno, transcurre un tiempo de reacción. En un conductor promedio, este tiempo es de aproximadamente 1 segundo."
       },
       {
-        "title": "Distancia de Detención",
-        "content": "La distancia total para detenerte es la suma de: [Distancia de Reacción] + [Distancia de Frenado]."
+        "title": "La Fórmula",
+        "content": "La Distancia de Detención Total es igual a la suma de dos partes: la Distancia de Reacción (lo que avanzas mientras piensas) más la Distancia de Frenado (lo que avanzas mientras el vehículo físicamente se detiene)."
+      },
+      {
+        "title": "Cálculo Rápido",
+        "content": "Para calcular tu distancia de reacción aproximada, multiplica la primera cifra de tu velocidad por 3. (Ejemplo: a 70 km/h, 7 x 3 = 21 metros solo para reaccionar)."
+      },
+      {
+        "title": "El Efecto de la Velocidad",
+        "content": "Al aumentar la velocidad al doble, la energía cinética aumenta 4 veces, por lo que la distancia de frenado también se multiplica por 4. Nunca es proporcional."
       },
       {
         "title": "Tip del Libro ⭐",
-        "content": "A 90 km/h, tu auto recorrerá más de 70 metros antes de detenerse por completo. ¡Mantén una distancia amplia!"
+        "content": "Conducir a 90 km/h significa que necesitarás más de 70 metros para detener tu vehículo por completo en asfalto seco. ¡Mantén siempre una distancia amplia y segura!"
       }
     ]
   },
   {
     "id": 3,
-    "title": "El Alcohol y la Conducción",
+    "title": "Ley Emilia y Tolerancia Cero",
     "slides": [
       {
-        "title": "Falsa Sensación",
-        "content": "El alcohol deprime el sistema nervioso central. Disminuye tus reflejos y distorsiona la visión y el cálculo de distancias."
+        "title": "Ley Tolerancia Cero",
+        "content": "Esta ley endureció las penas y bajó los límites. Se considera 'Bajo la influencia del alcohol' tener entre 0.3 y 0.8 gramos de alcohol por litro de sangre. 'Estado de ebriedad' es tener 0.8 o más gramos de alcohol por litro de sangre."
       },
       {
-        "title": "Mitos Falsos",
-        "content": "Es completamente falso que tomar café, comer limón o darse una ducha fría acelere la eliminación del alcohol del cuerpo."
+        "title": "Ley Emilia",
+        "content": "Sanciona con cárcel efectiva (al menos un año) a los conductores que en estado de ebriedad generen lesiones gravísimas o la muerte de terceros. Además, penaliza huir del lugar del accidente y negarse a realizar la alcoholemia."
+      },
+      {
+        "title": "Mitos del Alcohol",
+        "content": "El alcohol se metaboliza en el hígado a un ritmo fijo. Es completamente falso que tomar café negro, comer un limón, masticar chicle, o darse una ducha fría aceleren la eliminación del alcohol del cuerpo."
+      },
+      {
+        "title": "Efectos en la Conducción",
+        "content": "El alcohol deprime el sistema nervioso central, reduce la visión periférica, retrasa los tiempos de reacción y, lo más peligroso, genera un estado de falsa confianza, llevando a asumir riesgos innecesarios."
       },
       {
         "title": "Tip del Libro ⭐",
-        "content": "Cualquier cantidad de alcohol, por mínima que sea, aumenta severamente el riesgo de sufrir un accidente con resultado fatal."
+        "content": "La única forma de eliminar el alcohol del cuerpo es esperar a que pase el tiempo (el cuerpo elimina entre 0.10 y 0.15 g/l por hora). Si bebes, simplemente NO conduzcas. Nunca."
       }
     ]
   },
   {
     "id": 4,
-    "title": "Convivencia Vial",
+    "title": "Convivencia Vial y Usuarios Vulnerables",
     "slides": [
       {
-        "title": "Responsabilidad",
-        "content": "Las calles no te pertenecen de forma exclusiva. La Convivencia Vial se basa en la solidaridad, la educación y el respeto mutuo."
+        "title": "Convivencia Vial",
+        "content": "El principio de confianza dice que si tú cumples las normas, esperas que los demás también lo hagan. Sin embargo, la conducción a la defensiva exige anticiparse a los errores de los demás."
       },
       {
-        "title": "Usuarios Vulnerables",
-        "content": "Debes tener especial consideración con los usuarios vulnerables: peatones, ciclistas y motociclistas."
+        "title": "Peatones",
+        "content": "El peatón es el usuario más vulnerable de la vía. En zonas de paso de cebra, semáforos en rojo o esquinas no reguladas, el peatón siempre tiene preferencia de paso absoluta si ya inició el cruce."
+      },
+      {
+        "title": "Ciclistas",
+        "content": "Las bicicletas son vehículos. Al adelantar a un ciclista, la ley te obliga a dejar un espacio lateral mínimo de 1.5 metros, ya que el viento de tu vehículo podría desestabilizarlo."
+      },
+      {
+        "title": "Adultos Mayores",
+        "content": "Las personas mayores pueden tener visión o audición disminuida, y necesitan más tiempo para cruzar la calle. Ten paciencia y jamás los apresures tocando la bocina."
       },
       {
         "title": "Tip del Libro ⭐",
-        "content": "En una colisión, los usuarios vulnerables absorben todo el impacto con su cuerpo. Nunca compitas por el espacio con ellos."
+        "content": "Si ves un bus de transporte escolar detenido con sus luces intermitentes encendidas, debes reducir tu velocidad al mínimo y estar preparado para detenerte. Los niños pueden cruzar inesperadamente."
       }
     ]
   },
   {
     "id": 5,
-    "title": "Uso del Cinturón",
+    "title": "Física de la Conducción",
     "slides": [
       {
-        "title": "La Física del Choque",
-        "content": "En caso de colisión a sólo 50 km/h sin cinturón de seguridad, el impacto contra el parabrisas equivale a caer desde un tercer piso."
+        "title": "Energía Cinética",
+        "content": "La energía de movimiento de tu vehículo depende de la velocidad al cuadrado. Por esto, un choque a 80 km/h es infinitamente más violento que uno a 40 km/h (la energía se cuadruplica)."
       },
       {
-        "title": "Obligación",
-        "content": "Su uso es obligatorio para todos los ocupantes del vehículo, en todos los asientos."
+        "title": "Fuerza Centrífuga",
+        "content": "Es la fuerza que tiende a sacar a tu vehículo hacia afuera en una curva. Depende directamente de la velocidad y del peso de tu auto. A mayor velocidad en curva, mayor es el riesgo de derrapar."
+      },
+      {
+        "title": "Efecto Túnel",
+        "content": "A mayor velocidad, tu campo de visión lateral se reduce severamente. A 130 km/h, tu ángulo de visión es de solo 30 grados; literalmente dejas de ver los objetos a los costados de la vía."
       },
       {
         "title": "Tip del Libro ⭐",
-        "content": "Tú, como conductor, eres responsable legalmente de exigir que TODOS tus pasajeros utilicen el cinturón de seguridad antes de arrancar."
+        "content": "Siempre debes frenar 'antes' de entrar a una curva. Frenar 'dentro' de la curva es altamente peligroso porque desestabiliza el peso del auto y puedes perder el control direccional."
       }
     ]
   },
   {
     "id": 6,
-    "title": "Peligros de la Velocidad",
+    "title": "Uso de Cinturón y Silla Infantil",
     "slides": [
       {
-        "title": "Energía Cinética",
-        "content": "Al duplicar la velocidad, la energía del movimiento no se duplica, ¡se cuadruplica! Esto significa que el choque será 4 veces más destructivo."
+        "title": "Sistemas de Retención Infantil (SRI)",
+        "content": "Los niños menores de 12 años siempre deben ir en el asiento trasero. Los niños menores de 9 años, o que midan menos de 135 cm y pesen menos de 33 kg, están obligados a utilizar una silla o alzador adecuado."
       },
       {
-        "title": "Visión de Túnel",
-        "content": "A mayor velocidad, tu campo visual se reduce drásticamente, lo que se conoce como el 'efecto túnel'."
+        "title": "Impacto sin Cinturón",
+        "content": "En un choque a 50 km/h, chocar sin cinturón de seguridad equivale a caer desde un cuarto piso de un edificio. A 70 km/h, equivale a caer desde un séptimo piso."
+      },
+      {
+        "title": "Efecto Elefante",
+        "content": "Un pasajero en el asiento trasero sin cinturón, en caso de choque a 60 km/h, será proyectado hacia adelante con una fuerza equivalente al peso de un elefante (varias toneladas), aplastando a los ocupantes delanteros."
       },
       {
         "title": "Tip del Libro ⭐",
-        "content": "Si aumentas tu velocidad de 30 km/h a 60 km/h, la distancia necesaria para frenar se multiplica por 4."
+        "content": "El conductor es responsable legal de asegurarse que TODOS los pasajeros (adelante y atrás) utilicen su cinturón de seguridad antes de iniciar la marcha."
       }
     ]
   },
   {
     "id": 7,
-    "title": "Cruces y Preferencias",
+    "title": "Manejo en Condiciones Adversas",
     "slides": [
       {
-        "title": "Derecho a Paso",
-        "content": "En un cruce no regulado (sin semáforo ni signos PARE ni CEDA EL PASO), el vehículo que aparece por tu derecha siempre tiene la preferencia."
+        "title": "Lluvia y Pavimento",
+        "content": "Las primeras gotas de lluvia son las más peligrosas porque se mezclan con el polvo y el aceite de la vía, formando una capa altamente resbaladiza. Reduce tu velocidad de inmediato."
       },
       {
-        "title": "Rutas de Tierra",
-        "content": "Si vas por un camino de tierra y te aproximas a uno pavimentado, pierdes toda preferencia. El pavimento siempre tiene prioridad."
+        "title": "Aquaplaning",
+        "content": "Cuando hay exceso de agua en la vía, tus neumáticos pueden perder contacto con el pavimento y 'flotar' sobre el agua. Pierdes toda la dirección y freno. La única solución es dejar de acelerar suavemente."
+      },
+      {
+        "title": "Hielo y Nieve",
+        "content": "El hielo negro es invisible y extremadamente resbaladizo. La distancia de frenado sobre hielo puede ser hasta 10 veces mayor que en asfalto seco. Debes usar marchas altas (tercera o cuarta) para evitar que las ruedas patinen."
       },
       {
         "title": "Tip del Libro ⭐",
-        "content": "Frente a peatones cruzando en una esquina (tenga o no líneas pintadas), el peatón SIEMPRE tiene la preferencia absoluta."
+        "content": "Si conduces con niebla densa, jamás uses las luces altas, porque se reflejarán en las gotas de agua de la niebla y te cegarán a ti mismo. Usa siempre luces bajas o neblineros."
       }
     ]
   },
   {
     "id": 8,
-    "title": "Manejo bajo Lluvia",
+    "title": "Cruces, Preferencias y Rotondas",
     "slides": [
       {
-        "title": "Peligro Invisible",
-        "content": "Con las primeras gotas de lluvia, el pavimento se vuelve extremadamente resbaladizo porque el agua se mezcla con el polvo y el aceite de la vía."
+        "title": "Cruce no Regulado",
+        "content": "Si llegas a una esquina donde no hay Semáforo, PARE, ni CEDA EL PASO, debes ceder siempre el paso al vehículo que se aproxima por tu DERECHA. Esa es la regla general absoluta."
       },
       {
-        "title": "Aquaplaning",
-        "content": "El agua actúa como lubricante. Al conducir con lluvia intensa, las llantas pueden perder contacto y el auto comenzará a 'flotar'."
+        "title": "Excepciones a la Regla",
+        "content": "Pierdes tu preferencia de la derecha si te aproximas a una vía pavimentada desde una vía de tierra, o si vas a virar (el que sigue derecho siempre tiene preferencia sobre el que vira)."
+      },
+      {
+        "title": "Rotondas (Mini rotondas)",
+        "content": "Todo vehículo que ya se encuentra circulando DENTRO de una rotonda tiene preferencia de paso por sobre los vehículos que están por ingresar a ella."
       },
       {
         "title": "Tip del Libro ⭐",
-        "content": "Si llueve, reduce tu velocidad a la mitad y duplica tu distancia de seguimiento con el vehículo de adelante."
+        "content": "Frente a un signo PARE, debes detener tu vehículo por completo (las 4 ruedas detenidas a cero) en la línea de detención. Un 'pare a medias' es una infracción gravísima."
       }
     ]
   },
   {
     "id": 9,
-    "title": "Las Luces del Auto",
+    "title": "Uso de Luces del Vehículo",
     "slides": [
       {
-        "title": "Ver y ser Visto",
-        "content": "Las luces de tu vehículo no son solo para que tú veas el camino en la oscuridad, son principalmente para que los demás te vean a ti."
+        "title": "Ver y Ser Visto",
+        "content": "Las luces no son solo para que tú veas el camino de noche, su función primordial es que los demás vehículos te vean a ti. Un vehículo gris sin luces al atardecer se vuelve invisible."
       },
       {
-        "title": "Falsa Preferencia",
-        "content": "Las luces intermitentes de peligro (gatos) NO te dan preferencia de paso. Solo indican que estás detenido por emergencia."
+        "title": "Vías Interurbanas",
+        "content": "En autopistas, carreteras y caminos rurales es OBLIGATORIO circular con las luces bajas encendidas durante todo el día, incluso a pleno sol del mediodía."
+      },
+      {
+        "title": "Luces Altas y Encandilamiento",
+        "content": "De noche, debes bajar las luces (pasar a luces bajas) al cruzarte con un vehículo en sentido contrario (a 200 metros mínimo), y también cuando te aproximes por detrás a otro vehículo (a 50 metros mínimo) para no cegarlo por su espejo retrovisor."
       },
       {
         "title": "Tip del Libro ⭐",
-        "content": "En carretera y vías rurales, es obligatorio mantener siempre encendidas las luces bajas, tanto de día como de noche."
+        "content": "Las luces intermitentes de emergencia (hazard o gatos) SOLO se deben utilizar cuando tu vehículo está detenido por una avería o si eres el último auto en un taco peligroso. No te dan ninguna preferencia de paso."
       }
     ]
   },
   {
     "id": 10,
-    "title": "Adelantamientos",
+    "title": "Fatiga, Sueño y Punto Ciego",
     "slides": [
       {
-        "title": "Alta Peligrosidad",
-        "content": "Adelantar es la maniobra más riesgosa en la conducción. Nunca adelantes si tienes dudas sobre la velocidad del auto que viene en contra."
+        "title": "El Riesgo de la Fatiga",
+        "content": "La fatiga al volante es responsable de entre un 15% y un 30% de los accidentes en carretera. Disminuye la agudeza visual, alarga el tiempo de reacción y causa microsueños (pequeñas pérdidas de consciencia)."
       },
       {
-        "title": "Prohibiciones",
-        "content": "Está estrictamente prohibido adelantar en curvas, cruces, pasos de cebra, cimas de cuestas y túneles."
+        "title": "Combatir el Sueño",
+        "content": "El café, el aire frío de la ventana, o subir la radio son solo placebos momentáneos. La ÚNICA solución segura y real contra el sueño es salir de la vía y dormir una siesta de entre 20 a 30 minutos."
+      },
+      {
+        "title": "El Punto Ciego",
+        "content": "Los espejos retrovisores no cubren todo el ángulo visual. Siempre existe un área (hacia atrás y los costados) que no puedes ver a través de ellos. Especialmente peligroso para motocicletas."
       },
       {
         "title": "Tip del Libro ⭐",
-        "content": "Si alguien te está adelantando, NUNCA aceleres. Mantén tu velocidad y acércate un poco a la derecha para facilitarle la maniobra."
-      }
-    ]
-  },
-  {
-    "id": 11,
-    "title": "Puntos Ciegos",
-    "slides": [
-      {
-        "title": "Zonas Ocultas",
-        "content": "Los espejos retrovisores no muestran todo. Existen 'puntos ciegos' a los lados y atrás de tu vehículo."
-      },
-      {
-        "title": "Riesgo Constante",
-        "content": "Una motocicleta, un ciclista o un niño pequeño pueden esconderse perfectamente dentro de un punto ciego."
-      },
-      {
-        "title": "Tip del Libro ⭐",
-        "content": "Antes de cambiar de pista o abrir la puerta, siempre debes girar levemente la cabeza para mirar por encima de tu hombro."
-      }
-    ]
-  },
-  {
-    "id": 12,
-    "title": "Fatiga y Sueño",
-    "slides": [
-      {
-        "title": "Hipnosis de Carretera",
-        "content": "En vías monótonas y largas, puedes caer en un estado de trance. Esta es una de las principales causas de accidentes fatales."
-      },
-      {
-        "title": "Mala Solución",
-        "content": "Tomar bebidas energéticas, café, o poner la música a todo volumen NO solucionan la fatiga; solo ocultan el síntoma brevemente."
-      },
-      {
-        "title": "Tip del Libro ⭐",
-        "content": "Si te da sueño intenso al volante, la ÚNICA solución real y segura es salir de la ruta y dormir una siesta de 20 a 30 minutos."
-      }
-    ]
-  },
-  {
-    "id": 13,
-    "title": "Neumáticos",
-    "slides": [
-      {
-        "title": "Único Apoyo",
-        "content": "Los neumáticos son el único punto de contacto entre el auto y el suelo. Si fallan, pierdes absolutamente todo el control."
-      },
-      {
-        "title": "Surcos y Presión",
-        "content": "Los surcos (dibujo) deben tener al menos 1.6 mm de profundidad. Si están lisos o con poca presión de aire, el auto patinará fácilmente."
-      },
-      {
-        "title": "Tip del Libro ⭐",
-        "content": "Debes revisar la presión de los neumáticos al menos cada dos semanas y SIEMPRE cuando estén FRÍOS."
-      }
-    ]
-  },
-  {
-    "id": 14,
-    "title": "Jóvenes al Volante",
-    "slides": [
-      {
-        "title": "Tasa de Siniestralidad",
-        "content": "Estadísticamente, los varones entre 18 y 29 años representan el grupo con la mayor tasa de mortalidad en accidentes de tránsito."
-      },
-      {
-        "title": "Inmadurez",
-        "content": "Aunque tienen buenos reflejos físicos, su inmadurez emocional los lleva a tomar demasiados riesgos e intentar demostrar habilidades irreales."
-      },
-      {
-        "title": "Tip del Libro ⭐",
-        "content": "Un conductor maduro jamás compite en las calles, no cede a la presión del grupo para ir más rápido y evita reaccionar con ira."
-      }
-    ]
-  },
-  {
-    "id": 15,
-    "title": "Estacionamiento",
-    "slides": [
-      {
-        "title": "Norma General",
-        "content": "Debes estacionar al costado derecho de la calzada, alineado al sentido del tránsito, apagando el motor y dejando el freno de mano puesto."
-      },
-      {
-        "title": "Distancias Mínimas",
-        "content": "No puedes estacionar a menos de 10 metros de una esquina, o a menos de 5 metros de un grifo para incendios."
-      },
-      {
-        "title": "Tip del Libro ⭐",
-        "content": "Si estacionas en una calle con pendiente en bajada, gira SIEMPRE tus ruedas hacia la cuneta y deja puesta la marcha de retroceso."
-      }
-    ]
-  },
-  {
-    "id": 16,
-    "title": "Reventón",
-    "slides": [
-      {
-        "title": "Pérdida de Dirección",
-        "content": "Si un neumático revienta a alta velocidad, el vehículo tirará bruscamente hacia el lado de la rueda reventada."
-      },
-      {
-        "title": "Error Fatal",
-        "content": "El instinto te dirá que pises el freno a fondo. ¡NO LO HAGAS! Si frenas bruscamente, el auto girará sobre sí mismo y volcará."
-      },
-      {
-        "title": "Tip del Libro ⭐",
-        "content": "Sujeta el volante con mucha fuerza para mantener la trayectoria derecha y deja de acelerar, permitiendo que el auto se detenga por sí solo."
-      }
-    ]
-  },
-  {
-    "id": 17,
-    "title": "Los Peatones",
-    "slides": [
-      {
-        "title": "Conducta Impredecible",
-        "content": "Especialmente los niños pequeños y las personas de la tercera edad pueden irrumpir sorpresivamente en la calzada."
-      },
-      {
-        "title": "Visión de Túnel Infantil",
-        "content": "Un niño que corre detrás de un juguete solo ve el juguete, su cerebro ignora por completo los vehículos."
-      },
-      {
-        "title": "Tip del Libro ⭐",
-        "content": "Si vas manejando y ves una pelota rebotando en la calle, ¡frena! Es casi 100% seguro que un niño saldrá corriendo detrás de ella."
-      }
-    ]
-  },
-  {
-    "id": 18,
-    "title": "Manejo Nocturno",
-    "slides": [
-      {
-        "title": "Visión Reducida",
-        "content": "De noche tu campo visual se reduce solo a la zona iluminada por tus luces (aproximadamente 50 metros)."
-      },
-      {
-        "title": "Manejando a Ciegas",
-        "content": "Si vas a más de 90 km/h de noche, la distancia que necesitas para frenar es mayor al alcance de tus luces. Básicamente vas a ciegas."
-      },
-      {
-        "title": "Tip del Libro ⭐",
-        "content": "Si el vehículo que viene en contra trae luces altas y te encandila, reduce tu velocidad y mira hacia la línea blanca de la orilla derecha."
-      }
-    ]
-  },
-  {
-    "id": 19,
-    "title": "Distancia",
-    "slides": [
-      {
-        "title": "Tiempo, no metros",
-        "content": "Es muy difícil calcular distancias en metros mientras conduces. Por eso se utiliza la 'Regla de los 3 Segundos'."
-      },
-      {
-        "title": "Cómo aplicarla",
-        "content": "Cuenta 'mil-uno, mil-dos, mil-tres' desde que el auto de adelante pasa por un poste, hasta que tú pasas por el mismo poste."
-      },
-      {
-        "title": "Tip del Libro ⭐",
-        "content": "Si un vehículo te sigue muy pegado por detrás (acosándote), aumenta TU distancia con el vehículo de enfrente. Así podrás frenar suavemente si es necesario."
-      }
-    ]
-  },
-  {
-    "id": 20,
-    "title": "Panel de Instrumentos",
-    "slides": [
-      {
-        "title": "Comunicación del Auto",
-        "content": "El tablero no solo muestra la velocidad. Las luces testigo son el idioma de tu automóvil para avisarte sobre fallas."
-      },
-      {
-        "title": "Colores Críticos",
-        "content": "Las luces amarillas o naranjas son advertencias para revisar pronto. Pero las luces ROJAS exigen acción inmediata."
-      },
-      {
-        "title": "Tip del Libro ⭐",
-        "content": "Si se enciende la luz ROJA de presión de aceite o de batería, o sientes un fuerte olor a bencina, debes detener el motor de inmediato o destruirás el auto."
+        "content": "Para evitar los puntos ciegos, justo antes de cambiar de pista de circulación, SIEMPRE debes realizar un giro de cabeza rápido para mirar por encima de tu hombro y asegurarte que no hay un vehículo pequeño."
       }
     ]
   }
