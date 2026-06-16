@@ -101,25 +101,25 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
       
       <div style={{ position: 'absolute', top: '90px', left: '15px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', zIndex: 10 }}>
         <motion.button id="tour-missions" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={onMissions} style={{ position: 'relative', background: 'white', border: '3px solid var(--kuro-gray)', borderRadius: '50%', width: '55px', height: '55px', fontSize: '1.8rem', boxShadow: '0 4px 0 var(--kuro-gray)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          🎯
+          <img src="/images/kuro_mission.png" alt="Misiones" style={{ width: '35px', height: '35px', mixBlendMode: 'multiply' }} />
           {hasCompletedMission && (
             <span style={{ position: 'absolute', top: '-2px', right: '-2px', width: '16px', height: '16px', backgroundColor: 'var(--kuro-incorrect)', borderRadius: '50%', border: '2px solid white', animation: 'pulse-heartbeat 1s infinite' }} />
           )}
         </motion.button>
         <motion.button id="tour-album" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={onAlbum} style={{ background: 'white', border: '3px solid var(--kuro-gray)', borderRadius: '50%', width: '55px', height: '55px', fontSize: '1.8rem', boxShadow: '0 4px 0 var(--kuro-gray)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          📖
+          <img src="/images/kuro_album.png" alt="Álbum" style={{ width: '35px', height: '35px', mixBlendMode: 'multiply' }} />
         </motion.button>
         <motion.button id="tour-podium" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setShowPodium(true)} style={{ background: 'white', border: '3px solid var(--kuro-gray)', borderRadius: '50%', width: '55px', height: '55px', fontSize: '1.8rem', boxShadow: '0 4px 0 var(--kuro-gray)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          🏆
+          <img src="/images/kuro_trophy.png" alt="Podio" style={{ width: '35px', height: '35px', mixBlendMode: 'multiply' }} />
         </motion.button>
       </div>
 
       <div style={{ position: 'absolute', top: '90px', right: '15px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', zIndex: 10 }}>
         <motion.button id="tour-shop" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={onShop} style={{ background: 'white', border: '3px solid var(--kuro-gray)', borderRadius: '50%', width: '55px', height: '55px', fontSize: '1.8rem', boxShadow: '0 4px 0 var(--kuro-gray)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          🏪
+          <img src="/images/kuro_shop.png" alt="Tienda" style={{ width: '35px', height: '35px', mixBlendMode: 'multiply' }} />
         </motion.button>
         <motion.button id="tour-account" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={isAnonymous ? onLinkAccount : onChangeUser} style={{ background: 'white', border: '3px solid var(--kuro-gray)', borderRadius: '50%', width: '55px', height: '55px', fontSize: '1.8rem', boxShadow: '0 4px 0 var(--kuro-gray)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          {isAnonymous ? '💾' : '🚪'}
+          {isAnonymous ? '💾' : <img src="/images/kuro_profile_1781502061317.png" alt="Salir" style={{ width: '30px', height: '30px' }} />}
         </motion.button>
       </div>
       
