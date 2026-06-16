@@ -262,6 +262,13 @@ function App() {
           onLoginSuccess={handleLoginSuccess} 
         />
       )}
+      {view === 'link_account' && (
+        <LoginView 
+          isLinking={true}
+          onLoginSuccess={() => setView('home')} 
+          onCancel={() => setView('home')}
+        />
+      )}
       {view === 'onboarding' && (
         <OnboardingView 
           userName={currentUser?.name}
@@ -278,7 +285,9 @@ function App() {
           leaderboard={leaderboard}
           onStart={startLevel} 
           timeToNextLife={timeToNextLife}
+          isAnonymous={currentUser?.isAnonymous}
           onChangeUser={handleLogout}
+          onLinkAccount={() => setView('link_account')}
           onStudy={() => handleGoToStudy()}
           onShop={() => setView('shop')}
           onMissions={() => setView('missions')}
