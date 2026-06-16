@@ -17,25 +17,33 @@ import useAlbum from './hooks/useAlbum'
 import useLeaderboard from './hooks/useLeaderboard'
 import { auth, onAuthStateChanged, logout } from './services/auth'
 import { syncProfileFromCloud, syncProfileToCloud } from './hooks/useCloudSync'
+import { useGameStore } from './store/useStore'
 
 function App() {
   const [questions, setQuestions] = useState([])
   
-  const [currentUser, setCurrentUser] = useState(null)
-  
-  const [currentLevel, setCurrentLevel] = useState(1)
-  const [streak, setStreak] = useState(0)
-  const [failedQuestions, setFailedQuestions] = useState([])
-  const [savedTestIndex, setSavedTestIndex] = useState(0)
-  const [xp, setXp] = useState(0)
-  const [inventory, setInventory] = useState({ eraser: 0, shield: 0 })
+  const currentUser = useGameStore(s => s.currentUser)
+  const setCurrentUser = useGameStore(s => s.setCurrentUser)
+  const currentLevel = useGameStore(s => s.currentLevel)
+  const setCurrentLevel = useGameStore(s => s.setCurrentLevel)
+  const streak = useGameStore(s => s.streak)
+  const setStreak = useGameStore(s => s.setStreak)
+  const failedQuestions = useGameStore(s => s.failedQuestions)
+  const setFailedQuestions = useGameStore(s => s.setFailedQuestions)
+  const savedTestIndex = useGameStore(s => s.savedTestIndex)
+  const setSavedTestIndex = useGameStore(s => s.setSavedTestIndex)
+  const xp = useGameStore(s => s.xp)
+  const setXp = useGameStore(s => s.setXp)
+  const earnXpStore = useGameStore(s => s.earnXp)
+  const inventory = useGameStore(s => s.inventory)
+  const setInventory = useGameStore(s => s.setInventory)
+  const view = useGameStore(s => s.view)
+  const setView = useGameStore(s => s.setView)
   
   const { lives, decreaseLife, addLife, refillLives, hasLives, maxLives, timeToNextLife } = useLives(currentUser?.uid)
   const { missions, updateMissionProgress, claimReward } = useMissions(currentUser?.uid)
   const { unlockedCards, checkUnlocks } = useAlbum(currentUser?.uid)
   const { leaderboard, updatePlayerStats } = useLeaderboard();
-  
-  const [view, setView] = useState('loading') // 'loading', 'login', 'onboarding', 'home', 'theory', 'test', 'recovery', 'shop', 'missions', 'album'
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -134,7 +142,7 @@ function App() {
   }, [currentLevel, streak, failedQuestions, savedTestIndex, xp, inventory, currentUser])
 
   const earnXp = (amount) => {
-    setXp(prev => prev + amount);
+    earnXpStore(amount);
   }
 
   const buyItem = (item, cost) => {
