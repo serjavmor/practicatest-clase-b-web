@@ -166,8 +166,8 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
         />
       </div>
 
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', paddingBottom: '40px' }}>
-        <div style={{ textAlign: 'center', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '15px' }}>
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', paddingBottom: '40px', position: 'relative', zIndex: 10 }}>
+        <div style={{ textAlign: 'center', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '15px', position: 'relative', zIndex: 10 }}>
           <div style={{
             backgroundColor: 'white',
             padding: '10px 20px',
