@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import localforage from 'localforage'
 import confetti from 'canvas-confetti'
-import UserSelectView from './components/pages/UserSelectView'
+import LoginView from './components/pages/LoginView'
 import HomeView from './components/pages/HomeView'
 import TheoryView from './components/pages/TheoryView'
 import TestView from './components/pages/TestView'
@@ -14,6 +14,8 @@ import useLives from './hooks/useLives'
 import useMissions from './hooks/useMissions'
 import useAlbum from './hooks/useAlbum'
 import useLeaderboard from './hooks/useLeaderboard'
+import { onAuthStateChanged, logout } from './services/auth'
+import { syncProfileFromCloud, syncProfileToCloud } from './hooks/useCloudSync'
 
 function App() {
   const [questions, setQuestions] = useState([])
@@ -27,12 +29,38 @@ function App() {
   const [xp, setXp] = useState(0)
   const [inventory, setInventory] = useState({ eraser: 0, shield: 0 })
   
-  const { lives, decreaseLife, addLife, refillLives, hasLives, maxLives, timeToNextLife } = useLives(currentUser?.id)
-  const { missions, updateMissionProgress, claimReward } = useMissions(currentUser?.id)
-  const { unlockedCards, checkUnlocks } = useAlbum(currentUser?.id)
+  const { lives, decreaseLife, addLife, refillLives, hasLives, maxLives, timeToNextLife } = useLives(currentUser?.uid)
+  const { missions, updateMissionProgress, claimReward } = useMissions(currentUser?.uid)
+  const { unlockedCards, checkUnlocks } = useAlbum(currentUser?.uid)
   const { leaderboard, updatePlayerStats } = useLeaderboard();
   
-  const [view, setView] = useState('userSelect') // 'userSelect', 'onboarding', 'home', 'theory', 'test', 'recovery', 'shop', 'missions', 'album'
+  const [view, setView] = useState('loading') // 'loading', 'login', 'onboarding', 'home', 'theory', 'test', 'recovery', 'shop', 'missions', 'album'
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(async (user) => {
+      if (user) {
+        // Hydrate from cloud if data exists
+        const data = await syncProfileFromCloud(user.uid);
+        setCurrentUser({ 
+          uid: user.uid, 
+          name: user.displayName || (user.isAnonymous ? 'Invitado' : 'Piloto'),
+          isAnonymous: user.isAnonymous
+        });
+        
+        setView(prev => {
+          if (prev === 'loading' || prev === 'login') {
+            if (!data && !user.isAnonymous) return 'onboarding';
+            return 'home';
+          }
+          return prev;
+        });
+      } else {
+        setCurrentUser(null);
+        setView('login');
+      }
+    });
+    return () => unsubscribe();
+  }, []);
 
   useEffect(() => {
     // Load data
@@ -45,13 +73,13 @@ function App() {
   // Cargar estado cuando se selecciona un usuario
   useEffect(() => {
     async function loadUserData() {
-      if (currentUser) {
-        const savedLevel = await localforage.getItem(`kuro_user_${currentUser.id}_level`)
-        const savedStreak = await localforage.getItem(`kuro_user_${currentUser.id}_streak`)
-        const savedErrors = await localforage.getItem(`kuro_user_${currentUser.id}_errors`)
-        const savedIndex = await localforage.getItem(`kuro_user_${currentUser.id}_test_index`)
-        const savedXp = await localforage.getItem(`kuro_user_${currentUser.id}_xp`)
-        const savedInv = await localforage.getItem(`kuro_user_${currentUser.id}_inventory`)
+      if (currentUser && currentUser.uid) {
+        const savedLevel = await localforage.getItem(`kuro_user_${currentUser.uid}_level`)
+        const savedStreak = await localforage.getItem(`kuro_user_${currentUser.uid}_streak`)
+        const savedErrors = await localforage.getItem(`kuro_user_${currentUser.uid}_errors`)
+        const savedIndex = await localforage.getItem(`kuro_user_${currentUser.uid}_test_index`)
+        const savedXp = await localforage.getItem(`kuro_user_${currentUser.uid}_xp`)
+        const savedInv = await localforage.getItem(`kuro_user_${currentUser.uid}_inventory`)
         
         setCurrentLevel(savedLevel ? parseInt(savedLevel, 10) : 1)
         setStreak(savedStreak ? parseInt(savedStreak, 10) : 0)
@@ -67,21 +95,28 @@ function App() {
   // Guardar estado al cambiar
   useEffect(() => {
     async function saveUserData() {
-      if (currentUser) {
-        await localforage.setItem(`kuro_user_${currentUser.id}_level`, currentLevel)
-        await localforage.setItem(`kuro_user_${currentUser.id}_streak`, streak)
-        await localforage.setItem(`kuro_user_${currentUser.id}_errors`, JSON.stringify(failedQuestions))
-        await localforage.setItem(`kuro_user_${currentUser.id}_test_index`, savedTestIndex)
-        await localforage.setItem(`kuro_user_${currentUser.id}_xp`, xp)
-        await localforage.setItem(`kuro_user_${currentUser.id}_inventory`, JSON.stringify(inventory))
+      if (currentUser && currentUser.uid) {
+        await localforage.setItem(`kuro_user_${currentUser.uid}_level`, currentLevel)
+        await localforage.setItem(`kuro_user_${currentUser.uid}_streak`, streak)
+        await localforage.setItem(`kuro_user_${currentUser.uid}_errors`, JSON.stringify(failedQuestions))
+        await localforage.setItem(`kuro_user_${currentUser.uid}_test_index`, savedTestIndex)
+        await localforage.setItem(`kuro_user_${currentUser.uid}_xp`, xp)
+        await localforage.setItem(`kuro_user_${currentUser.uid}_inventory`, JSON.stringify(inventory))
         
+        // Sync full profile to cloud
+        await syncProfileToCloud(currentUser.uid, {
+          level: currentLevel,
+          streak: streak,
+          errors: JSON.stringify(failedQuestions),
+          testIndex: savedTestIndex,
+          xp: xp,
+          inventory: JSON.stringify(inventory),
+          name: currentUser.name
+        });
+
         // Update Firebase Leaderboard
-        if (currentUser.uid) {
-          console.log("Firebase sync: updating stats for user", currentUser.uid, "xp:", xp, "level:", currentLevel);
-          updatePlayerStats(currentUser.uid, currentUser.name, xp, currentLevel, 'kuro_profile.png');
-        } else {
-          console.warn("Firebase sync: skipped, no UID found for currentUser", currentUser);
-        }
+        console.log("Firebase sync: updating stats for user", currentUser.uid, "xp:", xp, "level:", currentLevel);
+        updatePlayerStats(currentUser.uid, currentUser.name, xp, currentLevel, 'kuro_profile.png');
       }
     }
     saveUserData()
@@ -109,14 +144,13 @@ function App() {
     return false;
   }
 
-  const handleUserSelect = (profile, isNew) => {
-    console.log("User selected:", profile, "isNew:", isNew);
-    setCurrentUser(profile);
-    if (isNew) {
-      setView('onboarding');
-    } else {
-      setView('home');
-    }
+  const handleLoginSuccess = (user) => {
+    // view routing is now handled safely by onAuthStateChanged
+  }
+
+  const handleLogout = async () => {
+    await logout();
+    // onAuthStateChanged will set view to login
   }
 
   const finishOnboarding = () => {
@@ -204,9 +238,14 @@ function App() {
 
   return (
     <>
-      {view === 'userSelect' && (
-        <UserSelectView 
-          onSelectUser={handleUserSelect} 
+      {view === 'loading' && (
+        <div style={{ display: 'flex', height: '100dvh', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--kuro-bg)' }}>
+          <img src="/images/kuromi_instructor_1781483016419.png" style={{ height: '80px', animation: 'float 3s infinite' }} alt="Cargando" />
+        </div>
+      )}
+      {view === 'login' && (
+        <LoginView 
+          onLoginSuccess={handleLoginSuccess} 
         />
       )}
       {view === 'onboarding' && (
@@ -225,7 +264,7 @@ function App() {
           leaderboard={leaderboard}
           onStart={startLevel} 
           timeToNextLife={timeToNextLife}
-          onChangeUser={() => setView('userSelect')}
+          onChangeUser={handleLogout}
           onStudy={() => handleGoToStudy()}
           onShop={() => setView('shop')}
           onMissions={() => setView('missions')}

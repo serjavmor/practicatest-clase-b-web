@@ -29,4 +29,4 @@ try {
   console.log("Persistence initialization skipped");
 }
 
-export { db };
+export { db, app };

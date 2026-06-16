@@ -25,8 +25,9 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
         <button onClick={onShop} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
           <img src="/images/kuro_shop.png" alt="Shop" style={{ width: '40px', height: '40px', marginRight: '6px', mixBlendMode: 'multiply' }} /> Tienda
         </button>
-        <button onClick={onChangeUser} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '4px 10px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', fontSize: '0.8rem', display: 'flex', alignItems: 'center' }}>
-          <img src="/images/kuro_profile.png" alt="User" style={{ width: '36px', height: '36px', marginRight: '4px', mixBlendMode: 'multiply' }} /> Cambiar
+        <button onClick={onChangeUser} style={{ backgroundColor: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '15px', padding: '10px 15px', fontWeight: 'bold', color: 'var(--kuro-dark)', cursor: 'pointer' }}>
+          <img src="/images/kuro_profile_1781502061317.png" alt="Profile" style={{ width: '20px', verticalAlign: 'middle', marginRight: '5px' }} />
+          Salir
         </button>
       </div>
       
