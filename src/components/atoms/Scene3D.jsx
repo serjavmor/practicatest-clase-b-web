@@ -32,17 +32,16 @@ function KuromiModel() {
   
   useFrame((state) => {
     if (meshRef.current) {
-      // Gentle floating and looking around
-      meshRef.current.position.y = Math.sin(state.clock.elapsedTime * 1.5) * 0.3 - 2;
+      // Gentle floating and looking around higher up
+      meshRef.current.position.y = Math.sin(state.clock.elapsedTime * 1.5) * 0.3 + 2;
       meshRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
       meshRef.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.8) * 0.05;
     }
   });
 
-  // Scale and position might need tweaking depending on the original GLB size
   return (
-    <group ref={meshRef} position={[0, -2, -2]}>
-      <primitive object={scene} scale={3} />
+    <group ref={meshRef} position={[0, 2, -2]}>
+      <primitive object={scene} scale={1.5} />
     </group>
   );
 }
