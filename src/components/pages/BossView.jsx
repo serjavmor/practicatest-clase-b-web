@@ -143,7 +143,6 @@ export default function BossView({ questions, lives, decreaseLife, streak, setSt
         streak={streak} 
         xp={xp}
         progress={0} // Ocultar progreso normal
-        timeToNextLife={timeToNextLife} 
         onExit={() => onPause(currentIndex)} 
         onStudy={() => onStudy(currentIndex)}
       />
