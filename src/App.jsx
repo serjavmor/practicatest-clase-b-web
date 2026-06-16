@@ -8,7 +8,6 @@ import HomeView from './components/pages/HomeView'
 import TheoryView from './components/pages/TheoryView'
 import TestView from './components/pages/TestView'
 import RecoveryView from './components/pages/RecoveryView'
-import OnboardingView from './components/pages/OnboardingView'
 import ShopView from './components/pages/ShopView'
 import MissionsView from './components/pages/MissionsView'
 import AlbumView from './components/pages/AlbumView'
@@ -22,6 +21,7 @@ import { useGameStore } from './store/useStore'
 
 function App() {
   const [questions, setQuestions] = useState([])
+  const [needsTour, setNeedsTour] = useState(false)
   
   const currentUser = useGameStore(s => s.currentUser)
   const setCurrentUser = useGameStore(s => s.setCurrentUser)
@@ -67,9 +67,14 @@ function App() {
         
         const hasSeenOnboarding = await localforage.getItem(`kuro_user_${user.uid}_onboarding`);
         
+        if (!hasSeenOnboarding) {
+          setNeedsTour(true);
+        } else {
+          setNeedsTour(false);
+        }
+        
         setView(prev => {
           if (prev === 'loading' || prev === 'login') {
-            if (!hasSeenOnboarding && !user.isAnonymous) return 'onboarding';
             return 'home';
           }
           return prev;
@@ -173,12 +178,12 @@ function App() {
     // onAuthStateChanged will set view to login
   }
 
-  const finishOnboarding = async () => {
+  const finishTour = async () => {
     if (currentUser && currentUser.uid) {
       await localforage.setItem(`kuro_user_${currentUser.uid}_onboarding`, true);
       syncProfileToCloud(currentUser.uid, { onboarding: true });
     }
-    setView('home');
+    setNeedsTour(false);
   }
 
   const startLevel = () => {
@@ -297,14 +302,6 @@ function App() {
             />
           </motion.div>
         )}
-        {view === 'onboarding' && (
-          <motion.div key="onboarding" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
-            <OnboardingView 
-              userName={currentUser?.name}
-              onComplete={finishOnboarding}
-            />
-          </motion.div>
-        )}
         {view === 'home' && (
           <motion.div key="home" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
             <HomeView 
@@ -324,6 +321,8 @@ function App() {
               onMissions={() => setView('missions')}
               onAlbum={() => setView('album')}
               hasCompletedMission={missions.some(m => m.completed && !m.claimed)}
+              needsTour={needsTour}
+              onTourComplete={finishTour}
             />
           </motion.div>
         )}

@@ -1,17 +1,93 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import localforage from 'localforage';
+import { Joyride, STATUS } from 'react-joyride';
 import TopBar from '../organisms/TopBar';
 
-export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, leaderboard, onStart, timeToNextLife, isAnonymous, onChangeUser, onLinkAccount, onStudy, onShop, onMissions, hasCompletedMission, onAlbum }) {
+export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, leaderboard, onStart, timeToNextLife, isAnonymous, onChangeUser, onLinkAccount, onStudy, onShop, onMissions, hasCompletedMission, onAlbum, needsTour, onTourComplete }) {
   const levels = Array.from({length: 10}, (_, i) => i + 1);
+
+  const tourSteps = [
+    {
+      target: 'body',
+      content: '¡Bienvenido a Camino al Examen! Soy Kuromi y te daré un tour rápido.',
+      placement: 'center',
+      disableBeacon: true,
+    },
+    {
+      target: '#tour-lives',
+      content: 'Aquí tienes tus Vidas. Cada vez que repruebes un examen, perderás una. ¡Si te quedas sin ellas, tendrás que estudiar para recuperarlas!',
+      placement: 'bottom',
+    },
+    {
+      target: '#tour-xp',
+      content: 'Estas son tus Kuro-Coins. Gánalas pasando niveles o completando misiones. ¡Úsalas en la tienda!',
+      placement: 'bottom',
+    },
+    {
+      target: '#tour-streak',
+      content: '¡Tu Racha de Fuego! Aumenta cada vez que pasas un nivel sin fallar. ¡Mantenla viva!',
+      placement: 'bottom',
+    },
+    {
+      target: '#tour-missions',
+      content: 'Aquí puedes ver tus Misiones Diarias y reclamar recompensas.',
+      placement: 'right',
+    },
+    {
+      target: '#tour-level',
+      content: 'Y aquí están los niveles. ¡Presiona el corazón palpitante para empezar tu primer examen! ¡Suerte!',
+      placement: 'top',
+    }
+  ];
+
+  const handleJoyrideCallback = (data) => {
+    const { status } = data;
+    if ([STATUS.FINISHED, STATUS.SKIPPED].includes(status)) {
+      onTourComplete();
+    }
+  };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
+      {needsTour && (
+        <Joyride
+          steps={tourSteps}
+          run={true}
+          continuous={true}
+          showSkipButton={true}
+          callback={handleJoyrideCallback}
+          styles={{
+            options: {
+              primaryColor: '#ffb300',
+              textColor: '#333',
+              zIndex: 1000,
+            },
+            tooltip: {
+              borderRadius: '16px',
+              fontWeight: 'bold',
+            },
+            buttonNext: {
+              borderRadius: '20px',
+              fontWeight: 'bold',
+            },
+            buttonBack: {
+              marginRight: 10,
+            }
+          }}
+          locale={{
+            back: 'Atrás',
+            close: 'Cerrar',
+            last: '¡Empezar!',
+            next: 'Siguiente',
+            skip: 'Saltar'
+          }}
+        />
+      )}
       <TopBar lives={lives} streak={streak} xp={xp} timeToNextLife={timeToNextLife} onStudy={onStudy} />
       
       <div style={{ position: 'absolute', top: '90px', left: '15px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '8px', zIndex: 10 }}>
-        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={onMissions} style={{ position: 'relative', background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
+        <motion.button id="tour-missions" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={onMissions} style={{ position: 'relative', background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
           <img src="/images/kuro_mission.png" alt="Missions" style={{ width: '40px', height: '40px', marginRight: '6px', mixBlendMode: 'multiply' }} /> Misiones
           {hasCompletedMission && (
             <span style={{ position: 'absolute', top: '-5px', right: '-5px', width: '15px', height: '15px', backgroundColor: 'var(--kuro-incorrect)', borderRadius: '50%', border: '2px solid white', animation: 'pulse-heartbeat 1s infinite' }} />
@@ -119,6 +195,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
           return (
             <motion.button 
               key={level}
+              id={isCurrent ? "tour-level" : undefined}
               whileHover={isCurrent ? { scale: 1.1 } : {}}
               whileTap={isCurrent ? { scale: 0.9 } : {}}
               onClick={() => isCurrent && onStart()}
