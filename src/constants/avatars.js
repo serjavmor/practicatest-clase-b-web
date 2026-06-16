@@ -1,7 +1,7 @@
 // Placeholders temporales para avatares (SVG data URIs con fondo transparente)
 
 const createSvgDataUri = (svgString) => {
-  return `data:image/svg+xml;base64,${btoa(svgString)}`;
+  return `data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`;
 };
 
 // 1. Personajes (Characters) - Emojis grandes centrados
