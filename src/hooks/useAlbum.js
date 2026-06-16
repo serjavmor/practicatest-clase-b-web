@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { toast } from 'sonner';
 import localforage from 'localforage';
 import confetti from 'canvas-confetti';
 
@@ -61,8 +62,14 @@ export default function useAlbum(userId) {
         origin: { y: 0.6 },
         colors: ['#ffb6c1', '#1a1a1a', '#ff9600']
       });
-      // Here we could trigger a toast notification
-      console.log(`¡Carta Desbloqueada: ${cardId}!`);
+      
+      const cardDefinition = ALBUM_CARDS.find(c => c.id === cardId);
+      if (cardDefinition) {
+        toast.success(`¡Nueva Carta Desbloqueada!`, {
+          description: cardDefinition.name,
+          icon: '🏆'
+        });
+      }
     }
   };
 

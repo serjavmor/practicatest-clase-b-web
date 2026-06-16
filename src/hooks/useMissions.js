@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { toast } from 'sonner';
 import localforage from 'localforage';
 
 const MISSION_POOL = [
@@ -73,6 +74,14 @@ export default function useMissions(userId) {
         }
         
         const completed = newCurrent >= mission.target;
+        
+        if (completed && !mission.completed) {
+          toast.success(`¡Misión Completada: ${mission.title}!`, {
+            description: 'Ve a la pestaña de Misiones para reclamar tu recompensa.',
+            icon: '🎯'
+          });
+        }
+
         return {
           ...mission,
           current: Math.min(newCurrent, mission.target),

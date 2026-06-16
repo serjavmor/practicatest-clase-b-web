@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { toast } from 'sonner';
 import localforage from 'localforage';
 
 const MAX_LIVES = 5;
@@ -60,6 +61,11 @@ export default function useLives(userId) {
           // Regenerate one life
           const newLives = Math.min(lives + 1, MAX_LIVES);
           setLivesState(newLives);
+          
+          toast.info('¡Vida Recuperada!', {
+            description: 'Se ha regenerado una de tus vidas. ¡Sigue estudiando!',
+            icon: '❤️'
+          });
           
           if (newLives === MAX_LIVES) {
             setLastLostTime(null);

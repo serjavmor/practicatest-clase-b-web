@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Toaster } from 'sonner'
 import localforage from 'localforage'
 import confetti from 'canvas-confetti'
 import LoginView from './components/pages/LoginView'
@@ -252,6 +253,7 @@ function App() {
 
   return (
     <>
+      <Toaster position="top-center" richColors />
       {view === 'loading' && (
         <div style={{ display: 'flex', height: '100dvh', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--kuro-bg)' }}>
           <img src="/images/kuromi_instructor_1781483016419.png" style={{ height: '80px', animation: 'float 3s infinite' }} alt="Cargando" />
