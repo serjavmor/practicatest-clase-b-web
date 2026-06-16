@@ -55,11 +55,11 @@ function App() {
           isAnonymous: user.isAnonymous
         });
         
-        const isNewUser = user.metadata.creationTime === user.metadata.lastSignInTime;
+        const hasSeenOnboarding = await localforage.getItem(`kuro_user_${user.uid}_onboarding`);
         
         setView(prev => {
           if (prev === 'loading' || prev === 'login') {
-            if ((!data || isNewUser) && !user.isAnonymous) return 'onboarding';
+            if (!hasSeenOnboarding && !user.isAnonymous) return 'onboarding';
             return 'home';
           }
           return prev;
@@ -163,7 +163,11 @@ function App() {
     // onAuthStateChanged will set view to login
   }
 
-  const finishOnboarding = () => {
+  const finishOnboarding = async () => {
+    if (currentUser && currentUser.uid) {
+      await localforage.setItem(`kuro_user_${currentUser.uid}_onboarding`, true);
+      syncProfileToCloud(currentUser.uid, { onboarding: true });
+    }
     setView('home');
   }
 

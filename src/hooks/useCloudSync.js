@@ -39,6 +39,8 @@ export const syncProfileFromCloud = async (uid) => {
       if (data.missions !== undefined) await localforage.setItem(`kuro_user_${uid}_missions`, data.missions);
       if (data.unlockedCards !== undefined) await localforage.setItem(`kuro_user_${uid}_unlockedCards`, data.unlockedCards);
       
+      if (data.onboarding !== undefined) await localforage.setItem(`kuro_user_${uid}_onboarding`, data.onboarding);
+      
       return data;
     } else {
       console.log("Cloud sync: No profile found in cloud for", uid);
