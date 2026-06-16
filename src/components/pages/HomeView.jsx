@@ -22,29 +22,62 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
     },
     {
       target: '#tour-xp',
+      content: 'Estas son tus Kuro-Coins. Gánalas pasando niveles o completando misiones. ¡Úsalas en la tienda!',
+      placement: 'bottom',
+    },
+    {
+      target: '#tour-streak',
+      content: '¡Tu Racha de Fuego! Aumenta cada vez que pasas un nivel sin fallar. ¡Mantenla viva!',
+      placement: 'bottom',
+    },
+    {
       target: '#tour-missions',
-      content: '🎯 Aquí tienes tus Misiones Diarias. ¡Gana XP y recompensas completándolas!',
+      content: (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', textAlign: 'left' }}>
+          <img src="/images/kuro_mission.png" alt="Misiones" style={{ width: '30px', height: '30px' }} />
+          <span>Aquí tienes tus Misiones Diarias. ¡Gana XP y recompensas completándolas!</span>
+        </div>
+      ),
       placement: 'right',
-      disableBeacon: true,
     },
     {
       target: '#tour-album',
-      content: '📖 Este es tu Álbum. Usa tus recompensas para coleccionar cartas.',
+      content: (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', textAlign: 'left' }}>
+          <img src="/images/kuro_album.png" alt="Álbum" style={{ width: '30px', height: '30px' }} />
+          <span>Este es tu Álbum. Usa tus recompensas para coleccionar cartas.</span>
+        </div>
+      ),
       placement: 'right',
     },
     {
       target: '#tour-podium',
-      content: '🏆 Revisa el Podio para ver quiénes son los mejores pilotos de la semana.',
+      content: (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', textAlign: 'left' }}>
+          <img src="/images/kuro_trophy.png" alt="Podio" style={{ width: '30px', height: '30px' }} />
+          <span>Revisa el Podio para ver quiénes son los mejores pilotos de la semana.</span>
+        </div>
+      ),
       placement: 'right',
     },
     {
       target: '#tour-shop',
-      content: '🏪 En la Tienda puedes comprar vidas extra y ayudas para tus exámenes.',
+      content: (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', textAlign: 'left' }}>
+          <img src="/images/kuro_shop.png" alt="Tienda" style={{ width: '30px', height: '30px' }} />
+          <span>En la Tienda puedes comprar vidas extra y ayudas para tus exámenes.</span>
+        </div>
+      ),
       placement: 'left',
     },
     {
       target: '#tour-account',
-      content: '💾 Guarda tu progreso creando una cuenta en la nube, o 🚪 cambia de perfil desde aquí.',
+      content: (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', textAlign: 'left' }}>
+          <img src="/images/kuro_account.png" alt="Cuenta" style={{ width: '30px', height: '30px' }} />
+          <span>Guarda tu progreso creando una cuenta, o cambia de perfil desde aquí.</span>
+        </div>
+      ),
       placement: 'left',
     },
     {
