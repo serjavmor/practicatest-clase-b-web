@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Toaster } from 'sonner'
+import { motion, AnimatePresence } from 'framer-motion'
 import localforage from 'localforage'
 import confetti from 'canvas-confetti'
 import LoginView from './components/pages/LoginView'
@@ -259,121 +260,155 @@ function App() {
     };
   }
 
+  const pageVariants = {
+    initial: { opacity: 0, y: 15 },
+    in: { opacity: 1, y: 0 },
+    out: { opacity: 0, y: -15 }
+  };
+  
+  const pageTransition = {
+    type: 'tween',
+    ease: 'easeInOut',
+    duration: 0.3
+  };
+
   return (
     <>
       <Toaster position="top-center" richColors />
-      {view === 'loading' && (
-        <div style={{ display: 'flex', height: '100dvh', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--kuro-bg)' }}>
-          <img src="/images/kuromi_instructor_1781483016419.png" style={{ height: '80px', animation: 'float 3s infinite' }} alt="Cargando" />
-        </div>
-      )}
-      {view === 'login' && (
-        <LoginView 
-          onLoginSuccess={handleLoginSuccess} 
-        />
-      )}
-      {view === 'link_account' && (
-        <LoginView 
-          isLinking={true}
-          onLoginSuccess={() => setView('home')} 
-          onCancel={() => setView('home')}
-        />
-      )}
-      {view === 'onboarding' && (
-        <OnboardingView 
-          userName={currentUser?.name}
-          onComplete={finishOnboarding}
-        />
-      )}
-      {view === 'home' && (
-        <HomeView 
-          lives={lives} 
-          streak={streak} 
-          xp={xp}
-          currentLevel={currentLevel} 
-          savedTestIndex={savedTestIndex}
-          leaderboard={leaderboard}
-          onStart={startLevel} 
-          timeToNextLife={timeToNextLife}
-          isAnonymous={currentUser?.isAnonymous}
-          onChangeUser={handleLogout}
-          onLinkAccount={() => setView('link_account')}
-          onStudy={() => handleGoToStudy()}
-          onShop={() => setView('shop')}
-          onMissions={() => setView('missions')}
-          onAlbum={() => setView('album')}
-          hasCompletedMission={missions.some(m => m.completed && !m.claimed)}
-        />
-      )}
-      {view === 'shop' && (
-        <ShopView
-          xp={xp}
-          inventory={inventory}
-          buyItem={buyItem}
-          onExit={() => setView('home')}
-        />
-      )}
-      {view === 'theory' && (
-        <TheoryView 
-          lesson={getLessonForLevel()} 
-          onComplete={finishTheory} 
-        />
-      )}
-      {view === 'test' && (
-        <TestView 
-          questions={getQuestionsForLevel()} 
-          lives={lives}
-          decreaseLife={decreaseLife}
-          streak={streak}
-          setStreak={setStreak}
-          xp={xp}
-          earnXp={earnXp}
-          inventory={inventory}
-          useItem={useItem}
-          initialIndex={savedTestIndex}
-          onPause={handlePause}
-          onFinish={finishLevel} 
-          timeToNextLife={timeToNextLife}
-          onFailQuestion={(q) => setFailedQuestions(prev => {
-            // Evitar duplicados
-            if (prev.find(item => item.id === q.id)) return prev;
-            return [...prev, q];
-          })}
-          updateMissionProgress={updateMissionProgress}
-          checkUnlocks={checkUnlocks}
-          onStudy={handleGoToStudy}
-        />
-      )}
-      {view === 'recovery' && (
-        <RecoveryView 
-          questions={questions}
-          lives={lives}
-          maxLives={maxLives}
-          onEarnLife={() => {
-            addLife();
-            updateMissionProgress('recover_life', 1);
-            checkUnlocks({ livesRecoveredEvent: 1 });
-          }}
-          earnXp={earnXp}
-          onExit={() => setView('home')}
-        />
-      )}
-      {view === 'missions' && (
-        <MissionsView
-          missions={missions}
-          claimReward={(missionId) => claimReward(missionId, earnXp)}
-          onExit={() => setView('home')}
-          xp={xp}
-        />
-      )}
-      {view === 'album' && (
-        <AlbumView
-          unlockedCards={unlockedCards}
-          streak={streak}
-          currentLevel={currentLevel}
-          onExit={() => setView('home')}
-        />
-      )}
+      <AnimatePresence mode="wait">
+        {view === 'loading' && (
+          <motion.div key="loading" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition} style={{ display: 'flex', height: '100dvh', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--kuro-bg)' }}>
+            <img src="/images/kuromi_instructor_1781483016419.png" style={{ height: '80px', animation: 'float 3s infinite' }} alt="Cargando" />
+          </motion.div>
+        )}
+        {view === 'login' && (
+          <motion.div key="login" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <LoginView 
+              onLoginSuccess={handleLoginSuccess} 
+            />
+          </motion.div>
+        )}
+        {view === 'link_account' && (
+          <motion.div key="link_account" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <LoginView 
+              isLinking={true}
+              onLoginSuccess={() => setView('home')} 
+              onCancel={() => setView('home')}
+            />
+          </motion.div>
+        )}
+        {view === 'onboarding' && (
+          <motion.div key="onboarding" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <OnboardingView 
+              userName={currentUser?.name}
+              onComplete={finishOnboarding}
+            />
+          </motion.div>
+        )}
+        {view === 'home' && (
+          <motion.div key="home" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <HomeView 
+              lives={lives} 
+              streak={streak} 
+              xp={xp}
+              currentLevel={currentLevel} 
+              savedTestIndex={savedTestIndex}
+              leaderboard={leaderboard}
+              onStart={startLevel} 
+              timeToNextLife={timeToNextLife}
+              isAnonymous={currentUser?.isAnonymous}
+              onChangeUser={handleLogout}
+              onLinkAccount={() => setView('link_account')}
+              onStudy={() => handleGoToStudy()}
+              onShop={() => setView('shop')}
+              onMissions={() => setView('missions')}
+              onAlbum={() => setView('album')}
+              hasCompletedMission={missions.some(m => m.completed && !m.claimed)}
+            />
+          </motion.div>
+        )}
+        {view === 'shop' && (
+          <motion.div key="shop" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <ShopView
+              xp={xp}
+              inventory={inventory}
+              buyItem={buyItem}
+              onExit={() => setView('home')}
+            />
+          </motion.div>
+        )}
+        {view === 'theory' && (
+          <motion.div key="theory" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <TheoryView 
+              lesson={getLessonForLevel()} 
+              onComplete={finishTheory} 
+            />
+          </motion.div>
+        )}
+        {view === 'test' && (
+          <motion.div key="test" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <TestView 
+              questions={getQuestionsForLevel()} 
+              lives={lives}
+              decreaseLife={decreaseLife}
+              streak={streak}
+              setStreak={setStreak}
+              xp={xp}
+              earnXp={earnXp}
+              inventory={inventory}
+              useItem={useItem}
+              initialIndex={savedTestIndex}
+              onPause={handlePause}
+              onFinish={finishLevel} 
+              timeToNextLife={timeToNextLife}
+              onFailQuestion={(q) => setFailedQuestions(prev => {
+                // Evitar duplicados
+                if (prev.find(item => item.id === q.id)) return prev;
+                return [...prev, q];
+              })}
+              updateMissionProgress={updateMissionProgress}
+              checkUnlocks={checkUnlocks}
+              onStudy={handleGoToStudy}
+            />
+          </motion.div>
+        )}
+        {view === 'recovery' && (
+          <motion.div key="recovery" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <RecoveryView 
+              questions={questions}
+              lives={lives}
+              maxLives={maxLives}
+              onEarnLife={() => {
+                addLife();
+                updateMissionProgress('recover_life', 1);
+                checkUnlocks({ livesRecoveredEvent: 1 });
+              }}
+              earnXp={earnXp}
+              onExit={() => setView('home')}
+            />
+          </motion.div>
+        )}
+        {view === 'missions' && (
+          <motion.div key="missions" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <MissionsView
+              missions={missions}
+              claimReward={(missionId) => claimReward(missionId, earnXp)}
+              onExit={() => setView('home')}
+              xp={xp}
+            />
+          </motion.div>
+        )}
+        {view === 'album' && (
+          <motion.div key="album" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <AlbumView
+              unlockedCards={unlockedCards}
+              streak={streak}
+              currentLevel={currentLevel}
+              onExit={() => setView('home')}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }

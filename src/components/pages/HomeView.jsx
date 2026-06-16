@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import localforage from 'localforage';
 import TopBar from '../organisms/TopBar';
 
@@ -10,31 +11,31 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
       <TopBar lives={lives} streak={streak} xp={xp} timeToNextLife={timeToNextLife} onStudy={onStudy} />
       
       <div style={{ position: 'absolute', top: '90px', left: '15px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '8px', zIndex: 10 }}>
-        <button onClick={onMissions} style={{ position: 'relative', background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
+        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={onMissions} style={{ position: 'relative', background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
           <img src="/images/kuro_mission.png" alt="Missions" style={{ width: '40px', height: '40px', marginRight: '6px', mixBlendMode: 'multiply' }} /> Misiones
           {hasCompletedMission && (
             <span style={{ position: 'absolute', top: '-5px', right: '-5px', width: '15px', height: '15px', backgroundColor: 'var(--kuro-incorrect)', borderRadius: '50%', border: '2px solid white', animation: 'pulse-heartbeat 1s infinite' }} />
           )}
-        </button>
-        <button onClick={onAlbum} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
+        </motion.button>
+        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={onAlbum} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
           <img src="/images/kuro_album.png" alt="Album" style={{ width: '40px', height: '40px', marginRight: '6px', mixBlendMode: 'multiply' }} /> Álbum
-        </button>
+        </motion.button>
       </div>
 
       <div style={{ position: 'absolute', top: '90px', right: '15px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px', zIndex: 10 }}>
-        <button onClick={onShop} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
+        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={onShop} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
           <img src="/images/kuro_shop.png" alt="Shop" style={{ width: '40px', height: '40px', marginRight: '6px', mixBlendMode: 'multiply' }} /> Tienda
-        </button>
+        </motion.button>
         {isAnonymous ? (
-          <button onClick={onLinkAccount} style={{ backgroundColor: 'var(--kuro-pink)', border: 'none', borderRadius: '15px', padding: '10px 15px', fontWeight: 'bold', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+          <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={onLinkAccount} style={{ backgroundColor: 'var(--kuro-pink)', border: 'none', borderRadius: '15px', padding: '10px 15px', fontWeight: 'bold', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
             <span style={{ fontSize: '1.2rem', marginRight: '5px' }}>💾</span>
             Crear Cuenta
-          </button>
+          </motion.button>
         ) : (
-          <button onClick={onChangeUser} style={{ backgroundColor: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '15px', padding: '10px 15px', fontWeight: 'bold', color: 'var(--kuro-dark)', cursor: 'pointer' }}>
+          <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={onChangeUser} style={{ backgroundColor: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '15px', padding: '10px 15px', fontWeight: 'bold', color: 'var(--kuro-dark)', cursor: 'pointer' }}>
             <img src="/images/kuro_profile_1781502061317.png" alt="Profile" style={{ width: '20px', verticalAlign: 'middle', marginRight: '5px' }} />
             Salir
-          </button>
+          </motion.button>
         )}
       </div>
       
@@ -116,8 +117,10 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
           }
 
           return (
-            <button 
+            <motion.button 
               key={level}
+              whileHover={isCurrent ? { scale: 1.1 } : {}}
+              whileTap={isCurrent ? { scale: 0.9 } : {}}
               onClick={() => isCurrent && onStart()}
               disabled={!isCurrent}
               style={{
@@ -136,16 +139,6 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
                 opacity: isLocked ? 0.8 : 1,
                 position: 'relative'
               }}
-              onMouseDown={(e) => {
-                if (isCurrent) {
-                  e.currentTarget.style.transform = `translateX(${xOffset}px) scale(0.9)`;
-                }
-              }}
-              onMouseUp={(e) => {
-                if (isCurrent) {
-                  e.currentTarget.style.transform = `translateX(${xOffset}px) scale(1)`;
-                }
-              }}
             >
               {isCurrent && savedTestIndex > 0 && (
                 <span style={{ position: 'absolute', top: '-15px', backgroundColor: 'white', color: 'var(--kuro-dark)', fontSize: '0.8rem', padding: '4px 10px', borderRadius: '12px', fontWeight: 'bold', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>
@@ -153,7 +146,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
                 </span>
               )}
               {icon}
-            </button>
+            </motion.button>
           )
         })}
       </div>
