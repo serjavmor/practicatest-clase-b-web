@@ -143,8 +143,10 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingBottom: '40px' }}>
         <motion.button 
           id="tour-level"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1, transition: { type: 'spring', stiffness: 300, damping: 15 } }}
+          whileHover={{ scale: 1.1, rotate: 3, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
+          whileTap={{ scale: 0.9, rotate: -3 }}
           onClick={onStart}
           style={{
              width: '180px',
@@ -209,9 +211,9 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
       {showPodium && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <motion.div 
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.8, opacity: 0 }}
+            initial={{ scale: 0.5, opacity: 0, y: 50 }}
+            animate={{ scale: 1, opacity: 1, y: 0, transition: { type: 'spring', stiffness: 400, damping: 15 } }}
+            exit={{ scale: 0.5, opacity: 0, y: 50, transition: { duration: 0.2 } }}
             style={{ backgroundColor: 'white', borderRadius: '24px', padding: '20px', width: '90%', maxWidth: '350px', position: 'relative', boxShadow: '0 8px 0 var(--kuro-gray)' }}
           >
             <button onClick={() => setShowPodium(false)} style={{ position: 'absolute', top: '10px', right: '10px', background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}>

@@ -8,6 +8,16 @@ import { motion } from 'framer-motion';
 export default function MissionsView({ missions, claimReward, onExit, xp }) {
   const { playMissionComplete } = useAudio();
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -50 },
+    show: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 300, damping: 20 } }
+  };
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
       <TopBar onExit={onExit} xp={xp} />
@@ -33,9 +43,17 @@ export default function MissionsView({ missions, claimReward, onExit, xp }) {
         <h1 style={{ color: 'var(--duo-text)', fontSize: '2rem', marginBottom: '15px' }}>Misiones Diarias</h1>
       </div>
 
-      <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 40px 20px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        animate="show"
+        style={{ flex: 1, overflowY: 'auto', padding: '0 20px 40px 20px', display: 'flex', flexDirection: 'column', gap: '15px' }}
+      >
         {missions.map(mission => (
-          <div key={mission.id} style={{
+          <motion.div 
+            variants={itemVariants}
+            key={mission.id} 
+            style={{
             backgroundColor: 'white',
             borderRadius: '16px',
             padding: '15px',
@@ -112,9 +130,9 @@ export default function MissionsView({ missions, claimReward, onExit, xp }) {
                 Reclamada ✅
               </button>
             )}
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

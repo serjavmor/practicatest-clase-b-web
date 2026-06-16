@@ -317,15 +317,16 @@ function App() {
   }
 
   const pageVariants = {
-    initial: { opacity: 0, y: 15 },
-    in: { opacity: 1, y: 0 },
-    out: { opacity: 0, y: -15 }
+    initial: { opacity: 0, y: 40, scale: 0.98 },
+    in: { opacity: 1, y: 0, scale: 1 },
+    out: { opacity: 0, y: -40, scale: 1.02 }
   };
   
   const pageTransition = {
-    type: 'tween',
-    ease: 'easeInOut',
-    duration: 0.3
+    type: 'spring',
+    stiffness: 300,
+    damping: 25,
+    mass: 0.8
   };
 
   return (

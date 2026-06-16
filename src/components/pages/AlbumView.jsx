@@ -3,6 +3,7 @@ import TopBar from '../organisms/TopBar';
 import { ALBUM_CARDS } from '../../hooks/useAlbum';
 import useAudio from '../../hooks/useAudio';
 import AnimatedTrophy from '../atoms/AnimatedTrophy';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function AlbumView({ unlockedCards, streak, currentLevel, onExit }) {
   const { playUnlockCard } = useAudio();
@@ -10,6 +11,16 @@ export default function AlbumView({ unlockedCards, streak, currentLevel, onExit 
 
   const totalUnlocked = unlockedCards.length;
   const totalCards = ALBUM_CARDS.length;
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.8 },
+    show: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 300, damping: 20 } }
+  };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
@@ -72,12 +83,20 @@ export default function AlbumView({ unlockedCards, streak, currentLevel, onExit 
         <h2 style={{ color: 'var(--duo-text)', fontSize: '1.2rem', margin: '10px 0', textAlign: 'center' }}>Cartas Exclusivas</h2>
       </div>
 
-      <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 20px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '15px', alignContent: 'start' }}>
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        animate="show"
+        style={{ flex: 1, overflowY: 'auto', padding: '0 20px 20px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '15px', alignContent: 'start' }}
+      >
         {ALBUM_CARDS.map((card, index) => {
           const isUnlocked = unlockedCards.includes(card.id);
           
           return (
-            <div 
+            <motion.div 
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, rotate: 2, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
+              whileTap={{ scale: 0.95, rotate: -2 }}
               key={card.id}
               onClick={() => {
                 setSelectedCard(card);
@@ -96,14 +115,8 @@ export default function AlbumView({ unlockedCards, streak, currentLevel, onExit 
                 padding: '10px',
                 cursor: 'pointer',
                 position: 'relative',
-                overflow: 'hidden',
-                transition: 'transform 0.2s',
-                transform: 'scale(1)',
-                animation: isUnlocked ? 'slideUp 0.5s ease backwards' : 'none',
-                animationDelay: `${index * 0.1}s`
+                overflow: 'hidden'
               }}
-              onMouseDown={(e) => e.currentTarget.style.transform = 'scale(0.95)'}
-              onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
               {/* Card Image */}
               <div style={{ 
@@ -143,35 +156,45 @@ export default function AlbumView({ unlockedCards, streak, currentLevel, onExit 
               }}>
                 {isUnlocked ? card.name : '???'}
               </h3>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
 
       {/* Modal / Popup for Card Details */}
+      <AnimatePresence>
       {selectedCard && (
-        <div style={{
-          position: 'absolute',
-          top: 0, left: 0, right: 0, bottom: 0,
-          backgroundColor: 'rgba(0,0,0,0.6)',
-          zIndex: 100,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '20px'
-        }} onClick={() => setSelectedCard(null)}>
-          <div style={{
-            backgroundColor: 'white',
-            borderRadius: '24px',
-            padding: '25px',
-            width: '100%',
-            maxWidth: '350px',
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          style={{
+            position: 'absolute',
+            top: 0, left: 0, right: 0, bottom: 0,
+            backgroundColor: 'rgba(0,0,0,0.6)',
+            zIndex: 100,
             display: 'flex',
-            flexDirection: 'column',
             alignItems: 'center',
-            boxShadow: '0 10px 25px rgba(0,0,0,0.3)',
-            animation: 'popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
-          }} onClick={e => e.stopPropagation()}>
+            justifyContent: 'center',
+            padding: '20px'
+          }} onClick={() => setSelectedCard(null)}
+        >
+          <motion.div 
+            initial={{ scale: 0.5, y: 100, opacity: 0 }}
+            animate={{ scale: 1, y: 0, opacity: 1, transition: { type: 'spring', stiffness: 400, damping: 15 } }}
+            exit={{ scale: 0.5, y: 100, opacity: 0 }}
+            style={{
+              backgroundColor: 'white',
+              borderRadius: '24px',
+              padding: '25px',
+              width: '100%',
+              maxWidth: '350px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              boxShadow: '0 10px 25px rgba(0,0,0,0.3)'
+            }} onClick={e => e.stopPropagation()}
+          >
             
             {unlockedCards.includes(selectedCard.id) ? (
               <>
@@ -201,12 +224,19 @@ export default function AlbumView({ unlockedCards, streak, currentLevel, onExit 
               </>
             )}
 
-            <button onClick={() => setSelectedCard(null)} className="duo-btn btn-primary" style={{ marginTop: '20px', width: '100%' }}>
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setSelectedCard(null)} 
+              className="duo-btn btn-primary" 
+              style={{ marginTop: '20px', width: '100%' }}
+            >
               Cerrar
-            </button>
-          </div>
-        </div>
+            </motion.button>
+          </motion.div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </div>
   );
 }

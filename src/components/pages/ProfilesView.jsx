@@ -2,6 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }) {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 50, scale: 0.8 },
+    show: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 300, damping: 20 } }
+  };
   return (
     <div style={{ 
       display: 'flex', 
@@ -16,18 +30,24 @@ export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }
         ¿Quién conduce hoy?
       </h1>
 
-      <div style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: '30px',
-        justifyContent: 'center',
-        maxWidth: '800px'
-      }}>
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        animate="show"
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '30px',
+          justifyContent: 'center',
+          maxWidth: '800px'
+        }}
+      >
         {profiles.map((profile, index) => (
           <motion.div
             key={profile.uid}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
+            variants={item}
+            whileHover={{ scale: 1.1, rotate: 2, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
+            whileTap={{ scale: 0.9 }}
             onClick={() => onSelectProfile(profile)}
             style={{
               display: 'flex',
@@ -74,8 +94,9 @@ export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }
 
         {/* Añadir Nuevo Usuario */}
         <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
+          variants={item}
+          whileHover={{ scale: 1.1, rotate: -2, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
+          whileTap={{ scale: 0.9 }}
           onClick={onAddProfile}
           style={{
             display: 'flex',
@@ -108,7 +129,7 @@ export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }
             Nuevo Piloto
           </span>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 }
