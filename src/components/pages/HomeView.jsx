@@ -125,23 +125,25 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
           alt="Kuromi Mascot" 
           style={{ height: '120px', marginBottom: '10px', mixBlendMode: 'multiply', filter: 'contrast(1.1)' }} 
         />
-        <div style={{
-          backgroundColor: 'white',
-          padding: '10px 20px',
-          borderRadius: '16px',
-          boxShadow: '0 4px 0 var(--duo-gray)',
-          fontWeight: 'bold',
-          color: 'var(--duo-text)',
-          marginBottom: '15px',
-          position: 'relative'
-        }}>
-          ¡Aprobar la Clase B es tu destino!
-        </div>
-        <h1 style={{ color: 'var(--duo-text)', fontSize: '2rem', marginBottom: '15px' }}>Camino al Examen</h1>
-
       </div>
 
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', paddingBottom: '40px' }}>
+        <div style={{ textAlign: 'center', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '15px' }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '10px 20px',
+            borderRadius: '16px',
+            boxShadow: '0 4px 0 var(--kuro-gray)',
+            fontWeight: 'bold',
+            color: 'var(--duo-text)',
+            marginBottom: '10px',
+            position: 'relative'
+          }}>
+            ¡Aprobar la Clase B es tu destino!
+          </div>
+          <h1 style={{ color: 'var(--duo-text)', fontSize: '2rem', margin: 0 }}>Camino al Examen</h1>
+        </div>
+
         <motion.button 
           id="tour-level"
           initial={{ scale: 0.8, opacity: 0 }}
