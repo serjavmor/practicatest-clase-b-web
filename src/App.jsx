@@ -81,7 +81,7 @@ function App() {
           uid: user.uid, 
           name: user.displayName || (user.isAnonymous ? 'Invitado' : 'Piloto'),
           isAnonymous: user.isAnonymous,
-          avatar: '/images/kuro_profile_1781502061317.png'
+          avatar: '/images/kuro_profile.png'
         };
 
         // Add to device profiles if not there

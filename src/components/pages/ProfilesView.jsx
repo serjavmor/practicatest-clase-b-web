@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import localforage from 'localforage';
 import CompositeAvatar from '../atoms/CompositeAvatar';
 
 export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }) {
@@ -77,7 +78,7 @@ export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }
                 </div>
               ) : (
                 <img 
-                  src={profile.avatar || "/images/kuro_profile_1781502061317.png"} 
+                  src={profile.avatar || "/images/kuro_profile.png"} 
                   alt={profile.name} 
                   style={{ width: '80%', height: '80%', objectFit: 'contain' }} 
                 />

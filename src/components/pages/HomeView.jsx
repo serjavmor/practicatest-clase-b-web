@@ -119,7 +119,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
           <img src="/images/kuro_shop.png" alt="Tienda" style={{ width: '45px', height: '45px', mixBlendMode: 'multiply' }} />
         </motion.button>
         <motion.button id="tour-account" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={isAnonymous ? onLinkAccount : onChangeUser} style={{ background: 'transparent', border: 'none', padding: 0, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          {isAnonymous ? <img src="/images/kuro_account.png" alt="Crear Cuenta" style={{ width: '45px', height: '45px', mixBlendMode: 'multiply' }} /> : <img src="/images/kuro_profile_1781502061317.png" alt="Salir" style={{ width: '45px', height: '45px' }} />}
+          {isAnonymous ? <img src="/images/kuro_account.png" alt="Crear Cuenta" style={{ width: '45px', height: '45px', mixBlendMode: 'multiply' }} /> : <img src="/images/kuro_profile.png" alt="Salir" style={{ width: '45px', height: '45px' }} />}
         </motion.button>
       </div>
       
