@@ -78,7 +78,7 @@ useGLTF.preload('/models/kuromi.glb');
 
 export default function Scene3D() {
   return (
-    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, overflow: 'hidden' }}>
+    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '75vh', zIndex: 0, overflow: 'hidden' }}>
       <Canvas camera={{ position: [0, 0, 10], fov: 50 }} dpr={[1, 2]}>
         <color attach="background" args={['#f9efff']} />
         <fog attach="fog" args={['#f9efff', 5, 20]} />
