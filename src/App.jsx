@@ -14,7 +14,7 @@ import useLives from './hooks/useLives'
 import useMissions from './hooks/useMissions'
 import useAlbum from './hooks/useAlbum'
 import useLeaderboard from './hooks/useLeaderboard'
-import { onAuthStateChanged, logout } from './services/auth'
+import { auth, onAuthStateChanged, logout } from './services/auth'
 import { syncProfileFromCloud, syncProfileToCloud } from './hooks/useCloudSync'
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
   const [view, setView] = useState('loading') // 'loading', 'login', 'onboarding', 'home', 'theory', 'test', 'recovery', 'shop', 'missions', 'album'
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(async (user) => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         // Hydrate from cloud if data exists
         const data = await syncProfileFromCloud(user.uid);
