@@ -21,7 +21,7 @@ function InfiniteGrid() {
     <gridHelper 
       ref={gridRef} 
       args={[80, 80, '#ff4ea0', '#c6b5cc']} 
-      position={[0, -2.5, 0]} 
+      position={[0, -1.2, 0]} 
     />
   );
 }
@@ -36,7 +36,7 @@ function KuromiModel() {
     if (meshRef.current) {
       // Gentle floating and looking around higher up
       const pulseSpeed = hovered ? 3.0 : 1.5;
-      meshRef.current.position.y = Math.sin(state.clock.elapsedTime * pulseSpeed) * 0.3 - 1.5;
+      meshRef.current.position.y = Math.sin(state.clock.elapsedTime * pulseSpeed) * 0.3 - 0.7;
       
       // Rotation logic
       const idleRotationY = Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
@@ -54,7 +54,7 @@ function KuromiModel() {
   return (
     <group 
       ref={meshRef} 
-      position={[0, -1.5, -2]}
+      position={[0, -0.7, -2]}
       scale={[1.125, 1.125, 1.125]}
       onClick={(e) => {
         e.stopPropagation();
