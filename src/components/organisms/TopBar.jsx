@@ -38,28 +38,16 @@ export default function TopBar({ lives, streak, xp, progress, timeToNextLife, on
         {xp !== undefined && (
           <div id="tour-xp" style={{ display: 'flex', alignItems: 'center', backgroundColor: '#fff', borderRadius: '15px', padding: '5px 8px', boxShadow: '0 2px 0 #e0e0e0' }}>
             <img src="/images/kuro_coin.png" alt="Kuro Coin" style={{ width: '32px', height: '32px', marginRight: '5px', mixBlendMode: 'multiply' }} />
-            <motion.span 
-              key={xp}
-              initial={{ scale: 1.5, color: '#00ff00' }}
-              animate={{ scale: 1, color: 'var(--kuro-dark)' }}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
-              style={{ fontWeight: 'bold', fontSize: '1.1rem', display: 'inline-block' }}
-            >
+            <span style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#2a1744', whiteSpace: 'nowrap' }}>
               {xp}
-            </motion.span>
+            </span>
           </div>
         )}
         <div id="tour-streak" style={{ display: 'flex', alignItems: 'center', color: 'var(--kuro-dark)', fontWeight: 'bold' }}>
           <img src="/images/kuro_fire.png" alt="Streak" style={{ width: '36px', height: '36px', marginRight: '4px', mixBlendMode: 'multiply' }} />
-          <motion.span 
-            key={streak}
-            initial={{ scale: 1.5, y: -10 }}
-            animate={{ scale: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 300, damping: 10 }}
-            style={{ fontSize: '1.2rem', display: 'inline-block' }}
-          >
+          <span style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#2a1744', whiteSpace: 'nowrap' }}>
             {streak}
-          </motion.span>
+          </span>
         </div>
       </div>
       
