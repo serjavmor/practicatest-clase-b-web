@@ -4,6 +4,7 @@ import localforage from 'localforage';
 import { Joyride, STATUS } from 'react-joyride';
 import TopBar from '../organisms/TopBar';
 import CompositeAvatar from '../atoms/CompositeAvatar';
+import Scene3D from '../atoms/Scene3D';
 
 export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, leaderboard, onStart, timeToNextLife, isAnonymous, onChangeUser, onLinkAccount, onStudy, onShop, onMissions, hasCompletedMission, onAlbum, needsTour, onTourComplete, currentUser }) {
   const [showPodium, setShowPodium] = useState(false);
@@ -96,6 +97,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--kuro-bg)' }}>
+      <Scene3D />
       {needsTour && (
         <Joyride
           steps={tourSteps}
