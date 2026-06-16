@@ -39,8 +39,9 @@ export default function CompositeAvatar({ config, size = 100 }) {
         alt="Character" 
         style={{
           position: 'absolute',
-          top: 0, left: 0,
-          width: '100%', height: '100%',
+          top: '25%', left: '25%',
+          width: '50%', height: '50%',
+          objectFit: 'contain',
           zIndex: 2
         }} 
       />
