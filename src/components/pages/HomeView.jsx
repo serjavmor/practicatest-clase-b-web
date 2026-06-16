@@ -240,17 +240,50 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
              </div>
 
              {/* Right side: Stats */}
-             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                <div style={{ fontSize: '1.4rem', fontWeight: '900', color: '#fff', textShadow: '1px 1px 0 rgba(0,0,0,0.5)', marginBottom: '5px' }}>
+             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
+                <div style={{ fontSize: '1.4rem', fontWeight: '900', color: '#fff', textShadow: '1px 1px 0 rgba(0,0,0,0.5)', marginBottom: '10px' }}>
                   Nivel {currentLevel}
                 </div>
-                <div style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                   <div style={{ flex: 1, height: '18px', backgroundColor: 'rgba(0,0,0,0.4)', borderRadius: '9px', overflow: 'hidden', border: '2px solid rgba(255,255,255,0.3)' }}>
-                     <div style={{ width: `${(((currentLevel - 1) % 5) / 4) * 100}%`, height: '100%', backgroundColor: '#fff', borderRadius: '5px' }} />
-                   </div>
-                   <span style={{ fontSize: '1rem', color: '#fff', fontWeight: 'bold', textShadow: '1px 1px 0 rgba(0,0,0,0.5)' }}>
-                     {((currentLevel - 1) % 5)}/4
-                   </span>
+                
+                {/* Node Progress Bar */}
+                <div style={{ width: '100%', position: 'relative', height: '26px', display: 'flex', alignItems: 'center' }}>
+                  {/* Background Track */}
+                  <div style={{ position: 'absolute', top: '50%', left: '0', width: '100%', height: '6px', backgroundColor: 'rgba(0,0,0,0.4)', transform: 'translateY(-50%)', zIndex: 0, borderRadius: '3px', boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.5)' }} />
+                  {/* Fill Track */}
+                  <div style={{ position: 'absolute', top: '50%', left: '0', width: `${((((currentLevel - 1) % 5)) / 4) * 100}%`, height: '6px', backgroundColor: '#fff', transform: 'translateY(-50%)', zIndex: 0, transition: 'width 0.5s ease-out', borderRadius: '3px', boxShadow: '0 0 8px rgba(255,255,255,0.8)' }} />
+                  
+                  {/* Nodes Container */}
+                  <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 1 }}>
+                    {[1, 2, 3, 4, 5].map(node => {
+                      const cycleLevel = ((currentLevel - 1) % 5) + 1;
+                      const isPassed = node < cycleLevel;
+                      const isActive = node === cycleLevel;
+                      const isBoss = node === 5;
+                      
+                      return (
+                        <div key={node} style={{ 
+                          width: isBoss ? '26px' : '16px', 
+                          height: isBoss ? '26px' : '16px', 
+                          borderRadius: '50%', 
+                          backgroundColor: isPassed ? '#fff' : isActive ? 'var(--kuro-pink)' : '#3a1c61', 
+                          border: `2px solid ${isActive || isPassed ? '#fff' : 'rgba(255,255,255,0.3)'}`,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          boxShadow: isActive ? '0 0 12px rgba(255,255,255,1)' : '0 2px 4px rgba(0,0,0,0.5)',
+                          transition: 'all 0.3s ease',
+                          zIndex: isBoss ? 2 : 1
+                        }}>
+                          {isBoss && (
+                            <img src="/images/badtz_inspector_1781483016419.png" alt="Boss" style={{ width: '140%', height: '140%', objectFit: 'contain', filter: isPassed ? 'grayscale(0%)' : isActive ? 'drop-shadow(0 0 2px white)' : 'grayscale(100%) opacity(0.6)', transform: isActive ? 'scale(1.1) translateY(-2px)' : 'scale(1)', transition: 'all 0.3s ease' }} />
+                          )}
+                          {!isBoss && isPassed && (
+                            <div style={{ width: '6px', height: '6px', backgroundColor: 'var(--kuro-dark)', borderRadius: '50%' }} />
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
              </div>
           </div>
