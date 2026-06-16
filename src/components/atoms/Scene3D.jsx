@@ -1,6 +1,6 @@
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Float } from '@react-three/drei';
+import { Float, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 
 function FloatingParticles({ count = 50 }) {
@@ -71,6 +71,29 @@ function FloatingParticles({ count = 50 }) {
   );
 }
 
+function KuromiModel() {
+  const { scene } = useGLTF('/models/kuromi.glb');
+  const meshRef = useRef();
+  
+  useFrame((state) => {
+    if (meshRef.current) {
+      // Gentle floating and looking around
+      meshRef.current.position.y = Math.sin(state.clock.elapsedTime * 1.5) * 0.3 - 2;
+      meshRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
+      meshRef.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.8) * 0.05;
+    }
+  });
+
+  // Scale and position might need tweaking depending on the original GLB size
+  return (
+    <group ref={meshRef} position={[0, -2, -2]}>
+      <primitive object={scene} scale={3} />
+    </group>
+  );
+}
+
+useGLTF.preload('/models/kuromi.glb');
+
 export default function Scene3D() {
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
@@ -82,6 +105,8 @@ export default function Scene3D() {
         <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
           <FloatingParticles count={60} />
         </Float>
+
+        <KuromiModel />
       </Canvas>
     </div>
   );
