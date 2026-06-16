@@ -36,7 +36,7 @@ function KuromiModel() {
     if (meshRef.current) {
       // Gentle floating and looking around higher up
       const pulseSpeed = hovered ? 3.0 : 1.5;
-      meshRef.current.position.y = Math.sin(state.clock.elapsedTime * pulseSpeed) * 0.3 + 2;
+      meshRef.current.position.y = Math.sin(state.clock.elapsedTime * pulseSpeed) * 0.3 - 1.5;
       
       // Rotation logic
       const idleRotationY = Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
@@ -54,7 +54,7 @@ function KuromiModel() {
   return (
     <group 
       ref={meshRef} 
-      position={[0, 2, -2]}
+      position={[0, -1.5, -2]}
       scale={[1.125, 1.125, 1.125]}
       onClick={(e) => {
         e.stopPropagation();
