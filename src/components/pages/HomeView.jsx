@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import localforage from 'localforage';
 import { Joyride, STATUS } from 'react-joyride';
 import TopBar from '../organisms/TopBar';
+import CompositeAvatar from '../atoms/CompositeAvatar';
 
-export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, leaderboard, onStart, timeToNextLife, isAnonymous, onChangeUser, onLinkAccount, onStudy, onShop, onMissions, hasCompletedMission, onAlbum, needsTour, onTourComplete }) {
+export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, leaderboard, onStart, timeToNextLife, isAnonymous, onChangeUser, onLinkAccount, onStudy, onShop, onMissions, hasCompletedMission, onAlbum, needsTour, onTourComplete, currentUser }) {
   const [showPodium, setShowPodium] = useState(false);
 
   const tourSteps = [
@@ -179,7 +180,13 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
             </>
           ) : (
             <>
-               <img src="/images/kuro_heart.png" style={{ height: '70px', marginBottom: '10px', mixBlendMode: 'screen' }} alt="Play" />
+               {currentUser?.avatarConfig ? (
+                 <div style={{ marginBottom: '10px', pointerEvents: 'none' }}>
+                   <CompositeAvatar config={currentUser.avatarConfig} size={80} />
+                 </div>
+               ) : (
+                 <img src="/images/kuro_heart.png" style={{ height: '70px', marginBottom: '10px', mixBlendMode: 'screen' }} alt="Play" />
+               )}
                Nivel {currentLevel}
             </>
           )}

@@ -30,14 +30,7 @@ export default function LoginView({ onLoginSuccess, isLinking = false, onCancel,
     setError(null);
     try {
       if (onGuestLogin) {
-        const localUid = 'guest_' + Date.now() + Math.random().toString(36).substring(7);
-        const profile = {
-          uid: localUid,
-          name: 'Invitado ' + Math.floor(Math.random() * 1000),
-          isAnonymous: true,
-          avatar: '/images/kuromi_instructor_1781483016419.png'
-        };
-        onGuestLogin(profile);
+        onGuestLogin();
       } else {
         const user = await loginAnonymously();
         onLoginSuccess(user);

@@ -13,6 +13,7 @@ import ShopView from './components/pages/ShopView'
 import MissionsView from './components/pages/MissionsView'
 import AlbumView from './components/pages/AlbumView'
 import BossView from './components/pages/BossView'
+import AvatarCreatorView from './components/pages/AvatarCreatorView'
 import useLives from './hooks/useLives'
 import useMissions from './hooks/useMissions'
 import useAlbum from './hooks/useAlbum'
@@ -222,6 +223,19 @@ function App() {
     setView('home');
   }
 
+  const handleSaveNewLocalProfile = async (data) => {
+    const profile = {
+      uid: 'guest_' + Date.now() + Math.random().toString(36).substring(7),
+      name: data.name || 'Piloto ' + Math.floor(Math.random() * 1000),
+      isAnonymous: true,
+      avatarConfig: data.config
+    };
+    const updated = [...deviceProfiles, profile];
+    setDeviceProfiles(updated);
+    await localforage.setItem('kuro_device_profiles', updated);
+    handleSelectProfile(profile);
+  };
+
   const finishTour = async () => {
     if (currentUser && currentUser.uid) {
       await localforage.setItem(`kuro_user_${currentUser.uid}_onboarding`, true);
@@ -343,7 +357,15 @@ function App() {
             <ProfilesView 
               profiles={deviceProfiles} 
               onSelectProfile={handleSelectProfile}
-              onAddProfile={() => setView('login')}
+              onAddProfile={(action) => setView(action === 'login' ? 'login' : 'avatar_creator')}
+            />
+          </motion.div>
+        )}
+        {view === 'avatar_creator' && (
+          <motion.div key="avatar_creator" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <AvatarCreatorView 
+              onSave={handleSaveNewLocalProfile} 
+              onCancel={() => setView(deviceProfiles.length > 0 ? 'profiles' : 'login')} 
             />
           </motion.div>
         )}
@@ -351,12 +373,7 @@ function App() {
           <motion.div key="login" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
             <LoginView 
               onLoginSuccess={handleLoginSuccess} 
-              onGuestLogin={(profile) => {
-                const updated = [...deviceProfiles, profile];
-                setDeviceProfiles(updated);
-                localforage.setItem('kuro_device_profiles', updated);
-                handleSelectProfile(profile);
-              }}
+              onGuestLogin={() => setView('avatar_creator')}
             />
           </motion.div>
         )}
@@ -378,6 +395,7 @@ function App() {
               currentLevel={currentLevel} 
               savedTestIndex={savedTestIndex}
               leaderboard={leaderboard}
+              currentUser={currentUser}
               onStart={startLevel} 
               timeToNextLife={timeToNextLife}
               isAnonymous={currentUser?.isAnonymous}

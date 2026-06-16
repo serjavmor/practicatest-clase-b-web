@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import CompositeAvatar from '../atoms/CompositeAvatar';
 
 export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }) {
   const container = {
@@ -70,11 +71,17 @@ export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }
               boxShadow: '0 8px 0 var(--kuro-pink-shadow)',
               marginBottom: '15px'
             }}>
-              <img 
-                src={profile.avatar || "/images/kuro_profile_1781502061317.png"} 
-                alt={profile.name} 
-                style={{ width: '80%', height: '80%', objectFit: 'contain' }} 
-              />
+              {profile.avatarConfig ? (
+                <div style={{ transform: 'scale(0.8)', transformOrigin: 'center' }}>
+                  <CompositeAvatar config={profile.avatarConfig} size={100} />
+                </div>
+              ) : (
+                <img 
+                  src={profile.avatar || "/images/kuro_profile_1781502061317.png"} 
+                  alt={profile.name} 
+                  style={{ width: '80%', height: '80%', objectFit: 'contain' }} 
+                />
+              )}
             </div>
             <span style={{ 
               color: 'white', 
@@ -97,7 +104,7 @@ export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }
           variants={item}
           whileHover={{ scale: 1.1, rotate: -2, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
           whileTap={{ scale: 0.9 }}
-          onClick={onAddProfile}
+          onClick={() => onAddProfile('avatar')}
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -130,6 +137,23 @@ export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }
           </span>
         </motion.div>
       </motion.div>
+
+      <div style={{ marginTop: '40px' }}>
+        <button 
+          onClick={() => onAddProfile('login')}
+          style={{ 
+            background: 'none', 
+            border: 'none', 
+            color: 'var(--kuro-pink)', 
+            textDecoration: 'underline', 
+            cursor: 'pointer', 
+            fontSize: '1rem',
+            fontWeight: 'bold'
+          }}
+        >
+          ¿Ya tienes cuenta en la nube? Inicia Sesión
+        </button>
+      </div>
     </div>
   );
 }
