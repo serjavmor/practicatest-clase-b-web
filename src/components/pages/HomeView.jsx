@@ -158,8 +158,8 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
         </motion.button>
       </div>
       
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', paddingBottom: '40px', position: 'relative', zIndex: 10 }}>
-        <div style={{ textAlign: 'center', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '15px', position: 'relative', zIndex: 10 }}>
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', paddingBottom: '40px', position: 'relative', zIndex: 10, pointerEvents: 'none' }}>
+        <div style={{ textAlign: 'center', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '15px', position: 'relative', zIndex: 10, pointerEvents: 'auto' }}>
           <div style={{
             backgroundColor: 'white',
             padding: '10px 20px',
@@ -183,6 +183,7 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
           whileTap={{ scale: 0.95 }}
           onClick={onStart}
           style={{
+             pointerEvents: 'auto',
              width: '90%',
              maxWidth: '350px',
              backgroundColor: currentLevel % 5 === 0 ? 'var(--kuro-incorrect)' : 'var(--kuro-pink)',
