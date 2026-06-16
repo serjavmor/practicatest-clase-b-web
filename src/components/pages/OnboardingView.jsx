@@ -6,7 +6,7 @@ export default function OnboardingView({ userName, onComplete }) {
   const slides = [
     {
       title: `¡Hola ${userName}!`,
-      content: <>Bienvenido a 'Camino al Examen - Clase B'. Soy Kuromi, y seré tu instructora personal para ayudarte a sacar tu licencia de conducir a la primera. 🚗💨</>,
+      content: <>Bienvenido a 'Camino al Examen - Clase B'. Soy Kuromi, y seré tu instructora personal para ayudarte a sacar tu licencia de conducir a la primera. <span style={{fontSize: '1.8rem', verticalAlign: 'middle'}}>🚗💨</span></>,
       image: "kuromi_celebrate_1781483026283.png"
     },
     {
@@ -16,7 +16,7 @@ export default function OnboardingView({ userName, onComplete }) {
     },
     {
       title: "El Sistema de Vidas",
-      content: <>Tienes 5 vidas (<img src='/images/kuro_heart.png' alt='Vida' style={{width:'16px', height:'16px', verticalAlign:'middle', mixBlendMode:'multiply'}}/>). Si repruebas un test, pierdes una vida. Las vidas se recargan automáticamente cada 15 minutos, pero si no quieres esperar, ¡puedes estudiar en la Sala de Castigo para recuperarlas al instante!</>,
+      content: <>Tienes 5 vidas (<img src='/images/kuro_heart.png' alt='Vida' style={{width:'28px', height:'28px', verticalAlign:'middle', mixBlendMode:'multiply'}}/>). Si repruebas un test, pierdes una vida. Las vidas se recargan automáticamente cada 15 minutos, pero si no quieres esperar, ¡puedes estudiar en la Sala de Castigo para recuperarlas al instante!</>,
       image: "kuromi_sad_1781483036083.png"
     },
     {
@@ -64,7 +64,7 @@ export default function OnboardingView({ userName, onComplete }) {
         <img 
           src={`/images/${currentSlide.image}`} 
           alt="Kuromi" 
-          style={{ height: '120px', mixBlendMode: 'multiply', filter: 'contrast(1.1)', marginBottom: '20px' }} 
+          style={{ height: '160px', mixBlendMode: 'multiply', filter: 'contrast(1.1)', marginBottom: '20px' }} 
         />
         
         <h2 style={{ color: 'var(--kuro-dark)', marginBottom: '15px' }}>
