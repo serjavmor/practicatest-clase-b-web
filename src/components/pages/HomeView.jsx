@@ -6,6 +6,7 @@ import TopBar from '../organisms/TopBar';
 
 export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, leaderboard, onStart, timeToNextLife, isAnonymous, onChangeUser, onLinkAccount, onStudy, onShop, onMissions, hasCompletedMission, onAlbum, needsTour, onTourComplete }) {
   const levels = Array.from({length: 10}, (_, i) => i + 1);
+  const [showPodium, setShowPodium] = useState(false);
 
   const tourSteps = [
     {
@@ -96,6 +97,9 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
         <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={onAlbum} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
           <img src="/images/kuro_album.png" alt="Album" style={{ width: '40px', height: '40px', marginRight: '6px', mixBlendMode: 'multiply' }} /> Álbum
         </motion.button>
+        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setShowPodium(true)} style={{ background: 'white', border: '2px solid var(--kuro-gray)', borderRadius: '20px', padding: '5px 12px', color: 'var(--kuro-dark)', fontWeight: 'bold', boxShadow: '0 2px 0 var(--kuro-gray)', display: 'flex', alignItems: 'center' }}>
+          <img src="/images/kuro_trophy.png" alt="Podio" style={{ width: '40px', height: '40px', marginRight: '6px', mixBlendMode: 'multiply' }} /> Podio
+        </motion.button>
       </div>
 
       <div style={{ position: 'absolute', top: '90px', right: '15px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px', zIndex: 10 }}>
@@ -134,45 +138,6 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
           ¡Aprobar la Clase B es tu destino!
         </div>
         <h1 style={{ color: 'var(--duo-text)', fontSize: '2rem', marginBottom: '15px' }}>Camino al Examen</h1>
-
-        {/* Leaderboard Podio */}
-        {leaderboard.length > 0 && (
-          <div style={{
-            backgroundColor: '#fff',
-            borderRadius: '16px',
-            padding: '10px 15px',
-            width: '100%',
-            maxWidth: '300px',
-            boxShadow: '0 4px 0 var(--duo-gray)',
-            marginBottom: '20px'
-          }}>
-            <h3 style={{ margin: '0 0 10px 0', color: 'var(--kuro-dark)', fontSize: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img src="/images/kuro_trophy.png" alt="Trophy" style={{ width: '36px', height: '36px', marginRight: '5px', mixBlendMode: 'multiply' }} /> Podio de la Casa
-            </h3>
-            {leaderboard.map((user, idx) => (
-              <div key={idx} style={{ 
-                display: 'flex', 
-                justifyContent: 'space-between', 
-                alignItems: 'center',
-                padding: '5px 0',
-                borderBottom: idx < leaderboard.length - 1 ? '1px solid #f0f0f0' : 'none',
-                fontWeight: idx === 0 ? 'bold' : 'normal',
-                color: idx === 0 ? '#ffb300' : 'var(--kuro-dark)'
-              }}>
-                <div>
-                  <span style={{ marginRight: '10px', width: '36px', display: 'inline-block' }}>
-                    {idx === 0 ? <img src="/images/kuro_medal_1.png" style={{width: '36px', mixBlendMode: 'multiply'}}/> : idx === 1 ? <img src="/images/kuro_medal_2.png" style={{width: '36px', mixBlendMode: 'multiply'}}/> : <img src="/images/kuro_medal_3.png" style={{width: '36px', mixBlendMode: 'multiply'}}/>}
-                  </span>
-                  <span>{user.nickname}</span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <img src="/images/kuro_coin.png" style={{ width: '30px', height: '30px', marginRight: '4px', mixBlendMode: 'multiply' }}/>
-                  <span>{user.xp}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
 
       </div>
 
@@ -227,6 +192,58 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
           )
         })}
       </div>
+
+      {/* Modal del Podio */}
+      {showPodium && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <motion.div 
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            style={{ backgroundColor: 'white', borderRadius: '24px', padding: '20px', width: '90%', maxWidth: '350px', position: 'relative', boxShadow: '0 8px 0 var(--kuro-gray)' }}
+          >
+            <button onClick={() => setShowPodium(false)} style={{ position: 'absolute', top: '10px', right: '10px', background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}>
+              <img src="/images/kuro_close.png" alt="Close" style={{ width: '40px', height: '40px', mixBlendMode: 'multiply' }} />
+            </button>
+            <h2 style={{ textAlign: 'center', color: 'var(--kuro-dark)', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <img src="/images/kuro_trophy.png" alt="Trophy" style={{ width: '40px', height: '40px', marginRight: '10px', mixBlendMode: 'multiply' }} /> 
+              Podio
+            </h2>
+            
+            {leaderboard.length > 0 ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {leaderboard.map((user, idx) => (
+                  <div key={idx} style={{ 
+                    display: 'flex', 
+                    justifyContent: 'space-between', 
+                    alignItems: 'center',
+                    padding: '10px',
+                    backgroundColor: idx === 0 ? '#fff8e1' : idx === 1 ? '#f5f5f5' : idx === 2 ? '#fff3e0' : 'white',
+                    borderRadius: '12px',
+                    border: '2px solid',
+                    borderColor: idx === 0 ? '#ffb300' : idx === 1 ? '#9e9e9e' : idx === 2 ? '#ff9800' : '#e0e0e0',
+                    fontWeight: idx === 0 ? 'bold' : 'normal',
+                    color: 'var(--kuro-dark)'
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                      <span style={{ marginRight: '10px', width: '36px', display: 'inline-block' }}>
+                        {idx === 0 ? <img src="/images/kuro_medal_1.png" style={{width: '36px', mixBlendMode: 'multiply'}}/> : idx === 1 ? <img src="/images/kuro_medal_2.png" style={{width: '36px', mixBlendMode: 'multiply'}}/> : idx === 2 ? <img src="/images/kuro_medal_3.png" style={{width: '36px', mixBlendMode: 'multiply'}}/> : <span style={{fontSize:'1.2rem', paddingLeft: '10px'}}>{idx + 1}</span>}
+                      </span>
+                      <span style={{ fontSize: '1.1rem' }}>{user.nickname}</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                      <span style={{ fontWeight: 'bold', marginRight: '5px' }}>{user.xp}</span>
+                      <img src="/images/kuro_coin.png" style={{ width: '24px', height: '24px', mixBlendMode: 'multiply' }}/>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p style={{ textAlign: 'center', color: 'var(--kuro-gray)' }}>Aún no hay puntuaciones.</p>
+            )}
+          </motion.div>
+        </div>
+      )}
     </div>
   )
 }
