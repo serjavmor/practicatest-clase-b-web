@@ -31,6 +31,17 @@ function KuromiModel() {
   const meshRef = useRef();
   const [spinCount, setSpinCount] = useState(0);
   const [hovered, setHovered] = useState(false);
+
+  React.useEffect(() => {
+    scene.traverse((child) => {
+      if (child.isMesh && child.material) {
+        child.material.transparent = false;
+        child.material.opacity = 1;
+        child.material.depthWrite = true;
+        child.material.needsUpdate = true;
+      }
+    });
+  }, [scene]);
   
   useFrame((state) => {
     if (meshRef.current) {
