@@ -143,6 +143,13 @@ function App() {
         setSavedTestIndex(savedIndex ? parseInt(savedIndex, 10) : 0)
         setXp(savedXp ? parseInt(savedXp, 10) : 0)
         setInventory(savedInv ? JSON.parse(savedInv) : { eraser: 0, shield: 0 })
+        
+        // Auto-complete tour if user has already progressed
+        const hasProgressed = (savedLevel && parseInt(savedLevel, 10) > 1) || (savedXp && parseInt(savedXp, 10) > 0);
+        if (hasProgressed) {
+          setNeedsTour(false);
+          await localforage.setItem(`kuro_user_${currentUser.uid}_onboarding`, true);
+        }
       }
     }
     loadUserData()
@@ -248,6 +255,11 @@ function App() {
     if (!hasLives) {
       setView('recovery')
       return;
+    }
+    
+    // Si inicia un nivel, terminamos el tour automáticamente para que se guarde el progreso del onboarding
+    if (needsTour) {
+      finishTour();
     }
     
     // Nivel Jefe (Cada 5 niveles)
