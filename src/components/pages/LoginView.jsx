@@ -102,10 +102,10 @@ export default function LoginView({ onLoginSuccess, isLinking = false, onCancel,
       padding: '20px'
     }}>
       <img src="/images/kuromi_instructor_1781483016419.png" style={{ height: '120px', mixBlendMode: 'multiply', filter: 'contrast(1.1)', marginBottom: '20px', animation: 'float 3s infinite' }} alt="Kuromi" />
-      <h1 style={{ color: 'var(--kuro-dark)', marginBottom: '20px', textAlign: 'center' }}>
+      <h1 style={{ color: 'var(--kuro-dark)', marginBottom: isLinking ? '10px' : '20px', textAlign: 'center', fontSize: '1.8rem', maxWidth: '350px' }}>
         {isLinking ? 'Protege tu Progreso' : 'Kuro Driving Test'}
       </h1>
-      {isLinking && <p style={{textAlign: 'center', marginBottom: '20px', color: 'var(--kuro-dark)'}}>Vincula una cuenta para guardar tu progreso en la nube y acceder desde cualquier dispositivo.</p>}
+      {isLinking && <p style={{textAlign: 'center', marginBottom: '20px', color: 'var(--kuro-dark)', maxWidth: '320px', fontSize: '0.95rem', lineHeight: '1.4'}}>Vincula una cuenta para guardar tu progreso en la nube y acceder desde cualquier dispositivo.</p>}
       
       <div style={{ 
         backgroundColor: 'white', 
