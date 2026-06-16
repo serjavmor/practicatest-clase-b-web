@@ -138,7 +138,7 @@ export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }
         </motion.div>
       </motion.div>
 
-      <div style={{ marginTop: '40px' }}>
+      <div style={{ marginTop: '40px', display: 'flex', gap: '20px' }}>
         <button 
           onClick={() => onAddProfile('login')}
           style={{ 
@@ -152,6 +152,24 @@ export default function ProfilesView({ profiles, onSelectProfile, onAddProfile }
           }}
         >
           ¿Ya tienes cuenta en la nube? Inicia Sesión
+        </button>
+
+        <button 
+          onClick={() => {
+            if (window.confirm("¿Seguro que quieres borrar todos los perfiles y progreso de este dispositivo?")) {
+              localforage.clear().then(() => window.location.reload());
+            }
+          }}
+          style={{ 
+            background: 'none', 
+            border: 'none', 
+            color: 'var(--kuro-gray)', 
+            textDecoration: 'underline', 
+            cursor: 'pointer', 
+            fontSize: '1rem'
+          }}
+        >
+          Borrar Datos Locales
         </button>
       </div>
     </div>
