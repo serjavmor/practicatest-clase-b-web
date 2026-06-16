@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { loginWithGoogle, loginAnonymously, loginWithEmail, registerWithEmail, linkGoogleAccount, linkEmailAccount } from '../../services/auth';
 
-export default function LoginView({ onLoginSuccess, isLinking = false, onCancel }) {
+export default function LoginView({ onLoginSuccess, isLinking = false, onCancel, onGuestLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
@@ -29,8 +29,19 @@ export default function LoginView({ onLoginSuccess, isLinking = false, onCancel 
     setLoading(true);
     setError(null);
     try {
-      const user = await loginAnonymously();
-      onLoginSuccess(user);
+      if (onGuestLogin) {
+        const localUid = 'guest_' + Date.now() + Math.random().toString(36).substring(7);
+        const profile = {
+          uid: localUid,
+          name: 'Invitado ' + Math.floor(Math.random() * 1000),
+          isAnonymous: true,
+          avatar: '/images/kuromi_instructor_1781483016419.png'
+        };
+        onGuestLogin(profile);
+      } else {
+        const user = await loginAnonymously();
+        onLoginSuccess(user);
+      }
     } catch (err) {
       setError('Error al iniciar como invitado.');
       setLoading(false);

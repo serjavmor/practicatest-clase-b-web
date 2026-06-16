@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import localforage from 'localforage'
 import confetti from 'canvas-confetti'
 import LoginView from './components/pages/LoginView'
+import ProfilesView from './components/pages/ProfilesView'
 import HomeView from './components/pages/HomeView'
 import TheoryView from './components/pages/TheoryView'
 import TestView from './components/pages/TestView'
@@ -23,6 +24,7 @@ import { useGameStore } from './store/useStore'
 function App() {
   const [questions, setQuestions] = useState([])
   const [needsTour, setNeedsTour] = useState(false)
+  const [deviceProfiles, setDeviceProfiles] = useState([])
   
   const currentUser = useGameStore(s => s.currentUser)
   const setCurrentUser = useGameStore(s => s.setCurrentUser)
@@ -47,6 +49,20 @@ function App() {
   const { unlockedCards, checkUnlocks } = useAlbum(currentUser?.uid)
   const { leaderboard, updatePlayerStats } = useLeaderboard();
 
+  // Load device profiles initially
+  useEffect(() => {
+    async function initProfiles() {
+      const savedProfiles = await localforage.getItem('kuro_device_profiles') || [];
+      setDeviceProfiles(savedProfiles);
+      
+      // Si hay perfiles y no estamos en medio de un login forzado, mostramos selector
+      if (savedProfiles.length > 0) {
+        setView('profiles');
+      }
+    }
+    initProfiles();
+  }, []);
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
@@ -60,29 +76,42 @@ function App() {
             data = null;
         }
         
-        setCurrentUser({ 
+        const newProfile = { 
           uid: user.uid, 
           name: user.displayName || (user.isAnonymous ? 'Invitado' : 'Piloto'),
-          isAnonymous: user.isAnonymous
+          isAnonymous: user.isAnonymous,
+          avatar: '/images/kuro_profile_1781502061317.png'
+        };
+
+        // Add to device profiles if not there
+        setDeviceProfiles(prev => {
+          const exists = prev.find(p => p.uid === user.uid);
+          if (!exists) {
+            const updated = [...prev, newProfile];
+            localforage.setItem('kuro_device_profiles', updated);
+            return updated;
+          }
+          return prev;
         });
         
-        const hasSeenOnboarding = await localforage.getItem(`kuro_user_${user.uid}_onboarding`);
-        
-        if (!hasSeenOnboarding) {
-          setNeedsTour(true);
-        } else {
-          setNeedsTour(false);
-        }
-        
+        // No auto-login to home, we wait for profile selection if we are in 'profiles' view
+        // Unless it's a new login/register (view === 'login')
         setView(prev => {
-          if (prev === 'loading' || prev === 'login') {
+          if (prev === 'loading') {
+            return 'profiles'; // Or home if we decided to skip
+          }
+          if (prev === 'login') {
+            setCurrentUser(newProfile);
             return 'home';
           }
           return prev;
         });
       } else {
-        setCurrentUser(null);
-        setView('login');
+        // Only go to login if we don't have profiles
+        setView(prev => {
+          if (prev === 'loading') return 'profiles'; // It will render login if deviceProfiles is empty
+          return prev;
+        });
       }
     });
     return () => unsubscribe();
@@ -170,13 +199,27 @@ function App() {
     return false;
   }
 
-  const handleLoginSuccess = (user) => {
-    // view routing is now handled safely by onAuthStateChanged
+  const handleLoginSuccess = async (user) => {
+    // handled by onAuthStateChanged, which will set view='home' if we are in 'login'
   }
 
-  const handleLogout = async () => {
-    await logout();
-    // onAuthStateChanged will set view to login
+  const handleLogout = () => {
+    setCurrentUser(null);
+    setView('profiles');
+  }
+
+  const handleSelectProfile = async (profile) => {
+    setCurrentUser(profile);
+    
+    // Check onboarding for this profile
+    const hasSeenOnboarding = await localforage.getItem(`kuro_user_${profile.uid}_onboarding`);
+    if (!hasSeenOnboarding) {
+      setNeedsTour(true);
+    } else {
+      setNeedsTour(false);
+    }
+    
+    setView('home');
   }
 
   const finishTour = async () => {
@@ -294,10 +337,25 @@ function App() {
             <img src="/images/kuromi_instructor_1781483016419.png" style={{ height: '80px', animation: 'float 3s infinite' }} alt="Cargando" />
           </motion.div>
         )}
-        {view === 'login' && (
+        {view === 'profiles' && deviceProfiles.length > 0 && (
+          <motion.div key="profiles" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <ProfilesView 
+              profiles={deviceProfiles} 
+              onSelectProfile={handleSelectProfile}
+              onAddProfile={() => setView('login')}
+            />
+          </motion.div>
+        )}
+        {(view === 'login' || (view === 'profiles' && deviceProfiles.length === 0)) && (
           <motion.div key="login" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
             <LoginView 
               onLoginSuccess={handleLoginSuccess} 
+              onGuestLogin={(profile) => {
+                const updated = [...deviceProfiles, profile];
+                setDeviceProfiles(updated);
+                localforage.setItem('kuro_device_profiles', updated);
+                handleSelectProfile(profile);
+              }}
             />
           </motion.div>
         )}
