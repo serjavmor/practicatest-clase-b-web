@@ -39,17 +39,27 @@ function App() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
-        // Hydrate from cloud if data exists
-        const data = await syncProfileFromCloud(user.uid);
+        // We use Promise.race to avoid hanging the UI if network is blocked
+        const syncPromise = syncProfileFromCloud(user.uid);
+        const timeoutPromise = new Promise(resolve => setTimeout(() => resolve('timeout'), 4000));
+        
+        let data = await Promise.race([syncPromise, timeoutPromise]);
+        if (data === 'timeout') {
+            console.warn('Sync timed out, continuing with local data');
+            data = null;
+        }
+        
         setCurrentUser({ 
           uid: user.uid, 
           name: user.displayName || (user.isAnonymous ? 'Invitado' : 'Piloto'),
           isAnonymous: user.isAnonymous
         });
         
+        const isNewUser = user.metadata.creationTime === user.metadata.lastSignInTime;
+        
         setView(prev => {
           if (prev === 'loading' || prev === 'login') {
-            if (!data && !user.isAnonymous) return 'onboarding';
+            if ((!data || isNewUser) && !user.isAnonymous) return 'onboarding';
             return 'home';
           }
           return prev;
