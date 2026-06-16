@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TopBar from '../organisms/TopBar';
 import { ALBUM_CARDS } from '../../hooks/useAlbum';
 import useAudio from '../../hooks/useAudio';
+import AnimatedTrophy from '../atoms/AnimatedTrophy';
 
 export default function AlbumView({ unlockedCards, streak, currentLevel, onExit }) {
   const { playUnlockCard } = useAudio();
@@ -61,10 +62,10 @@ export default function AlbumView({ unlockedCards, streak, currentLevel, onExit 
             display: 'flex', flexDirection: 'column', alignItems: 'center', 
             opacity: currentLevel >= 10 ? 1 : 0.4, filter: currentLevel >= 10 ? 'none' : 'grayscale(100%)' 
           }}>
-            <div>
-              <img src="/images/kuro_badge_legend.png" alt="Legend" style={{ width: '58px', height: '58px', mixBlendMode: 'multiply' }} />
+            <div style={{ height: '58px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <AnimatedTrophy size={48} color={currentLevel >= 10 ? "#ffb300" : "#999"} />
             </div>
-            <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)' }}>Leyenda</span>
+            <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--kuro-dark)', marginTop: '4px' }}>Leyenda</span>
           </div>
         </div>
 

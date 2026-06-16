@@ -2,6 +2,8 @@ import React from 'react';
 import TopBar from '../organisms/TopBar';
 import useAudio from '../../hooks/useAudio';
 import confetti from 'canvas-confetti';
+import AnimatedChest from '../atoms/AnimatedChest';
+import { motion } from 'framer-motion';
 
 export default function MissionsView({ missions, claimReward, onExit, xp }) {
   const { playMissionComplete } = useAudio();
@@ -45,7 +47,7 @@ export default function MissionsView({ missions, claimReward, onExit, xp }) {
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <img src="/images/kuro_mission.png" alt="Mission" style={{ width: '40px', height: '40px', mixBlendMode: 'multiply' }} />
+                <AnimatedChest size={40} isOpen={mission.claimed} />
                 <div>
                   <h3 style={{ margin: 0, color: 'var(--kuro-dark)', fontSize: '1.1rem' }}>{mission.title}</h3>
                   <p style={{ margin: 0, color: 'var(--kuro-gray)', fontSize: '0.9rem' }}>{mission.description}</p>
@@ -71,7 +73,9 @@ export default function MissionsView({ missions, claimReward, onExit, xp }) {
             </div>
 
             {mission.completed && !mission.claimed && (
-              <button 
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => {
                   playMissionComplete();
                   claimReward(mission.id);
@@ -91,7 +95,7 @@ export default function MissionsView({ missions, claimReward, onExit, xp }) {
                 }}
               >
                 ¡Reclamar Recompensa!
-              </button>
+              </motion.button>
             )}
 
             {mission.claimed && (
