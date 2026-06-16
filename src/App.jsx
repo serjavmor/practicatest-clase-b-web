@@ -11,6 +11,7 @@ import RecoveryView from './components/pages/RecoveryView'
 import ShopView from './components/pages/ShopView'
 import MissionsView from './components/pages/MissionsView'
 import AlbumView from './components/pages/AlbumView'
+import BossView from './components/pages/BossView'
 import useLives from './hooks/useLives'
 import useMissions from './hooks/useMissions'
 import useAlbum from './hooks/useAlbum'
@@ -191,6 +192,13 @@ function App() {
       setView('recovery')
       return;
     }
+    
+    // Nivel Jefe (Cada 5 niveles)
+    if (currentLevel % 5 === 0) {
+      setView('boss');
+      return;
+    }
+
     if (savedTestIndex > 0) {
       setView('test') // Resume directly
     } else {
@@ -404,6 +412,29 @@ function App() {
               streak={streak}
               currentLevel={currentLevel}
               onExit={() => setView('home')}
+            />
+          </motion.div>
+        )}
+        {view === 'boss' && (
+          <motion.div key="boss" initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+            <BossView
+              questions={getQuestionsForLevel()} 
+              lives={lives}
+              decreaseLife={decreaseLife}
+              streak={streak}
+              setStreak={setStreak}
+              xp={xp}
+              earnXp={earnXp}
+              onPause={handlePause}
+              onFinish={finishLevel} 
+              timeToNextLife={timeToNextLife}
+              onFailQuestion={(q) => setFailedQuestions(prev => {
+                if (prev.find(item => item.id === q.id)) return prev;
+                return [...prev, q];
+              })}
+              updateMissionProgress={updateMissionProgress}
+              checkUnlocks={checkUnlocks}
+              onStudy={handleGoToStudy}
             />
           </motion.div>
         )}

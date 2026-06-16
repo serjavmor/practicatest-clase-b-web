@@ -10,6 +10,7 @@ export const ALBUM_CARDS = [
   { id: 'card_4', name: 'Mente Maestra', description: 'Termina un nivel entero sin cometer errores.', conditionText: 'Nivel Perfecto', image: '/images/kuro_badge_legend.png' },
   { id: 'card_5', name: 'Comprador Compulsivo', description: 'Gasta un total de 150 Kuro-Coins en la Tienda.', conditionText: 'Gasta 150 Monedas', image: '/images/kuro_shop.png' },
   { id: 'card_6', name: 'Leyenda del Volante', description: 'Llega al temible nivel 10 del examen.', conditionText: 'Alcanza el Nivel 10', image: '/images/kuromi_instructor_1781483016419.png' },
+  { id: 'card_7', name: 'Mata Jefes', description: 'Derrota a un Jefe Examinador por primera vez.', conditionText: 'Derrota al Jefe', image: '/images/kuro_badge_boss.png' },
 ];
 
 export default function useAlbum(userId) {
@@ -73,7 +74,7 @@ export default function useAlbum(userId) {
     }
   };
 
-  const checkUnlocks = ({ currentLevel, streak, perfectLevel, livesRecoveredEvent, coinsSpentEvent, levelCompletedEvent }) => {
+  const checkUnlocks = ({ currentLevel, streak, perfectLevel, livesRecoveredEvent, coinsSpentEvent, levelCompletedEvent, bossDefeatedEvent }) => {
     const newStats = { ...stats };
     let statsChanged = false;
 
@@ -112,6 +113,9 @@ export default function useAlbum(userId) {
     
     // 6. Leyenda del Volante
     if (currentLevel >= 10 && !unlockedCards.includes('card_6')) unlockCard('card_6');
+
+    // 7. Mata Jefes
+    if (bossDefeatedEvent && !unlockedCards.includes('card_7')) unlockCard('card_7');
   };
 
   return {
