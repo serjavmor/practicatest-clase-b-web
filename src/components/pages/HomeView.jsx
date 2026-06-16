@@ -158,14 +158,6 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
         </motion.button>
       </div>
       
-      <div style={{ textAlign: 'center', padding: '10px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <img 
-          src="/images/kuromi_instructor_1781483016419.png" 
-          alt="Kuromi Mascot" 
-          style={{ height: '120px', marginBottom: '10px', mixBlendMode: 'multiply', filter: 'contrast(1.1)' }} 
-        />
-      </div>
-
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', paddingBottom: '40px', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '15px', position: 'relative', zIndex: 10 }}>
           <div style={{

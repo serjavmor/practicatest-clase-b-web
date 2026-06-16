@@ -41,7 +41,7 @@ function KuromiModel() {
 
   return (
     <group ref={meshRef} position={[0, 2, -2]}>
-      <primitive object={scene} scale={1.5} />
+      <primitive object={scene} scale={1.125} />
     </group>
   );
 }
