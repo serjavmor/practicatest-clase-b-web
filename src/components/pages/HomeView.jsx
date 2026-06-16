@@ -141,77 +141,86 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
 
       </div>
 
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingBottom: '40px' }}>
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', paddingBottom: '40px' }}>
         <motion.button 
           id="tour-level"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1, transition: { type: 'spring', stiffness: 300, damping: 15 } }}
-          whileHover={{ scale: 1.1, rotate: 3, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
-          whileTap={{ scale: 0.9, rotate: -3 }}
+          whileHover={{ scale: 1.05, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
+          whileTap={{ scale: 0.95 }}
           onClick={onStart}
           style={{
-             width: '180px',
-             height: '180px',
-             borderRadius: '50%',
-             backgroundColor: currentLevel % 5 === 0 ? 'var(--kuro-incorrect)' : 'var(--kuro-dark)',
-             border: '8px solid white',
-             boxShadow: '0 8px 0 rgba(0,0,0,0.2)',
-             color: 'white',
-             fontSize: '1.5rem',
-             fontWeight: 'bold',
+             width: '90%',
+             maxWidth: '350px',
+             backgroundColor: currentLevel % 5 === 0 ? 'var(--kuro-incorrect)' : 'var(--kuro-pink)',
+             border: '4px solid white',
+             borderRadius: '24px',
+             boxShadow: currentLevel % 5 === 0 
+               ? '0 10px 0 var(--kuro-incorrect-shadow), 0 15px 20px rgba(0,0,0,0.2)' 
+               : '0 10px 0 var(--kuro-pink-shadow), 0 15px 20px rgba(0,0,0,0.2)',
+             padding: '20px 20px 15px 20px',
              display: 'flex',
              flexDirection: 'column',
-             alignItems: 'center',
-             justifyContent: 'center',
+             position: 'relative',
+             overflow: 'hidden',
              cursor: 'pointer',
-             marginBottom: '40px',
              animation: 'float 3s infinite'
           }}
         >
-          {savedTestIndex > 0 ? (
-            <>
-              <span style={{ fontSize: '3rem', marginBottom: '10px' }}>▶️</span>
-              Continuar
-            </>
-          ) : currentLevel % 5 === 0 ? (
-            <>
-              <img src="/images/badtz_inspector_1781483016419.png" style={{ height: '70px', marginBottom: '10px', filter: 'drop-shadow(2px 2px 0px white)' }} alt="Boss" />
-              ¡Jefe Final!
-            </>
-          ) : (
-            <>
-               {currentUser?.avatarConfig ? (
-                 <div style={{ marginBottom: '10px', pointerEvents: 'none' }}>
-                   <CompositeAvatar config={currentUser.avatarConfig} size={80} />
-                 </div>
-               ) : (
-                 <img src="/images/kuro_heart.png" style={{ height: '70px', marginBottom: '10px', mixBlendMode: 'screen' }} alt="Play" />
-               )}
-               Nivel {currentLevel}
-            </>
-          )}
-        </motion.button>
+          {/* Top text */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px' }}>
+            <h2 style={{ 
+              color: 'white', 
+              fontSize: '2.5rem', 
+              fontWeight: '900', 
+              textShadow: '2px 2px 0px rgba(0,0,0,0.3), -1px -1px 0 rgba(0,0,0,0.3), 1px -1px 0 rgba(0,0,0,0.3), -1px 1px 0 rgba(0,0,0,0.3), 1px 1px 0 rgba(0,0,0,0.3)', 
+              margin: 0, 
+              textTransform: 'uppercase', 
+              letterSpacing: '2px' 
+            }}>
+              {savedTestIndex > 0 ? 'Continuar' : currentLevel % 5 === 0 ? '¡Jefe Final!' : 'Batalla'}
+            </h2>
+          </div>
 
-        <div style={{ width: '80%', maxWidth: '300px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', color: 'var(--kuro-dark)', fontWeight: 'bold' }}>
-            <span>Avance de Fase</span>
-            <span>{((currentLevel - 1) % 5)} / 4</span>
+          {/* Inner Stats Box */}
+          <div style={{ 
+            backgroundColor: 'rgba(0,0,0,0.2)', 
+            borderRadius: '16px', 
+            padding: '10px 15px', 
+            display: 'flex', 
+            alignItems: 'center',
+            gap: '15px',
+            boxShadow: 'inset 0 4px 8px rgba(0,0,0,0.2)'
+          }}>
+             {/* Left side: Avatar */}
+             <div style={{ width: '60px', height: '60px', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {currentLevel % 5 === 0 ? (
+                  <img src="/images/badtz_inspector_1781483016419.png" style={{ height: '60px', filter: 'drop-shadow(2px 2px 0px white)' }} alt="Boss" />
+                ) : currentUser?.avatarConfig ? (
+                  <div style={{ transform: 'scale(0.8)', pointerEvents: 'none' }}>
+                    <CompositeAvatar config={currentUser.avatarConfig} size={80} />
+                  </div>
+                ) : (
+                  <img src="/images/kuro_heart.png" style={{ height: '50px', mixBlendMode: 'screen' }} alt="Play" />
+                )}
+             </div>
+
+             {/* Right side: Stats */}
+             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                <div style={{ fontSize: '1.4rem', fontWeight: '900', color: '#fff', textShadow: '1px 1px 0 rgba(0,0,0,0.5)', marginBottom: '5px' }}>
+                  Nivel {currentLevel}
+                </div>
+                <div style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                   <div style={{ flex: 1, height: '18px', backgroundColor: 'rgba(0,0,0,0.4)', borderRadius: '9px', overflow: 'hidden', border: '2px solid rgba(255,255,255,0.3)' }}>
+                     <div style={{ width: `${(((currentLevel - 1) % 5) / 4) * 100}%`, height: '100%', backgroundColor: '#fff', borderRadius: '5px' }} />
+                   </div>
+                   <span style={{ fontSize: '1rem', color: '#fff', fontWeight: 'bold', textShadow: '1px 1px 0 rgba(0,0,0,0.5)' }}>
+                     {((currentLevel - 1) % 5)}/4
+                   </span>
+                </div>
+             </div>
           </div>
-          <div style={{ width: '100%', height: '24px', backgroundColor: 'white', borderRadius: '12px', border: '3px solid var(--kuro-gray)', overflow: 'hidden', boxShadow: '0 4px 0 var(--kuro-gray)' }}>
-            <motion.div 
-              initial={{ width: 0 }}
-              animate={{ width: `${(((currentLevel - 1) % 5) / 4) * 100}%` }}
-              style={{ 
-                height: '100%', 
-                backgroundColor: 'var(--kuro-pink)', 
-                borderRadius: '8px'
-              }}
-            />
-          </div>
-          <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'var(--duo-text)', marginTop: '10px', fontWeight: 'bold' }}>
-            Próximo Jefe: Nivel {Math.ceil(currentLevel/5)*5}
-          </p>
-        </div>
+        </motion.button>
       </div>
 
       {/* Modal del Podio */}
