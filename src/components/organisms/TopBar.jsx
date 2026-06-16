@@ -12,7 +12,7 @@ export default function TopBar({ lives, streak, xp, progress, timeToNextLife, on
       
       <div id="tour-lives" style={{ display: 'flex', alignItems: 'center', color: 'var(--kuro-incorrect)', fontWeight: 'bold' }}>
         <img src="/images/kuro_heart.png" alt="Life" style={{ width: '36px', height: '36px', marginRight: '4px', mixBlendMode: 'multiply' }} />
-        <span style={{ fontSize: '1.2rem', marginRight: '8px' }}>{lives}</span>
+        <span style={{ fontSize: '1.2rem', marginRight: '8px', position: 'relative', zIndex: 1, flexShrink: 0, display: 'inline-block' }}>{lives}</span>
         {onStudy && lives < 5 && (
           <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={onStudy} style={{ background: 'var(--kuro-pink)', border: 'none', borderRadius: '50%', width: '28px', height: '28px', color: 'white', fontWeight: 'bold', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', marginRight: '8px', boxShadow: '0 2px 0 var(--kuro-pink-shadow)' }}>+</motion.button>
         )}
@@ -36,16 +36,16 @@ export default function TopBar({ lives, streak, xp, progress, timeToNextLife, on
       
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
         {xp !== undefined && (
-          <div id="tour-xp" style={{ display: 'flex', alignItems: 'center', backgroundColor: '#fff', borderRadius: '15px', padding: '5px 8px', boxShadow: '0 2px 0 #e0e0e0' }}>
+          <div id="tour-xp" style={{ display: 'flex', alignItems: 'center', backgroundColor: '#fff', borderRadius: '15px', padding: '5px 8px', boxShadow: '0 2px 0 #e0e0e0', flexShrink: 0 }}>
             <img src="/images/kuro_coin.png" alt="Kuro Coin" style={{ width: '32px', height: '32px', marginRight: '5px', mixBlendMode: 'multiply' }} />
-            <span style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#2a1744', whiteSpace: 'nowrap' }}>
+            <span style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#2a1744', whiteSpace: 'nowrap', position: 'relative', zIndex: 1, flexShrink: 0, display: 'inline-block' }}>
               {xp}
             </span>
           </div>
         )}
-        <div id="tour-streak" style={{ display: 'flex', alignItems: 'center', color: 'var(--kuro-dark)', fontWeight: 'bold' }}>
+        <div id="tour-streak" style={{ display: 'flex', alignItems: 'center', color: 'var(--kuro-dark)', fontWeight: 'bold', flexShrink: 0 }}>
           <img src="/images/kuro_fire.png" alt="Streak" style={{ width: '36px', height: '36px', marginRight: '4px', mixBlendMode: 'multiply' }} />
-          <span style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#2a1744', whiteSpace: 'nowrap' }}>
+          <span style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#2a1744', whiteSpace: 'nowrap', position: 'relative', zIndex: 1, flexShrink: 0, display: 'inline-block' }}>
             {streak}
           </span>
         </div>
