@@ -5,7 +5,6 @@ import { Joyride, STATUS } from 'react-joyride';
 import TopBar from '../organisms/TopBar';
 
 export default function HomeView({ lives, streak, currentLevel, savedTestIndex, xp, leaderboard, onStart, timeToNextLife, isAnonymous, onChangeUser, onLinkAccount, onStudy, onShop, onMissions, hasCompletedMission, onAlbum, needsTour, onTourComplete }) {
-  const levels = Array.from({length: 10}, (_, i) => i + 1);
   const [showPodium, setShowPodium] = useState(false);
 
   const tourSteps = [
@@ -141,56 +140,69 @@ export default function HomeView({ lives, streak, currentLevel, savedTestIndex, 
 
       </div>
 
-      <div style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingBottom: '40px' }}>
-        {levels.map(level => {
-          const isCurrent = level === currentLevel;
-          const isCompleted = level < currentLevel;
-          const isLocked = level > currentLevel;
-          
-          const xOffset = level % 2 === 0 ? 50 : -50;
-          
-          let icon = <img src="/images/kuro_heart.png" alt="Heart" style={{ width: '90px', height: '90px', opacity: 0.5, filter: 'grayscale(100%)', mixBlendMode: 'multiply' }} />;
-          
-          if (isCompleted) {
-            icon = <img src="/images/kuro_coin.png" alt="Coin" style={{ width: '90px', height: '90px', mixBlendMode: 'multiply' }} />;
-          } else if (isCurrent) {
-            icon = savedTestIndex > 0 ? <span style={{fontSize: '4.5rem'}}>▶️</span> : <img src="/images/kuro_heart.png" alt="Active" style={{ width: '90px', height: '90px', mixBlendMode: 'multiply' }} />;
-          }
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingBottom: '40px' }}>
+        <motion.button 
+          id="tour-level"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={onStart}
+          style={{
+             width: '180px',
+             height: '180px',
+             borderRadius: '50%',
+             backgroundColor: currentLevel % 5 === 0 ? 'var(--kuro-incorrect)' : 'var(--kuro-dark)',
+             border: '8px solid white',
+             boxShadow: '0 8px 0 rgba(0,0,0,0.2)',
+             color: 'white',
+             fontSize: '1.5rem',
+             fontWeight: 'bold',
+             display: 'flex',
+             flexDirection: 'column',
+             alignItems: 'center',
+             justifyContent: 'center',
+             cursor: 'pointer',
+             marginBottom: '40px',
+             animation: 'float 3s infinite'
+          }}
+        >
+          {savedTestIndex > 0 ? (
+            <>
+              <span style={{ fontSize: '3rem', marginBottom: '10px' }}>▶️</span>
+              Continuar
+            </>
+          ) : currentLevel % 5 === 0 ? (
+            <>
+              <img src="/images/badtz_inspector_1781483016419.png" style={{ height: '70px', marginBottom: '10px', filter: 'drop-shadow(2px 2px 0px white)' }} alt="Boss" />
+              ¡Jefe Final!
+            </>
+          ) : (
+            <>
+               <img src="/images/kuro_heart.png" style={{ height: '70px', marginBottom: '10px', mixBlendMode: 'screen' }} alt="Play" />
+               Nivel {currentLevel}
+            </>
+          )}
+        </motion.button>
 
-          return (
-            <motion.button 
-              key={level}
-              id={isCurrent ? "tour-level" : undefined}
-              whileHover={isCurrent ? { scale: 1.1 } : {}}
-              whileTap={isCurrent ? { scale: 0.9 } : {}}
-              onClick={() => isCurrent && onStart()}
-              disabled={!isCurrent}
-              style={{
-                width: '110px',
-                height: '110px',
-                backgroundColor: 'transparent',
-                border: 'none',
-                transform: `translateX(${xOffset}px) translateY(${isCurrent ? 0 : 0}px)`,
-                cursor: isCurrent ? 'pointer' : 'default',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '20px 0',
-                transition: 'transform 0.1s',
-                animation: isCurrent ? 'pulse-heartbeat 2s infinite' : 'none',
-                opacity: isLocked ? 0.8 : 1,
-                position: 'relative'
+        <div style={{ width: '80%', maxWidth: '300px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', color: 'var(--kuro-dark)', fontWeight: 'bold' }}>
+            <span>Avance de Fase</span>
+            <span>{((currentLevel - 1) % 5)} / 4</span>
+          </div>
+          <div style={{ width: '100%', height: '24px', backgroundColor: 'white', borderRadius: '12px', border: '3px solid var(--kuro-gray)', overflow: 'hidden', boxShadow: '0 4px 0 var(--kuro-gray)' }}>
+            <motion.div 
+              initial={{ width: 0 }}
+              animate={{ width: `${(((currentLevel - 1) % 5) / 4) * 100}%` }}
+              style={{ 
+                height: '100%', 
+                backgroundColor: 'var(--kuro-pink)', 
+                borderRadius: '8px'
               }}
-            >
-              {isCurrent && savedTestIndex > 0 && (
-                <span style={{ position: 'absolute', top: '-15px', backgroundColor: 'white', color: 'var(--kuro-dark)', fontSize: '0.8rem', padding: '4px 10px', borderRadius: '12px', fontWeight: 'bold', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>
-                  En pausa
-                </span>
-              )}
-              {icon}
-            </motion.button>
-          )
-        })}
+            />
+          </div>
+          <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'var(--duo-text)', marginTop: '10px', fontWeight: 'bold' }}>
+            Próximo Jefe: Nivel {Math.ceil(currentLevel/5)*5}
+          </p>
+        </div>
       </div>
 
       {/* Modal del Podio */}
